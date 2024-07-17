@@ -20,11 +20,19 @@ It is designed to be used in conjunction with `Y Client`, a client-side applicat
 
 ![Schema](../assets/images/application.png)
 
-**Programming Language:** Python
-
+**Programming Language:** Python <br>
 **Framework:** Flask + SQlite + SQLAlchemy
 
 ## Getting Started
+
+To avoid conflicts with the Python environment, we recommend using a virtual environment to install the server dependencies.
+
+Assuming you have [Anaconda](https://www.anaconda.com/) installed, you can create a new environment with the following command:
+
+```bash
+conda create --name Y python=3.11
+conda activate Y
+```
 
 To install and execute the server clone its repository to your local machine  
 ```bash
