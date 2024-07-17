@@ -7,7 +7,7 @@ title: "Home"
 subtitle: "Where the Digital World Comes to Life"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/stampo_biscotti.jpg
+header_img: assets/images/header3.jpg
 header_title: "Y Social"
 ---
 

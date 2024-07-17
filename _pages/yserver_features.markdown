@@ -7,7 +7,7 @@ title:  "Y Server - Features"
 subtitle: "Available Actions, Recommender Systems and Bias"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/Jekyll_Logo.png
+header_img: assets/images/server2.jpg
 header_title: "Y Server - Features"
 vega: true
 ---

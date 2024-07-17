@@ -7,7 +7,7 @@ title:  "yClient"
 subtitle: "Client guide and how to"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/Jekyll_Logo.png
+header_img: assets/images/laptop.jpg
 header_title: "Y Client"
 vega: true
 ---

@@ -7,7 +7,7 @@ title:  "LLMs"
 subtitle: "Setup a local LLMs server"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/Jekyll_Logo.png
+header_img: assets/images/llms.jpg
 header_title: "LLM Agents"
 vega: true
 ---

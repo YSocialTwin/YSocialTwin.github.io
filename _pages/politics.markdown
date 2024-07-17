@@ -7,7 +7,7 @@ title:  "Y Server"
 subtitle: "Server guide and how to"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/Jekyll_Logo.png
+header_img: assets/images/politics1.jpg
 header_title: "Y Server"
 vega: true
 ---
