@@ -58,6 +58,13 @@ navbar:
         - title: 🤖 Local LLMs #Label
           url: /llms #url
 
+    - title: 🧙‍Behind the curtains
+      child:
+        - title: 🎰 Y Server - Actions and Bias #Label
+          url: /yserver_features  #url
+        - title: 🎭 Y Client - LLM Agents #Label
+          url: /yclient_agents #url
+
     - title: 🎬 Scenario Design #Label
       url: /scenario #url
 
