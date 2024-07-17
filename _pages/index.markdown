@@ -16,25 +16,34 @@ header_title: "Y Social"
         <div class="col-md-2 col-md-offset-3">
         </div>
         <div class="col-md-8">
-            <h5> What is Y Social? </h5>
+            
+            <h2> What is Y Social? </h2>
             <p> Y Social is a cutting-edge Digital Twin of a microblogging platform. </p>
                 <p> It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. </p>
                 <p> Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</p>
-            <h5> Why Y Social? </h5>
+             <br>
+            <h2> Why Y Social? </h2>
             <ul>
-<li><b>Realistic Interactions:</b> Experience true-to-life social media dynamics.</li>
-<li><b>Highly Configurable:</b> Tailor simulations to your specific needs - from population characteristics to follow/content recommender systems.</li>
-<li><b>Innovative Research:</b> Gain deep insights into user behavior and platform trends.</li>
-</ul>
-<hr>
-<div align="center">
-<em>Join us to explore, innovate, and revolutionize social media understanding.</em>
-</div>
-            <hr>
+                <li><b>Realistic Interactions:</b> Experience true-to-life social media dynamics.</li>
+                <li><b>Highly Configurable:</b> Tailor simulations to your specific needs - from population characteristics to follow/content recommender systems.</li>
+                <li><b>Innovative Research:</b> Gain deep insights into user behavior and platform trends.</li>
+            </ul>
+            <br>
+            <h2> Who is Y Social for? </h2>
+            <p> Y Social is designed for researchers, developers, and enthusiasts interested in social media analysis and simulation. </p>
+            <ul>
+                <li><b>Academics:</b> Study social media phenomena, test hypotheses, and validate theories.</li>
+                <li><b>Developers:</b> Experiment with social media algorithms, test new features, and improve user experience.</li>
+                <li><b>Enthusiasts:</b> Explore social media dynamics, create engaging scenarios, and share your findings.</li>
+            </ul>
+
+            <div align="center">
+                <em>Join us to explore, innovate, and revolutionize social media understanding.</em>
+            </div>
         </div>
     </div>
 </div>
-
+<br>
 <div class="row pb-5">
     <div class="col-md-12 col-sm-12">
         <div class="card-container">
