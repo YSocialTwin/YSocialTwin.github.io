@@ -4,11 +4,11 @@
 
 layout: default-full
 title: "Home"
-subtitle: "un template per i progetti del master SoBigData"
+subtitle: "Where the Digital World Comes to Life"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/stampo_biscotti.jpg
-header_title: "Progettone Template"
+header_title: "Y Social"
 ---
 
 <div class="container py-3">

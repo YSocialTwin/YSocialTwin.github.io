@@ -19,9 +19,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Progettone Template"
-subtitle: "un template per i progetti del master SoBigData"
-email: your-email@example.com
+title: "Y Social"
+subtitle: "Where the Digital World Comes to Life"
+email: giulio.rossetti@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -45,10 +45,16 @@ github_repo:
 navbar:
   style :  dual #non modificare
   brand: # è il titolo del sito e funziona da bottone (tipicamente per la homepage).
-    title :  "Progettone Website Guide"
-    img: "./assets/images/Logo_masthead.png"
+    title :  "Y Social"
+    img: "./assets/images/Ysocial_logo.png"
     url: /
   nav:
+    - title: Configuration
+      child:
+        - title: Y Server #Label
+          url: /yserver  #url
+        - title: Y Client #Label
+          url: /yclient #url
     - title: Bootstrap
       url: /bootstrap
     - title: Jekyll
@@ -86,7 +92,7 @@ googlefonts:
   - url: "https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
 
 chulapa-skin:
-  skin:  "gitdev-dark" #"graymor" #"graymor" "gitdev-dark" "gitdev" "universal" "academia" "gitdev" "towards" "pear" "twitter-lights-out" "twitter-dim" "wandoo" "lymcha" "twitter" "chulapa" "sunset" "sunset" "minty" "lux" "journal" "deeply"
+  skin:  "lux" #"gitdev-dark" #"graymor" #"graymor" "gitdev-dark" "gitdev" "universal" "academia" "gitdev" "towards" "pear" "twitter-lights-out" "twitter-dim" "wandoo" "lymcha" "twitter" "chulapa" "sunset" "sunset" "minty" "lux" "journal" "deeply"
   #vars:
   #  body-bg: "#fbf1ed"
     # font-family-base: "Comic Neue"
