@@ -1,0 +1,10 @@
+<div class={% if include.container == 'fluid' %}"container-fluid"{% else %}"container"{% endif %}>
+    <div class="row pt-2">
+        <div class="col-md-6 col-sm-12  ">
+            {{ include.col-one | markdownify }}
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+            {{ include.col-two | markdownify }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+---
+---
+@charset "utf-8";
+// Your custom css /scss here
+
+#sezione-1, #sezione-11, #sezione-12, #mappa-delle-stragi, #galleria{
+  scroll-margin-top: 60px; /* Imposta lo spazio di scorrimento prima dell'elemento ancorato */
+}
+
+.tech {
+  background-color: rgba(216, 248, 217, 0.7);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tech-show {
+  display: block;
+}
+
+.tech-hide {
+  display: none;
+}
+
+.modal {
+  z-index: 100;
+}
+
+.modal-backdrop {
+  z-index: 99;
+}
+.sticky-top {
+    z-index: 98;
+}
+
+// card container:
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  .card-img {
+    width: 100%;
+    object-fit: cover;
+    padding: 10px;
+  }
+
+  .card-img img {
+    max-width: 100%;
+  }
+
+  .card-body {
+    padding: 10px;
+    padding-top: 0;
+
+    h5 {
+      margin-top: 0.5rem;
+    }
+  }
+}
+.card-container .card {
+  flex: 1 1 100%; /* Default: cards take full width on small screens */
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .card-container .card {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row on small screens */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .card-container .card {
+    flex: 1 1 calc(33.33% - 1rem); /* 3 cards per row on medium screens */
+    max-width: calc(33.33% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .card-container .card {
+    flex: 1 1 calc(25% - 1rem); /* 4 cards per row on large screens */
+    max-width: calc(25% - 1rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-container .card {
+    flex: 1 1 calc(20% - 1rem); /* 5 cards per row on extra-large screens */
+    max-width: calc(20% - 1rem);
+  }
+}
+
+// badges with big numbers and description using grid:
+.badge-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-neue-bold {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Backgound full width color:
+.bg-color-full {
+    clip-path: inset(0 -100vmax);
+    box-shadow: 0 0 0 100vmax rgba(243, 173, 149, 0.3);
+}
+
+.bg-color {
+  background-color: rgba(243, 173, 149, 0.3);
+}
+
+// iframe :
+iframe {
+  border: 0;
+}
+
+// wrench
+.tech-wrench .fa-wrench:hover {
+  transform: scale(1, 1) !important;
+}

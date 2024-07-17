@@ -1,0 +1,56 @@
+{% assign dataset = site.data[include.dataset] %}
+
+<div class="{% if include.container == 'fluid' %}container-fluid{% else %}container{% endif %}">
+    <div class="row pt-2">
+        <div class={% if include.dimension == "small" %}"col-md-8 offset-md-2 col-sm-12"{% else %}"col-md-12"{% endif %}>
+            {% for chart in {{dataset}} %}
+            <button class="btn btn-primary chart-button" schema-url="{{site.baseurl}}/{{ chart.url }}" data-description="{{chart.description}}">{{ chart.name }}
+            </button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class={% if include.dimension == 'small' %}"col-md-8 offset-md-2 col-sm-12"{% else %}"col-md-12"{% endif %}>
+            <vegachart id="displayed-chart" schema-url="" style="width: 100%"></vegachart>
+            <div id="chart-container"></div>
+            <p id="chart-description"></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    console.log('ciao CHART');
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const chartButtons = document.querySelectorAll('.chart-button');
+        const chartDescription = document.getElementById('chart-description');
+
+        function displayChart(chartUrl, chartDescriptionText) {
+            const vegaChart = document.createElement('vegachart');
+            const chartContainer = document.getElementById('chart-container');
+            const chartDescription = document.getElementById('chart-description');
+            chartContainer.innerHTML = '';
+            vegaChart.setAttribute('schema-url', chartUrl);
+            vegaChart.style.width = '100%';
+
+            chartContainer.appendChild(vegaChart);
+            chartDescription.setAttribute('data-description', chartDescriptionText);
+            parseSchema(vegaChart).then(schema => vegaEmbed(vegaChart, schema, {"actions": false}));
+
+
+        }
+
+        chartButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const chartUrl = this.getAttribute('schema-url');
+                const chartName = this.getAttribute('data-description');
+                chartDescription.textContent = chartName;
+                displayChart(chartUrl, chartName);
+            });
+        });
+        if (chartButtons.length > 0) {
+            chartButtons[0].click();
+        }
+    });
+</script>
+

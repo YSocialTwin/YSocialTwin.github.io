@@ -1,0 +1,14 @@
+<div class="{% if include.container == 'fluid' %}container-fluid{% else %}container{% endif %}">
+    <div class="row py-2">
+        <div class="{% if include.dimension == 'small' %}col-md-8 offset-md-2 col-sm-12{% else %}col-md-12{% endif %}">
+            <div class="badge-container">
+                {% for n in site.data[{{include.data}}] %}
+                <div class="card text-white bg-info mb-3 py-2 px-5 align-items-center">
+                    <h1>{{ n[include.number] }}</h1>
+                    <h5 class="mt-0">{{ n[include.description] }}</h5>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

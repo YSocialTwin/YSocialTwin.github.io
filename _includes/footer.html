@@ -1,0 +1,98 @@
+<!-- Footer -->
+<footer class="footer-chulapa text-left mt-0 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                {%- if site.github_repo -%}
+                <p>
+                    <strong>Repositories</strong>
+                </p>
+                <p>
+                    All the data, analysis, and website code are available on our Github repositories.
+                </p>
+                <div role="navigation"
+                     class="d-flex flex-wrap justify-content-left">
+                    {%- for gitirepo in site.github_repo -%}
+                    <a href={{ gitirepo.url }}>
+                        <i class="fa-pull-left fab fa-github"
+                           style="vertical-align: middle; font-size: 1rem;
+                    line-height: 1.5rem"></i>
+                        {{ gitirepo.name }}</a>
+
+
+                    {%- endfor -%}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p style="padding-left: 1.2rem">
+                    <strong> Project by</strong>
+                </p>
+                {%- if site.data.members -%}
+                <ol>
+                    {% for member in site.data.members %}
+                    <li>
+                        <a href="https://github.com/{{ member.github }}">
+                            {{ member.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ol>
+                {%- endif -%}
+            </div>
+            <div class="col-md-4">
+                <div class="mb-2">
+                    <img style="margin-left: 0; margin-right:0;"
+                         src="{{site.baseurl}}/assets/images/Logo_SoBigData MASTER.png"
+                         alt="SoBigData RI Logo">
+                </div>
+                {%- if site.footer.links -%}
+                <hr>
+                <div role="navigation"
+                     class="d-flex flex-wrap justify-content-left">
+                    {%- for social in site.footer.links -%}
+                    {%- assign urlslice = social.url | slice: 0,4 -%}
+                    {%- if urlslice == "http" -%}
+                    <a href="{{ social.url | absolute_url }}"
+                       title="footer{{ social.label }}"
+                       class="chulapa-footer-sociallink lead"
+                       target="_blank">
+                        {%- elsif social.url contains "@" -%}
+                        <a href="mailto:{{- social.url -}}?subject={{ site.title | append: ' web contact' | strip_html | uri_escape }}"
+                           title="footer{{ social.label }}"
+                           class="chulapa-footer-sociallink lead" target="_blank">
+                            {%- else -%}
+                            <a href="{{ social.url | absolute_url }}"
+                               title="footer{{ social.label }}"
+                               class="chulapa-footer-sociallink lead" target="_blank">
+                                {%- endif -%}
+                                <span class="fa-stack fa-lg"
+                                      aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="{{ social.icon }} fa-stack-1x fa-inverse"></i>
+              </span><span class="sr-only">{{ social.label }}</span>
+                            </a>
+                            {%- endfor -%}
+                </div>
+                {%- endif -%}
+                <hr>
+                <p class="mt-2 mb-3">
+                    {%- if site.footer.copyright -%}
+
+                    {{ site.footer.copyright }}
+
+                    {%- endif -%}
+                </p>
+                <p>
+                    <!-- Do not remove this in order to give  attributions -->
+                    Website powered by <a href="https://jekyllrb.com/"
+                                          target="_blank">Jekyll</a>
+                    <!-- End  attributions -->
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->

@@ -1,0 +1,22 @@
+<div class="{% if include.container == 'fluid' %}container-fluid{% else %}container{% endif %}">
+    <div class="row pt-2">
+        <div class="col-md-12 col-sm-12">
+            <div class="card-container">
+                {% for image in site.data.img-selector %}
+                {% if include.width %}
+                <div class="card" style="width:{{ include.width }};">
+                {% else %}
+                <div class="card">
+                {% endif %}
+                        <div class="card-img"><img src="{{site.baseurl}}/{{ image[include.url]}}" class="card-img-top" alt="{{ image[include.name] }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ image[include.name] }}</h5>
+                            <p class="card-text">{{ image[include.description] }}</p>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

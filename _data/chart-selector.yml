@@ -1,0 +1,12 @@
+- name: Fascista
+  url:  "assets/charts/timeline_victims_Fascista.json"
+  description: "morti per mano di fascisti"
+- name: Nazista
+  url:  "assets/charts/timeline_victims_Nazista.json"
+  description: "morti per mano di nazisti"
+- name: Nazifascista
+  url:  "assets/charts/timeline_victims_Nazifascista.json"
+  description: "morti per mano di nazifascisti"
+- name: Sconosciuta
+  url:  "assets/charts/timeline_victims_Sconosciuta.json"
+  description: "morti per mano di sconosciuti"

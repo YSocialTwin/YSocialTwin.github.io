@@ -1,0 +1,16 @@
+- name: Bootstrap
+  url:  "assets/images/bootstrap_t.png"
+  description: "Una panoramica di Bootstrap"
+  path: "bootstrap"
+- name: Jekyll
+  url:  "assets/images/jekyll_t.png"
+  description: "Una panoramica di Jekyll"
+  path: "jekyll-ssg"
+- name: Altair Charts
+  url:  "assets/images/altair-gallery_t.png"
+  description: "Come esportare grafici con Altair"
+  path: "charts"
+- name: Markdown
+  url:  "assets/images/markdown_t.png"
+  description: "Cheatsheet per Markdown e Kramdown"
+  path: "markdown"

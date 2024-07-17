@@ -1,0 +1,159 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Progettone Template"
+subtitle: "un template per i progetti del master SoBigData"
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+
+# Riportare il github del gruppo di progetto e quello del sito web (se differente).
+# Tali informazioni appariranno nel Footer del sito.
+github_repo:
+  - name: "Group 0 - Project repository"
+    url: "https://github.com/sobigdata-master/progettone-template"
+  - name: "Group 0 - Website repository"
+    url: "https://github.com/sobigdata-master/progettone-template"
+
+
+
+
+
+
+
+navbar:
+  style :  dual #non modificare
+  brand: # è il titolo del sito e funziona da bottone (tipicamente per la homepage).
+    title :  "Progettone Website Guide"
+    img: "./assets/images/Logo_masthead.png"
+    url: /
+  nav:
+    - title: Bootstrap
+      url: /bootstrap
+    - title: Jekyll
+      url: /jekyll-ssg
+    - title: Charts
+      url: /charts
+    - title: Folium
+      url: /folium-map
+    - title: Write first #Label
+      child:
+        - title: markdown cheatsheet #Label
+          url: /markdown  #url
+        - title: kramdown cheatsheet #Label
+          url: /kramdown #url
+    - title: One page demo
+      child:
+        - title: Demo
+          url: /single
+        - title: "Sezione 1" #Label
+          url: /single#sezione-1 #url
+        - title: "Sezione 1.1" #Label
+          url: /single#sezione-11 #url
+        - title: "Sezione 1.2" #Label
+          url: /single#sezione-12 #url
+        - title: "Gallerie" #Label
+          url: /single#galleria #url
+        - title: "Mappa delle stragi" #Label
+          url: /single#mappa-delle-stragi #url
+
+
+
+googlefonts:
+  - url: "https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+  - url: "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  - url: "https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
+
+chulapa-skin:
+  skin:  "gitdev-dark" #"graymor" #"graymor" "gitdev-dark" "gitdev" "universal" "academia" "gitdev" "towards" "pear" "twitter-lights-out" "twitter-dim" "wandoo" "lymcha" "twitter" "chulapa" "sunset" "sunset" "minty" "lux" "journal" "deeply"
+  #vars:
+  #  body-bg: "#fbf1ed"
+    # font-family-base: "Comic Neue"
+    # headings-font-family: "Lekton"
+
+
+#chulapa-skin:
+#  autothemer  :  true
+#  vars:
+#    primary: "darkorange"
+
+
+
+##################################################
+#    NON modificare la sezione sottostante
+##################################################
+
+# Build settings
+theme: chulapa-jekyll
+plugins:
+  - jekyll-feed
+
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+footer:
+  links:
+  - label: "LinkedIn"
+    icon: "fab fa-linkedin"
+    url: https://www.linkedin.com/company/sobigdata
+  - label: "Twitter"
+    icon: "fab fa-twitter"
+    url: https://www.twitter.com/sobigdata
+  - label: "Facebook"
+    icon: "fab fa-facebook"
+    url: https://www.facebook.com/sobigdata
+  copyright: "2024 SoBigData Master Projects"
+
+
+sass:
+  quiet_deps: true
+
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+ - .sass-cache/
+ - .jekyll-cache/
+ - gemfiles/
+ - Gemfile
+ - Gemfile.lock
+ - node_modules/
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
+ - .idea/
+
+include:
+  - .nojekyll
+livereload: true
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+#github_username:  jekyll
+
+future: true
