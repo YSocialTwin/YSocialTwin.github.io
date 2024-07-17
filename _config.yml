@@ -31,10 +31,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 # Riportare il github del gruppo di progetto e quello del sito web (se differente).
 # Tali informazioni appariranno nel Footer del sito.
 github_repo:
-  - name: "Group 0 - Project repository"
-    url: "https://github.com/sobigdata-master/progettone-template"
-  - name: "Group 0 - Website repository"
-    url: "https://github.com/sobigdata-master/progettone-template"
+  - name: "Y Social Twin"
+    url: "https://github.com/YSocialTwin"
+  #- name: "Group 0 - Website repository"
+  #  url: "https://github.com/sobigdata-master/progettone-template"
 
 
 
@@ -49,40 +49,53 @@ navbar:
     img: "./assets/images/Ysocial_logo.png"
     url: /
   nav:
-    - title: Configuration
+    - title: ⛮ How To
       child:
-        - title: Y Server #Label
+        - title: 🖥️ Y Server #Label
           url: /yserver  #url
-        - title: Y Client #Label
+        - title: 💻 Y Client #Label
           url: /yclient #url
-    - title: Bootstrap
-      url: /bootstrap
-    - title: Jekyll
-      url: /jekyll-ssg
-    - title: Charts
-      url: /charts
-    - title: Folium
-      url: /folium-map
-    - title: Write first #Label
+        - title: 🤖 Local LLMs #Label
+          url: /llms #url
+
+    - title: 🎬 Scenario Design #Label
+      url: /scenario #url
+
+    - title: 🍹 Recipes
       child:
-        - title: markdown cheatsheet #Label
-          url: /markdown  #url
-        - title: kramdown cheatsheet #Label
-          url: /kramdown #url
-    - title: One page demo
-      child:
-        - title: Demo
-          url: /single
-        - title: "Sezione 1" #Label
-          url: /single#sezione-1 #url
-        - title: "Sezione 1.1" #Label
-          url: /single#sezione-11 #url
-        - title: "Sezione 1.2" #Label
-          url: /single#sezione-12 #url
-        - title: "Gallerie" #Label
-          url: /single#galleria #url
-        - title: "Mappa delle stragi" #Label
-          url: /single#mappa-delle-stragi #url
+        - title: 🤯 Political Debate #Label
+          url: /politics  #url
+
+    - title: 👥 About Us #Label
+      url: /about #url
+    #- title: Bootstrap
+    #  url: /bootstrap
+    #- title: Jekyll
+    #  url: /jekyll-ssg
+    #- title: Charts
+    #  url: /charts
+    #- title: Folium
+    #  url: /folium-map
+    #- title: Write first #Label
+    #  child:
+    #    - title: markdown cheatsheet #Label
+    #      url: /markdown  #url
+    #    - title: kramdown cheatsheet #Label
+    #      url: /kramdown #url
+    #- title: One page demo
+    #  child:
+    #    - title: Demo
+    #      url: /single
+    #    - title: "Sezione 1" #Label
+    #      url: /single#sezione-1 #url
+    #    - title: "Sezione 1.1" #Label
+    #      url: /single#sezione-11 #url
+    #    - title: "Sezione 1.2" #Label
+    #      url: /single#sezione-12 #url
+    #    - title: "Gallerie" #Label
+    #      url: /single#galleria #url
+    #    - title: "Mappa delle stragi" #Label
+    #      url: /single#mappa-delle-stragi #url
 
 
 
@@ -121,17 +134,17 @@ collections:
     permalink: /:path
 
 footer:
-  links:
-  - label: "LinkedIn"
-    icon: "fab fa-linkedin"
-    url: https://www.linkedin.com/company/sobigdata
-  - label: "Twitter"
-    icon: "fab fa-twitter"
-    url: https://www.twitter.com/sobigdata
-  - label: "Facebook"
-    icon: "fab fa-facebook"
-    url: https://www.facebook.com/sobigdata
-  copyright: "2024 SoBigData Master Projects"
+  #links:
+  #- label: "LinkedIn"
+  #  icon: "fab fa-linkedin"
+  #  url: https://www.linkedin.com/company/sobigdata
+  #- label: "Twitter"
+  #  icon: "fab fa-twitter"
+  #  url: https://www.twitter.com/sobigdata
+  #- label: "Facebook"
+  #  icon: "fab fa-facebook"
+  #  url: https://www.facebook.com/sobigdata
+  copyright: "2024 YSocial"
 
 
 sass:

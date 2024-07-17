@@ -1,16 +1,16 @@
-- name: Bootstrap
+- name: Y Server
   url:  "assets/images/bootstrap_t.png"
-  description: "Una panoramica di Bootstrap"
-  path: "bootstrap"
-- name: Jekyll
+  description: "Understand the Y Server"
+  path: "yserver"
+- name: Y Client
   url:  "assets/images/jekyll_t.png"
-  description: "Una panoramica di Jekyll"
-  path: "jekyll-ssg"
-- name: Altair Charts
+  description: "How does Y Client work?"
+  path: "yclient"
+- name: Scenario Design
   url:  "assets/images/altair-gallery_t.png"
-  description: "Come esportare grafici con Altair"
-  path: "charts"
-- name: Markdown
-  url:  "assets/images/markdown_t.png"
-  description: "Cheatsheet per Markdown e Kramdown"
-  path: "markdown"
+  description: "Configure your simulation"
+  path: "scenario"
+#- name: Markdown
+#  url:  "assets/images/markdown_t.png"
+#  description: "Cheatsheet per Markdown e Kramdown"
+#  path: "markdown"

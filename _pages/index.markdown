@@ -13,12 +13,23 @@ header_title: "Y Social"
 
 <div class="container py-3">
     <div class="row">
-        <div class="col-md-3 col-md-offset-3">
+        <div class="col-md-2 col-md-offset-3">
         </div>
-        <div class="col-md-6">
-            <hr>
-            <p>Questo template è stato disegnato per realizzare i progettoni del master SoBigData.
-Il template proposto è basato su Bootstrap e Jekyll e include una serie di funzionalità che possono essere utili per la creazione di un sito web.</p>
+        <div class="col-md-8">
+            <h5> What is Y Social? </h5>
+            <p> Y Social is a cutting-edge Digital Twin of a microblogging platform. </p>
+                <p> It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. </p>
+                <p> Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</p>
+            <h5> Why Y Social? </h5>
+            <ul>
+<li><b>Realistic Interactions:</b> Experience true-to-life social media dynamics.</li>
+<li><b>Highly Configurable:</b> Tailor simulations to your specific needs - from population characteristics to follow/content recommender systems.</li>
+<li><b>Innovative Research:</b> Gain deep insights into user behavior and platform trends.</li>
+</ul>
+<hr>
+<div align="center">
+<em>Join us to explore, innovate, and revolutionize social media understanding.</em>
+</div>
             <hr>
         </div>
     </div>
@@ -43,7 +54,7 @@ Il template proposto è basato su Bootstrap e Jekyll e include una serie di funz
     </div>
 </div>
 
-
+<!--
 <div class="container py-3 mb-0 bg-color-full bg-color">
     <div class="row">
         <div class="col-md-3 col-md-offset-3">
@@ -54,3 +65,4 @@ Il template proposto è basato su Bootstrap e Jekyll e include una serie di funz
         </div>
     </div>
 </div>
+-->
