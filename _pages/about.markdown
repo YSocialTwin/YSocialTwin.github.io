@@ -3,12 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title:  "Y Server"
-subtitle: "Server guide and how to"
+title:  "About Us"
+subtitle: "Meet the Y Social Team"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/aboutus.jpg
-header_title: "Y Server"
+header_title: "About Us"
 vega: true
 ---
 

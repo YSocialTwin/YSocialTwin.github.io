@@ -73,6 +73,9 @@ navbar:
         - title: 🤯 Political Debate #Label
           url: /politics  #url
 
+    - title: 📙 Resources #Label
+      url: /data_pub
+
     - title: 👥 About Us #Label
       url: /about #url
     #- title: Bootstrap

@@ -3,12 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title:  "Y Server"
-subtitle: "Server guide and how to"
+title:  "Scenario Design"
+subtitle: "Describe your simulation and let it come to life"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/landscape.png
-header_title: "Y Server"
+header_title: "Scenario Design"
 vega: true
 ---
 

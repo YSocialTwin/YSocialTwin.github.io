@@ -3,12 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title:  "Y Server - Features"
+title:  "Y Server"
 subtitle: "Available Actions, Recommender Systems and Bias"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/server2.jpg
-header_title: "Y Server - Features"
+header_title: "Y Server"
 vega: true
 ---
 
