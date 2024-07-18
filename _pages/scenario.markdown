@@ -92,6 +92,11 @@ The `agents` section contains the parameters that define the agents:
 
 Using such information, the `YClient` will create the agents population (leveraging the `faker` Python library).
 
+**Big Five Personality Traits**: Openness to Experience, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
+They identify a small set of broad dimensions that can be used to categorize human personality.<br> <br>
+`YSocial` binarize each of such variables (high/low) in order to define the agents' profiles.
+{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
+
 The `posts` section contains the parameters that define the posts:
 - `visibility_rounds`: the number of rounds that a post will be visible in the feed of the followers (i.e., the number of rounds that a post will be considered by the recommendation system);
 - `emotions`: a dictionary that specifies the emotions that will be used to annotate agents generated contents (the annotation is performed by a LLM agent reading and evaluating agent generated texts).

@@ -22,25 +22,20 @@ vega: true
 
 [//]: # (Chart Timeline Stragi)
 <br>
-{% capture timeline_stragi %}
-{% include_relative snippets/chart-timeline.md %}
+{% capture activity_trend %}
+{% include_relative snippets/politics/activity_trend.md %}
 {% endcapture %}
 
-{% include one-column.html dimension="small" content=timeline_stragi %}
+{% include one-column.html dimension="small" content=activity_trend %}
 
-[//]: # (Big numbers)
-<div class="bg-color bg-color-full py-3 my-5">
-    {% include one-column.html dimension="small" title="I numeri delle stragi per matrice" %}
-    {% include big-numbers-cards.html data="morti-matrice" number="Morti" description="Matrice" %}
-</div>
 
 [//]: # (Chart Two columns)
 {% capture introduction_images %}
-{% include_relative snippets/gallery-images.md %}
+{% include_relative snippets/politics/gallery-images.md %}
 {% endcapture %}
 
 {% capture section_1_content %}
-    {% include_relative snippets/section-1.md %}
+    {% include_relative snippets/politics/section-1.md %}
 {% endcapture %}
 
 {% include two-columns.html col-one=introduction_images col-two=section_1_content %}

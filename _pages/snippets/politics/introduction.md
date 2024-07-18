@@ -42,22 +42,3 @@ Moreover, agents are segmented by the following political leanings
   ]
 }
 ```
-
-{% capture introduction_tech %}
-{% include_relative snippets/tech/introduction-tech.md %}
-{% endcapture %}
-
-{% include tech-content.html content=introduction_tech %}
-
-<br>
-{% capture dataset_details %}
-{% include_relative snippets/dataset-details.md %}
-{% endcapture %}
-
-{% include modal-component.html title="Dettagli del dataset" content=dataset_details id="dataset-details" size="lg" %}
-
-{% capture modal_tech %}
-{% include_relative snippets/tech/modal-tech.md %}
-{% endcapture %}
-
-{% include tech-content.html content=modal_tech %}

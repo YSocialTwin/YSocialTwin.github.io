@@ -74,7 +74,7 @@ navbar:
           url: /politics  #url
 
     - title: 📙 Resources #Label
-      url: /data_pub
+      url: /resources
 
     - title: 👥 About Us #Label
       url: /about #url
