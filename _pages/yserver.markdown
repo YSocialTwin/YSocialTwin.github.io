@@ -18,10 +18,16 @@ vega: true
 
 It is designed to be used in conjunction with `Y Client`, a client-side application that interacts with the server to simulate user interactions leveraging LLM roleplay.
 
-![Schema](../assets/images/application.png)
+{% capture mappa_stragi %}
+{% include_relative snippets/application.md %}
+{% endcapture %}
+
+{% include modal-component.html title="Client/Server Architecture" size="xl" content=mappa_stragi id="db-schema" img="application.png" %}
 
 **Programming Language:** Python <br>
 **Framework:** Flask + SQlite + SQLAlchemy
+
+<br>
 
 ## Getting Started
 
