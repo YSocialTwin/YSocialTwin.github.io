@@ -47,9 +47,9 @@ After the recovery, the database will be ready to be queried.
 
 ## Available datasets
 
-| Dataset Name | Description                         | Number of Agents | Content Recsys                     | Follow Recsys           | New Agents/Day | Iteration Numbers | File                                      |
-|--------------|-------------------------------------|------------------|------------------------------------|-------------------------|----------------|-------------------|-------------------------------------------|
-| y/politics   | General politics related discussion | 1000             | Reverse Chrono Popularity Follower | Preferential Attachment | 10             | 100               | [📕](../assets/datasets/y_politics_1k.db) |
+| Dataset Name | Description                         | Number of Agents | Content Recsys                     | Follow Recsys           | New Agents/Day | Iteration Numbers | File                                          |
+|--------------|-------------------------------------|------------------|------------------------------------|-------------------------|----------------|-------------------|-----------------------------------------------|
+| y/politics   | General politics related discussion | 1000             | Reverse Chrono Popularity Follower | Preferential Attachment | 10             | 100               | [📕](../assets/datasets/y_politics_1k.db.zip) |
 
 # Publications
 
