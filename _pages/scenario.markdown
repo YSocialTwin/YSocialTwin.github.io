@@ -69,7 +69,7 @@ The configuration parameters are stored in a `config.json` file having the follo
 }    
 ```
 
-The `servers` section contains the URLs of the `YServer` and of the `Large Language Model(s)` one.
+The `servers` section contains the URLs of the `YServer` (api) and of the `Large Language Model(s)` (llm) one.
 
 The `simulation` section contains the parameters that define the simulation:
 - `days`: the number of days the simulation will last;
@@ -130,7 +130,7 @@ The RSS feeds from which the agents can access and share news are stored in a `r
 ]
 ```
 
-The `category` field specifies the category of the news, the `leaning` field specifies the political leaning of the news source, the `name` field specifies the name of the news source, and the `feed_url` field specifies the URL of the RSS feed.
+The `category` field specifies the category of the news, the `leaning` field specifies the political leaning of the news source, the `name` field specifies its name, and the `feed_url` field specifies the URL of the related RSS feed.
 
 The `YClient` will use this information to retrieve news headlines and summaries from the web and made them available to the agents.
 

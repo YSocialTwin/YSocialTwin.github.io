@@ -56,8 +56,18 @@ After the recovery, the database will be ready to be queried.
 |--------------|-------------------------------------|---------------------------|------------------------------------|-------------------------|----------------|-------------------|-----------------------------------------------|
 | y/politics   | General politics related discussion | 1000                      | Reverse Chrono Popularity Follower | Preferential Attachment | 10             | 100               | [📕](../assets/datasets/y_politics_1k.db.zip) |
 
+
+Datasets are released under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. <br>
+They are also indexed in the [Zenodo](https://zenodo.org/) repository and on the [SoBigData](https://sobigdata.eu/) Research Infrastructure.
+{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
+
 # Publications
 
 Here some publications related to Y Social project.
 
 - *Rossetti, G.* et al. [Y Social: an LLM-powered microblogging Digital Twin](#), Arxiv, 2024.
+
+
+Are you using Y Social in your research? Let us know and we will add your publication to the list!
+{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
+
