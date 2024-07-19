@@ -33,14 +33,14 @@ Here's the team:
 </tr>
 <tr>
 <td><img src="../assets/images/andrea_failla.png" style="width: 240px;"></td>
-<td><img src="../assets/images/riccardo_improta.png" style="width: 240px;"></td>
+<td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;"></td>
 <td><img src="../assets/images/virginia_morini.png" style="width: 240px;"></td>
 </tr>
-<tr>
+<!-- <tr>
 <td></td>
-<td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;"></td>
+<td><img src="../assets/images/riccardo_improta.png" style="width: 240px;"></td>
 <td></td>
-</tr>
+</tr> -->
 </table>
 
 
