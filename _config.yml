@@ -65,8 +65,10 @@ navbar:
 
     - title: 🍹 Recipes
       child:
-        - title: 🤯 Political Debate #Label
+        - title: 🤯 y/politics #Label
           url: /politics  #url
+        - title: 🤺 y/olympics  #Label
+          url: /olympics #url
 
     - title: 📙 Resources #Label
       url: /resources

@@ -1,8 +1,3 @@
-{% capture onepage_tech %}
-{% include_relative snippets/tech/onepage-tech.md %}
-{% endcapture %}
-
-{% include tech-content.html content=onepage_tech %}
 
 # Agorà: discussing political issues
 
