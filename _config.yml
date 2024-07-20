@@ -23,9 +23,9 @@ title: "Y Social"
 subtitle: "Where the Digital World Comes to Life"
 email: giulio.rossetti@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Y Social is a cutting-edge Digital Twin of a microblogging platform.
+  It enables realistic social media simulations by integrating Large Language Models (LLMs) agents.
+  Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.
 
 
 # Riportare il github del gruppo di progetto e quello del sito web (se differente).
@@ -35,11 +35,6 @@ github_repo:
     url: "https://github.com/YSocialTwin"
   #- name: "Group 0 - Website repository"
   #  url: "https://github.com/sobigdata-master/progettone-template"
-
-
-
-
-
 
 
 navbar:
@@ -144,7 +139,13 @@ collections:
     permalink: /:path
 
 footer:
-  #links:
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:giulio.rossetti@isti.cnr.it"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/YSocialTwin"
   #- label: "LinkedIn"
   #  icon: "fab fa-linkedin"
   #  url: https://www.linkedin.com/company/sobigdata
