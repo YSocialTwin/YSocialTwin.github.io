@@ -3,7 +3,7 @@
 
 The `y/olympics` scenario describes a social network where users discuss the Paris 2024 Olympics. 
 
-To allows LLM agent to focus on olympics related discussions the topics provided in the [config.json](#) file are the following:
+To allows LLM agent to focus on olympics related discussions the topics provided in the [config.json](../../../assets/recipes/config_olympics.json) file are the following:
 
 ```json
 {"interests": [
@@ -33,7 +33,7 @@ Moreover, agents are segmented to be supporters of the 20 countries with the hig
 }
 ```
 
-Olympics related news are collected accessing the RSS feeds listed in the [rss_feed.json](#) file.
+Olympics related news are collected accessing the RSS feeds listed in the [rss_feed.json](../../../assets/recipes/rss_feeds_olympics.json) file.
 
 Come back in early September to see the results of the simulation.
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}
