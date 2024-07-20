@@ -10,3 +10,7 @@
   url:  "assets/images/landscape.jpg"
   description: "Configure your simulation"
   path: "scenario"
+- name: Resources
+  url:  "assets/images/politics1.jpg"
+  description: "Download pre-run simlations"
+  path: "scenario"

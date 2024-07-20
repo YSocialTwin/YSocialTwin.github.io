@@ -1,4 +1,6 @@
-### Hourly Activity rate
+<div class={% if include.container=='fluid' %}"container-fluid"{% else %}"container"{% endif %}>
+<h3 style="text-align: center"> Hourly Activity Rate </h3>
+</div>
 <br>
 
 ![trend](../assets/images/politics/politics_rate.png)

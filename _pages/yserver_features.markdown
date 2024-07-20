@@ -37,6 +37,8 @@ In an online environment, the way contents are selected deeply affects the discu
 
 For such a reason, `Y` natively integrates several standard recommender systems for content and social interaction suggestion.
 
+![AlgBias](../assets/images/algo.jpg)
+
 ## Content Recommendations
 
 Several of the introduced actions - namely, `/read`, `/comment`, `/reaction`, `/share`, `/reply` - focus on allowing agents to "react" to contents produced by peers.  

@@ -19,6 +19,23 @@ vega: true
 
 {% include one-column.html dimension="small" content=introduction_content %}
 
+[//]: # (Chart Two columns)
+
+<div class={% if include.container=='fluid' %}"container-fluid"{% else %}"container"{% endif %}>
+<h3 style="text-align: center"> Discussion Thread Examples </h3>
+</div>
+
+{% capture introduction_images %}
+{% include_relative snippets/politics/thread_ex1.md %}
+{% endcapture %}
+
+{% capture section_1_content %}
+    {% include_relative snippets/politics/thread_ex2.md %}
+{% endcapture %}
+
+{% include two-columns.html col-one=introduction_images col-two=section_1_content %}
+
+
 
 [//]: # (Chart Timeline Stragi)
 <br>
@@ -30,54 +47,49 @@ vega: true
 
 
 [//]: # (Chart Two columns)
+
+<div class={% if include.container=='fluid' %}"container-fluid"{% else %}"container"{% endif %}>
+<h3 style="text-align: center"> Political Leaning & Age Distribution </h3>
+</div>
+
 {% capture introduction_images %}
-{% include_relative snippets/politics/gallery-images.md %}
+{% include_relative snippets/politics/political_leaning.md %}
 {% endcapture %}
 
 {% capture section_1_content %}
-    {% include_relative snippets/politics/section-1.md %}
+    {% include_relative snippets/politics/age_distribution.md %}
 {% endcapture %}
 
 {% include two-columns.html col-one=introduction_images col-two=section_1_content %}
 
-[//]: # (Cards Gallery)
-<div class="bg-color bg-color-full py-3 my-5" id="galleria">
-    {% include one-column.html dimension="small" title="Gallerie di immagini e chart" %}
-</div>
-{% include img-gallery-cards.html width='23%' datasource=site.data.img-selector url='url' name='name' description='description' %}
+[//]: # (Chart Two columns)
 
-
-[//]: # (Image selector)
-<div class="bg-color-full bg-color py-3 my-5" style="min-height:45vh">
-{% include one-column.html dimension="small" title="Seleziona un'immagine" %}
-{% include img-selector.html dataset="img-selector" button_name="name" url="url" %}
+<div class={% if include.container=='fluid' %}"container-fluid"{% else %}"container"{% endif %}>
+<h3 style="text-align: center"> Generated Content Statistics </h3>
 </div>
 
-[//]: # (Chart selector)
-{% include one-column.html dimension="small" title="Numero di morti per tipo di matrice" %}
-{% include chart-selector.html dimension="small" dataset="chart-selector" %}
-
-
-[//]: # (Gallery explanation)
-{% capture galleries_explanation %}
-{% include_relative snippets/galleries-explanation.md %}
-{% endcapture %}
-{% include one-column.html dimension="small" content=galleries_explanation %}
-<br>
-
-[//]: # (Map with modal)
-<hr>
-{% capture mappa_stragi_intro %}
-{% include_relative snippets/mappa-stragi-intro.md %}
-{% endcapture %}
-{% include one-column.html dimension="small" content=mappa_stragi_intro %}
-<hr>
-
-[//]: # (Video in one column)
-{% capture video_content %}
-{% include snippets/video.html id="UOQEACobAHk" provider="youtube" video_res="hq2" %}
+{% capture introduction_images %}
+{% include_relative snippets/politics/content_left.md %}
 {% endcapture %}
 
-{% include one-column.html dimension="small" title="Presentazione di Paolo Pezzino" content=video_content %}
+{% capture section_1_content %}
+    {% include_relative snippets/politics/content_right.md %}
+{% endcapture %}
 
-{% include code-explanation.html %}
+{% include two-columns.html col-one=introduction_images col-two=section_1_content %}
+
+[//]: # (Chart Two columns)
+
+<div class={% if include.container=='fluid' %}"container-fluid"{% else %}"container"{% endif %}>
+<h3 style="text-align: center"> Viral Contents and Recommender Impact </h3>
+</div>
+
+{% capture introduction_images %}
+{% include_relative snippets/politics/content_left1.md %}
+{% endcapture %}
+
+{% capture section_1_content %}
+    {% include_relative snippets/politics/content_right1.md %}
+{% endcapture %}
+
+{% include two-columns.html col-one=introduction_images col-two=section_1_content %}

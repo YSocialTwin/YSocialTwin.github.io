@@ -14,11 +14,7 @@ vega: true
 
 # Who are we?
 
-We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior. 
-
-YSocial is the result of a joint effort of [ISTI-CNR](), [University of Pisa](), [University of Trento]() and [Université Lyon 1]().
-
-Here's the team:
+We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior.
 
 <table>
 <tr>
@@ -43,6 +39,20 @@ Here's the team:
 </tr> -->
 </table>
 
+`YSocial` is the result of a joint effort of [ISTI-CNR](https://www.isti.cnr.it/en/), [University of Pisa](https://www.unipi.it/), [University of Trento](https://www.unitn.it/) and [Université Lyon 1](https://www.univ-lyon1.fr/).
+
+<table style="align: center; vertical-align: middle;">
+<tr>
+<td colspan="3"> <img src="../assets/images/isti.png" style="width: 600px;">  </td>
+</tr>
+<tr>
+<td><img src="../assets/images/unitn.jpg" style="width: 230px;"> </td>
+<td><img src="../assets/images/unipi.webp" style="width: 230px;"> </td>
+<td><img src="../assets/images/lyon.jpg" style="width: 230px;"> </td>
+</tr>
+</table>
+
+<br>
 
 ## How to Cite
 If you use `YSocial` in your research, please cite the following paper:
