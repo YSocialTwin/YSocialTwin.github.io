@@ -1,5 +1,5 @@
 
-# Paris 2024 seen by 1k agents
+# Paris 2024 seen by 2k+ agents
 
 The `y/olympics` scenario describes a social network where users discuss the Paris 2024 Olympics. 
 
