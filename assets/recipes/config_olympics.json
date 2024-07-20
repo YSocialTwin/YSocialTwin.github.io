@@ -1,6 +1,7 @@
 {
   "servers": {
     "llm": "http://127.0.0.1:11434/v1",
+    "llm_api_key": "NULL",
     "api": "http://127.0.0.1:5050/"
   },
   "simulation": {
@@ -75,6 +76,7 @@
       "min": 1,
       "max": 3
     },
+    "probability_of_daily_follow": 0.1,
     "interests": [
         "Archery",
         "Artistic Gymnastics",
