@@ -31,6 +31,8 @@ Check out our [Recipes](https://github.com/YSocialTwin/Scenario_recipes) reposit
 Download the related [datasets](data_pub) and have a look to the descriptive analysis we performed!
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}
 
+
+![agents](assets/images/agents.jpg)
 <br>
 
 ### Configuration Parameters

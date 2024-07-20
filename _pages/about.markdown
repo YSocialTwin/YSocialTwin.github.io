@@ -16,21 +16,56 @@ vega: true
 
 We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior.
 
-<table>
+<table style="text-align: center">
 <tr>
-<td><img src="../assets/images/giulio_rossetti.png" style="width: 240px;"></td>
-<td><img src="../assets/images/massimo_stella.png" style="width: 240px;"></td>
-<td><img src="../assets/images/remy_cazabet.png" style="width: 240px;"></td>
+<td><img src="../assets/images/giulio_rossetti.png" style="width: 240px;">
+Senior Researcher<br>
+Network Science<br>
+<a href="https://twitter.com/GiulioRossetti">@GiulioRossetti</a>
+</td>
+<td><img src="../assets/images/massimo_stella.png" style="width: 240px;">
+Associate Prof.<br>
+Cognitive NetSci<br>
+<a href="https://twitter.com/MassimoSt">@MassimoSt</a>
+</td>
+<td><img src="../assets/images/remy_cazabet.png" style="width: 240px;">
+Associate Prof.<br>
+Network Science<br>
+<a href="https://twitter.com/Yquetzal">@Yquetzal</a></td>
 </tr>
 <tr>
-<td><img src="../assets/images/katherine_abramski.png" style="width: 240px;"></td>
-<td><img src="../assets/images/erica_cau.png" style="width: 240px;"></td>
-<td><img src="../assets/images/salvatore_citraro.png" style="width: 240px;"></td>
+<td><img src="../assets/images/katherine_abramski.png" style="width: 240px;">
+PhD Student in AI<br>
+LLMs & Cognition<br>
+<a href="https://twitter.com/katie_abramski">@katie_abramski</a>
+</td>
+<td><img src="../assets/images/erica_cau.png" style="width: 240px;">
+PhD Student in AI<br>
+LLMs & Opinion Dynamics<br>
+<a href="https://twitter.com/CauErica">@CauErica</a>
+</td>
+<td><img src="../assets/images/salvatore_citraro.png" style="width: 240px;">
+PostDoc<br>
+Feature-rich Modeling<br>
+<a href="https://twitter.com/dsalvaz">@dsalvaz</a>
+</td>
 </tr>
 <tr>
-<td><img src="../assets/images/andrea_failla.png" style="width: 240px;"></td>
-<td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;"></td>
-<td><img src="../assets/images/virginia_morini.png" style="width: 240px;"></td>
+<td><img src="../assets/images/andrea_failla.png" style="width: 240px;">
+PhD Student in AI<br>
+Higher-order Modeling<br>
+<a href="https://twitter.com/AndreaFailla4">@AndreaFailla4</a>
+</td>
+<td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;">
+PostDoc<br>
+Opinion Modeling<br>
+<a href="https://twitter.com/VPansanella">@VPansanella</a>
+</td>
+<td><img src="../assets/images/virginia_morini.png" style="width: 240px;">
+PhD Student in AI<br>
+Computational Social Science<br>
+<a href="https://twitter.com/Virgiiim">@Virgiiim</a>
+</td>
 </tr>
 <!-- <tr>
 <td></td>
