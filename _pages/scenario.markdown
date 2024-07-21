@@ -59,6 +59,8 @@ The configuration parameters are stored in a `config.json` file having the follo
     "reading_from_follower_ratio": 0.6,
     "political_leanings": ["Democrat", "Republican", ...],
     "age": {"min": 18, "max": 80},
+    "round_actions": { "min": 1,"max": 3},
+    "nationalities": ["Italian", "French", "German", ...],
     "llm_agents": ["llama3", "mistral"],
     "n_interests": {"min": 4, "max": 10},
     "interests": [...],
@@ -87,6 +89,8 @@ The `agents` section contains the parameters that define the agents:
 - `reading_from_follower_ratio`: the ratio of posts that the recommended system will suggest that need to be produced by the agent's followers;
 - `political_leanings`: the political leanings of the agents;
 - `age`: the age range of the agents;
+- `round_actions`: the number of actions that an agent can perform in a round;
+- `nationalities`: the nationalities of the agents (they will impact the locales used to generate synthetic data);
 - `llm_agents`: a list of Large Language Models that the YClient can assign to the agents;
 - `n_interests`: the number of interests that the agents can have;
 - `interests`: the topics among witch each agent can sample (at creation time) in order to define their interests;
