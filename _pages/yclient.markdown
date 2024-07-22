@@ -104,7 +104,7 @@ In this latter case, the `agents.json` file will be used to log the agents on th
 
 ## YClient Simulation Loop
 
-The following is a simplified (pseudocode) version of the simulation loop implemented by `plain_y_client.py`:
+The following is a simplified and non-comprehensive pseudocode-version of the simulation loop implemented by `plain_y_client.py`:
 
 ```python
 # Input: config: Simulation configuration Files
@@ -126,11 +126,11 @@ for day in range(config.simulation.days):
         for agent in active:
             # evaluate agent’s actions (once per activity slot) 
             agent.select_action(["NEWS", "POST","COMMENT", 
-                                 "REPLY", "SHARE", "READ", "NONE"])
+                                 "REPLY", "SHARE", "READ", "SEARCH", "NONE"])
 
     for agent in agents:
-        # evaluate following and hashtag search (once per day) 
-        agent.select_action(["FOLLOW", "SEARCH", "NONE"])
+        # evaluate following (once per day) 
+        agent.select_action(["FOLLOW", "NONE"])
     #increase the agent population (if specified in config) 
     agents.add_new_agents()
 ```
