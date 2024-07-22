@@ -46,6 +46,8 @@ The configuration parameters are stored in a `config.json` file having the follo
     "api": "http://127.0.0.1:5000/"
   },
   "simulation": {
+    "name": "simulation_name",
+    "client": "YClientBase",
     "days": 365,
     "slots": 24,
     "starting_agents": 1000,
@@ -76,6 +78,8 @@ The configuration parameters are stored in a `config.json` file having the follo
 The `servers` section contains the URLs of the `YServer` (api) and of the `Large Language Model(s)` (llm) one.
 
 The `simulation` section contains the parameters that define the simulation:
+- `name`: the name of the simulation;
+- `client`: the name of the client implementation that will be used to run the simulation, default is `YClientBase`;
 - `days`: the number of days the simulation will last;
 - `slots`: the number of slots in a day;
 - `starting_agents`: the number of agents that will be created at the beginning of the simulation by the `YClient`;
@@ -139,4 +143,7 @@ The RSS feeds from which the agents can access and share news are stored in a `r
 The `category` field specifies the category of the news, the `leaning` field specifies the political leaning of the news source, the `name` field specifies its name, and the `feed_url` field specifies the URL of the related RSS feed.
 
 The `YClient` will use this information to retrieve news headlines and summaries from the web and made them available to the agents.
+
+To automatically generate the `rss_feeds.json` from a list of keywords (using Bing search), use the `populate_news_feeds.py` script available in the `YClient` repository.
+{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
 

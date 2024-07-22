@@ -54,14 +54,13 @@ Remember to start the [YServer](yserver) before running the client and verify th
 
 The REST API exposed by the server can be used to implement several variants of the client.
 
-`YClient` exposes a simple commandline client that can be instantiated using the following command:
+`y_client.py` exposes a simple commandline client that can be instantiated using the following command:
 
 ```bash
-cd YClient/clients
-python plain_y_client.py [flags] [arguments]
+python y_client.py [flags] [arguments]
 ```
 
-Several parameters can be specified while launching `plain_y_client.py`:
+Several parameters can be specified while launching `y_client.py`:
 
 Use the flags and their respective arguments as described below:
 
@@ -76,24 +75,24 @@ Use the flags and their respective arguments as described below:
 | **Initial Social Graph**        | `-g`  | `None`                             | Name of the graph file (CSV format, number of nodes equal to the starting agents - ids as consecutive integers starting from 0) to be used for the simulation.                  |
 | **Content Recommender System**  | `-x`  | `ReverseChronoFollowersPopularity` | Name of the content recommender system to be used. Options: `Random`, `ReverseChrono`, `ReverseChronoPopularity`, `ReverseChronoFollowers`, `ReverseChronoFollowersPopularity`. |
 | **Follower Recommender System** | `-y`  | `PreferentialAttachment`           | Name of the follower recommender system to be used. Options: `Random`, `PreferentialAttachment`, `AdamicAdar`, `Jaccard`, `CommonNeighbors`.                                    |
-| **Output File**                 | `-w`  | `agents.json`                      | Name of the output file storing the generated agents.                                                                                                                           |
 
 <br>
+
+The simulation results (generated agents and sqlite3 database) will be stored in the `experiment` directory.
+{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
 
 ## Examples
 
 To start a fresh simulation with a specific [scenario configuration](scenario) (as described by the `config.json` and `rss_feed.json` files), use the following command:
 
 ```bash
-cd YClient/clients
-python plain_y_client.py -c config.json -f rss_feeds.json -o your_name -r True -n True -x ReverseChronoFollowersPopularity -y PreferentialAttachment -w agents.json
+python y_client.py -c config.json -f rss_feeds.json -o your_name -r True -n True -x ReverseChronoFollowersPopularity -y PreferentialAttachment 
 ```
 
 To resume an existing simulation, use the following command:
 
 ```bash
-cd YClient/clients
-python plain_y_client.py -a agents.json -o your_name -w agents.json
+python y_client.py -a agents.json -o your_name 
 ```
 
 In this latter case, the `agents.json` file will be used to log the agents on the `YServer` and resume the simulation from the last available server simulation round.
@@ -136,5 +135,6 @@ for day in range(config.simulation.days):
     agents.add_new_agents()
 ```
 
-More complicated behaviors (allowing for more finegrained agents configurations) can be implemented by extending the `YClient`. Alternative implementation will be released in the future.
+More complicated behaviors (allowing for more finegrained agents configurations) can be implemented by extending the `y_client.clients.YClientBase` class. 
+Alternative implementation will be released in the future.
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}
