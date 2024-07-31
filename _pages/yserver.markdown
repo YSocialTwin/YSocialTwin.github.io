@@ -22,7 +22,7 @@ It is designed to be used in conjunction with `Y Client`, a client-side applicat
 {% include_relative snippets/application.md %}
 {% endcapture %}
 
-{% include modal-component.html title="Client/Server Architecture" size="xl" content=mappa_stragi id="db-schema" img="../assets/images/application.png" %}
+{% include modal-component.html title="Client/Server Architecture" size="xl" content=mappa_stragi id="db-schema" img="application.png" %}
 
 **Programming Language:** Python <br>
 **Framework:** Flask + SQlite + SQLAlchemy
