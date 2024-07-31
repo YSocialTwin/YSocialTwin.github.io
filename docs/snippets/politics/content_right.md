@@ -1,5 +1,5 @@
 
-![Contents]({{site.baseurl}}/assets/images/politics/contents.png)
+![Contents](../assets/images/politics/contents.png)
 
-![Hashgags]({{site.baseurl}}/assets/images/politics/hashtags.png)
+![Hashgags](../assets/images/images/politics/hashtags.png)
 

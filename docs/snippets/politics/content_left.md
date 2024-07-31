@@ -1,4 +1,4 @@
 
-![Reactions]({{site.baseurl}}/assets/images/politics/reactions.png)
+![Reactions](../assets/images/politics/reactions.png)
 
-![Emotions]({{site.baseurl}}/assets/images/politics/emotions.png)
+![Emotions](../assets/images/politics/emotions.png)

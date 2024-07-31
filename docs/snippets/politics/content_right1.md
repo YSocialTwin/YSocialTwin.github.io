@@ -1,3 +1,3 @@
 
-![Recs]({{site.baseurl}}/assets/images/politics/recs.png)
+![Recs](../assets/images/politics/recs.png)
 

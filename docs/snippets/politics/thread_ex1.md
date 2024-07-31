@@ -1,5 +1,5 @@
 
-![Thread]({{site.baseurl}}/assets/images/politics/thread.png)
+![Thread](../assets/images/images/politics/thread.png)
 
 Examples of generated discussion threads <br>
 (visual mockups generated with [Tweetgen](https://www.tweetgen.com/).

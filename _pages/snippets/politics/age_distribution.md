@@ -1,2 +1,2 @@
 
-![Age]({{site.baseurl}}/assets/images/politics/age.png)
+![Age](../assets/images/politics/age.png)

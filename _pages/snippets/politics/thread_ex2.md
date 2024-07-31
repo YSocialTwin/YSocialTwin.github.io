@@ -1,3 +1,3 @@
 
-![news]({{site.baseurl}}/assets/images/politics/news_thread.png)
+![news](../assets/images/politics/news_thread.png)
 

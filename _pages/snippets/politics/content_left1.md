@@ -1,2 +1,2 @@
 
-![Threads]({{site.baseurl}}/assets/images/politics/threads.png)
+![Threads](../assets/images/politics/threads.png)
