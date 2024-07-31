@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 	<channel>
-		<title>Progettone Template | un template per i progetti del master SoBigData</title>
+		<title>Y Social | Where the Digital World Comes to Life</title>
 		<generator>(c) Chulapa Jekyll Theme RSS generator</generator>
-		<link>https://danielefadda.github.io/sbd-master-template</link>
-		<description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+		<link>https://ysocialtwin.github.io/</link>
+		<description>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</description>
 		<language>en-US</language>
 		<copyright>(c) 2024, </copyright>	
-		<pubDate>Thu, 11 Jul 2024 15:46:13 +0200</pubDate>
-		<lastBuildDate>Thu, 11 Jul 2024 15:46:13 +0200</lastBuildDate>
+		<pubDate>Wed, 31 Jul 2024 15:03:37 +0200</pubDate>
+		<lastBuildDate>Wed, 31 Jul 2024 15:03:37 +0200</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
-		<atom:link href="https://danielefadda.github.io/sbd-master-template/rss.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://ysocialtwin.github.io/rss.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<title>Progettone Template | un template per i progetti del master SoBigData</title>
+			<title>Y Social | Where the Digital World Comes to Life</title>
 			<url></url>
-			<link>https://danielefadda.github.io/sbd-master-template</link>
-			<description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+			<link>https://ysocialtwin.github.io/</link>
+			<description>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</description>
 		</image></channel>
 </rss>
