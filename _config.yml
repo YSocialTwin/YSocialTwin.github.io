@@ -73,6 +73,9 @@ navbar:
     - title: 📙 Resources #Label
       url: /resources
 
+    - title: 📚 Blog #Label
+      url: /blog
+
     - title: 👥 About Us #Label
       url: /about #url
     #- title: Bootstrap
@@ -135,6 +138,22 @@ theme: chulapa-jekyll
 plugins:
   - jekyll-feed
 
+  #- jekyll-archives
+  #- jekyll-email-protect
+  #- jekyll-get-json
+  #- jekyll-imagemagick
+  #- jekyll-jupyter-notebook
+  #- jekyll-link-attributes
+  #- jekyll-minifier
+  - jekyll-paginate
+  #- jekyll-regex-replace
+  #- jekyll/scholar
+  #- jekyll-sitemap
+  #- jekyll-tabs
+  #- jekyll-toc
+  #- jekyll-twitter-plugin
+  #- jemoji
+
 collections:
   pages:
     output: true
@@ -189,3 +208,31 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #github_username:  jekyll
 
 future: true
+
+
+# -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+
+blog_name: Blog # blog_name will be displayed in your blog page
+blog_nav_title:  # your blog must have a title for it to be displayed in the nav bar
+blog_description: Y Social Blog # blog_description will be displayed in your blog page
+permalink: /blog/:year/:title/
+
+# Pagination
+pagination:
+  enabled: true
+
+paginate: 1
+paginate_path: "/blog/page:num/"
+
+related_blog_posts:
+  enabled: false
+  max_related: 5
+
+#paginate_path: "/blog/page:num/"
+
+
+
+news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+news_limit: 5 # leave blank to include all the news in the `_news` folder

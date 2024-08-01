@@ -136,3 +136,28 @@ iframe {
 .tech-wrench .fa-wrench:hover {
   transform: scale(1, 1) !important;
 }
+
+/**
+ * Pagination navbar
+ */
+
+
+.pagination {
+  li {
+    a, div {
+      min-width: 41px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    div {
+      display: block;
+      padding: 1em * .25;
+      border: 1px solid transparent;
+
+      &.pager-edge {
+        color: white;
+        border: 1px dashed;
+      }
+    }
+  }
+}

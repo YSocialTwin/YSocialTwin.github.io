@@ -118,4 +118,22 @@ iframe {
   transform: scale(1, 1) !important;
 }
 
+/**
+ * Pagination navbar
+ */
+.pagination li a, .pagination li div {
+  min-width: 41px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pagination li div {
+  display: block;
+  padding: 0.25em;
+  border: 1px solid transparent;
+}
+.pagination li div.pager-edge {
+  color: white;
+  border: 1px dashed;
+}
+
 /*# sourceMappingURL=custom.css.map */
