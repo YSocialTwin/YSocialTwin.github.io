@@ -99,6 +99,7 @@ If you use `YSocial` in your research, please cite the following paper:
   Abramski, Katherine and Cau, Erica and Citraro, Salvatore and 
   Failla, Andrea and Improta, Riccardo and Morini, Virginia and 
   Pansanella, Virginia},
+  journal={arXiv preprint arXiv:2408.00818},
   year={2024}
 }
 ```

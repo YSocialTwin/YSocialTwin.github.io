@@ -1,24 +1,3 @@
-# SoBigData Master - Progettone Website Template
-
-Per sviluppare il sito web del Progettone®, utilizzeremo un Generatore di Siti Statici (SSG), che consente di creare siti web rapidi da caricare senza la necessità di complessi sistemi backend o database.
-
-In particolare, useremo uno dei SSG più diffusi, **Jekyll**.
-
-
-# Per clonare questo tema in un proprio repository
-
-Andare al seguente link:
-
-```bash
-https://github.com/new/import
-```
-
-e inserire il link del repository da clonare:
-
-```bash
-https://github.com/danielefadda/sbd-master-template.git
-```
-
 Nella cartella appena clonata eseguire: 
 
 ```bash

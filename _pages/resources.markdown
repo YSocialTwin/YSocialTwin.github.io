@@ -67,7 +67,7 @@ They are also indexed in the [Zenodo](https://zenodo.org/) repository and on the
 
 Here some publications related to Y Social project.
 
-- *Rossetti, G.* et al. [Y Social: an LLM-powered Social Media Digital Twin](#), Arxiv, 2024.
+- *Rossetti, G.* et al. [Y Social: an LLM-powered Social Media Digital Twin](https://arxiv.org/abs/2408.00818), arXiv:2408.00818, 2024.
 
 
 Are you using Y Social in your research? <br>
