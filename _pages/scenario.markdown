@@ -53,6 +53,16 @@ The configuration parameters are stored in a `config.json` file having the follo
     "starting_agents": 1000,
     "new_agents_per_iteration": 10
     "hourly_activity": {...},
+    "actions_likelihood": {
+      "post": 0.2,
+      "comment": 0.3,
+      "read": 0.1,
+      "share": 0.1,
+      "reply": 0.1,
+      "search": 0.05,
+      "news": 0.1,
+      "cast": 0.05
+    }
   },
   "agents": {
     "education_levels": ["high school", "bachelor", "master", "phd"],
@@ -66,7 +76,8 @@ The configuration parameters are stored in a `config.json` file having the follo
     "llm_agents": ["llama3", "mistral"],
     "n_interests": {"min": 4, "max": 10},
     "interests": [...],
-    "big_five": {...}
+    "big_five": {...},
+    "attention_window": 336
   },
   "posts": {
     "visibility_rounds": 36,
@@ -85,8 +96,9 @@ The `simulation` section contains the parameters that define the simulation:
 - `starting_agents`: the number of agents that will be created at the beginning of the simulation by the `YClient`;
 - `new_agents_per_iteration`: the number of agents that will be created during each day of the simulation;
 - `hourly_activity`: a dictionary that specifies the hourly activity of the agents.
+- `actions_likelihood`: a dictionary that specifies the likelihood of each action that an agent can select in a round. During each agent-iteration, the system will sample from this distribution to identify the set of candidate actions the agent will be asked to choose from. Setting individual action likelihood to 0 will prevent the agent from performing that action.
 
-The `agents` section contains the parameters that define the agents:
+The `agents` section contains the parameters that will be used to generate the agents profiles:
 - `education_levels`: the education levels of the agents;
 - `languages`: the languages spoken by the agents;
 - `max_length_thread_reading`: the maximum number of posts of a given threads that an agent can read to build a context before commenting;
@@ -98,7 +110,8 @@ The `agents` section contains the parameters that define the agents:
 - `llm_agents`: a list of Large Language Models that the YClient can assign to the agents;
 - `n_interests`: the number of interests that the agents can have;
 - `interests`: the topics among witch each agent can sample (at creation time) in order to define their interests;
-- `big_five`: a dictionary that specifies the Big Five personality traits of the agents (which will be sampled at creation time).
+- `big_five`: a dictionary that specifies the Big Five personality traits of the agents (which will be sampled at creation time);
+- `attention_window`: the posting/commenting/reacting history (in terms of rounds) the system will use to dynamically estimate the agent's topics of interests.
 
 Using such information, the `YClient` will create the agents population (leveraging the `faker` Python library).
 
