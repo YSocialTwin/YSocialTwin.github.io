@@ -49,7 +49,7 @@ then move to the server main directory and install its dependencies using
     
 ```bash
 cd YServer
-pip install requirement_server.txt
+pip install requirements_server.txt
 ```
 
 #### Run the server
