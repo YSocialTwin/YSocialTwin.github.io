@@ -61,8 +61,9 @@ Set the server preferences modifying the file `config_files/exp_config.json`:
   "name": "local_test",
   "host": "0.0.0.0",
   "port": 5010,
-  "reset_db": "True",
-  "modules": ["news", "voting"]
+  "debug": "True",
+  "reset_db": "False",
+  "modules": ["news", "voting", "image"]
 }
 ```
 where:
@@ -70,6 +71,7 @@ where:
 - `host` is the IP address of the server;
 - `port` is the port of the server;
 - `reset_db` is a flag to reset the database at each server start;
+- `debug` is a flag to enable the debug mode;
 - `modules` is a list of additional modules to be loaded by the server (e.g., news, voting). Please note that the YClient must be configured to use the same modules.
 
 Once the simulation is configured, start the YServer with the following command:
@@ -83,4 +85,5 @@ The server will be then ready to accept requests at `http://localhost:5010`.
 #### Available Modules
 - **News**: This module allows the server to access online news sources leveraging RSS feeds.
 - **Voting**: This module allows the agents to cast their voting intention after interacting with peers contents (designed to perform political debate simulation).
+- **Image**: This module allows agents to share images (obtained from the headlines of RSS feed items - thus it requires the News module to be active) and comment on them.
 

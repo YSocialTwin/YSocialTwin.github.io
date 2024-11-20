@@ -1,4 +1,4 @@
----
+from distutils.command.config import config---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
@@ -107,18 +107,21 @@ Remember to modify the  `config.json` file to specify the LLM server address, po
 
 ## YClient Simulation Loop
 
-The following is a simplified and non-comprehensive pseudocode-version of the simulation loop implemented by `plain_y_client.py`:
+The following is a simplified and non-comprehensive pseudocode-version of the simulation loop implemented by `y_client/clients/client_base.py`:
 
 ```python
 # Input: config: Simulation configuration Files
 # Input: feeds: RSS feeds
 
 # configuring agents and servers 
-agents = create_agents(config, feeds)
+agents = create_agents(config)
+pages = create_pages(config, feeds)  # see scenario documentation
+agents = agents + pages
+
 y_server = connect(config.servers.api)
 
-# simulation loop 
-for day in range(config.simulation.days):
+ for day in range(config.simulation.days):
+    
     for slot in range(config.simulation.slots):
         #synchronize with the y_server clock 
         h = y_server.get_current_slot()
@@ -126,18 +129,27 @@ for day in range(config.simulation.days):
         # identify the active agents for the current slot 
         expected_active = int(len(agents) * config.simulation.hourly_activity[h])
         active = random.sample(agents, expected_active)
+        
+        # available actions
+        acts = [a for a, v in config.simulation.actions_likelihood.items() if v > 0]
+        
         for agent in active:
-            # evaluate agent’s actions (once per activity slot) 
-            agent.select_action(["NEWS", "POST","COMMENT", 
-                                 "REPLY", "SHARE", "READ", "SEARCH", "NONE"])
+            for _ in round_actions:
+                # evaluate agent’s actions (once per activity slot) 
+                agent.select_action(acts)
+                
+                # reply to received mentions
+                agent.reply_mentions()
 
-    for agent in agents:
-        # evaluate following (once per day) 
-        agent.select_action(["FOLLOW", "NONE"])
-    #increase the agent population (if specified in config) 
+    # evaluate following (once per day) 
+    evaluate_following(active)
+    
+    # increase the agent population 
     agents.add_new_agents()
+    
+    # evaluate churn
+    agents.churn()
 ```
 
-More complicated behaviors (allowing for more finegrained agents configurations) can be implemented by extending the `y_client.clients.YClientBase` class. 
-Alternative implementation will be released in the future.
+More complicated behaviors (allowing for more finegrained agents configurations) can be implemented by extending the `y_client.clients.YClientBase` class (see as an example `y_client.clients.YClientWithPages`).
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}

@@ -67,8 +67,8 @@ navbar:
       child:
         - title: 🤯 y/politics #Label
           url: /politics  #url
-        - title: 🤺 y/olympics  #Label
-          url: /olympics #url
+        #- title: 🤺 y/olympics  #Label
+        #  url: /olympics #url
 
     - title: 📙 Resources #Label
       url: /resources
