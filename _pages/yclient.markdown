@@ -33,14 +33,19 @@ Assuming you have [Anaconda](https://www.anaconda.com/) installed, you can creat
 conda create --name Y python=3.11
 conda activate Y
 ```
+Download the latest official release:
 
-To install and execute the client clone its repository to your local machine  
+| Version | Codename  | Release Date |                                                                           Download                                                                            |
+|:-------:|:---------:|:------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| v1.0.0  |  `Hoid`   |  2024-11-21  | [tar.gz](https://github.com/YSocialTwin/YClient/archive/refs/tags/v1.0.0.tar.gz) - [zip](https://github.com/YSocialTwin/YClient/archive/refs/tags/v1.0.0.zip) |
+
+Alternatively, clone its repository to your local machine  
 ```bash
 git clone https://github.com/YSocialTwin/YClient.git
 ```
 
-then move to the client main directory and install its dependencies using 
-    
+Once obtained the `Y Client` (and decompressed it whenever needed), open a terminal, move to its main directory and install its dependencies using 
+
 ```bash
 cd YClient
 pip install requirement_client.txt
