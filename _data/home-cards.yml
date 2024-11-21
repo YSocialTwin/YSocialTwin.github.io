@@ -13,4 +13,4 @@
 - name: Resources
   url:  "assets/images/politics1.jpg"
   description: "Download pre-run simlations"
-  path: "scenario"
+  path: "politics"
