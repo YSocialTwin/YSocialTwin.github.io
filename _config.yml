@@ -224,13 +224,13 @@ pagination:
   enabled: true
 
 paginate: 2
+paginate_path: "/blog/page:num/"
 #paginate_path: "/blog/"
 
 related_blog_posts:
   enabled: false
   max_related: 5
 
-paginate_path: "/blog/page:num/"
 
 
 
