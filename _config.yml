@@ -223,7 +223,7 @@ permalink: /blog/:year/:title/
 pagination:
   enabled: true
 
-paginate: 2
+paginate: 1
 paginate_path: "/blog/page:num/"
 #paginate_path: "/blog/"
 
