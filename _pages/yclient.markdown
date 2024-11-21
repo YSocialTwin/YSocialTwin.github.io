@@ -114,7 +114,7 @@ Remember to modify the  `config.json` file to specify the LLM server address, po
 
 The following is a simplified and non-comprehensive pseudocode-version of the simulation loop implemented by `y_client/clients/client_base.py`:
 
-```python
+```bash
 # Input: config: Simulation configuration Files
 # Input: feeds: RSS feeds
 

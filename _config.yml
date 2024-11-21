@@ -49,7 +49,7 @@ navbar:
         - title: 🖥️ Y Server #Label
           url: /yserver  #url
         - title: 💻 Y Client #Label
-          url: /yclient #url
+          url: /yclient
         - title: 🤖 Local LLMs #Label
           url: /llms #url
 
