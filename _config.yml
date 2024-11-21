@@ -224,7 +224,7 @@ pagination:
   enabled: true
 
 paginate: 1
-paginate_path: "/blog/page:num/"
+paginate_path: "/blog/"
 
 related_blog_posts:
   enabled: false
