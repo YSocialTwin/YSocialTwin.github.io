@@ -44,29 +44,27 @@ navbar:
     img: "./assets/images/Ysocial_logo.png"
     url: /
   nav:
-    - title: ⛮ How To
+    - title: ⛮ Getting Started
       child:
-        - title: 🖥️ Y Server #Label
-          url: /yserver  #url
-        - title: 💻 Y Client #Label
-          url: /yclient
-        - title: 🤖 Local LLMs #Label
-          url: /llms #url
+        - title: The easy way... #Label
+          url: /ysocial  #url
+        - title: ... the hard way!
+          url: /hard_way
+
 
     - title: 🧙‍Behind the curtains
       child:
-        - title: 🎰 Y Server - Actions and Bias #Label
-          url: /yserver_features  #url
-        - title: 🎭 Y Client - LLM Agents #Label
-          url: /yclient_agents #url
+        - title: 🎰 Experiments #Label
+          url: /experiments  #url
+        - title: 🎭 LLM Agents #Label
+          url: /agents #url
+      #  - title: 🎬 Scenario Design #Label
+      #    url: /scenario #url
 
-    - title: 🎬 Scenario Design #Label
-      url: /scenario #url
-
-    - title: 🍹 Recipes
-      child:
-        - title: 🤯 y/politics #Label
-          url: /politics  #url
+   # - title: 🍹 Recipes
+   #   child:
+   #     - title: 🤯 y/politics #Label
+   #       url: /politics  #url
         #- title: 🤺 y/olympics  #Label
         #  url: /olympics #url
 

@@ -1,16 +1,16 @@
-- name: Y Server
-  url:  "assets/images/server1.jpg"
-  description: "Understand the Y Server"
-  path: "yserver"
-- name: Y Client
-  url:  "assets/images/laptop.jpg"
-  description: "How does Y Client work?"
-  path: "yclient"
-- name: Scenario Design
+- name: Getting Started
   url:  "assets/images/landscape.jpg"
-  description: "Configure your simulation"
-  path: "scenario"
+  description: "Install Y Social"
+  path: "ysocial"
+- name: Experiments
+  url:  "assets/images/header3.jpg"
+  description: "Behind the curtains"
+  path: "experiments"
 - name: Resources
-  url:  "assets/images/politics1.jpg"
-  description: "Download pre-run simlations"
-  path: "politics"
+  url:  "assets/images/server1.jpg"
+  description: "Datasets and more!"
+  path: "resources"
+- name: Blog
+  url:  "assets/images/blog.jpg"
+  description: "News from the Agents"
+  path: "blog"

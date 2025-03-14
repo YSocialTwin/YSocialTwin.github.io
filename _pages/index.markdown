@@ -21,7 +21,32 @@ header_title: "Y Social"
             <p> Y Social is a cutting-edge Digital Twin of a microblogging platform. </p>
                 <p> It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. </p>
                 <p> Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</p>
-             <br>
+
+            <div class="custom-carousel">
+  <div class="carousel-container">
+    <div class="carousel-item active">
+      <img src="../assets/images/web/ysocial1.png" alt="Slide 1" >
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/web/ysocial_timeline.png" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/images/web/ysocial_profile.png" alt="Slide 2">
+    </div>
+ <div class="carousel-item">
+      <img src="../assets/images/web/admin_dash.png" alt="Slide 3">
+    </div>
+ <div class="carousel-item">
+      <img src="../assets/images/web/admin_exp.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/web/admin_page.png" alt="Slide 3">
+    </div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
             <h2> Why Y Social? </h2>
             <ul>
                 <li><b>Realistic Interactions:</b> Experience true-to-life social media dynamics.</li>
@@ -62,6 +87,30 @@ header_title: "Y Social"
         </div>
     </div>
 </div>
+
+
+<script>
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalItems; 
+  updateCarousel();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+  updateCarousel();
+});
+
+function updateCarousel() {
+  items.forEach(item => item.classList.remove('active'));
+
+  items[currentIndex].classList.add('active');
+}
+
+</script>
 
 <!--
 <div class="container py-3 mb-0 bg-color-full bg-color">

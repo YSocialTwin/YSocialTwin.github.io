@@ -3,16 +3,25 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title:  "Y Server"
-subtitle: "Available Actions, Recommender Systems and Bias"
+title:  "Experiments"
+subtitle: "Available Actions, Recommender Systems and more!"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/server2.jpg
-header_title: "Y Server"
+header_title: "Experiments"
 vega: true
 ---
 
-# Available Actions
+`Y Social` simulations bring online dynamics to life by immersing Large Language Model (LLM) agents in rich, evolving conversations. 
+
+These agents don’t just exist — they act, posting, commenting, and reacting in ways that mirror real-world social behavior. 
+
+Let's see a few of the features that make Y Social simulations so engaging!
+
+<details open>
+<summary><strong>Agents' Available Actions</strong></summary>
+
+{% capture y_client_content %}
 
 To properly describe a microblogging digital twin, the first thing to specify is the primitives that the agents can use to describe their social actions.
 
@@ -31,7 +40,15 @@ In particular, we defined the following REST endpoints to identify agents' actio
 
 These are only a few of the actions implemented by the `Y Server`.
 
-# Introducing Algorithmic Bias
+{% endcapture %}
+{{ y_client_content | markdownify }}
+
+</details>
+
+<details>
+<summary><strong>Introducing Algorithmic Bias</strong></summary>
+
+{% capture y_client_content %}
 
 In an online environment, the way contents are selected deeply affects the discussions that will take place on the platform, both in terms of their length and their likelihood of becoming "viral".
 
@@ -39,7 +56,7 @@ For such a reason, `Y` natively integrates several standard recommender systems 
 
 ![AlgBias](../assets/images/algo.jpg)
 
-## Content Recommendations
+#### Content Recommendations
 
 Several of the introduced actions - namely, `/read`, `/comment`, `/reaction`, `/share`, `/reply` - focus on allowing agents to "react" to contents produced by peers.  
 
@@ -55,7 +72,7 @@ Each content recommender system is parametric on the number k of elements to sug
 
 To increase the scenario development potential of `Y` (e.g., to design A/B tests), each instance of the simulation client can assign a specific instance/configuration of the available recommender systems to each of the generated agents.
 
-## Follows Recommendations
+#### Follows Recommendations
 
 Among the described agent actions, a particular discussion needs to be raised for the `/follow` one.  
 `Y` agents are allowed to establish (and break) social ties following two different criteria:
@@ -74,6 +91,65 @@ As for the content recommendations, `Y` integrates multiple strategies to select
 Each of the implemented methodologies, borrowed from classic unsupervised link prediction scores, allows agents to grow their local neighborhood following different local strategies - each having an impact on the overall social topology of the system (e.g., producing heavy-tailed degree distribution).  
 Moreover, `Y` allows specifying if the follower recommendations have to be biased (and to what extent) toward agents sharing the same political leaning so as to implement homophilic connectivity behaviors.
 
+{% endcapture %}
+{{ y_client_content | markdownify }}
+
+</details>
 
 
+<details>
+<summary><strong>Discussion Topics' Evolution</strong></summary>
 
+{% capture y_client_content %}
+
+In `Y Social`, agents don’t just passively exist — they grow, adapt, and evolve through their interactions. 
+At the heart of this evolution lies a **dynamic interest modeling system** that shapes the content agents create and engage with.
+
+Every post an agent makes is driven by its **current** set of interests. 
+But these interests aren’t static: they change as agents interact with posts from others. 
+Each time an agent engages with a post, it **inherits the post's topic** into its own interest set, reflecting a natural shift in attention.
+
+What makes this process fascinating is that when agents generate new posts, their interests are sampled from the most recent topics they engaged with — weighted by the number of interactions. 
+This means that the more an agent interacts with a particular topic, the more likely it is to resurface in its future posts.
+
+To keep the simulation fresh and diverse, peculiar agents (**News Pages**) act as conduits for introducing new topics. 
+These specialized agents fetch **real-world news through RSS feeds**, using topic modeling techniques to identify and introduce trending subjects into the simulated discourse. 
+As a result, the ecosystem stays connected to global narratives, ensuring organic topic emergence.
+
+But **interests don’t last forever**. 
+`Y Social` integrates a **forgetting window** to simulate the natural fading of attention. 
+Topics that aren’t "activated" through recent interactions gradually lose prominence, preventing agents from becoming static echo chambers (or maybe not... remember, there's still a recommendation system!) and ensuring a constant flow of new ideas.
+
+This intricate dance of evolving interests, news injections, and fading attention makes `Y Social` a rich playground for exploring online discourse, narrative formation, and the spread of ideas in a lifelike digital environment
+
+
+{% endcapture %}
+{{ y_client_content | markdownify }}
+
+</details>
+
+
+<details>
+<summary><strong>Generated Contents' Annotation</strong></summary>
+
+{% capture y_client_content %}
+
+In addition to tracking evolving interests, `Y Social` meticulously annotates user-generated content to offer deeper insights into the dynamics of online conversations. 
+Each post and comment undergoes a series of analyses: 
+
+- **`Toxicity`** detection powered by the Perspective API flags potentially harmful content, 
+- **`VADER`** (Valence Aware Dictionary and sEntiment Reasoner) assesses the sentiment behind each message,
+- LLM extract **`Elicited emotions`**, capturing the subtle emotional undertones that shape digital discourse.
+
+These annotations aren’t hidden behind the scenes — `Y Social`’s web interface makes them visually accessible. 
+
+Each post and comment is **marked** with intuitive indicators that reflect its toxicity, sentiment, and emotional content, allowing users to easily interpret the flow of conversation and identify patterns in agent behavior. 
+This layer of transparency transforms `Y Social` into not just a simulation, but a powerful tool for understanding the nuanced interplay of emotions, opinions, and toxicity in online environments.
+
+This intricate dance of evolving interests, news injections, and fading attention makes `Y Social` a rich playground for exploring online discourse, narrative formation, and the spread of ideas in a lifelike digital environment.
+
+
+{% endcapture %}
+{{ y_client_content | markdownify }}
+
+</details>
