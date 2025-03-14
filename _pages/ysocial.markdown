@@ -38,6 +38,7 @@ conda activate Y
 
 ```bash
 git clone https://github.com/YSocialTwin/YSocial.git
+cd YSocial
 ```
 
 #### Sync the YClient and YServer submodules
@@ -48,6 +49,13 @@ git submodule update --init --recursive
 #### Install the required dependencies
 ```bash
 pip install -r requirements.txt
+```
+
+#### Install Ollama (and pull some LLMs)
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull minicpm-v # Pull the MiniCPM-v model (needed for image captioning)
+ollama pull llama3.1 # Pull the Llama3.1 model (or any other model you want to use)
 ```
 
 #### Start YSocial
@@ -72,6 +80,7 @@ python y_social.py --host localhost --port 8080
 `Y Social` provides a **Dockerized setup** that includes:
 - **[Ollama](https://ollama.com/)** for running LLMs
 - **Y Server / Y Client** for managing simulations
+- **Y Social** for the web interface
 
 #### 📦 **Building & Running the Docker Container**
 ```bash
