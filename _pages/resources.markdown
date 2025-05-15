@@ -108,8 +108,8 @@ Let us know and we will add your publication to the list!
 - FAIR (Future Artificial Intelligence Research) workshop, 2025
 
 Forthcoming Events:
-- HHAI - [International Conference Series on Hybrid Human-Artificial Intelligence](https://hhai-conference.org/2025/), 2025
-- CCS - [Conference on Complex Systems](https://ccs25.cssociety.org/), 2025
+- [Tutorial](events/hhai) *"LLM-powered Simulations of Social Media Environments"* @[HHAI](https://hhai-conference.org/2025/), 2025
+- Workshop *"Simulating Societies"* @[CCS](https://ccs25.cssociety.org/), 2025
 - SoBigData Summer School - [From Data to Social Innovation](https://summerschool2025.sobigdata.eu/), 2025
 
 
