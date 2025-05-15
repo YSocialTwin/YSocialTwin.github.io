@@ -4,7 +4,7 @@
 
 layout: home
 title:  "LLM-powered Simulations of Social Media Environments"
-subtitle: "HHAI 2025 Workshop"
+subtitle: "HHAI 2025 Tutorial"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/teaching.png
