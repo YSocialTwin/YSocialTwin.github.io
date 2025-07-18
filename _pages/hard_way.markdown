@@ -117,7 +117,7 @@ It is designed to be used in conjunction with `Y Server`, a server-side applicat
 
 
 **Programming Language:** Python <br>
-**Framework:** pyautogen + feedparser + bs4 + faker
+**Framework:** ag2 + feedparser + bs4 + faker
 
 ### Getting Started
 
