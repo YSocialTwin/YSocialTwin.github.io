@@ -83,12 +83,8 @@ After the recovery, the database will be ready to be queried.
 | `Recsys4a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Scale-free     | 60   | [📕](../assets/datasets/1k_60d_FollowerPopularity_BA_database.db.zip) |
 
 
-<--
-Datasets are released under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. <br>
-They are also indexed in the [Zenodo](https://zenodo.org/) repository and on the [SoBigData](https://sobigdata.eu/) Research Infrastructure.
+Datasets are released under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. 
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}
-
--->
 
 #### Research and Outreach
 
