@@ -68,7 +68,7 @@ After the recovery, the database will be ready to be queried.
 </details>
 
 
-![Dataset and Publications]({{site.baseurl}}/assets/images/data_pubs.jpg)
+![Dataset and Publications](../assets/images/data_pubs.jpg)
 
 ## Available datasets
 
