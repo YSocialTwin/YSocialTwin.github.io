@@ -62,10 +62,7 @@ sqlite3 database_recovered.db < data.sql
 
 After the recovery, the database will be ready to be queried.
 
-{% endcapture %}
-{{ y_client_content | markdownify }}
 
-</details>
 
 
 ![Dataset and Publications](../assets/images/data_pubs.jpg)
@@ -85,6 +82,11 @@ After the recovery, the database will be ready to be queried.
 
 Datasets are released under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. 
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}
+
+{% endcapture %}
+{{ y_client_content | markdownify }}
+
+</details>
 
 #### Research and Outreach
 
@@ -110,10 +112,12 @@ Let us know and we will add your publication to the list!
 - CS2Italy - Conference on Computational Social Science, 2024
 - FAIR (Future Artificial Intelligence Research) workshop, 2025
 
+
 Forthcoming Events:
 - [Tutorial](events/hhai) *"LLM-powered Simulations of Social Media Environments"* @[HHAI](https://hhai-conference.org/2025/), 2025
 - Workshop *"Simulating Societies"* @[CCS](https://ccs25.cssociety.org/), 2025
 - SoBigData Summer School - [From Data to Social Innovation](https://summerschool2025.sobigdata.eu/), 2025
+- The Threads of Complex Networks Summer School, 2025
 
 
 Here a slide deck about the `Y Social` project.
