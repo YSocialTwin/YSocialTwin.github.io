@@ -18,15 +18,15 @@ Here you can find some datasets generated with Y Social, as well as collections 
 
 ## Available datasets
 
-| Dataset Name | LLM          | Number of Starting Agents | Content Recsys                     | Follow Recsys | Starting Graph | Days | File                                                                  |
-|--------------|--------------|---------------------------|------------------------------------|---------------|----------------|------|-----------------------------------------------------------------------|
-| `Recsys1`    | LLama3.1-8B  | 1000                      | Reverse Chrono                     | Disabled      | Random Graph   | 60   | [📕](../assets/datasets/1k_60d_ReverseChrono_ER_database.db.zip)      |
-| `Recsys2`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Random Graph   | 60   | [📕](../assets/datasets/1k_60d_Popularity_ER_database.db.zip)         |
-| `Recsys2a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Scale-free     | 60   | [📕](../assets/datasets/1k_60d_Popularity_BA_database.db.zip)         |
-| `Recsys3`    | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Random Graph   | 60   | [📕](../assets/datasets/1k_60d_Follower_ER_database.db.zip)           |
-| `Recsys3a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Scale-free     | 60   | [📕](../assets/datasets/1k_60d_Follower_BA_database.db.zip)           |
-| `Recsys4`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Random Graph   | 60   | [📕](../assets/datasets/1k_60d_FollowerPopularity_ER_database.db.zip) |
-| `Recsys4a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Scale-free     | 60   | [📕](../assets/datasets/1k_60d_FollowerPopularity_BA_database.db.zip) |
+| Dataset Name | LLM          | Number of Starting Agents | Content Recsys                     | Follow Recsys | Starting Graph | Days | File                                                       |
+|--------------|--------------|---------------------------|------------------------------------|---------------|----------------|------|------------------------------------------------------------|
+| `Recsys1`    | LLama3.1-8B  | 1000                      | Reverse Chrono                     | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_ReverseChrono_ER_database.db.zip) |
+| `Recsys2`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Popularity_ER_database.db.zip) |
+| `Recsys2a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Scale-free     | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Popularity_BA_database.db.zip) |
+| `Recsys3`    | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Follower_ER_database.db.zip) |
+| `Recsys3a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Scale-free     | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Follower_BA_database.db.zip) |
+| `Recsys4`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_FollowerPopularity_ER_database.db.zip) |
+| `Recsys4a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Scale-free     | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_FollowerPopularity_BA_database.db.zip) |
 
 Sometimes sqlite files might appear as corrupted when downloaded. 
 In such an eventuality, recover them by running the following command:
