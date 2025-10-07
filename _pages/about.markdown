@@ -12,6 +12,10 @@ header_title: "About Us"
 vega: true
 ---
 
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-12">
+
 # Who are we?
 
 We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior.
@@ -130,3 +134,7 @@ YSocial has been developed thanks to the support of the following national and e
 
 
 
+
+        </div>
+    </div>
+</div>

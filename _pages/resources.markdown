@@ -12,6 +12,10 @@ header_title: "Resources"
 vega: true
 ---
 
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-12">
+
 Here you can find some datasets generated with Y Social, as well as collections of predefined thematic agent populations and news pages.
 
 ![Dataset and Publications](../assets/images/data_pubs.jpg)
@@ -117,3 +121,7 @@ Here a slide deck about the `Y Social` project.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSWYu2s09mEJwL7mskYHC3XFuIeTdBPTnHEpee3KyCCFbr5eyix7UZMyUEMYrSfm_ZMI9_ZJt64Ql1Z/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+
+        </div>
+    </div>
+</div>
