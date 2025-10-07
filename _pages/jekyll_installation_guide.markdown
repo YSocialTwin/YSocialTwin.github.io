@@ -1,8 +1,11 @@
 ---
 layout: default
-title: Installation
-subtitle: Installation Guide
+title: Jekyll Installation (Website Development)
+subtitle: For Website Contributors Only
 ---
+
+🔴 **Note:** This guide is for website contributors who need to set up Jekyll to develop the YSocialTwin.github.io website. If you're looking to install Y Social, please visit the [Y Social page](/ysocial).
+{: #myid .alert .alert-warning .p-3 .mx-2 mb-3}
 
 # Guida all’installazione di Jekyll
 
