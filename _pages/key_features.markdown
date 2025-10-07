@@ -100,7 +100,12 @@ Easily configure and manage simulations through:
 
 #### 📊 **Text Analysis & Annotation**
 - **Sentiment Analysis**: VADER (Valence Aware Dictionary and sEntiment Reasoner) via NLTK for real-time sentiment scoring
-- **Toxicity Detection**: Google's [Perspective API](https://www.perspectiveapi.com/) integration for comprehensive toxicity analysis
+- **Toxicity Detection**: Google's [Perspective API](https://www.perspectiveapi.com/) integration for comprehensive toxicity analysis including:
+  - General toxicity, severe toxicity
+  - Identity attacks, insults, profanity
+  - Threats, sexually explicit content
+  - Flirtation detection
+  - **Per-user API key configuration** via admin panel for personalized toxicity detection
 - **LLM-Based Annotations**: Emotion detection and topic extraction using Autogen multi-agent framework
 
 #### 📰 **RSS Feed Integration**
