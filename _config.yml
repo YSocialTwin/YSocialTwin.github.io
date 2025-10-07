@@ -44,15 +44,15 @@ navbar:
     img: "./assets/images/Ysocial_logo.png"
     url: /
   nav:
-    - title: ⛮ Getting Started
+    - title: 🚀 Get Started
       child:
-        - title: The easy way... #Label
+        - title: Quick Start (Docker) #Label
           url: /ysocial  #url
-        - title: ... the hard way!
+        - title: Manual Installation
           url: /hard_way
 
 
-    - title: 🧙‍Behind the curtains
+    - title: 📖 Documentation
       child:
         - title: 🎰 Experiments #Label
           url: /experiments  #url
@@ -68,13 +68,13 @@ navbar:
         #- title: 🤺 y/olympics  #Label
         #  url: /olympics #url
 
-    - title: 📙 Resources #Label
+    - title: 🔬 Resources
       url: /resources
 
-    - title: 📚 Blog #Label
+    - title: 📚 Blog
       url: /blog
 
-    - title: 👥 About Us #Label
+    - title: 👥 About
       url: /about #url
     #- title: Bootstrap
     #  url: /bootstrap

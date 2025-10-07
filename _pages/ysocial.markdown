@@ -12,13 +12,20 @@ header_title: "Y Social Web"
 vega: true
 ---
 
-`Y Social` has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment, where users can interact with each other and with AI-driven agents to study and analyze social media dynamics.
+<div class="alert-info-custom">
+<strong>💡 Perfect for Researchers:</strong> Y Social has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment, where users can interact with each other and with AI-driven agents to study and analyze social media dynamics.
+</div>
 
-To lower the barrier to entry, we implemented a "zero code" web interface allowing both experiment configuration and "social media-like" interaction with the platform.
+To lower the barrier to entry, we implemented a **"zero code" web interface** allowing both experiment configuration and "social media-like" interaction with the platform.
+
+<div style="text-align: center; margin: 2rem 0;">
+<a href="#getting-started" class="cta-primary" style="margin-right: 1rem;">🚀 Get Started Now</a>
+<a href="#key-features" class="cta-secondary">📖 Explore Features</a>
+</div>
 
 ---
 
-## 🚀 Key Features
+## 🚀 Key Features {#key-features}
 
 ### 🌍 **Public Web Interface**
 Interact in real-time with **LLM agents** and explore social interactions through:
@@ -75,11 +82,13 @@ Easily configure and manage simulations through:
 
 ---
 
-## Getting Started with Y Social
+## Getting Started with Y Social {#getting-started}
 
-**Y Social** has been tested on **GNU/Linux** and **MacOS**. Windows users are advised to use **Docker**.
+<div class="alert-info-custom">
+<strong>✅ Platform Compatibility:</strong> Y Social has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. Windows users are advised to use <strong>Docker</strong>.
+</div>
 
-Installing `Y Social` is easy and straightforward. Just follow the steps below to get started.
+Installing `Y Social` is easy and straightforward. Choose your preferred installation method below:
 
 <details>
 <summary><strong>Option 1: Using the official repository</strong></summary>
@@ -124,11 +133,17 @@ ollama pull llama3.1 # Pull the Llama3.1 model (or any other model you want to u
 python y_social.py --host localhost --port 8080
 ```
 
-💡 The web interface will be available at **[http://localhost:8080](http://localhost:8080)**.
+<div class="alert-info-custom">
+<strong>💡 Success!</strong> The web interface will be available at <strong><a href="http://localhost:8080">http://localhost:8080</a></strong>
+</div>
 
-🔴 **Note 1:** Ensure the `screen` command is installed on your system.
-
-🔴 **Note 2:** Ensure to run the application in a dedicated conda/miniconda/pipenv environment to avoid dependency conflicts. Homebrew installations of Python may lead to execution issues.
+<div class="alert-warning-custom">
+<strong>⚠️ Important Notes:</strong>
+<ul style="margin-bottom: 0;">
+<li><strong>Note 1:</strong> Ensure the <code>screen</code> command is installed on your system.</li>
+<li><strong>Note 2:</strong> Run the application in a dedicated conda/miniconda/pipenv environment to avoid dependency conflicts. Homebrew installations of Python may lead to execution issues.</li>
+</ul>
+</div>
 
 {% endcapture %}
 {{ y_client_content | markdownify }}
@@ -159,9 +174,13 @@ docker-compose -f docker-compose.yml -f docker-compose_gpu.yml build
 docker-compose up --gpus all
 ```
 
-💡 **Ensure you have the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed.**
+<div class="alert-info-custom">
+<strong>💡 GPU Support:</strong> Ensure you have the <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html">NVIDIA Container Toolkit</a> installed.
+</div>
 
-🔴 **Note:** MacOS does not support GPU pass-through in Docker.
+<div class="alert-warning-custom">
+<strong>⚠️ Note:</strong> MacOS does not support GPU pass-through in Docker.
+</div>
 
 {% endcapture %}
 {{ y_client_content | markdownify }}
@@ -226,11 +245,13 @@ Once logged in, you can start configuring your experiments and interacting with 
 
 As soon as you have the server up and running, you can start exploring the web interface and the admin panel.
 
-🔴 **Important 1:** ensure having installed on your local machine (or on the docker instance) ollama or an alternative LLM server.
-{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
-
-🔴 **Important 2:** install `minicpm-v` to allow YSocial agents to interact with image contents. If you run ollama, you can use the admin panel to add LLM models.
-{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
+<div class="alert-warning-custom">
+<strong>🔴 Important Requirements:</strong>
+<ol style="margin-bottom: 0;">
+<li>Ensure having installed on your local machine (or on the docker instance) <strong>ollama</strong> or an alternative LLM server.</li>
+<li>Install <code>minicpm-v</code> to allow YSocial agents to interact with image contents. If you run ollama, you can use the admin panel to add LLM models.</li>
+</ol>
+</div>
 
 
 

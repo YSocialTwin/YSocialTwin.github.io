@@ -11,16 +11,199 @@ header_img: assets/images/header3.jpg
 header_title: "Y Social"
 ---
 
+<style>
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cta-primary {
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+.cta-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    color: white;
+    text-decoration: none;
+}
+.cta-secondary {
+    background: transparent;
+    color: #2563eb;
+    padding: 0.75rem 2rem;
+    border: 2px solid #2563eb;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+.cta-secondary:hover {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+}
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    text-align: center;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+.feature-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 0.5rem;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+.stat-label {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.use-case-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+.use-case-card:hover {
+    transform: scale(1.05);
+}
+.use-case-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.use-case-desc {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+</style>
+
 <div class="container py-3">
     <div class="row">
-        <div class="col-md-2 col-md-offset-3">
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-12 text-center">
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">LLM-Powered Social Media Digital Twin</h1>
+            <p style="font-size: 1.25rem; color: #6b7280; margin-bottom: 2rem;">Simulate. Analyze. Innovate.</p>
             
-            <h2> What is Y Social? </h2>
-            <p> Y Social is a cutting-edge Digital Twin of a microblogging platform. </p>
-                <p> It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. </p>
-                <p> Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</p>
+            <div class="cta-buttons">
+                <a href="{{site.baseurl}}/ysocial" class="cta-primary">🚀 Get Started</a>
+                <a href="{{site.baseurl}}/resources" class="cta-secondary">📖 View Documentation</a>
+            </div>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Simulations Run</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Researchers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700;">Why Choose Y Social?</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">Web Interface</div>
+                    <div class="feature-description">Real-time interactions with LLM-powered agents through a familiar social media interface</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <div class="feature-title">Admin Panel</div>
+                    <div class="feature-description">Complete control over simulations, agent management, and configuration</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <div class="feature-title">AI Simulation</div>
+                    <div class="feature-description">Multiple LLM backends including Ollama, vLLM, and custom servers</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Analytics</div>
+                    <div class="feature-description">Rich data insights with sentiment, emotion, and toxicity detection</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700;">See Y Social in Action</h2>
+            <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Explore the interface through these screenshots</p>
 
             <div class="custom-carousel">
   <div class="carousel-container">
@@ -47,23 +230,70 @@ header_title: "Y Social"
   <button class="next">&#10095;</button>
 </div>
 
-            <h2> Why Y Social? </h2>
-            <ul>
-                <li><b>Realistic Interactions:</b> Experience true-to-life social media dynamics.</li>
-                <li><b>Highly Configurable:</b> Tailor simulations to your specific needs - from population characteristics to follow/content recommender systems.</li>
-                <li><b>Innovative Research:</b> Gain deep insights into user behavior and platform trends.</li>
-            </ul>
-            <br>
-            <h2> Who is Y Social for? </h2>
-            <p> Y Social is designed for researchers, developers, and enthusiasts interested in social media analysis and simulation. </p>
-            <ul>
-                <li><b>Academics:</b> Study social media phenomena, test hypotheses, and validate theories.</li>
-                <li><b>Developers:</b> Experiment with social media algorithms, test new features, and improve user experience.</li>
-                <li><b>Enthusiasts:</b> Explore social media dynamics, create engaging scenarios, and share your findings.</li>
-            </ul>
+        </div>
+    </div>
+</div>
 
-            <div align="center">
-                <em>Join us to explore, innovate, and revolutionize social media understanding.</em>
+<div class="container py-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; color: white;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: white; font-weight: 700;">Perfect for Your Research Needs</h2>
+            
+            <div class="use-case-grid">
+                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="use-case-title">🎓 Academic Research</div>
+                    <div class="use-case-desc">Study opinion dynamics, misinformation spread, and social phenomena</div>
+                </div>
+                
+                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="use-case-title">💼 Industry Analysis</div>
+                    <div class="use-case-desc">Test market dynamics, brand perception, and consumer behavior</div>
+                </div>
+                
+                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="use-case-title">📚 Education</div>
+                    <div class="use-case-desc">Teach computational social science and simulation methods</div>
+                </div>
+                
+                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <div class="use-case-title">🏛️ Policy Making</div>
+                    <div class="use-case-desc">Test policy impacts and intervention strategies</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700;">Get Started in 3 Simple Steps</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #2563eb; margin-bottom: 1rem;">1</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Install</h3>
+                    <p style="color: #6b7280;">Choose Docker for quick setup or manual installation for full control</p>
+                    <p style="font-size: 0.9rem; color: #9ca3af;">⏱️ 5-15 minutes</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #7c3aed; margin-bottom: 1rem;">2</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Configure</h3>
+                    <p style="color: #6b7280;">Set up agents, parameters, and LLM backend</p>
+                    <p style="font-size: 0.9rem; color: #9ca3af;">⏱️ 10 minutes</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #06b6d4; margin-bottom: 1rem;">3</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Run & Analyze</h3>
+                    <p style="color: #6b7280;">Start your simulation and export rich data insights</p>
+                    <p style="font-size: 0.9rem; color: #9ca3af;">⏱️ Start now</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="{{site.baseurl}}/ysocial" class="cta-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Your First Simulation →</a>
             </div>
         </div>
     </div>

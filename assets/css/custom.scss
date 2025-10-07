@@ -228,3 +228,174 @@ button.next {
 button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+// Modern design enhancements
+.cta-primary {
+    background: #2563eb;
+    color: white !important;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+    border: none;
+}
+
+.cta-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    color: white !important;
+    text-decoration: none;
+}
+
+.cta-secondary {
+    background: transparent;
+    color: #2563eb !important;
+    padding: 0.75rem 2rem;
+    border: 2px solid #2563eb;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.cta-secondary:hover {
+    background: #2563eb;
+    color: white !important;
+    text-decoration: none;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.alert-info-custom {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+    border-left: 4px solid #2563eb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.alert-warning-custom {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(234, 88, 12, 0.1) 100%);
+    border-left: 4px solid #f59e0b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.code-block-header {
+    background: #1f2937;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.copy-button {
+    background: #374151;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.copy-button:hover {
+    background: #4b5563;
+}
+
+// Enhanced navigation styling
+.navbar-chulapa {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Enhanced footer styling
+.footer-chulapa {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: white;
+}
+
+// Improved heading styles
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h2 {
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+// Enhanced card styles for home-cards
+.card {
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+// Stats and highlights
+.stats-highlight {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+// Improve details/summary styling
+details {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: white;
+}
+
+details[open] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+details summary {
+    font-weight: 600;
+    padding: 0.5rem;
+    margin: -1rem;
+    margin-bottom: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+details[open] summary {
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-bottom: 1rem;
+}
