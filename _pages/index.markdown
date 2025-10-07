@@ -153,8 +153,8 @@ header_title: "Y Social"
                     <div class="stat-label">Simulations Run</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Researchers</div>
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Research Institutions</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">100%</div>

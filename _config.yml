@@ -46,10 +46,14 @@ navbar:
   nav:
     - title: 🚀 Get Started
       child:
-        - title: Quick Start (Docker) #Label
+        - title: Introduction #Label
+          url: /key_features  #url
+        - title: Quick Start #Label
           url: /ysocial  #url
-        - title: Manual Installation
-          url: /hard_way
+        - title: Docker #Label
+          url: /docker  #url
+        #- title: Manual Installation
+        #  url: /hard_way
 
 
     - title: 📖 Documentation
