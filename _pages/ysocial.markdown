@@ -12,8 +12,12 @@ header_title: "Y Social"
 vega: true
 ---
 
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-12">
+
 <div class="alert-info-custom">
-<strong>💡 Do you want a "complete control" on your YSocial instance?</strong> Follow this guide to prepare your local setup.
+<strong>💡 Do you want "complete control" on your YSocial instance?</strong> Follow this guide to prepare your local setup.
 </div>
 
 <div class="alert-info-custom">
@@ -63,6 +67,33 @@ git submodule update --init --recursive
 ```bash
 pip install -r requirements.txt
 ```
+
+#### Choose Your Database (Optional)
+
+Y Social supports two database backends:
+
+- **SQLite** (default): Lightweight, file-based database. Perfect for development and testing.
+- **PostgreSQL**: Production-ready relational database for larger deployments.
+
+**To use SQLite (default):**
+```bash
+# No additional configuration needed - SQLite is the default
+python y_social.py --host localhost --port 8080
+```
+
+**To use PostgreSQL:**
+```bash
+# Install PostgreSQL (if not already installed)
+# Ubuntu/Debian: sudo apt-get install postgresql postgresql-contrib
+# MacOS: brew install postgresql
+
+# Start YSocial with PostgreSQL
+python y_social.py --host localhost --port 8080 --db postgresql
+```
+
+<div class="alert-info-custom">
+<strong>💡 Database Choice:</strong> SQLite is ideal for single-user scenarios and development. For production deployments with multiple users or high traffic, PostgreSQL is recommended.
+</div>
 
 <div class="alert-warning-custom">
 <strong>⚠️ Important Notes:</strong>
@@ -155,4 +186,8 @@ Once logged in, you can start configuring your experiments and interacting with 
 {% endcapture %}
 {{ y_client_start | markdownify }}
 </details>
+
+        </div>
+    </div>
+</div>
 

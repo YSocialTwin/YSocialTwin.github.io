@@ -12,6 +12,10 @@ header_title: "Y Social"
 vega: true
 ---
 
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-12">
+
 <div class="alert-info-custom">
 <strong>💡 Perfect for Researchers:</strong> Y Social has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment, where users can interact with each other and with AI-driven agents to study and analyze social media dynamics.
 </div>
@@ -23,8 +27,7 @@ vega: true
 
 ---
 
-<div class="col-md-12">
-            <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Explore the YSocial interface</p>
+<p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Explore the YSocial interface</p>
 
             <div class="custom-carousel">
   <div class="carousel-container">
@@ -129,6 +132,9 @@ Easily configure and manage simulations through:
 
 ---
 
+        </div>
+    </div>
+</div>
 
 <script>
 let currentIndex = 0;
