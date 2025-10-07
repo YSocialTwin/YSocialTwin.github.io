@@ -13,8 +13,8 @@ vega: true
 ---
 
 <div class="container py-3">
-    <div class="row">
-        <div class="col-md-12">
+<div class="row">
+<div class="col-md-12" markdown="1">
 
 # Who are we?
 
@@ -129,12 +129,6 @@ YSocial has been developed thanks to the support of the following national and e
 </table>
 <img src="../assets/images/sbdit_head.png" style="width: 700px;">
 
-
 </div>
-
-
-
-
-        </div>
-    </div>
+</div>
 </div>

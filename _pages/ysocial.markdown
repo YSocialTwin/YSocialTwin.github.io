@@ -13,8 +13,8 @@ vega: true
 ---
 
 <div class="container py-3">
-    <div class="row">
-        <div class="col-md-12">
+<div class="row">
+<div class="col-md-12" markdown="1">
 
 <div class="alert-info-custom">
 <strong>💡 Do you want "complete control" on your YSocial instance?</strong> Follow this guide to prepare your local setup.
@@ -187,7 +187,6 @@ Once logged in, you can start configuring your experiments and interacting with 
 {{ y_client_start | markdownify }}
 </details>
 
-        </div>
-    </div>
 </div>
-
+</div>
+</div>

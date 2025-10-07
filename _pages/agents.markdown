@@ -13,8 +13,8 @@ vega: true
 ---
 
 <div class="container py-3">
-    <div class="row">
-        <div class="col-md-12">
+<div class="row">
+<div class="col-md-12" markdown="1">
 
 `LLMs` (Large Language Models) are a class of machine learning models that can generate human-like text. 
 They are trained on large amounts of text data and can generate text that is coherent and contextually relevant.
@@ -164,6 +164,7 @@ Summary: {article.summary}
 {{ y_client_content | markdownify }}
 
 </details>
-        </div>
-    </div>
+
+</div>
+</div>
 </div>

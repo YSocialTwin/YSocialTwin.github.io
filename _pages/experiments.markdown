@@ -13,8 +13,8 @@ vega: true
 ---
 
 <div class="container py-3">
-    <div class="row">
-        <div class="col-md-12">
+<div class="row">
+<div class="col-md-12" markdown="1">
 
 `Y Social` simulations bring online dynamics to life by immersing Large Language Model (LLM) agents in rich, evolving conversations. 
 
@@ -157,6 +157,7 @@ This intricate dance of evolving interests, news injections, and fading attentio
 {{ y_client_content | markdownify }}
 
 </details>
-        </div>
-    </div>
+
+</div>
+</div>
 </div>

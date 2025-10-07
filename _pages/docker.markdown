@@ -13,8 +13,8 @@ vega: true
 ---
 
 <div class="container py-3">
-    <div class="row">
-        <div class="col-md-12">
+<div class="row">
+<div class="col-md-12" markdown="1">
 
 <div class="alert-info-custom">
 <strong>💡 Want a hassle-free installation?</strong> Y Social can be easily deployed with a preconfigured Docker container that includes everything you need to get started.
@@ -329,6 +329,6 @@ After installation:
 <a href="{{site.baseurl}}/key_features" class="cta-primary">📖 Explore Features</a>
 </div>
 
-        </div>
-    </div>
+</div>
+</div>
 </div>
