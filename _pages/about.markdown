@@ -36,6 +36,11 @@ Cognitive NetSci<br>
 Associate Prof.<br>
 Network Science<br>
 <a href="https://twitter.com/Yquetzal">@Yquetzal</a></td>
+<td><img src="../assets/images/andrea_failla.png" style="width: 240px;">
+PhD Student in AI<br>
+Higher-order Modeling<br>
+<a href="https://twitter.com/AndreaFailla4">@AndreaFailla4</a>
+</td>
 </tr>
 <tr>
 <td><img src="../assets/images/katherine_abramski.png" style="width: 240px;">
@@ -53,18 +58,13 @@ PostDoc<br>
 Feature-rich Modeling<br>
 <a href="https://twitter.com/dsalvaz">@dsalvaz</a>
 </td>
-</tr>
-<tr>
-<td><img src="../assets/images/andrea_failla.png" style="width: 240px;">
-PhD Student in AI<br>
-Higher-order Modeling<br>
-<a href="https://twitter.com/AndreaFailla4">@AndreaFailla4</a>
-</td>
 <td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;">
 PostDoc<br>
 Opinion Modeling<br>
 <a href="https://twitter.com/VPansanella">@VPansanella</a>
 </td>
+</tr>
+<tr>
 <td><img src="../assets/images/virginia_morini.png" style="width: 240px;">
 PhD Student in AI<br>
 Computational Social Science<br>
@@ -82,7 +82,7 @@ Computational Social Science<br>
 
 <table style="align: center; vertical-align: middle;">
 <tr>
-<td colspan="3"> <img src="../assets/images/isti.png" style="width: 600px;">  </td>
+<td colspan="4"> <img src="../assets/images/isti.png" style="width: 600px;">  </td>
 </tr>
 <tr>
 <td><img src="../assets/images/unitn.jpg" style="width: 230px;"> </td>
@@ -117,17 +117,28 @@ YSocial has been developed thanks to the support of the following national and e
 <div style="float: none; width: 100%; text-align: center">
 <table>
 <tr>
-<td><a href="https://fondazione-fair.it/en/"><img src="../assets/images/fair.png" style="width: 240px;"></a>
+<td></td>
+<td colspan="4"><a href="https://fondazione-fair.it/en/"><img src="../assets/images/fair.png" style="width: 240px;"></a>
 </td>
+
 </tr>
 <tr>
-<td>
+<td></td>
+<td colspan="2">
 <a href="http://sobigdata.eu/"><img src="../assets/images/sbd.png" style="width: 350px;"></a></td>
-<td>
+<td></td>
+<td colspan="2">
 <a href="https://pnrr.sobigdata.it/"><img src="../assets/images/sbdit.png" style="width: 350px;"></a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td colspan="4">
+<img src="../assets/images/sbdit_head.png" style="width: 700px;">
+</td>
 </tr>
 </table>
-<img src="../assets/images/sbdit_head.png" style="width: 700px;">
+
 
 </div>
 </div>

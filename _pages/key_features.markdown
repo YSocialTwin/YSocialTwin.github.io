@@ -28,8 +28,7 @@ vega: true
 ---
 
 <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Explore the YSocial interface</p>
-
-            <div class="custom-carousel">
+<div class="custom-carousel" >
   <div class="carousel-container">
     <div class="carousel-item active">
       <img src="../assets/images/web/ysocial1.png" alt="Slide 1" >
@@ -55,6 +54,8 @@ vega: true
 </div></div>
 
 <br>
+
+<div markdown="1">
 To lower the barrier to entry, we implemented a **"zero code" web interface** allowing both experiment configuration and "social media-like" interaction with the platform.
 
 ---
@@ -136,10 +137,11 @@ Easily configure and manage simulations through:
 - **Agent Avatars:** [Cartoon Set 15k](https://google.github.io/cartoonset/)
 
 ---
+</div>
 
 </div>
 </div>
-</div>
+
 
 <script>
 let currentIndex = 0;
