@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default-full
 title:  "LLM Agents"
 subtitle: "Prompting Agents' Profiles & Social Media Interactions"
 show_sidetoc: true
