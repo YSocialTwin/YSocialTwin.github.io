@@ -46,7 +46,7 @@ Datasets are released under the [CC BY-NC-SA 4.0](https://creativecommons.org/li
 {: #myid .alert .alert-info .p-3 .mx-2 mb-3}
 
 <details>
-<summary><strong>Data in Brief</strong></summary>
+<summary data-excerpt="SQLite database with 17+ tables: agents, posts, emotions, follows, hashtags, images, toxicity, sentiment, and more."><strong>Data in Brief</strong></summary>
 
 {% capture y_client_content %}
 

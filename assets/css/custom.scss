@@ -380,6 +380,7 @@ details {
     padding: 1rem;
     margin: 1rem 0;
     background: white;
+    position: relative;
 }
 
 details[open] {
@@ -393,11 +394,25 @@ details summary {
     margin-bottom: 1rem;
     background: #f9fafb;
     border-radius: 0.5rem 0.5rem 0 0;
+    cursor: pointer;
 }
 
 details[open] summary {
     border-radius: 0.5rem 0.5rem 0 0;
     margin-bottom: 1rem;
+}
+
+// Add excerpt preview when collapsed
+details:not([open]) summary::after {
+    content: attr(data-excerpt);
+    display: block;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    line-height: 1.5;
+    font-style: italic;
 }
 
 // Reduce header image height for blog posts and pages

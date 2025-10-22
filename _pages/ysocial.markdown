@@ -40,7 +40,7 @@ vega: true
 Installing `Y Social` is easy and straightforward. Choose your preferred installation method below:
 
 <details>
-<summary><strong>Install YSocial</strong></summary>
+<summary data-excerpt="Set up Y Social on your machine with Python virtual environment, clone the repository, and install dependencies."><strong>Install YSocial</strong></summary>
 
 {% capture y_client_content %}
 
@@ -112,7 +112,7 @@ python y_social.py --host localhost --port 8080 --db postgresql
 
 
 <details>
-<summary><strong>Setup your LLM server</strong></summary>
+<summary data-excerpt="Configure your LLM backend: Ollama, vLLM, or custom OpenAI-compatible servers for agent interactions."><strong>Setup your LLM server</strong></summary>
 
 {% capture y_client_server %}
 
@@ -150,7 +150,7 @@ vllm serve <model_name> --host 0.0.0.0 --port 8000
 </details>
 
 <details>
-<summary><strong>Start YSocial</strong></summary>
+<summary data-excerpt="Run the YSocial server on localhost:8080 with your chosen LLM backend (Ollama, vLLM, or custom)."><strong>Start YSocial</strong></summary>
 
 {% capture y_client_start %}
 
