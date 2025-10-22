@@ -1,3 +1,17 @@
+# YSocialTwin.github.io
+
+This repository hosts the **Y Social** project website.
+
+**🌐 Visit the website:** [https://ysocialtwin.github.io](https://ysocialtwin.github.io)
+
+**📦 Looking for Y Social installation?** See the [main Y Social repository](https://github.com/YSocialTwin/YSocial)
+
+---
+
+## Website Development
+
+This section is for website contributors who need to set up Jekyll to develop the website.
+
 Nella cartella appena clonata eseguire: 
 
 ```bash

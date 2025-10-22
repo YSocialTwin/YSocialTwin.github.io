@@ -208,23 +208,54 @@ header_title: "Y Social"
             <div class="custom-carousel">
   <div class="carousel-container">
     <div class="carousel-item active">
-      <img src="../assets/images/web/ysocial1.png" alt="Slide 1" >
+      <img src="../assets/images/screen/login.png" alt="Slide 1" >
     </div>
 <div class="carousel-item">
-      <img src="../assets/images/web/ysocial_timeline.png" alt="Slide 3">
+      <img src="../assets/images/screen/admin0.png" alt="Slide 3">
     </div>
     <div class="carousel-item">
-      <img src="../assets/images/web/ysocial_profile.png" alt="Slide 2">
+      <img src="../assets/images/screen/admin1.png" alt="Slide 2">
     </div>
  <div class="carousel-item">
-      <img src="../assets/images/web/admin_dash.png" alt="Slide 3">
+      <img src="../assets/images/screen/admin2.png" alt="Slide 3">
     </div>
  <div class="carousel-item">
-      <img src="../assets/images/web/admin_exp.png" alt="Slide 3">
+      <img src="../assets/images/screen/admin3.png" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/images/screen/admin4.png" alt="Slide 3">
     </div>
 <div class="carousel-item">
-      <img src="../assets/images/web/admin_page.png" alt="Slide 3">
+      <img src="../assets/images/screen/admin5.png" alt="Slide 3">
     </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/admin6.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/admin7.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/admin8.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/admin9.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/admin10.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/pl1.png" alt="Slide 3">
+    </div><div class="carousel-item">
+      <img src="../assets/images/screen/pl2.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/pl3.png" alt="Slide 3">
+    </div>
+<div class="carousel-item">
+      <img src="../assets/images/screen/pl4.png" alt="Slide 3">
+    </div>
+
+
   </div>
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>

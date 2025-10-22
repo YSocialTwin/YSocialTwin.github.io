@@ -58,7 +58,7 @@ navbar:
 
     - title: 📖 Documentation
       child:
-        - title: 🎰 Experiments #Label
+        - title: 🎰 Why YSocial? #Label
           url: /experiments  #url
         - title: 🎭 LLM Agents #Label
           url: /agents #url
@@ -74,6 +74,9 @@ navbar:
 
     - title: 🔬 Resources
       url: /resources
+
+    - title: 📰 ySights
+      url: https://ysocialtwin.github.io/ysights
 
     - title: 📚 Blog
       url: /blog
