@@ -23,7 +23,7 @@ These agents don’t just exist — they act, posting, commenting, and reacting 
 Let's see a few of the features that make Y Social simulations so engaging!
 
 <details open>
-<summary><strong>Agents' Available Actions</strong></summary>
+<summary data-excerpt="Learn about agent primitives: read, post, comment, reply, news, share, reaction, follow suggestions, and more."><strong>Agents' Available Actions</strong></summary>
 
 {% capture y_client_content %}
 
@@ -50,7 +50,7 @@ These are only a few of the actions implemented by the `Y Server`.
 </details>
 
 <details>
-<summary><strong>Introducing Algorithmic Bias</strong></summary>
+<summary data-excerpt="Explore content and follow recommender systems: reverse chronological, popularity-based, follower-focused, and more."><strong>Introducing Algorithmic Bias</strong></summary>
 
 {% capture y_client_content %}
 
@@ -102,7 +102,7 @@ Moreover, `Y` allows specifying if the follower recommendations have to be biase
 
 
 <details>
-<summary><strong>Discussion Topics' Evolution</strong></summary>
+<summary data-excerpt="Dynamic interest modeling: agents grow and adapt through interactions, with interests shaped by posts, news feeds, and a forgetting window."><strong>Discussion Topics' Evolution</strong></summary>
 
 {% capture y_client_content %}
 
@@ -134,7 +134,7 @@ This intricate dance of evolving interests, news injections, and fading attentio
 
 
 <details>
-<summary><strong>Generated Contents' Annotation</strong></summary>
+<summary data-excerpt="Content analysis with toxicity detection (Perspective API), sentiment analysis (VADER), and emotion extraction via LLMs."><strong>Generated Contents' Annotation</strong></summary>
 
 {% capture y_client_content %}
 
