@@ -63,7 +63,8 @@ docker-compose --version</code></pre>
 
 ---
 
-#### 📦 Basic Installation
+<details>
+<summary data-excerpt="Clone the YSocial repository, build the Docker container, and launch the web interface at http://localhost:8080 with admin access.">📦 Basic Installation</summary>
 
 ##### Step 1: Clone the Repository
 
@@ -92,29 +93,6 @@ docker-compose up
 Once the containers are running, open your browser and navigate to:
 - **Web Interface**: [http://localhost:8080](http://localhost:8080)
 - **Admin Panel**: Login with `admin@ysocial.com` / `test`
-
----
-
-#### ⚡ GPU Support (NVIDIA Only)
-
-For users with NVIDIA GPUs who want accelerated LLM inference:
-
-##### Prerequisites
-- NVIDIA GPU with CUDA support
-- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed
-
-##### Build & Run with GPU Support
-
-```bash
-docker-compose -f docker-compose.yml -f docker-compose_gpu.yml build
-docker-compose up --gpus all
-```
-
-<div class="alert-warning-custom">
-<strong>⚠️ Note:</strong> MacOS does not support GPU pass-through in Docker. MacOS users should use the CPU-only configuration.
-</div>
-
----
 
 ##### 🔧 LLM Backend Configuration
 
@@ -154,9 +132,32 @@ Connect to any OpenAI-compatible LLM server:
 docker run -e LLM_BACKEND=myserver.com:8000 -p 8080:8080 ysocial:latest
 ```
 
----
+</details>
 
-#### 💾 Database Configuration
+<details>
+<summary data-excerpt="Enable NVIDIA GPU acceleration for faster LLM inference. Requires NVIDIA GPU with CUDA support and NVIDIA Container Toolkit. Note: MacOS does not support GPU pass-through.">⚡ GPU Support (NVIDIA Only)</summary>
+
+For users with NVIDIA GPUs who want accelerated LLM inference:
+
+##### Prerequisites
+- NVIDIA GPU with CUDA support
+- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed
+
+##### Build & Run with GPU Support
+
+```bash
+docker-compose -f docker-compose.yml -f docker-compose_gpu.yml build
+docker-compose up --gpus all
+```
+
+<div class="alert-warning-custom">
+<strong>⚠️ Note:</strong> MacOS does not support GPU pass-through in Docker. MacOS users should use the CPU-only configuration.
+</div>
+
+</details>
+
+<details>
+<summary data-excerpt="Choose between SQLite (default, ideal for development) and PostgreSQL (recommended for production). Configure via environment variables in docker-compose.yml.">💾 Database Configuration</summary>
 
 Choose your database backend with environment variables:
 
@@ -204,9 +205,10 @@ docker run \
 </ul>
 </div>
 
----
+</details>
 
-#### 🛠️ Common Docker Commands
+<details>
+<summary data-excerpt="Essential Docker commands: start/stop services, view logs, rebuild containers, access shell. Use docker-compose up/down for service management.">🛠️ Common Docker Commands</summary>
 
 ##### Start Services
 ```bash
@@ -240,9 +242,10 @@ docker-compose up
 docker-compose exec ysocial /bin/bash
 ```
 
----
+</details>
 
-#### ❓ Troubleshooting
+<details>
+<summary data-excerpt="Solutions for common issues: port conflicts, container startup failures, disk space problems, and permission errors on Linux systems.">❓ Troubleshooting</summary>
 
 ##### Port Already in Use
 
@@ -274,6 +277,8 @@ On Linux, you may need to run Docker commands with `sudo` or add your user to th
 sudo usermod -aG docker $USER
 # Log out and log back in for changes to take effect
 ```
+
+</details>
 
 
 </div>
