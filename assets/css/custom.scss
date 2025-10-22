@@ -399,3 +399,24 @@ details[open] summary {
     border-radius: 0.5rem 0.5rem 0 0;
     margin-bottom: 1rem;
 }
+
+// Reduce header image height for blog posts and pages
+.header-chulapa {
+    max-height: 250px !important;
+    min-height: 150px !important;
+}
+
+.header-chulapa.header-hero {
+    max-height: 300px !important;
+}
+
+// For base header type (even smaller)
+.header-chulapa.header-base {
+    max-height: 150px !important;
+    min-height: 100px !important;
+}
+
+.header-chulapa .header-img {
+    object-fit: cover;
+    max-height: 100%;
+}
