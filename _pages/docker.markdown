@@ -116,11 +116,11 @@ docker-compose up --gpus all
 
 ---
 
-#### 🔧 LLM Backend Configuration
+##### 🔧 LLM Backend Configuration
 
 Y Social supports multiple LLM backends through Docker environment variables:
 
-##### Using Ollama (Default)
+###### Using Ollama (Default)
 
 Ollama is included in the Docker container by default:
 
@@ -134,7 +134,7 @@ Or explicitly specify:
 docker run -e LLM_BACKEND=ollama -p 8080:8080 ysocial:latest
 ```
 
-### Using vLLM
+###### Using vLLM
 
 For high-performance inference with vLLM:
 
@@ -146,7 +146,7 @@ docker run -e LLM_BACKEND=vllm -p 8080:8080 ysocial:latest
 <strong>💡 Note:</strong> When using vLLM, you need to start a separate vLLM server or configure it in your docker-compose.yml
 </div>
 
-##### Using Custom LLM Server
+###### Using Custom LLM Server
 
 Connect to any OpenAI-compatible LLM server:
 
@@ -203,45 +203,6 @@ docker run \
 <li><strong>PostgreSQL:</strong> Recommended for production with multiple users or high traffic</li>
 </ul>
 </div>
-
----
-
-#### 📋 Docker Compose Configuration Example
-
-Here's a complete `docker-compose.yml` example with all options:
-
-```yaml
-version: '3.8'
-
-services:
-  ysocial:
-    build: .
-    ports:
-      - "8080:8080"
-    environment:
-      - LLM_BACKEND=ollama          # ollama, vllm, or custom server
-      - DB_TYPE=sqlite              # sqlite or postgresql
-      - HOST=0.0.0.0
-      - PORT=8080
-    volumes:
-      - ./data:/app/data            # Persist data
-      - ./experiments:/app/experiments  # Persist experiments
-    restart: unless-stopped
-
-  # Optional: Add PostgreSQL service
-  postgres:
-    image: postgres:14
-    environment:
-      - POSTGRES_DB=ysocial
-      - POSTGRES_USER=ysocial
-      - POSTGRES_PASSWORD=ysocial_password
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    restart: unless-stopped
-
-volumes:
-  postgres_data:
-```
 
 ---
 
@@ -313,17 +274,6 @@ On Linux, you may need to run Docker commands with `sudo` or add your user to th
 sudo usermod -aG docker $USER
 # Log out and log back in for changes to take effect
 ```
-
----
-
-#### 🚀 Next Steps
-
-After installation:
-
-1. **Access the Admin Panel** with credentials: `admin@ysocial.com` / `test`
-2. **Configure Your First Simulation** through the admin interface
-3. **Pull LLM Models** using the admin panel's model management
-4. **Explore Features** and create your first simulation
 
 <div style="text-align: center; margin: 2rem 0;">
 <a href="{{site.baseurl}}/key_features" class="cta-primary">📖 Explore Features</a>
