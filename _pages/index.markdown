@@ -136,74 +136,29 @@ header_title: "Y Social"
 }
 </style>
 
+           
+
 <div class="container py-3">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">LLM-Powered Social Media Digital Twin</h1>
-            <p style="font-size: 1.25rem; color: #6b7280; margin-bottom: 2rem;">Simulate. Analyze. Innovate.</p>
             
             <div class="cta-buttons">
                 <a href="{{site.baseurl}}/ysocial" class="cta-primary">🚀 Get Started</a>
                 <a href="{{site.baseurl}}/resources" class="cta-secondary">📖 View Documentation</a>
             </div>
-            
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Simulations Run</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Research Institutions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Open Source</div>
-                </div>
-            </div>
         </div>
     </div>
+<div class="alert-info-custom">
+<strong>💡 YSocial </strong>  is an open-source platform designed to simulate realistic social media environments using AI-powered agents. 
+<br><br>
+Perfect for researchers in computational social science, YSocial allows you to study social dynamics, recommender systems effects, misinformation spread, and user behavior in a controlled setting.
+ </div>
 </div>
+
 
 <div class="container py-4">
     <div class="row">
         <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700;">Why Choose Y Social?</h2>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <div class="feature-title">Web Interface</div>
-                    <div class="feature-description">Real-time interactions with LLM-powered agents through a familiar social media interface</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <div class="feature-title">Admin Panel</div>
-                    <div class="feature-description">Complete control over simulations, agent management, and configuration</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <div class="feature-title">AI Simulation</div>
-                    <div class="feature-description">Multiple LLM backends including Ollama, vLLM, and custom servers</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <div class="feature-title">Analytics</div>
-                    <div class="feature-description">Rich data insights with sentiment, emotion, and toxicity detection</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container py-4">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700;">See Y Social in Action</h2>
-            <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Explore the interface through these screenshots</p>
 
             <div class="custom-carousel">
   <div class="carousel-container">
@@ -264,6 +219,59 @@ header_title: "Y Social"
         </div>
     </div>
 </div>
+
+<div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Simulations Run</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Research Institutions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+            </div>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <div class="feature-title">AI Simulation</div>
+                        <div class="feature-description">Agent-based modeling meets Generative AI for a more "realistic" simulation experience</div>
+                    </div>
+
+            <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <div class="feature-title">No Code Simulation</div>
+                    <div class="feature-description">Web interface to complete control simulations, agent management, and scenario configuration</div>
+                </div>
+            
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">Web Interface</div>
+                    <div class="feature-description">Explore (and join) in Real-time social simulation through a familiar social media interface</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Integrated Analytics</div>
+                    <div class="feature-description">Analyze simulation with ySights from embeedded and simulation-tuned Jupyter Lab</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
 <div class="container py-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; color: white;">
     <div class="row">

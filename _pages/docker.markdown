@@ -16,6 +16,11 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
+<div style="text-align: center; margin: 2rem 0;">
+<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="{{site.baseurl}}/ysocial" class="cta-secondary">📖 Manual Installation</a>
+</div>
+
 <div class="alert-info-custom">
 <strong>💡 Want a hassle-free installation?</strong> Y Social can be easily deployed with a preconfigured Docker container that includes everything you need to get started.
 </div>
@@ -24,10 +29,7 @@ vega: true
 <strong>✅ Platform Compatibility:</strong> Docker works on <strong>GNU/Linux</strong>, <strong>MacOS</strong>, and <strong>Windows</strong>. This is the recommended installation method for Windows users.
 </div>
 
-<div style="text-align: center; margin: 2rem 0;">
-<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
-<a href="{{site.baseurl}}/ysocial" class="cta-secondary">📖 Manual Installation</a>
-</div>
+
 
 ---
 
