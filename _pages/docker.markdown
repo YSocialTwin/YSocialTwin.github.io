@@ -275,9 +275,6 @@ sudo usermod -aG docker $USER
 # Log out and log back in for changes to take effect
 ```
 
-<div style="text-align: center; margin: 2rem 0;">
-<a href="{{site.baseurl}}/key_features" class="cta-primary">📖 Explore Features</a>
-</div>
 
 </div>
 </div>
