@@ -30,6 +30,14 @@ vega: true
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     transform: translateY(-2px);
 }
+.blog-card.featured-post {
+    background: linear-gradient(to right, #eff6ff 0%, white 100%);
+    border-left: 6px solid #2563eb;
+    padding: 2.5rem;
+}
+.blog-card.featured-post .blog-title {
+    font-size: 2rem;
+}
 .blog-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -112,7 +120,7 @@ vega: true
 </style>
 
 {% for post in paginator.posts %}
-<article class="blog-card">
+<article class="blog-card{% if forloop.first %} featured-post{% endif %}">
     <h2 class="blog-title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
@@ -127,7 +135,11 @@ vega: true
         {% endif %}
     </div>
     <div class="blog-excerpt">
-        {{ post.excerpt | strip_html | truncatewords: 50 }}
+        {% if forloop.first %}
+            {{ post.excerpt | strip_html | truncatewords: 100 }}
+        {% else %}
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+        {% endif %}
     </div>
     <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
 </article>
