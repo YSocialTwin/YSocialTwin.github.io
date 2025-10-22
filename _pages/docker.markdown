@@ -33,9 +33,7 @@ vega: true
 
 ---
 
-## 🐳 Running with Docker
-
-### What is Docker?
+#### 🐳 What is Docker?
 
 Docker is a platform for developing, shipping, and running applications in containers. Containers package your application and all its dependencies together, ensuring it runs consistently across different environments.
 
@@ -47,7 +45,7 @@ Don't want to deal with dependencies? Y Social provides a **Dockerized setup** t
 
 ---
 
-## Prerequisites
+#### Prerequisites
 
 Before you begin, ensure you have:
 - **Docker** installed (version 20.10+)
@@ -65,16 +63,16 @@ docker-compose --version</code></pre>
 
 ---
 
-## 📦 Basic Installation
+#### 📦 Basic Installation
 
-### Step 1: Clone the Repository
+##### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/YSocialTwin/YSocial.git
 cd YSocial
 ```
 
-### Step 2: Build & Run with Docker Compose
+##### Step 2: Build & Run with Docker Compose
 
 ```bash
 docker-compose -f docker-compose.yml build
@@ -89,7 +87,7 @@ docker-compose up
 <strong>⚠️ First Run:</strong> The initial build may take 5-10 minutes as it downloads and installs all dependencies and LLM models.
 </div>
 
-### Step 3: Access the Application
+##### Step 3: Access the Application
 
 Once the containers are running, open your browser and navigate to:
 - **Web Interface**: [http://localhost:8080](http://localhost:8080)
@@ -97,15 +95,15 @@ Once the containers are running, open your browser and navigate to:
 
 ---
 
-## ⚡ GPU Support (NVIDIA Only)
+#### ⚡ GPU Support (NVIDIA Only)
 
 For users with NVIDIA GPUs who want accelerated LLM inference:
 
-### Prerequisites
+##### Prerequisites
 - NVIDIA GPU with CUDA support
 - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed
 
-### Build & Run with GPU Support
+##### Build & Run with GPU Support
 
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose_gpu.yml build
@@ -118,11 +116,11 @@ docker-compose up --gpus all
 
 ---
 
-## 🔧 LLM Backend Configuration
+#### 🔧 LLM Backend Configuration
 
 Y Social supports multiple LLM backends through Docker environment variables:
 
-### Using Ollama (Default)
+##### Using Ollama (Default)
 
 Ollama is included in the Docker container by default:
 
@@ -148,7 +146,7 @@ docker run -e LLM_BACKEND=vllm -p 8080:8080 ysocial:latest
 <strong>💡 Note:</strong> When using vLLM, you need to start a separate vLLM server or configure it in your docker-compose.yml
 </div>
 
-### Using Custom LLM Server
+##### Using Custom LLM Server
 
 Connect to any OpenAI-compatible LLM server:
 
@@ -158,11 +156,11 @@ docker run -e LLM_BACKEND=myserver.com:8000 -p 8080:8080 ysocial:latest
 
 ---
 
-## 💾 Database Configuration
+#### 💾 Database Configuration
 
 Choose your database backend with environment variables:
 
-### Using SQLite (Default)
+##### Using SQLite (Default)
 
 SQLite is the default database, perfect for development and single-user scenarios:
 
@@ -170,7 +168,7 @@ SQLite is the default database, perfect for development and single-user scenario
 docker-compose up
 ```
 
-### Using PostgreSQL
+##### Using PostgreSQL
 
 For production deployments with multiple users:
 
@@ -208,7 +206,7 @@ docker run \
 
 ---
 
-## 📋 Docker Compose Configuration Example
+#### 📋 Docker Compose Configuration Example
 
 Here's a complete `docker-compose.yml` example with all options:
 
@@ -247,45 +245,45 @@ volumes:
 
 ---
 
-## 🛠️ Common Docker Commands
+#### 🛠️ Common Docker Commands
 
-### Start Services
+##### Start Services
 ```bash
 docker-compose up
 ```
 
-### Start in Background (Detached Mode)
+##### Start in Background (Detached Mode)
 ```bash
 docker-compose up -d
 ```
 
-### Stop Services
+##### Stop Services
 ```bash
 docker-compose down
 ```
 
-### View Logs
+##### View Logs
 ```bash
 docker-compose logs -f
 ```
 
-### Rebuild After Changes
+##### Rebuild After Changes
 ```bash
 docker-compose down
 docker-compose build --no-cache
 docker-compose up
 ```
 
-### Access Container Shell
+##### Access Container Shell
 ```bash
 docker-compose exec ysocial /bin/bash
 ```
 
 ---
 
-## ❓ Troubleshooting
+#### ❓ Troubleshooting
 
-### Port Already in Use
+##### Port Already in Use
 
 If port 8080 is already in use, modify the port mapping in `docker-compose.yml`:
 
@@ -294,21 +292,21 @@ ports:
   - "8081:8080"  # Use port 8081 instead
 ```
 
-### Container Won't Start
+##### Container Won't Start
 
 Check the logs:
 ```bash
 docker-compose logs
 ```
 
-### Out of Disk Space
+##### Out of Disk Space
 
 Remove unused Docker images and containers:
 ```bash
 docker system prune -a
 ```
 
-### Permission Issues
+##### Permission Issues
 
 On Linux, you may need to run Docker commands with `sudo` or add your user to the docker group:
 ```bash
@@ -318,7 +316,7 @@ sudo usermod -aG docker $USER
 
 ---
 
-## 🚀 Next Steps
+#### 🚀 Next Steps
 
 After installation:
 

@@ -56,12 +56,13 @@ navbar:
         #  url: /hard_way
 
 
-    - title: 📖 Documentation
+    - title: 📖 Inside YSocial
       child:
-        - title: 🎰 Why YSocial? #Label
-          url: /experiments  #url
         - title: 🎭 LLM Agents #Label
           url: /agents #url
+        - title: 🎰 Modeling Choices #Label
+          url: /experiments  #url
+
       #  - title: 🎬 Scenario Design #Label
       #    url: /scenario #url
 
