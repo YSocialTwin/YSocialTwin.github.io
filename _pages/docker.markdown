@@ -16,11 +16,6 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-<div style="text-align: center; margin: 2rem 0;">
-<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
-<a href="{{site.baseurl}}/ysocial" class="cta-secondary">📖 Manual Installation</a>
-</div>
-
 <div class="alert-info-custom">
 <strong>💡 Want a hassle-free installation?</strong> Y Social can be easily deployed with a preconfigured Docker container that includes everything you need to get started.
 </div>
@@ -64,7 +59,9 @@ docker-compose --version</code></pre>
 ---
 
 <details>
-<summary data-excerpt="Clone the YSocial repository, build the Docker container, and launch the web interface at http://localhost:8080 with admin access.">📦 Basic Installation</summary>
+<summary data-excerpt="Clone the YSocial repository, build the Docker container, and launch the web interface.">📦 Basic Installation</summary>
+
+<div markdown="1">
 
 ##### Step 1: Clone the Repository
 
@@ -93,8 +90,14 @@ docker-compose up
 Once the containers are running, open your browser and navigate to:
 - **Web Interface**: [http://localhost:8080](http://localhost:8080)
 - **Admin Panel**: Login with `admin@ysocial.com` / `test`
+</div>
+</details>
 
-##### 🔧 LLM Backend Configuration
+<details>
+<summary data-excerpt="Configure the OpenAI compatible LLM inference service.">🔧 LLM Backend Configuration</summary>
+
+<div markdown="1">
+
 
 Y Social supports multiple LLM backends through Docker environment variables:
 
@@ -131,12 +134,12 @@ Connect to any OpenAI-compatible LLM server:
 ```bash
 docker run -e LLM_BACKEND=myserver.com:8000 -p 8080:8080 ysocial:latest
 ```
-
+</div>
 </details>
 
 <details>
-<summary data-excerpt="Enable NVIDIA GPU acceleration for faster LLM inference. Requires NVIDIA GPU with CUDA support and NVIDIA Container Toolkit. Note: MacOS does not support GPU pass-through.">⚡ GPU Support (NVIDIA Only)</summary>
-
+<summary data-excerpt="Enable NVIDIA GPU acceleration for faster LLM inference.">⚡ GPU Support (NVIDIA Only)</summary>
+<div markdown="1">
 For users with NVIDIA GPUs who want accelerated LLM inference:
 
 ##### Prerequisites
@@ -153,12 +156,12 @@ docker-compose up --gpus all
 <div class="alert-warning-custom">
 <strong>⚠️ Note:</strong> MacOS does not support GPU pass-through in Docker. MacOS users should use the CPU-only configuration.
 </div>
-
+</div>
 </details>
 
 <details>
-<summary data-excerpt="Choose between SQLite (default, ideal for development) and PostgreSQL (recommended for production). Configure via environment variables in docker-compose.yml.">💾 Database Configuration</summary>
-
+<summary data-excerpt="Choose between SQLite (default, ideal for development) and PostgreSQL (recommended for production).">💾 Database Configuration</summary>
+<div markdown="1">
 Choose your database backend with environment variables:
 
 ##### Using SQLite (Default)
@@ -204,12 +207,12 @@ docker run \
 <li><strong>PostgreSQL:</strong> Recommended for production with multiple users or high traffic</li>
 </ul>
 </div>
-
+</div>
 </details>
 
 <details>
-<summary data-excerpt="Essential Docker commands: start/stop services, view logs, rebuild containers, access shell. Use docker-compose up/down for service management.">🛠️ Common Docker Commands</summary>
-
+<summary data-excerpt="Essential Docker commands: start/stop services, view logs, rebuild containers, access shell.">🛠️ Common Docker Commands</summary>
+<div markdown="1">
 ##### Start Services
 ```bash
 docker-compose up
@@ -241,12 +244,12 @@ docker-compose up
 ```bash
 docker-compose exec ysocial /bin/bash
 ```
-
+</div>
 </details>
 
 <details>
 <summary data-excerpt="Solutions for common issues: port conflicts, container startup failures, disk space problems, and permission errors on Linux systems.">❓ Troubleshooting</summary>
-
+<div markdown="1">
 ##### Port Already in Use
 
 If port 8080 is already in use, modify the port mapping in `docker-compose.yml`:
@@ -277,10 +280,17 @@ On Linux, you may need to run Docker commands with `sudo` or add your user to th
 sudo usermod -aG docker $USER
 # Log out and log back in for changes to take effect
 ```
-
+</div>
 </details>
 
 
 </div>
 </div>
+
+<div style="text-align: center; margin: 2rem 0;">
+<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="{{site.baseurl}}/ysocial" class="cta-secondary">📖 Manual Installation</a>
 </div>
+</div>
+
+

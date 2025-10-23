@@ -16,13 +16,6 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-
-
-<div style="text-align: center; margin: 2rem 0;">
-<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
-<a href="{{site.baseurl}}/docker" class="cta-secondary">📖 Install with Docker</a>
-</div>
-
 <div class="alert-info-custom">
 <strong>💡 Do you want "complete control" on your YSocial instance?</strong> Follow this guide to prepare your local setup.
 </div>
@@ -191,4 +184,10 @@ Once logged in, you can start configuring your experiments and interacting with 
 
 </div>
 </div>
+
+<div style="text-align: center; margin: 2rem 0;">
+<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="{{site.baseurl}}/docker" class="cta-secondary">📖 Install with Docker</a>
+</div>
+
 </div>

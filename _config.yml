@@ -61,7 +61,7 @@ navbar:
         - title: 🎭 LLM Agents #Label
           url: /agents #url
         - title: 🎰 Modeling Choices #Label
-          url: /experiments  #url
+          url: /modeling  #url
 
       #  - title: 🎬 Scenario Design #Label
       #    url: /scenario #url

@@ -139,15 +139,7 @@ header_title: "Y Social"
            
 
 <div class="container py-3">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            
-            <div class="cta-buttons">
-                <a href="{{site.baseurl}}/ysocial" class="cta-primary">🚀 Get Started</a>
-                <a href="{{site.baseurl}}/resources" class="cta-secondary">📖 View Documentation</a>
-            </div>
-        </div>
-    </div>
+    
 <div class="alert-info-custom">
 <strong>💡 YSocial </strong>  is an open-source platform designed to simulate realistic social media environments using AI-powered agents. 
 <br><br>

@@ -16,9 +16,10 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-# Who are we?
+<div class="alert-info-custom">
+<strong>💡Who are we? </strong> We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior.
 
-We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior.
+</div>
 
 <table style="text-align: center">
 <tr>

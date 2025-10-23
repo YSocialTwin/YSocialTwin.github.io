@@ -14,13 +14,13 @@ vega: true
 
 <div class="container py-3">
 <div class="row">
+<div class="alert-info-custom">
+💡 Here you can find some datasets generated with Y Social, as well as collections of predefined thematic agent populations and news pages.
+</div>
+
 <div class="col-md-12" markdown="1">
 
-Here you can find some datasets generated with Y Social, as well as collections of predefined thematic agent populations and news pages.
-
-![Dataset and Publications](../assets/images/data_pubs.jpg)
-
-## Available datasets
+### Available datasets
 
 | Dataset Name | LLM          | Number of Starting Agents | Content Recsys                     | Follow Recsys | Starting Graph | Days | File                                                       |
 |--------------|--------------|---------------------------|------------------------------------|---------------|----------------|------|------------------------------------------------------------|
@@ -84,7 +84,7 @@ This database includes the following tables:
 
 </details>
 
-## Research and Outreach
+### Research and Outreach
 
 `Y Social` is a research project: as such, we are always looking for collaborations and opportunities to share our work with the community.
 
@@ -110,11 +110,11 @@ Let us know and we will add your publication to the list!
 - [Tutorial](events/hhai) *"LLM-powered Simulations of Social Media Environments"* @[HHAI](https://hhai-conference.org/2025/), 2025
 - Workshop *"Simulating Societies"* @[Conference on Complex Systems](https://ccs25.cssociety.org/), 2025
 - SoBigData Summer School - [From Data to Social Innovation](https://summerschool2025.sobigdata.eu/), 2025
-
-
-Forthcoming Events:
 - [The Threads of Complex Networks](https://tcn2025.wordpress.com/tcn2025/) Summer School, 2025
 - ICT4Intel Trends, 2025
+
+Forthcoming Events:
+- FAIR 2025 Conference @[FAIR](https://www.fairconference2025.it/), 2025
 
 
 Here a slide deck about the `Y Social` project.
