@@ -198,6 +198,7 @@ Easily configure and manage simulations through:
 </div>
 
 
+{% raw %}
 <script>
 // Initialize all carousels on the page
 document.querySelectorAll('.custom-carousel').forEach((carousel) => {
@@ -223,3 +224,4 @@ document.querySelectorAll('.custom-carousel').forEach((carousel) => {
   }
 });
 </script>
+{% endraw %}
