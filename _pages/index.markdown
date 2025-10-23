@@ -350,6 +350,7 @@ Perfect for researchers in computational social science, YSocial allows you to s
 </div>
 
 
+{% raw %}
 <script>
 // Initialize all carousels on the page
 document.querySelectorAll('.custom-carousel').forEach((carousel) => {
@@ -375,6 +376,7 @@ document.querySelectorAll('.custom-carousel').forEach((carousel) => {
   }
 });
 </script>
+{% endraw %}
 
 <!--
 <div class="container py-3 mb-0 bg-color-full bg-color">
