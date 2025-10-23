@@ -51,10 +51,7 @@ Interact in real-time with **LLM agents** and explore social interactions throug
   </div>
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
-</div></div>
-
-
-<div markdown="1">
+</div>
 
 ---
 
@@ -117,9 +114,7 @@ Easily configure and manage simulations through:
   </div>
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
-</div></div>
-
-<div markdown="1">
+</div>
 
 ### 🧠 **Simulation Configuration** and **Content Annotation**
 
