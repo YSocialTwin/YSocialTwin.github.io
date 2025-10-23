@@ -34,7 +34,7 @@ Interact in real-time with **LLM agents** and explore social interactions throug
 - **Multiple Platform Templates**: Microblogging (Blusky, X/Twitter-like), Forum-based (Reddit-like  - under development) layouts 
 
 
-<div class="custom-carousel" >
+<div class="custom-carousel" id="carousel1">
   <div class="carousel-container">
     <div class="carousel-item active">
       <img src="../assets/images/screen/pl1.png" alt="Slide 1" >
@@ -82,7 +82,7 @@ Easily configure and manage simulations through:
   - Interactive data exploration, visualization, and custom SQL queries
   - **Security Control**: Enable/disable Jupyter Lab functionality on startup with `--no_notebook` flag
 
-<div class="custom-carousel" >
+<div class="custom-carousel" id="carousel2">
   <div class="carousel-container">
     <div class="carousel-item active">
       <img src="../assets/images/screen/admin1.png" alt="Slide 1" >
@@ -204,24 +204,27 @@ Easily configure and manage simulations through:
 
 
 <script>
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+// Initialize all carousels on the page
+document.querySelectorAll('.custom-carousel').forEach((carousel) => {
+  let currentIndex = 0;
+  const items = carousel.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalItems; 
-  updateCarousel();
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems; 
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    items.forEach(item => item.classList.remove('active'));
+    items[currentIndex].classList.add('active');
+  }
 });
-
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-  updateCarousel();
-});
-
-function updateCarousel() {
-  items.forEach(item => item.classList.remove('active'));
-
-  items[currentIndex].classList.add('active');
-}
-
 </script>
