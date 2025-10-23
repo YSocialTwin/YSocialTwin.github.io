@@ -17,87 +17,98 @@ vega: true
 <div class="col-md-12" markdown="1">
 
 <div class="alert-info-custom">
-<strong>💡Who are we? </strong> We are a team of multidisciplinary researchers that share a common interest in the study of social networks and human behavior.
+<strong>💡Who are we? </strong> <br> YSocial is the result of a joint effort of <a href="https://www.isti.cnr.it/en/">ISTI-CNR</a>, <a href="https://www.unipi.it">University of Pisa</a>, <a href="https://www.unitn.it/">University of Trento</a>, <a href="https://www.univ-lyon1.fr/">Université Lyon 1</a> and <a href="https://www.ipb.ac.rs/en/research/laboratories/scientific-computing-laboratory/"> University of Belgrade</a>.
 
 </div>
+{% raw %}
+<div style="display:flex; flex-direction:column; align-items:center; gap:2rem; width:100%; box-sizing:border-box; text-align:center;">
 
-<table style="text-align: center">
-<tr>
-<td><img src="../assets/images/giulio_rossetti.png" style="width: 240px;">
-Senior Researcher<br>
-Network Science<br>
-<a href="https://x.com/GiulioRossetti">@GiulioRossetti</a>
-</td>
-<td><img src="../assets/images/massimo_stella.png" style="width: 240px;">
-Associate Prof.<br>
-Cognitive NetSci<br>
-<a href="https://x.com/MassimoSt">@MassimoSt</a>
-</td>
-<td><img src="../assets/images/remy_cazabet.png" style="width: 240px;">
-Associate Prof.<br>
-Network Science<br>
-<a href="https://x.com/Yquetzal">@Yquetzal</a></td>
-<td><img src="../assets/images/andrea_failla.png" style="width: 240px;">
-PhD Student in AI<br>
-Higher-order Modeling<br>
-<a href="https://x.com/AndreaFailla4">@AndreaFailla4</a>
-</td>
-</tr>
-<tr>
-<td><img src="../assets/images/katherine_abramski.png" style="width: 240px;">
-PhD Student in AI<br>
-LLMs & Cognition<br>
-<a href="https://x.com/katie_abramski">@katie_abramski</a>
-</td>
-<td><img src="../assets/images/erica_cau.png" style="width: 240px;">
-PhD Student in AI<br>
-LLMs & Opinion Dynamics<br>
-<a href="https://x.com/CauErica">@CauErica</a>
-</td>
-<td><img src="../assets/images/salvatore_citraro.png" style="width: 240px;">
-PostDoc<br>
-Feature-rich Modeling<br>
-<a href="https://x.com/dsalvaz">@dsalvaz</a>
-</td>
-<td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;">
-PostDoc<br>
-Opinion Modeling<br>
-<a href="https://x.com/VPansanella">@VPansanella</a>
-</td>
-</tr>
-<tr>
-<td><img src="../assets/images/virginia_morini.png" style="width: 240px;">
-PhD Student in AI<br>
-Computational Social Science<br>
-<a href="https://x.com/Virgiiim">@Virgiiim</a>
-</td>
+  <!-- Row 1 -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/giulio_rossetti.png" style="width:100%; height:auto;">
+      <div>Senior Researcher<br>Network Science<br><a href="https://x.com/GiulioRossetti">@GiulioRossetti</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/massimo_stella.png" style="width:100%; height:auto;">
+      <div>Associate Prof.<br>Cognitive NetSci<br><a href="https://x.com/MassimoSt">@MassimoSt</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/remy_cazabet.png" style="width:100%; height:auto;">
+      <div>Associate Prof.<br>Network Science<br><a href="https://x.com/Yquetzal">@Yquetzal</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/andrea_failla.png" style="width:100%; height:auto;">
+      <div>PhD Student in AI<br>Higher-order Modeling<br><a href="https://x.com/AndreaFailla4">@AndreaFailla4</a></div>
+    </div>
+  </div>
 
-<td><img src="../assets/images/atomasevic.png" style="width: 240px;">
-Researcher<br>
-Computational Social Science<br>
-<a href="https://x.com/atomasevic">@atomasevic</a>
-</td>
-</tr>
-<!-- <tr>
-<td></td>
-<td><img src="../assets/images/riccardo_improta.png" style="width: 240px;"></td>
-<td></td>
-</tr> -->
-</table>
+  <!-- Row 2 -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/katherine_abramski.png" style="width:100%; height:auto;">
+      <div>PhD Student in AI<br>LLMs & Cognition<br><a href="https://x.com/katie_abramski">@katie_abramski</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/erica_cau.png" style="width:100%; height:auto;">
+      <div>PhD Student in AI<br>LLMs & Opinion Dynamics<br><a href="https://x.com/CauErica">@CauErica</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/salvatore_citraro.png" style="width:100%; height:auto;">
+      <div>PostDoc<br>Feature-rich Modeling<br><a href="https://x.com/dsalvaz">@dsalvaz</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/valentina_pansanella.png" style="width:100%; height:auto;">
+      <div>PostDoc<br>Opinion Modeling<br><a href="https://x.com/VPansanella">@VPansanella</a></div>
+    </div>
+  </div>
 
-`YSocial` is the result of a joint effort of [ISTI-CNR](https://www.isti.cnr.it/en/), [University of Pisa](https://www.unipi.it/), [University of Trento](https://www.unitn.it/), [Université Lyon 1](https://www.univ-lyon1.fr/) and [University of Belgrade](https://www.ipb.ac.rs/en/research/laboratories/scientific-computing-laboratory/).
+  <!-- Row 3 -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/virginia_morini.png" style="width:100%; height:auto;">
+      <div>PhD Student in AI<br>Computational Social Science<br><a href="https://x.com/Virgiiim">@Virgiiim</a></div>
+    </div>
+    <div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/atomasevic.png" style="width:100%; height:auto;">
+      <div>Researcher<br>Computational Social Science<br><a href="https://x.com/atomasevic">@atomasevic</a></div>
+    </div>
+  </div>
 
-<table style="align: center; vertical-align: middle;">
-<tr>
-<td colspan="4"> <img src="../assets/images/isti.png" style="width: 600px;">  </td>
-</tr>
-<tr>
-<td><img src="../assets/images/unitn.jpg" style="width: 230px;"> </td>
-<td><img src="../assets/images/unipi.webp" style="width: 230px;"> </td>
-<td><img src="../assets/images/lyon.jpg" style="width: 230px;"> </td>
-<td><img src="../assets/images/ubelgrade.png" style="width: 230px;"> </td>
-</tr>
-</table>
+</div>
+{% endraw %}
+
+<br><br>
+
+{% raw %}
+<div style="display:flex; flex-direction:column; align-items:center; gap:1.5rem; width:100%; box-sizing:border-box; text-align:center;">
+
+  <!-- Top image -->
+  <div>
+    <img src="../assets/images/isti.png"
+         alt="ISTI"
+         style="max-width:600px; width:100%; height:auto; display:inline-block;">
+  </div>
+
+  <!-- Four logos in a row -->
+  <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:1.5rem; width:100%;">
+    <img src="../assets/images/unitn.jpg"
+         alt="University of Trento"
+         style="max-width:230px; width:100%; height:auto; display:inline-block;">
+    <img src="../assets/images/unipi.webp"
+         alt="University of Pisa"
+         style="max-width:230px; width:100%; height:auto; display:inline-block;">
+    <img src="../assets/images/lyon.jpg"
+         alt="University of Lyon"
+         style="max-width:230px; width:100%; height:auto; display:inline-block;">
+    <img src="../assets/images/ubelgrade.png"
+         alt="University of Belgrade"
+         style="max-width:230px; width:100%; height:auto; display:inline-block;">
+  </div>
+
+</div>
+{% endraw %}
+
 
 <br>
 
@@ -149,40 +160,28 @@ YSocial has been developed thanks to the support of the following national and e
 }
 </style>
 
-<div class="center-table-wrapper">
-  <table>
-    <!-- Row 1: one cell spanning all columns -->
-    <tr>
-      <td colspan="3">
-        <a href="https://fondazione-fair.it/en/">
-          <img class="logo-large" src="../assets/images/fair.png" alt="FAIR" style="width:240px;">
-        </a>
-      </td>
-    </tr>
+{% raw %}
+<div style="display:flex; flex-direction:column; align-items:center; gap:1rem; width:100%; box-sizing:border-box;">
+  <div style="text-align:center;">
+    <a href="https://fondazione-fair.it/en/">
+      <img src="../assets/images/fair.png" alt="FAIR" style="max-width:240px; width:100%; height:auto;">
+    </a>
+  </div>
 
-    <!-- Row 2: two logos side-by-side + a middle spacer cell (3 columns total) -->
-    <tr>
-      <td>
-        <a href="http://sobigdata.eu/">
-          <img class="logo-medium" src="../assets/images/sbd.png" alt="SoBigData" style="width:350px;">
-        </a>
-      </td>
-      <td style="width:20px;"></td>
-      <td>
-        <a href="https://pnrr.sobigdata.it/">
-          <img class="logo-medium" src="../assets/images/sbdit.png" alt="SoBigData IT" style="width:350px;">
-        </a>
-      </td>
-    </tr>
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; width:100%;">
+    <a href="http://sobigdata.eu/" style="display:block; text-align:center;">
+      <img src="../assets/images/sbd.png" alt="SoBigData" style="max-width:350px; width:100%; height:auto;">
+    </a>
+    <a href="https://pnrr.sobigdata.it/" style="display:block; text-align:center;">
+      <img src="../assets/images/sbdit.png" alt="SoBigData IT" style="max-width:350px; width:100%; height:auto;">
+    </a>
+  </div>
 
-    <!-- Row 3: single centered large image -->
-    <tr>
-      <td colspan="3">
-        <img src="../assets/images/sbdit_head.png" alt="sbdit header" style="width:700px; max-width:100%;">
-      </td>
-    </tr>
-  </table>
+  <div style="text-align:center; width:100%;">
+    <img src="../assets/images/sbdit_head.png" alt="SBdit header" style="max-width:700px; width:100%; height:auto;">
+  </div>
 </div>
+{% endraw %}
 
 
 
