@@ -352,15 +352,25 @@ Perfect for researchers in computational social science, YSocial allows you to s
 
 <script>
 // Initialize carousel for the homepage
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   const carousel = document.querySelector('.custom-carousel');
-  if (!carousel) return;
+  if (!carousel) {
+    console.log('Carousel not found on index page');
+    return;
+  }
   
   let currentIndex = 0;
   const items = carousel.querySelectorAll('.carousel-item');
   const totalItems = items.length;
   const nextBtn = carousel.querySelector('.next');
   const prevBtn = carousel.querySelector('.prev');
+
+  if (!nextBtn || !prevBtn) {
+    console.log('Carousel buttons not found');
+    return;
+  }
+
+  console.log(`Index carousel initialized with ${totalItems} items`);
 
   nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % totalItems; 
@@ -376,7 +386,7 @@ Perfect for researchers in computational social science, YSocial allows you to s
     items.forEach(item => item.classList.remove('active'));
     items[currentIndex].classList.add('active');
   }
-})();
+});
 </script>
 
 <!--

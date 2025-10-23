@@ -200,26 +200,38 @@ Easily configure and manage simulations through:
 
 <script>
 // Initialize all carousels on the page
-document.querySelectorAll('.custom-carousel').forEach((carousel) => {
-  let currentIndex = 0;
-  const items = carousel.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-  const nextBtn = carousel.querySelector('.next');
-  const prevBtn = carousel.querySelector('.prev');
+document.addEventListener('DOMContentLoaded', function() {
+  const carousels = document.querySelectorAll('.custom-carousel');
+  console.log(`Found ${carousels.length} carousels on key_features page`);
+  
+  carousels.forEach((carousel, carouselIndex) => {
+    let currentIndex = 0;
+    const items = carousel.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const nextBtn = carousel.querySelector('.next');
+    const prevBtn = carousel.querySelector('.prev');
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalItems; 
-    updateCarousel();
+    if (!nextBtn || !prevBtn) {
+      console.log(`Carousel ${carouselIndex}: buttons not found`);
+      return;
+    }
+
+    console.log(`Carousel ${carouselIndex} initialized with ${totalItems} items`);
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalItems; 
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      items.forEach(item => item.classList.remove('active'));
+      items[currentIndex].classList.add('active');
+    }
   });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    items.forEach(item => item.classList.remove('active'));
-    items[currentIndex].classList.add('active');
-  }
 });
 </script>
