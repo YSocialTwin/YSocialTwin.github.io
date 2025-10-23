@@ -96,5 +96,30 @@
             </div>
         </div>
     </div>
+
+    <script>
+document.querySelectorAll('.custom-carousel').forEach((carousel) => {
+  let currentIndex = 0;
+  const items = carousel.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    items.forEach(item => item.classList.remove('active'));
+    items[currentIndex].classList.add('active');
+  }
+});
+</script>
 </footer>
 <!-- Footer -->

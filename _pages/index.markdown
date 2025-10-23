@@ -350,28 +350,33 @@ Perfect for researchers in computational social science, YSocial allows you to s
 </div>
 
 
+{% raw %}
 <script>
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+// Initialize all carousels on the page
+document.querySelectorAll('.custom-carousel').forEach((carousel) => {
+  let currentIndex = 0;
+  const items = carousel.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalItems; 
-  updateCarousel();
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems; 
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    items.forEach(item => item.classList.remove('active'));
+    items[currentIndex].classList.add('active');
+  }
 });
-
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-  updateCarousel();
-});
-
-function updateCarousel() {
-  items.forEach(item => item.classList.remove('active'));
-
-  items[currentIndex].classList.add('active');
-}
-
 </script>
+{% endraw %}
 
 <!--
 <div class="container py-3 mb-0 bg-color-full bg-color">

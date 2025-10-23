@@ -26,50 +26,56 @@ vega: true
 <td><img src="../assets/images/giulio_rossetti.png" style="width: 240px;">
 Senior Researcher<br>
 Network Science<br>
-<a href="https://twitter.com/GiulioRossetti">@GiulioRossetti</a>
+<a href="https://x.com/GiulioRossetti">@GiulioRossetti</a>
 </td>
 <td><img src="../assets/images/massimo_stella.png" style="width: 240px;">
 Associate Prof.<br>
 Cognitive NetSci<br>
-<a href="https://twitter.com/MassimoSt">@MassimoSt</a>
+<a href="https://x.com/MassimoSt">@MassimoSt</a>
 </td>
 <td><img src="../assets/images/remy_cazabet.png" style="width: 240px;">
 Associate Prof.<br>
 Network Science<br>
-<a href="https://twitter.com/Yquetzal">@Yquetzal</a></td>
+<a href="https://x.com/Yquetzal">@Yquetzal</a></td>
 <td><img src="../assets/images/andrea_failla.png" style="width: 240px;">
 PhD Student in AI<br>
 Higher-order Modeling<br>
-<a href="https://twitter.com/AndreaFailla4">@AndreaFailla4</a>
+<a href="https://x.com/AndreaFailla4">@AndreaFailla4</a>
 </td>
 </tr>
 <tr>
 <td><img src="../assets/images/katherine_abramski.png" style="width: 240px;">
 PhD Student in AI<br>
 LLMs & Cognition<br>
-<a href="https://twitter.com/katie_abramski">@katie_abramski</a>
+<a href="https://x.com/katie_abramski">@katie_abramski</a>
 </td>
 <td><img src="../assets/images/erica_cau.png" style="width: 240px;">
 PhD Student in AI<br>
 LLMs & Opinion Dynamics<br>
-<a href="https://twitter.com/CauErica">@CauErica</a>
+<a href="https://x.com/CauErica">@CauErica</a>
 </td>
 <td><img src="../assets/images/salvatore_citraro.png" style="width: 240px;">
 PostDoc<br>
 Feature-rich Modeling<br>
-<a href="https://twitter.com/dsalvaz">@dsalvaz</a>
+<a href="https://x.com/dsalvaz">@dsalvaz</a>
 </td>
 <td><img src="../assets/images/valentina_pansanella.png" style="width: 240px;">
 PostDoc<br>
 Opinion Modeling<br>
-<a href="https://twitter.com/VPansanella">@VPansanella</a>
+<a href="https://x.com/VPansanella">@VPansanella</a>
 </td>
 </tr>
 <tr>
 <td><img src="../assets/images/virginia_morini.png" style="width: 240px;">
 PhD Student in AI<br>
 Computational Social Science<br>
-<a href="https://twitter.com/Virgiiim">@Virgiiim</a>
+<a href="https://x.com/Virgiiim">@Virgiiim</a>
+</td>
+
+<td><img src="../assets/images/atomasevic.png" style="width: 240px;">
+Researcher<br>
+Computational Social Science<br>
+<a href="https://x.com/atomasevic">@atomasevic</a>
 </td>
 </tr>
 <!-- <tr>
@@ -79,7 +85,7 @@ Computational Social Science<br>
 </tr> -->
 </table>
 
-`YSocial` is the result of a joint effort of [ISTI-CNR](https://www.isti.cnr.it/en/), [University of Pisa](https://www.unipi.it/), [University of Trento](https://www.unitn.it/) and [Université Lyon 1](https://www.univ-lyon1.fr/).
+`YSocial` is the result of a joint effort of [ISTI-CNR](https://www.isti.cnr.it/en/), [University of Pisa](https://www.unipi.it/), [University of Trento](https://www.unitn.it/), [Université Lyon 1](https://www.univ-lyon1.fr/) and [University of Belgrade](https://www.ipb.ac.rs/en/research/laboratories/scientific-computing-laboratory/).
 
 <table style="align: center; vertical-align: middle;">
 <tr>
@@ -89,6 +95,7 @@ Computational Social Science<br>
 <td><img src="../assets/images/unitn.jpg" style="width: 230px;"> </td>
 <td><img src="../assets/images/unipi.webp" style="width: 230px;"> </td>
 <td><img src="../assets/images/lyon.jpg" style="width: 230px;"> </td>
+<td><img src="../assets/images/ubelgrade.png" style="width: 230px;"> </td>
 </tr>
 </table>
 
@@ -115,30 +122,68 @@ If you use `YSocial` in your research, please cite the following paper:
 
 YSocial has been developed thanks to the support of the following national and european projects:
 
-<div style="float: none; width: 100%; text-align: center">
-<table>
-<tr>
-<td></td>
-<td colspan="4"><a href="https://fondazione-fair.it/en/"><img src="../assets/images/fair.png" style="width: 240px;"></a>
-</td>
+<style>
+.center-table-wrapper {
+  width: 100%;
+  text-align: center;          /* centers inline content */
+  margin: 1.5rem 0;
+}
+.center-table-wrapper table {
+  margin: 0 auto;              /* centers the table block */
+  border-collapse: collapse;
+}
+.center-table-wrapper td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.4rem;
+}
+.center-table-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+@media (max-width: 800px) {
+  /* reduce default widths used previously */
+  .center-table-wrapper img.logo-large { width: 240px; }
+  .center-table-wrapper img.logo-medium { width: 200px; }
+}
+</style>
 
-</tr>
-<tr>
-<td></td>
-<td colspan="2">
-<a href="http://sobigdata.eu/"><img src="../assets/images/sbd.png" style="width: 350px;"></a></td>
-<td></td>
-<td colspan="2">
-<a href="https://pnrr.sobigdata.it/"><img src="../assets/images/sbdit.png" style="width: 350px;"></a></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td colspan="4">
-<img src="../assets/images/sbdit_head.png" style="width: 700px;">
-</td>
-</tr>
-</table>
+<div class="center-table-wrapper">
+  <table>
+    <!-- Row 1: one cell spanning all columns -->
+    <tr>
+      <td colspan="3">
+        <a href="https://fondazione-fair.it/en/">
+          <img class="logo-large" src="../assets/images/fair.png" alt="FAIR" style="width:240px;">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Row 2: two logos side-by-side + a middle spacer cell (3 columns total) -->
+    <tr>
+      <td>
+        <a href="http://sobigdata.eu/">
+          <img class="logo-medium" src="../assets/images/sbd.png" alt="SoBigData" style="width:350px;">
+        </a>
+      </td>
+      <td style="width:20px;"></td>
+      <td>
+        <a href="https://pnrr.sobigdata.it/">
+          <img class="logo-medium" src="../assets/images/sbdit.png" alt="SoBigData IT" style="width:350px;">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Row 3: single centered large image -->
+    <tr>
+      <td colspan="3">
+        <img src="../assets/images/sbdit_head.png" alt="sbdit header" style="width:700px; max-width:100%;">
+      </td>
+    </tr>
+  </table>
+</div>
+
 
 
 </div>
