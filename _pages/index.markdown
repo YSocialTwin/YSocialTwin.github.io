@@ -351,26 +351,32 @@ Perfect for researchers in computational social science, YSocial allows you to s
 
 
 <script>
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+// Initialize carousel for the homepage
+(function() {
+  const carousel = document.querySelector('.custom-carousel');
+  if (!carousel) return;
+  
+  let currentIndex = 0;
+  const items = carousel.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalItems; 
-  updateCarousel();
-});
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems; 
+    updateCarousel();
+  });
 
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-  updateCarousel();
-});
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+    updateCarousel();
+  });
 
-function updateCarousel() {
-  items.forEach(item => item.classList.remove('active'));
-
-  items[currentIndex].classList.add('active');
-}
-
+  function updateCarousel() {
+    items.forEach(item => item.classList.remove('active'));
+    items[currentIndex].classList.add('active');
+  }
+})();
 </script>
 
 <!--

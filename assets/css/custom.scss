@@ -205,7 +205,7 @@ details[open] summary {
   height: auto;
 }
 
-button {
+.custom-carousel button {
   position: absolute;
   top: 50%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -217,15 +217,15 @@ button {
   z-index: 1;
 }
 
-button.prev {
+.custom-carousel button.prev {
   left: 0;
 }
 
-button.next {
+.custom-carousel button.next {
   right: 0;
 }
 
-button:hover {
+.custom-carousel button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
