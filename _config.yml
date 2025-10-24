@@ -73,15 +73,15 @@ navbar:
         #- title: 🤺 y/olympics  #Label
         #  url: /olympics #url
 
-    - title: 🔬 Resources
-      url: /resources
-
     - title: 📊 ySights
       child:
         - title: Library Overview
           url: /ysights_library
         - title: Documentation
           url: https://ysocialtwin.github.io/ysights
+
+    - title: 🔬 Resources
+      url: /resources
 
     - title: 📚 Blog
       url: /blog
