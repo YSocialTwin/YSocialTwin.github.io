@@ -8,7 +8,7 @@ subtitle: "Where the Digital World Comes to Life"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/header3.jpg
-header_title: "Y Social"
+header_title: "Y Social" 
 ---
 
 <style>
@@ -212,6 +212,7 @@ Perfect for researchers in computational social science, YSocial allows you to s
     </div>
 </div>
 
+
 <div class="stats-bar">
                 <div class="stat-item">
                     <div class="stat-number">1000+</div>
@@ -226,6 +227,7 @@ Perfect for researchers in computational social science, YSocial allows you to s
                     <div class="stat-label">Open Source</div>
                 </div>
             </div>
+
 
 <div class="container py-4">
     <div class="row">

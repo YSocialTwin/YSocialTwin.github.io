@@ -1,10 +1,10 @@
 ---
 layout: default-full
 title: "ySights"
-subtitle: "Python Library for Y Social Data Analysis"
+subtitle: "Streamline Y Social Data Analysis"
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/resources.png
+header_img: assets/images/politics1.jpg
 header_title: "ySights"
 ---
 
