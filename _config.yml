@@ -76,8 +76,12 @@ navbar:
     - title: 🔬 Resources
       url: /resources
 
-    - title: 📰 ySights
-      url: https://ysocialtwin.github.io/ysights
+    - title: 📊 ySights
+      child:
+        - title: Library Overview
+          url: /ysights_library
+        - title: Documentation
+          url: https://ysocialtwin.github.io/ysights
 
     - title: 📚 Blog
       url: /blog
