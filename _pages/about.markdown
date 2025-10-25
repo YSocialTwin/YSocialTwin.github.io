@@ -27,19 +27,19 @@ vega: true
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/giulio_rossetti.png" style="width:100%; height:auto;">
-      <div>Senior Researcher<br>Network Science<br><a href="https://x.com/GiulioRossetti">@GiulioRossetti</a></div>
+      <div>Dr. Giulio Rossetti<br><small>Senior Researcher - YSocial PI</small><br><a href="https://x.com/GiulioRossetti">@GiulioRossetti</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/massimo_stella.png" style="width:100%; height:auto;">
-      <div>Associate Prof.<br>Cognitive NetSci<br><a href="https://x.com/MassimoSt">@MassimoSt</a></div>
+      <div>Dr. Massimo Stella<br><small>Associate Prof. - Cognitive NetSci</small><br><a href="https://x.com/MassimoSt">@MassimoSt</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/remy_cazabet.png" style="width:100%; height:auto;">
-      <div>Associate Prof.<br>Network Science<br><a href="https://x.com/Yquetzal">@Yquetzal</a></div>
+      <div>Dr. Rèmy Cazabet<br><small>Associate Prof. -Network Science</small><br><a href="https://x.com/Yquetzal">@Yquetzal</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/andrea_failla.png" style="width:100%; height:auto;">
-      <div>PhD Student in AI<br>Higher-order Modeling<br><a href="https://x.com/AndreaFailla4">@AndreaFailla4</a></div>
+      <div>Andrea Failla<br><small>PhD Student - Higher-order Modeling</small><br><a href="https://x.com/AndreaFailla4">@AndreaFailla4</a></div>
     </div>
   </div>
 
@@ -47,19 +47,19 @@ vega: true
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/katherine_abramski.png" style="width:100%; height:auto;">
-      <div>PhD Student in AI<br>LLMs & Cognition<br><a href="https://x.com/katie_abramski">@katie_abramski</a></div>
+      <div>Katherine Abramski<br><small>PhD Student - LLMs & Cognition</small> <br><a href="https://x.com/katie_abramski">@katie_abramski</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/erica_cau.png" style="width:100%; height:auto;">
-      <div>PhD Student in AI<br>LLMs & Opinion Dynamics<br><a href="https://x.com/CauErica">@CauErica</a></div>
+      <div>Erica Cau<br><small>PhD Student - LLMs Opinion Dynamics</small><br><a href="https://x.com/CauErica">@CauErica</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/salvatore_citraro.png" style="width:100%; height:auto;">
-      <div>PostDoc<br>Feature-rich Modeling<br><a href="https://x.com/dsalvaz">@dsalvaz</a></div>
+      <div>Dr. Salvatore Citraro<br><small>Researcher - Feature-rich Modeling</small><br><a href="https://x.com/dsalvaz">@dsalvaz</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/valentina_pansanella.png" style="width:100%; height:auto;">
-      <div>PostDoc<br>Opinion Modeling<br><a href="https://x.com/VPansanella">@VPansanella</a></div>
+      <div>Dr. Valentina Pansanella<br><small>Researcher - Opinion Modeling</small><br><a href="https://x.com/VPansanella">@VPansanella</a></div>
     </div>
   </div>
 
@@ -67,11 +67,15 @@ vega: true
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/virginia_morini.png" style="width:100%; height:auto;">
-      <div>PhD Student in AI<br>Computational Social Science<br><a href="https://x.com/Virgiiim">@Virgiiim</a></div>
+      <div>Dr. Virginia Morini<br><small>Researcher - Comp. Social Science</small><br><a href="https://x.com/Virgiiim">@Virgiiim</a></div>
+    </div>
+<div style="max-width:240px; text-align:center;">
+      <img src="../assets/images/veronicamesina.png" style="width:100%; height:auto;">
+      <div>Veronica Mesina<br><small>Phd Student - Silent Majorities</small><br><a href="https://www.linkedin.com/in/veronica-mesina/">LinkedIn</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/atomasevic.png" style="width:100%; height:auto;">
-      <div>Researcher<br>Computational Social Science<br><a href="https://x.com/atomasevic">@atomasevic</a></div>
+      <div>Dr. Aleksandar Tomasevic<small>Researcher - Comp. Social Science</small><br><a href="https://x.com/atomasevic">@atomasevic</a></div>
     </div>
   </div>
 
