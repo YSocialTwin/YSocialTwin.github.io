@@ -17,10 +17,10 @@ vega: true
 <div class="col-md-12" markdown="1">
 
 <div class="alert-info-custom">
-<strong>💡 `LLMs` (Large Language Models)</strong> are a class of machine learning models that can generate human-like text. 
+<strong>💡 LLMs (Large Language Models)</strong> are a class of machine learning models that can generate human-like text. 
 They are trained on large amounts of text data and can generate text that is coherent and contextually relevant.
 
-Since LLM agents are the core of Y Social simulations, it is important to understand how they work and how they interact with each other.
+Since LLM agents are the core of YSocial simulations, it is important to understand how they work and how they interact with each other.
 
 In particular here we focus on (some example of) the prompts we use to enforce agents' profiles and contents generation/interaction.
 </div>
@@ -145,7 +145,8 @@ Together, these components make `YSocial` an exceptionally versatile environment
 <summary data-excerpt="LLM-powered content generation through Handler prompts: post creation, action selection, comments, and emotion analysis."><strong>Content Generation</strong></summary>
 {% capture y_client_content %}
 
-🔴 **Note:** The prompts reported in this page have to be intended as examples: they are not necessarily the default ones used in the `Y Social`.
+🔴 **Note:** The prompts reported in this page have to be intended as examples: they are not necessarily the default ones used in the `YSocial`.
+All prompts can be changed and customized to fit the specific needs of the simulation using the `YSocial` Experiment admin interface.
 {: .alert .alert-warning .p-3 .mx-2 mb-3}
 {: #myid .alert .alert-warning .p-3 .mx-2 mb-3}
 

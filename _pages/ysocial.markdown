@@ -21,19 +21,18 @@ vega: true
 </div>
 
 <div class="alert-info-custom">
-<strong>✅ Platform Compatibility:</strong> Y Social has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. Windows users are advised to use <strong>Docker</strong>.
+<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. Windows users are advised to use <strong>Docker</strong> <small>(...or to install GNU/Linux)</small>.
 </div>
 
 ---
 
-## Getting Started with Y Social {#getting-started}
+### Getting Started with YSocial {#getting-started}
 
 
+Run `YSocial` is easy and straightforward. Just follow these three simple steps to get your local instance up and running:
 
-Installing `Y Social` is easy and straightforward. Choose your preferred installation method below:
-
-<details>
-<summary data-excerpt="Set up Y Social on your machine with Python virtual environment, clone the repository, and install dependencies."><strong>Install YSocial</strong></summary>
+<details open>
+<summary data-excerpt="Set up YSocial on your machine with Python virtual environment, clone the repository, and install dependencies."><strong>Step 1: Install YSocial</strong></summary>
 
 {% capture y_client_content %}
 
@@ -46,49 +45,22 @@ conda create --name Y python=3.11
 conda activate Y
 ```
 
-#### Clone the repository to your local machine
+###### Clone the repository to your local machine
 
 ```bash
 git clone https://github.com/YSocialTwin/YSocial.git
 cd YSocial
 ```
 
-#### Sync the YClient and YServer submodules
+###### Sync the YClient and YServer submodules
 ```bash
 git submodule update --init --recursive
 ```
 
-#### Install the required dependencies
+###### Install the required dependencies
 ```bash
 pip install -r requirements.txt
 ```
-
-#### Choose Your Database (Optional)
-
-Y Social supports two database backends:
-
-- **SQLite** (default): Lightweight, file-based database. Perfect for development and testing.
-- **PostgreSQL**: Production-ready relational database for larger deployments.
-
-**To use SQLite (default):**
-```bash
-# No additional configuration needed - SQLite is the default
-python y_social.py --host localhost --port 8080
-```
-
-**To use PostgreSQL:**
-```bash
-# Install PostgreSQL (if not already installed)
-# Ubuntu/Debian: sudo apt-get install postgresql postgresql-contrib
-# MacOS: brew install postgresql
-
-# Start YSocial with PostgreSQL
-python y_social.py --host localhost --port 8080 --db postgresql
-```
-
-<div class="alert-info-custom">
-<strong>💡 Database Choice:</strong> SQLite is ideal for single-user scenarios and development. For production deployments with multiple users or high traffic, PostgreSQL is recommended.
-</div>
 
 <div class="alert-warning-custom">
 <strong>⚠️ Important Notes:</strong>
@@ -105,26 +77,26 @@ python y_social.py --host localhost --port 8080 --db postgresql
 
 
 <details>
-<summary data-excerpt="Configure your LLM backend: Ollama, vLLM, or custom OpenAI-compatible servers for agent interactions."><strong>Setup your LLM server</strong></summary>
+<summary data-excerpt="Configure your LLM backend: Ollama, vLLM, or custom OpenAI-compatible servers for agent interactions."><strong>Step 2: Setup your LLM server</strong></summary>
 
 {% capture y_client_server %}
 
-## 🔧 LLM Backend Configuration
-
-YSocial supports multiple LLM backends for content annotation and agent interactions:
+`YSocial` supports multiple LLM backends for content annotation and agent interactions:
 
 - **Ollama** (default) - Local LLM server on port 11434
 - **vLLM** - High-performance inference engine on port 8000
 - **Custom OpenAI-compatible servers** - Any server with OpenAI-compatible API
 
-#### Install Ollama 
+Below are instructions to set up Ollama or vLLM as your LLM backend.
+
+###### Install Ollama 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull minicpm-v # Pull the MiniCPM-v model (needed for image captioning)
 ollama pull llama3.1 # Pull the Llama3.1 model (or any other model you want to use)
 ```
 
-#### Install vLLM 
+###### Install vLLM 
 ```bash
 pip install vllm
 vllm serve <model_name> --host 0.0.0.0 --port 8000
@@ -143,32 +115,76 @@ vllm serve <model_name> --host 0.0.0.0 --port 8000
 </details>
 
 <details>
-<summary data-excerpt="Run the YSocial server on localhost:8080 with your chosen LLM backend (Ollama, vLLM, or custom)."><strong>Start YSocial</strong></summary>
+<summary data-excerpt="Run YSocial with your chosen LLM & DBMS backends."><strong>Step 3: Start YSocial</strong></summary>
 
 {% capture y_client_start %}
 
-## Start YSocial
-
-To start the YSocial server, run the following command in your terminal. You can specify the host, port, and LLM backend as needed.
+To start the `YSocial`, run the following command in your terminal. You can specify the host and port as needed.
 
 ```bash
-# Use Ollama (default)
 python y_social.py --host localhost --port 8080
-
-# Use vLLM
-python y_social.py --host localhost --port 8080 --llm-backend vllm
-
-# Use custom OpenAI-compatible server
-python y_social.py --host localhost --port 8080 --llm-backend myserver.com:8000
 ```
 
+YSocial will start and be accessible via your web browser at [http://localhost:8080](http://localhost:8080).
+
+<br>
+##### Advanced Configuration
+
+By default, YSocial:
+- starts on `localhost:8080`;
+- uses Ollama as the LLM backend;
+- SQlite as the DBMS;
+- load the Jupyter Lab module for advanced analytics.
+
+All those options can be changed via command-line arguments.
+<br>
+###### Choose Your LLM Backend
+
+```bash
+# Use vLLM
+python y_social.py --llm-backend vllm
+
+# Use custom OpenAI-compatible server
+python y_social.py --llm-backend myserver.com:8000
+```
+###### Choose Your Database
+
+`YSocial` supports two database backends:
+
+- **SQLite** (default): Lightweight, file-based database. Perfect for development and testing.
+- **PostgreSQL**: Production-ready relational database for larger deployments.
+
+```bash
+# Start YSocial with PostgreSQL
+python y_social.py --db postgresql # (assuming you have PostgreSQL running and configured)
+```
+
+By default, `YSocial` will search for the following environment variables to access PostgreSQL:
+- `PG_USER` (default: "postgres")
+- `PG_PASSWORD` (default: "password")
+- `PG_HOST` (default: "localhost")
+- `PG_PORT` (default: "5432")
+- `PG_DBNAME` (default: "dashboard")
+- `PG_DBNAME_DUMMY` (default: "dummy")
+
+<div class="alert-info-custom">
+<strong>💡 Database Choice:</strong> SQLite is ideal for single-user scenarios and development. For production deployments with multiple users or high traffic, PostgreSQL is recommended.
+</div>
+
+###### Disable Jupyter Lab Module
+Jupyter Lab is included for advanced data analytics. If you don't need it, you can disable it with the following command:
+
+```bash
+# Start YSocial without Jupyter Lab
+python y_social.py --no_notebook
+```
 
 <div class="alert-info-custom">
 <strong>💡 Success!</strong> The web interface will be available at <strong><a href="http://localhost:8080">http://localhost:8080</a></strong>
 </div>
 
 
-## 🔑 Admin Panel Access
+##### 🔑 Admin Panel Access
 
 To access the **admin panel**, use the default credentials:
 
