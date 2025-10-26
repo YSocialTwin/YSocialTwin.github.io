@@ -83,9 +83,9 @@ pip install -r requirements.txt
 
 `YSocial` supports multiple LLM backends for content annotation and agent interactions:
 
-- **Ollama** (default) - Local LLM server on port 11434
-- **vLLM** - High-performance inference engine on port 8000
-- **Custom OpenAI-compatible servers** - Any server with OpenAI-compatible API
+- **Ollama** Local LLM server on port 11434
+- **vLLM** - Local High-performance inference engine on port 8000
+- **Custom OpenAI-compatible servers** - Any other server with OpenAI-compatible API
 
 Below are instructions to set up Ollama or vLLM as your LLM backend.
 
@@ -99,8 +99,9 @@ ollama pull llama3.1 # Pull the Llama3.1 model (or any other model you want to u
 ###### Install vLLM 
 ```bash
 pip install vllm
-vllm serve <model_name> --host 0.0.0.0 --port 8000
-# install models compatible with vLLM - remember to install at least a text-only model and MiniCPM-v 
+python3 -m vllm.entrypoints.openai.api_server <model_name> --host 0.0.0.0 --port 8000
+# Do not use "vllm serve" since, by default, it does not implement the full OpenAI API
+# Remember that to serve multiple models you need to expose different ports
 ```
 
 <div class="alert-warning-custom">
@@ -132,21 +133,34 @@ YSocial will start and be accessible via your web browser at [http://localhost:8
 
 By default, YSocial:
 - starts on `localhost:8080`;
-- uses Ollama as the LLM backend;
 - SQlite as the DBMS;
 - load the Jupyter Lab module for advanced analytics.
 
 All those options can be changed via command-line arguments.
 <br>
-###### Choose Your LLM Backend
+###### Choose Your (local) LLM Backend
+
+`YSocial` supports OpenAI compatible, local, LLM backends.
 
 ```bash
+# Use Ollama 
+python y_social.py --llm-backend ollama
+
 # Use vLLM
 python y_social.py --llm-backend vllm
 
 # Use custom OpenAI-compatible server
 python y_social.py --llm-backend myserver.com:8000
 ```
+
+If you choose Ollama or vLLM, make sure the server is running on the default port (`11434` for Ollama, `8000` for vLLM).
+
+If you plan to use a remote server just start `YSocial` without the `--llm-backend` argument and set the LLM server URL in the Admin Panel.
+
+```bash
+python y_social.py 
+```
+
 ###### Choose Your Database
 
 `YSocial` supports two database backends:
