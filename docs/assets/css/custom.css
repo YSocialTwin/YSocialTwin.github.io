@@ -174,7 +174,7 @@ details[open] summary {
   height: auto;
 }
 
-button {
+.custom-carousel button {
   position: absolute;
   top: 50%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -186,15 +186,15 @@ button {
   z-index: 1;
 }
 
-button.prev {
+.custom-carousel button.prev {
   left: 0;
 }
 
-button.next {
+.custom-carousel button.next {
   right: 0;
 }
 
-button:hover {
+.custom-carousel button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -342,6 +342,7 @@ details {
   padding: 1rem;
   margin: 1rem 0;
   background: white;
+  position: relative;
 }
 
 details[open] {
@@ -355,11 +356,63 @@ details summary {
   margin-bottom: 1rem;
   background: #f9fafb;
   border-radius: 0.5rem 0.5rem 0 0;
+  cursor: pointer;
 }
 
 details[open] summary {
   border-radius: 0.5rem 0.5rem 0 0;
   margin-bottom: 1rem;
+}
+
+details:not([open]) summary::after {
+  content: attr(data-excerpt);
+  display: block;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.header-chulapa {
+  max-height: 250px !important;
+  min-height: 150px !important;
+}
+
+.header-chulapa.header-hero {
+  max-height: 300px !important;
+}
+
+.header-chulapa.header-base {
+  max-height: 150px !important;
+  min-height: 100px !important;
+}
+
+.header-chulapa .header-img {
+  object-fit: cover;
+  max-height: 100%;
+}
+
+.nav-button:hover {
+  background: #2563eb !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.blog-sidebar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-post:hover {
+  background: #f3f4f6 !important;
+  transform: translateX(5px);
+  transition: all 0.3s;
 }
 
 /*# sourceMappingURL=custom.css.map */
