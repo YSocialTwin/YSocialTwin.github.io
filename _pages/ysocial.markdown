@@ -2,26 +2,37 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default-full
 title:  "Y Social"
-subtitle: "The easy way..."
+subtitle: "Quick Start"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/server1.jpg
-header_title: "Y Social Web"
+header_title: "Y Social"
 vega: true
 ---
 
-`Y Social` has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment, where users can interact with each other and with AI-driven agents to study and analyze social media dynamics.
+<div class="container py-3">
+<div class="row">
+<div class="col-md-12" markdown="1">
 
-To lower the barrier to entry, we implemented a "zero code" web interface allowing both experiment configuration and "social media-like" interaction with the platform.
+<div class="alert-info-custom">
+<strong>💡 Do you want "complete control" on your YSocial instance?</strong> Follow this guide to prepare your local setup.
+</div>
 
-## Getting Started with Y Social
+<div class="alert-info-custom">
+<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. Windows users are advised to use <strong>Docker</strong> <small>(...or to install GNU/Linux)</small>.
+</div>
 
-Installing `Y Social` is easy and straightforward. Just follow the steps below to get started.
+---
 
-<details>
-<summary><strong>Option 1: Using the official repository</strong></summary>
+### Getting Started with YSocial {#getting-started}
+
+
+Run `YSocial` is easy and straightforward. Just follow these three simple steps to get your local instance up and running:
+
+<details open>
+<summary data-excerpt="Set up YSocial on your machine with Python virtual environment, clone the repository, and install dependencies."><strong>Step 1: Install YSocial</strong></summary>
 
 {% capture y_client_content %}
 
@@ -34,78 +45,160 @@ conda create --name Y python=3.11
 conda activate Y
 ```
 
-#### Clone the repository to your local machine
+###### Clone the repository to your local machine
 
 ```bash
 git clone https://github.com/YSocialTwin/YSocial.git
 cd YSocial
 ```
 
-#### Sync the YClient and YServer submodules
+###### Sync the YClient and YServer submodules
 ```bash
 git submodule update --init --recursive
 ```
 
-#### Install the required dependencies
+###### Install the required dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-#### Install Ollama (and pull some LLMs)
+<div class="alert-warning-custom">
+<strong>⚠️ Important Notes:</strong>
+<ul style="margin-bottom: 0;">
+<li><strong>Note 1:</strong> Ensure the <code>screen</code> command is installed on your system.</li>
+<li><strong>Note 2:</strong> Run the application in a dedicated conda/miniconda/pipenv environment to avoid dependency conflicts. Homebrew installations of Python may lead to execution issues.</li>
+</ul>
+</div>
+
+{% endcapture %}
+{{ y_client_content | markdownify }}
+
+</details>
+
+
+<details>
+<summary data-excerpt="Configure your LLM backend: Ollama, vLLM, or custom OpenAI-compatible servers for agent interactions."><strong>Step 2: Setup your LLM server</strong></summary>
+
+{% capture y_client_server %}
+
+`YSocial` supports multiple LLM backends for content annotation and agent interactions:
+
+- **Ollama** Local LLM server on port 11434
+- **vLLM** - Local High-performance inference engine on port 8000
+- **Custom OpenAI-compatible servers** - Any other server with OpenAI-compatible API
+
+Below are instructions to set up Ollama or vLLM as your LLM backend.
+
+###### Install Ollama 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull minicpm-v # Pull the MiniCPM-v model (needed for image captioning)
 ollama pull llama3.1 # Pull the Llama3.1 model (or any other model you want to use)
 ```
 
-#### Start YSocial
+###### Install vLLM 
+```bash
+pip install vllm
+python3 -m vllm.entrypoints.openai.api_server <model_name> --host 0.0.0.0 --port 8000
+# Do not use "vllm serve" since, by default, it does not implement the full OpenAI API
+# Remember that to serve multiple models you need to expose different ports
+```
+
+<div class="alert-warning-custom">
+<strong>🔴 Important Requirements:</strong>
+<ol style="margin-bottom: 0;">
+<li>Install <code>minicpm-v</code> to allow YSocial agents to interact with image contents. If you run ollama, you can use the admin panel to add LLM models.</li>
+</ol>
+</div>
+
+{% endcapture %}
+{{ y_client_server | markdownify }}
+</details>
+
+<details>
+<summary data-excerpt="Run YSocial with your chosen LLM & DBMS backends."><strong>Step 3: Start YSocial</strong></summary>
+
+{% capture y_client_start %}
+
+To start the `YSocial`, run the following command in your terminal. You can specify the host and port as needed.
+
 ```bash
 python y_social.py --host localhost --port 8080
 ```
 
-💡 The web interface will be available at **[http://localhost:8080](http://localhost:8080)**.
+YSocial will start and be accessible via your web browser at [http://localhost:8080](http://localhost:8080).
 
-🔴 **Note:** Ensure the `screen` command is installed on your system. If using Windows, **Docker is recommended**.
+<br>
+##### Advanced Configuration
 
-{% endcapture %}
-{{ y_client_content | markdownify }}
+By default, YSocial:
+- starts on `localhost:8080`;
+- SQlite as the DBMS;
+- load the Jupyter Lab module for advanced analytics.
 
-</details>
+All those options can be changed via command-line arguments.
+<br>
+###### Choose Your (local) LLM Backend
 
-<details>
-<summary><strong>Option 2: Using Docker</strong></summary>
+`YSocial` supports OpenAI compatible, local, LLM backends.
 
-{% capture y_client_content %}
-
-`Y Social` provides a **Dockerized setup** that includes:
-- **[Ollama](https://ollama.com/)** for running LLMs
-- **Y Server / Y Client** for managing simulations
-- **Y Social** for the web interface
-
-#### 📦 **Building & Running the Docker Container**
 ```bash
-docker-compose -f docker-compose.yml build
-docker-compose up
+# Use Ollama 
+python y_social.py --llm-backend ollama
+
+# Use vLLM
+python y_social.py --llm-backend vllm
+
+# Use custom OpenAI-compatible server
+python y_social.py --llm-backend myserver.com:8000
 ```
 
-#### ⚡ **Enable GPU Support (NVIDIA Only)**
+If you choose Ollama or vLLM, make sure the server is running on the default port (`11434` for Ollama, `8000` for vLLM).
+
+If you plan to use a remote server just start `YSocial` without the `--llm-backend` argument and set the LLM server URL in the Admin Panel.
+
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose_gpu.yml build
-docker-compose up --gpus all
+python y_social.py 
 ```
 
-💡 **Ensure you have the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed.**
+###### Choose Your Database
 
-🔴 **Note:** MacOS does not support GPU pass-through in Docker.
+`YSocial` supports two database backends:
 
-{% endcapture %}
-{{ y_client_content | markdownify }}
+- **SQLite** (default): Lightweight, file-based database. Perfect for development and testing.
+- **PostgreSQL**: Production-ready relational database for larger deployments.
 
-</details>
+```bash
+# Start YSocial with PostgreSQL
+python y_social.py --db postgresql # (assuming you have PostgreSQL running and configured)
+```
 
-## Start Exploring
+By default, `YSocial` will search for the following environment variables to access PostgreSQL:
+- `PG_USER` (default: "postgres")
+- `PG_PASSWORD` (default: "password")
+- `PG_HOST` (default: "localhost")
+- `PG_PORT` (default: "5432")
+- `PG_DBNAME` (default: "dashboard")
+- `PG_DBNAME_DUMMY` (default: "dummy")
 
-As soon as you have the server up and running, you can start exploring the web interface and the admin panel.
+<div class="alert-info-custom">
+<strong>💡 Database Choice:</strong> SQLite is ideal for single-user scenarios and development. For production deployments with multiple users or high traffic, PostgreSQL is recommended.
+</div>
+
+###### Disable Jupyter Lab Module
+Jupyter Lab is included for advanced data analytics. If you don't need it, you can disable it with the following command:
+
+```bash
+# Start YSocial without Jupyter Lab
+python y_social.py --no_notebook
+```
+
+<div class="alert-info-custom">
+<strong>💡 Success!</strong> The web interface will be available at <strong><a href="http://localhost:8080">http://localhost:8080</a></strong>
+</div>
+
+
+##### 🔑 Admin Panel Access
 
 To access the **admin panel**, use the default credentials:
 
@@ -114,24 +207,17 @@ To access the **admin panel**, use the default credentials:
 
 Once logged in, you can start configuring your experiments and interacting with the platform.
 
-🔴 **Important 1:** ensure having installed on your local machine (or on the docker instance) ollama or an alternative LLM server.
-{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
 
-🔴 **Important 2:** install `minicpm-v` to allow YSocial agents to interact with image contents. If you run ollama, you can use the admin panel to add LLM models.
-{: #myid .alert .alert-info .p-3 .mx-2 mb-3}
+{% endcapture %}
+{{ y_client_start | markdownify }}
+</details>
 
+</div>
+</div>
 
+<div style="text-align: center; margin: 2rem 0;">
+<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="{{site.baseurl}}/docker" class="cta-secondary">📖 Install with Docker</a>
+</div>
 
----
-## 🛠 Technical Stack
-
-### 🔙 **Backend**
-- **Framework:** [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- **Database:** SQLite (via SQLAlchemy)
-- **LLM Interaction:** [Autogen](https://github.com/microsoft/autogen)
-
-### 🎨 **Frontend**
-- **Template:** [Friendkit](https://cssninja.io/product/friendkit)
-- **Agent Avatars:** [Cartoon Set 15k](https://google.github.io/cartoonset/)
-
----
+</div>

@@ -44,20 +44,25 @@ navbar:
     img: "./assets/images/Ysocial_logo.png"
     url: /
   nav:
-    - title: ⛮ Getting Started
+    - title: 🚀 Get Started
       child:
-        - title: The easy way... #Label
+        - title: Introduction #Label
+          url: /key_features  #url
+        - title: Quick Start #Label
           url: /ysocial  #url
-        - title: ... the hard way!
-          url: /hard_way
+        - title: Docker #Label
+          url: /docker  #url
+        #- title: Manual Installation
+        #  url: /hard_way
 
 
-    - title: 🧙‍Behind the curtains
+    - title: 📖 Inside YSocial
       child:
-        - title: 🎰 Experiments #Label
-          url: /experiments  #url
         - title: 🎭 LLM Agents #Label
           url: /agents #url
+        - title: 🎰 Modeling Choices #Label
+          url: /modeling  #url
+
       #  - title: 🎬 Scenario Design #Label
       #    url: /scenario #url
 
@@ -68,13 +73,20 @@ navbar:
         #- title: 🤺 y/olympics  #Label
         #  url: /olympics #url
 
-    - title: 📙 Resources #Label
+    - title: 📊 ySights
+      child:
+        - title: Library Overview
+          url: /ysights_library
+        - title: Documentation
+          url: https://ysocialtwin.github.io/ysights
+
+    - title: 🔬 Resources
       url: /resources
 
-    - title: 📚 Blog #Label
+    - title: 📚 Blog
       url: /blog
 
-    - title: 👥 About Us #Label
+    - title: 👥 About
       url: /about #url
     #- title: Bootstrap
     #  url: /bootstrap
@@ -221,7 +233,7 @@ permalink: /blog/:year/:title/
 pagination:
   enabled: true
 
-paginate: 1
+paginate: 10
 paginate_path: "/blog/page:num/"
 #paginate_path: "/blog/"
 

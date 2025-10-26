@@ -22,7 +22,7 @@ The following guide is intended for users who want to run the YServer and YClien
 {: #myid .alert .alert-warning .p-3 .mx-2 mb-3}
 
 <details>
-<summary><strong>Y Server</strong></summary>
+<summary data-excerpt="Server-side REST API application simulating microblogging platform actions, built with Python/Flask/SQLite."><strong>Y Server</strong></summary>
 
 {% capture y_client_content %}
 
@@ -106,7 +106,7 @@ The server will be then ready to accept requests at `http://localhost:5010`.
 </details>
 
 <details>
-<summary><strong>Y Client</strong></summary>
+<summary data-excerpt="Client application simulating user interactions with LLM roleplay, built with Python/pyautogen/feedparser."><strong>Y Client</strong></summary>
 
 
 {% capture y_client_content %}
@@ -257,7 +257,7 @@ More complicated behaviors (allowing for more finegrained agents configurations)
 </details>
 
 <details>
-<summary><strong>Large Language Models (LLMs)</strong></summary>
+<summary data-excerpt="Set up OpenAI-compatible LLM models to power agent interactions. Install ollama for local LLM hosting."><strong>Large Language Models (LLMs)</strong></summary>
 
 {% capture y_client_content %}
 
