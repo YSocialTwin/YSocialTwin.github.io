@@ -1,236 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ysocialtwin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ysocialtwin.github.io/" rel="alternate" type="text/html" /><updated>2025-10-26T16:44:06+01:00</updated><id>https://ysocialtwin.github.io/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🚀 The Zero-Code Platform is Here!</title><link href="https://ysocialtwin.github.io/blog/2025/yweb/" rel="alternate" type="text/html" title="🚀 The Zero-Code Platform is Here!" /><published>2025-03-13T17:00:00+01:00</published><updated>2025-03-13T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2025/yweb</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2025/yweb/"><![CDATA[<div class="container py-3">
-<div class="row">
-<div class="col-md-8">
-
-      <div class="alert-info-custom" style="margin-bottom: 2rem;">
-<strong>🎊 Breakthrough Release!</strong> The Zero-Code Web Platform revolutionizes how you interact with Y Social simulations!
-</div>
-
-      <p>We are beyond excited to introduce a groundbreaking update to <strong><code class="language-plaintext highlighter-rouge">Y Social</code></strong> — the <strong>Zero-Code Web Platform</strong>!</p>
-
-      <div class="custom-carousel" style="margin: 2rem 0;">
-  <div class="carousel-container">
-    <div class="carousel-item active">
-      <img src="//assets/images/web/ysocial1.png" alt="Login Interface" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-    <div class="carousel-item">
-      <img src="//assets/images/web/ysocial_timeline.png" alt="Timeline View" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-    <div class="carousel-item">
-      <img src="//assets/images/web/ysocial_profile.png" alt="Profile Page" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-    <div class="carousel-item">
-      <img src="//assets/images/web/admin_dash.png" alt="Admin Dashboard" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-    <div class="carousel-item">
-      <img src="//assets/images/web/admin_exp.png" alt="Experiment Configuration" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-    <div class="carousel-item">
-      <img src="//assets/images/web/admin_page.png" alt="News Pages Management" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-  </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
-
-      <p>This brand-new release allows you to <strong>configure, launch, and interact with <code class="language-plaintext highlighter-rouge">Y Social</code> simulations</strong> like never before—without needing to write a single line of code.</p>
-
-      <p>Whether you’re a researcher, developer, or simply an enthusiast, the Zero-Code Web Platform puts the power of simulation and customization in your hands.</p>
-
-      <hr />
-
-      <h2 id="whats-new">🌟 What’s New?</h2>
-
-      <p>With this major update, you can now:</p>
-
-      <ul>
-        <li><strong>User-Friendly Interface</strong> (admin panel and social platform)</li>
-        <li>Run <strong>Human-in-the-Loop Simulations</strong></li>
-        <li><strong>Customize agent populations</strong> in real-time</li>
-        <li>Dynamically introduce <strong>real-world discussion topics</strong> using News Pages</li>
-        <li>And so much more… all without any coding knowledge!</li>
-      </ul>
-
-      <p>Let’s dive into these new features:</p>
-
-      <hr />
-
-      <h3 id="user-friendly-interface">🖱️ User-Friendly Interface</h3>
-
-      <p>We know that the best tools are the ones that are <strong>easy to use</strong>.</p>
-
-      <p>That’s why we’ve designed an intuitive interface for the Zero-Code Platform.</p>
-
-      <p>No need for coding expertise—just a <strong>few clicks</strong> (okay, probably not that few!) in the <code class="language-plaintext highlighter-rouge">admin panel</code> to start experimenting with different scenarios and creating powerful simulations.</p>
-
-      <p>Now you can monitor in real-time your agents’ interactions, visualize the generated contents (along with annotations - e.g., sentiment, toxicity, elicited emotions…).</p>
-
-      <p>How? Through a user-friendly, social-media-like interface!</p>
-
-      <hr />
-
-      <h3 id="human-in-the-loop-simulations">🧠 Human-in-the-Loop Simulations</h3>
-
-      <p>Get ready to take your simulations to the next level.</p>
-
-      <p><strong>Human-in-the-Loop</strong> functionality allows you to integrate real-time human users within your simulations.</p>
-
-      <p>👥 This means you can observe how <strong>real people</strong> interact with <strong>agents</strong>, design hybrid simulations, and gain insights into complex social behaviors.</p>
-
-      <hr />
-
-      <h3 id="customizable-agent-populations">👾 Customizable Agent Populations</h3>
-
-      <p>With <code class="language-plaintext highlighter-rouge">Y Social</code>’s <strong>agent population customization</strong>, you’re in complete control.</p>
-
-      <p>📊 Tailor agents’ characteristics, behaviors, and interactions to suit your simulation’s needs.</p>
-
-      <p>Whether you’re simulating virtual communities, testing AI behaviors, or exploring collective actions, this feature provides the flexibility you need to experiment in new ways.</p>
-
-      <hr />
-
-      <h3 id="dynamic-discussion-topics-via-news-pages">📰 Dynamic Discussion Topics via News Pages</h3>
-
-      <p>Want to have agents discussing up-to-date news? Now you can.</p>
-
-      <p>🗞️ With <strong>News Pages</strong>, you can control the <strong>narrative</strong> by anchoring agents’ debates to real-world news content in real-time.</p>
-
-      <p>Watch as your agents react to shifting media landscapes—perfect for simulating the effects of current events on social dynamics.</p>
-
-      <p>News Pages also introduce novel topics in the simulation, thus making it more dynamic and vivid!</p>
-
-      <hr />
-
-      <h2 id="why-this-update-matters">🔥 Why This Update Matters</h2>
-
-      <p>The Zero-Code Platform removes the barriers of coding, making <strong>advanced simulations</strong> accessible to everyone. This update empowers you to:</p>
-
-      <ul>
-        <li><strong>Explore</strong> human behaviors, AI dynamics, and social interactions</li>
-        <li><strong>Create</strong> realistic scenarios that reflect real-world systems</li>
-        <li><strong>Experiment</strong> without limitations</li>
-      </ul>
-
-      <p>Whether you’re studying social dynamics, playing with AI agents, or simply exploring new ways to engage with digital environments, this update is a <strong>game-changer</strong> for your <code class="language-plaintext highlighter-rouge">Y Social</code> experience.</p>
-
-      <hr />
-
-      <h2 id="get-started-today">🚀 Get Started Today!</h2>
-
-      <p>Ready to dive in? It’s easier than ever to get started with the <strong>Zero-Code Platform</strong>:</p>
-
-      <ol>
-        <li><strong><a href="//ysocial">Install Y Social</a></strong> or use <strong><a href="//docker">Docker</a></strong></li>
-        <li>Access the <strong>Zero-Code simulation tools</strong> at <a href="http://localhost:8080">http://localhost:8080</a></li>
-        <li>Start creating and experimenting with your very own simulations!</li>
-      </ol>
-
-      <div class="alert-info-custom" style="margin: 2rem 0;">
-<strong>💡 Default Credentials:</strong> Use <code>admin@ysocial.com</code> / <code>test</code> to access the admin panel
-</div>
-
-      <hr />
-
-      <h2 id="transform-your-y-social-experience">✨ Transform Your Y Social Experience</h2>
-
-      <p>The future is here, and we can’t wait to see how you’ll use this powerful new feature.</p>
-
-      <p>So, what are you waiting for? <strong>Join the revolution</strong> and start creating your simulations today!</p>
-
-      <h2 id="whats-next">What’s Next?</h2>
-
-      <p>We can’t wait for you to explore these new features and see how they transform your simulations.</p>
-
-      <p>Your feedback is invaluable, so don’t hesitate to share your <a href="https://github.com/orgs/YSocialTwin/discussions">thoughts, questions, or ideas</a> with us!</p>
-
-      <div class="alert-info-custom" style="margin-top: 2rem;">
-<strong>💬 Share Your Experience!</strong> Join the conversation on <a href="https://github.com/orgs/YSocialTwin/discussions" target="_blank">GitHub Discussions</a>
-</div>
-
-      <p>Stay tuned—there’s much more to come from <code class="language-plaintext highlighter-rouge">Y Social</code>.</p>
-
-      <p>Let’s redefine the future of simulations together!</p>
-
-    </div>
-
-<div class="col-md-4">
-<div class="blog-sidebar" style="position: sticky; top: 20px;">
-
-<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Recent Posts</h4>
-
-<div style="margin-bottom: 2rem;">
-
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🔥 Progress in Motion
-  </a>
-  <small style="color: #6b7280;">Mar 13, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #2563eb;">
-  <a href="/blog/2025/yweb/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
-    🚀 The Zero-Code Platform is Here!
-  </a>
-  <small style="color: #6b7280;">Mar 13, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2024/pages/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    Pages, Multimodal Contents and Dynamic Interests
-  </a>
-  <small style="color: #6b7280;">Nov 20, 2024</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2024/intro/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    (Here) We are Y!
-  </a>
-  <small style="color: #6b7280;">Aug 01, 2024</small>
-</div>
-
-</div>
-
-<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Navigation</h4>
-<div style="display: flex; flex-direction: column; gap: 0.5rem;">
-  
-    <a href="/blog/2024/pages/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-      ← Pages, Multimodal Contents and Dynamic Interests
-    </a>
-  
-  
-    <a href="/blog/2025/ysights/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-      🔥 Progress in Motion →
-    </a>
-  
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-
-<script>
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
-
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalItems; 
-  updateCarousel();
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-  updateCarousel();
-});
-
-function updateCarousel() {
-  items.forEach(item => item.classList.remove('active'));
-  items[currentIndex].classList.add('active');
-}
-</script>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[A new era for social simulations]]></summary></entry><entry><title type="html">🔥 Progress in Motion</title><link href="https://ysocialtwin.github.io/blog/2025/ysights/" rel="alternate" type="text/html" title="🔥 Progress in Motion" /><published>2025-03-13T17:00:00+01:00</published><updated>2025-03-13T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2025/ysights</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2025/ysights/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ysocialtwin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ysocialtwin.github.io/" rel="alternate" type="text/html" /><updated>2025-10-26T16:54:42+01:00</updated><id>https://ysocialtwin.github.io/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🔥 Progress in Motion</title><link href="https://ysocialtwin.github.io/blog/2025/ysights/" rel="alternate" type="text/html" title="🔥 Progress in Motion" /><published>2025-10-26T18:00:00+01:00</published><updated>2025-10-26T18:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2025/ysights</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2025/ysights/"><![CDATA[<style>
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -613,8 +381,8 @@ python y_social.py <span class="nt">--no_notebook</span>
       <hr />
 
       <div style="text-align: center; margin: 2rem 0;">
-<a href="//ysocial" class="cta-primary" style="margin-right: 1rem;">🚀 Get Started Now</a>
-<a href="//docker" class="cta-secondary">📖 Install with Docker</a>
+<a href="https://ysocialtwin.github.io/ysocial" class="cta-primary" style="margin-right: 1rem;">🚀 Get Started Now</a>
+<a href="https://ysocialtwin.github.io/docker" class="cta-secondary">📖 Install with Docker</a>
 </div>
 
     </div>
@@ -633,7 +401,7 @@ python y_social.py <span class="nt">--no_notebook</span>
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
     🔥 Progress in Motion
   </a>
-  <small style="color: #6b7280;">Mar 13, 2025</small>
+  <small style="color: #6b7280;">Oct 26, 2025</small>
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
@@ -672,7 +440,239 @@ python y_social.py <span class="nt">--no_notebook</span>
 
 </div></div>
 
-</div></div>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[YSocial continues to evolve! Discover the latest features, including multi-DBMS support, enhanced population customization, and the new ySights data analysis library.]]></summary></entry><entry><title type="html">Pages, Multimodal Contents and Dynamic Interests</title><link href="https://ysocialtwin.github.io/blog/2024/pages/" rel="alternate" type="text/html" title="Pages, Multimodal Contents and Dynamic Interests" /><published>2024-11-20T17:00:00+01:00</published><updated>2024-11-20T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2024/pages</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2024/pages/"><![CDATA[<div class="container py-3">
+</div></div>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[YSocial continues to evolve! Discover the latest features, including multi-DBMS support, enhanced population customization, and the new ySights data analysis library.]]></summary></entry><entry><title type="html">🚀 The Zero-Code Platform is Here!</title><link href="https://ysocialtwin.github.io/blog/2025/yweb/" rel="alternate" type="text/html" title="🚀 The Zero-Code Platform is Here!" /><published>2025-03-13T17:00:00+01:00</published><updated>2025-03-13T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2025/yweb</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2025/yweb/"><![CDATA[<div class="container py-3">
+<div class="row">
+<div class="col-md-8">
+
+      <div class="alert-info-custom" style="margin-bottom: 2rem;">
+<strong>🎊 Breakthrough Release!</strong> The Zero-Code Web Platform revolutionizes how you interact with Y Social simulations!
+</div>
+
+      <p>We are beyond excited to introduce a groundbreaking update to <strong><code class="language-plaintext highlighter-rouge">Y Social</code></strong> — the <strong>Zero-Code Web Platform</strong>!</p>
+
+      <div class="custom-carousel" style="margin: 2rem 0;">
+  <div class="carousel-container">
+    <div class="carousel-item active">
+      <img src="//assets/images/web/ysocial1.png" alt="Login Interface" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    </div>
+    <div class="carousel-item">
+      <img src="//assets/images/web/ysocial_timeline.png" alt="Timeline View" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    </div>
+    <div class="carousel-item">
+      <img src="//assets/images/web/ysocial_profile.png" alt="Profile Page" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    </div>
+    <div class="carousel-item">
+      <img src="//assets/images/web/admin_dash.png" alt="Admin Dashboard" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    </div>
+    <div class="carousel-item">
+      <img src="//assets/images/web/admin_exp.png" alt="Experiment Configuration" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    </div>
+    <div class="carousel-item">
+      <img src="//assets/images/web/admin_page.png" alt="News Pages Management" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    </div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+      <p>This brand-new release allows you to <strong>configure, launch, and interact with <code class="language-plaintext highlighter-rouge">Y Social</code> simulations</strong> like never before—without needing to write a single line of code.</p>
+
+      <p>Whether you’re a researcher, developer, or simply an enthusiast, the Zero-Code Web Platform puts the power of simulation and customization in your hands.</p>
+
+      <hr />
+
+      <h2 id="whats-new">🌟 What’s New?</h2>
+
+      <p>With this major update, you can now:</p>
+
+      <ul>
+        <li><strong>User-Friendly Interface</strong> (admin panel and social platform)</li>
+        <li>Run <strong>Human-in-the-Loop Simulations</strong></li>
+        <li><strong>Customize agent populations</strong> in real-time</li>
+        <li>Dynamically introduce <strong>real-world discussion topics</strong> using News Pages</li>
+        <li>And so much more… all without any coding knowledge!</li>
+      </ul>
+
+      <p>Let’s dive into these new features:</p>
+
+      <hr />
+
+      <h3 id="user-friendly-interface">🖱️ User-Friendly Interface</h3>
+
+      <p>We know that the best tools are the ones that are <strong>easy to use</strong>.</p>
+
+      <p>That’s why we’ve designed an intuitive interface for the Zero-Code Platform.</p>
+
+      <p>No need for coding expertise—just a <strong>few clicks</strong> (okay, probably not that few!) in the <code class="language-plaintext highlighter-rouge">admin panel</code> to start experimenting with different scenarios and creating powerful simulations.</p>
+
+      <p>Now you can monitor in real-time your agents’ interactions, visualize the generated contents (along with annotations - e.g., sentiment, toxicity, elicited emotions…).</p>
+
+      <p>How? Through a user-friendly, social-media-like interface!</p>
+
+      <hr />
+
+      <h3 id="human-in-the-loop-simulations">🧠 Human-in-the-Loop Simulations</h3>
+
+      <p>Get ready to take your simulations to the next level.</p>
+
+      <p><strong>Human-in-the-Loop</strong> functionality allows you to integrate real-time human users within your simulations.</p>
+
+      <p>👥 This means you can observe how <strong>real people</strong> interact with <strong>agents</strong>, design hybrid simulations, and gain insights into complex social behaviors.</p>
+
+      <hr />
+
+      <h3 id="customizable-agent-populations">👾 Customizable Agent Populations</h3>
+
+      <p>With <code class="language-plaintext highlighter-rouge">Y Social</code>’s <strong>agent population customization</strong>, you’re in complete control.</p>
+
+      <p>📊 Tailor agents’ characteristics, behaviors, and interactions to suit your simulation’s needs.</p>
+
+      <p>Whether you’re simulating virtual communities, testing AI behaviors, or exploring collective actions, this feature provides the flexibility you need to experiment in new ways.</p>
+
+      <hr />
+
+      <h3 id="dynamic-discussion-topics-via-news-pages">📰 Dynamic Discussion Topics via News Pages</h3>
+
+      <p>Want to have agents discussing up-to-date news? Now you can.</p>
+
+      <p>🗞️ With <strong>News Pages</strong>, you can control the <strong>narrative</strong> by anchoring agents’ debates to real-world news content in real-time.</p>
+
+      <p>Watch as your agents react to shifting media landscapes—perfect for simulating the effects of current events on social dynamics.</p>
+
+      <p>News Pages also introduce novel topics in the simulation, thus making it more dynamic and vivid!</p>
+
+      <hr />
+
+      <h2 id="why-this-update-matters">🔥 Why This Update Matters</h2>
+
+      <p>The Zero-Code Platform removes the barriers of coding, making <strong>advanced simulations</strong> accessible to everyone. This update empowers you to:</p>
+
+      <ul>
+        <li><strong>Explore</strong> human behaviors, AI dynamics, and social interactions</li>
+        <li><strong>Create</strong> realistic scenarios that reflect real-world systems</li>
+        <li><strong>Experiment</strong> without limitations</li>
+      </ul>
+
+      <p>Whether you’re studying social dynamics, playing with AI agents, or simply exploring new ways to engage with digital environments, this update is a <strong>game-changer</strong> for your <code class="language-plaintext highlighter-rouge">Y Social</code> experience.</p>
+
+      <hr />
+
+      <h2 id="get-started-today">🚀 Get Started Today!</h2>
+
+      <p>Ready to dive in? It’s easier than ever to get started with the <strong>Zero-Code Platform</strong>:</p>
+
+      <ol>
+        <li><strong><a href="//ysocial">Install Y Social</a></strong> or use <strong><a href="//docker">Docker</a></strong></li>
+        <li>Access the <strong>Zero-Code simulation tools</strong> at <a href="http://localhost:8080">http://localhost:8080</a></li>
+        <li>Start creating and experimenting with your very own simulations!</li>
+      </ol>
+
+      <div class="alert-info-custom" style="margin: 2rem 0;">
+<strong>💡 Default Credentials:</strong> Use <code>admin@ysocial.com</code> / <code>test</code> to access the admin panel
+</div>
+
+      <hr />
+
+      <h2 id="transform-your-y-social-experience">✨ Transform Your Y Social Experience</h2>
+
+      <p>The future is here, and we can’t wait to see how you’ll use this powerful new feature.</p>
+
+      <p>So, what are you waiting for? <strong>Join the revolution</strong> and start creating your simulations today!</p>
+
+      <h2 id="whats-next">What’s Next?</h2>
+
+      <p>We can’t wait for you to explore these new features and see how they transform your simulations.</p>
+
+      <p>Your feedback is invaluable, so don’t hesitate to share your <a href="https://github.com/orgs/YSocialTwin/discussions">thoughts, questions, or ideas</a> with us!</p>
+
+      <div class="alert-info-custom" style="margin-top: 2rem;">
+<strong>💬 Share Your Experience!</strong> Join the conversation on <a href="https://github.com/orgs/YSocialTwin/discussions" target="_blank">GitHub Discussions</a>
+</div>
+
+      <p>Stay tuned—there’s much more to come from <code class="language-plaintext highlighter-rouge">Y Social</code>.</p>
+
+      <p>Let’s redefine the future of simulations together!</p>
+
+    </div>
+
+<div class="col-md-4">
+<div class="blog-sidebar" style="position: sticky; top: 20px;">
+
+<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Recent Posts</h4>
+
+<div style="margin-bottom: 2rem;">
+
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🔥 Progress in Motion
+  </a>
+  <small style="color: #6b7280;">Oct 26, 2025</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #2563eb;">
+  <a href="/blog/2025/yweb/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
+    🚀 The Zero-Code Platform is Here!
+  </a>
+  <small style="color: #6b7280;">Mar 13, 2025</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2024/pages/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    Pages, Multimodal Contents and Dynamic Interests
+  </a>
+  <small style="color: #6b7280;">Nov 20, 2024</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2024/intro/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    (Here) We are Y!
+  </a>
+  <small style="color: #6b7280;">Aug 01, 2024</small>
+</div>
+
+</div>
+
+<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Navigation</h4>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+  
+    <a href="/blog/2024/pages/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+      ← Pages, Multimodal Contents and Dynamic Interests
+    </a>
+  
+  
+    <a href="/blog/2025/ysights/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+      🔥 Progress in Motion →
+    </a>
+  
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalItems; 
+  updateCarousel();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+  updateCarousel();
+});
+
+function updateCarousel() {
+  items.forEach(item => item.classList.remove('active'));
+  items[currentIndex].classList.add('active');
+}
+</script>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[A new era for social simulations]]></summary></entry><entry><title type="html">Pages, Multimodal Contents and Dynamic Interests</title><link href="https://ysocialtwin.github.io/blog/2024/pages/" rel="alternate" type="text/html" title="Pages, Multimodal Contents and Dynamic Interests" /><published>2024-11-20T17:00:00+01:00</published><updated>2024-11-20T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2024/pages</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2024/pages/"><![CDATA[<div class="container py-3">
 <div class="row">
 <div class="col-md-8">
 
@@ -779,7 +779,7 @@ python y_social.py <span class="nt">--no_notebook</span>
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🔥 Progress in Motion
   </a>
-  <small style="color: #6b7280;">Mar 13, 2025</small>
+  <small style="color: #6b7280;">Oct 26, 2025</small>
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
@@ -892,7 +892,7 @@ By providing a safe space to explore how users interact, share information, and 
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🔥 Progress in Motion
   </a>
-  <small style="color: #6b7280;">Mar 13, 2025</small>
+  <small style="color: #6b7280;">Oct 26, 2025</small>
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">

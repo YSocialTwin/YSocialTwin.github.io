@@ -216,8 +216,8 @@ Once logged in, you can start configuring your experiments and interacting with 
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="{{site.baseurl}}/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
-<a href="{{site.baseurl}}/docker" class="cta-secondary">📖 Install with Docker</a>
+<a href="https://ysocialtwin.github.io/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="https://ysocialtwin.github.io/docker" class="cta-secondary">📖 Install with Docker</a>
 </div>
 
 </div>

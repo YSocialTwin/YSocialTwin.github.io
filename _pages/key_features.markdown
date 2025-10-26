@@ -191,8 +191,8 @@ Easily configure and manage simulations through:
 
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="{{site.baseurl}}/ysocial" class="cta-primary" style="margin-right: 1rem;">🚀 Get Started Now</a>
-<a href="{{site.baseurl}}/docker" class="cta-secondary">📖 Install with Docker</a>
+<a href="https://ysocialtwin.github.io/ysocial" class="cta-primary" style="margin-right: 1rem;">🚀 Get Started Now</a>
+<a href="https://ysocialtwin.github.io/docker" class="cta-secondary">📖 Install with Docker</a>
 </div>
 
 </div>
