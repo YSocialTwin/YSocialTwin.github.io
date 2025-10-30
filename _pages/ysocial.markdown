@@ -21,7 +21,9 @@ vega: true
 </div>
 
 <div class="alert-info-custom">
-<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. Windows users are advised to use <strong>Docker</strong> <small>(...or to install GNU/Linux)</small>.
+<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. 
+Windows users should generally have no trouble installing or running YSocial. 
+However, if something mysteriously refuses to cooperate, they are encouraged to try <strong>Docker</strong> <small>(...or simply install GNU/Linux)</small>.
 </div>
 
 ---
@@ -65,8 +67,7 @@ pip install -r requirements.txt
 <div class="alert-warning-custom">
 <strong>⚠️ Important Notes:</strong>
 <ul style="margin-bottom: 0;">
-<li><strong>Note 1:</strong> Ensure the <code>screen</code> command is installed on your system.</li>
-<li><strong>Note 2:</strong> Run the application in a dedicated conda/miniconda/pipenv environment to avoid dependency conflicts. Homebrew installations of Python may lead to execution issues.</li>
+<li><strong>Note 1:</strong> Run the application in a dedicated conda/miniconda/pipenv environment to avoid dependency conflicts. Homebrew installations of Python may lead to execution issues.</li>
 </ul>
 </div>
 
