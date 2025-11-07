@@ -22,7 +22,7 @@ vega: true
 
 <div class="alert-info-custom">
 <strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong> and <strong>MacOS</strong>. 
-Windows users should generally have no trouble installing or running YSocial. 
+Windows users should generally have no trouble installing or running YSocial - assuming they use WSL. 
 However, if something mysteriously refuses to cooperate, they are encouraged to try <strong>Docker</strong> <small>(...or simply install GNU/Linux)</small>.
 </div>
 
@@ -32,6 +32,40 @@ However, if something mysteriously refuses to cooperate, they are encouraged to 
 
 
 Run `YSocial` is easy and straightforward. Just follow these three simple steps to get your local instance up and running:
+
+<details>
+<summary data-excerpt="Set up WSL support (or change OS 🥸)"><strong>Step 0: Windows user - Install WSL</strong></summary>
+
+{% capture y_client_content_win %}
+
+If you are on Windows, the recommended way to run YSocial is through the Windows Subsystem for Linux (WSL).
+This provides a native Linux environment directly on Windows and ensures compatibility with Python and other dependencies.
+
+Open PowerShell as Administrator and run:
+
+```bash
+wsl --install
+```
+
+This command will:
+
+- Enable the WSL feature
+- Install Ubuntu as the default Linux distribution
+- Set up the required virtualization features
+
+<div class="alert-warning-custom">
+<strong>⚠️ Important Notes:</strong>
+<ul style="margin-bottom: 0;">
+<li><strong>Note:</strong> If prompted, restart your computer. </li>
+</ul>
+</div>
+
+
+{% endcapture %}
+{{ y_client_content_win | markdownify }}
+
+</details>
+
 
 <details open>
 <summary data-excerpt="Set up YSocial on your machine with Python virtual environment, clone the repository, and install dependencies."><strong>Step 1: Install YSocial</strong></summary>
