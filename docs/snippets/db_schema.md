@@ -1,1 +1,0 @@
-![Schema](../assets/images/db_schema.png)
