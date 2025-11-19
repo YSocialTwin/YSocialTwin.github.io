@@ -182,7 +182,7 @@ This intricate dance of evolving interests, news injections, and fading attentio
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="https://ysocialtwin.github.io/modeling" class="cta-primary" style="margin-right: 1rem;">🚀 Agents</a>
+<a href="/agents" class="cta-primary" style="margin-right: 1rem;">🚀 Agents</a>
 </div>
 
 </div>

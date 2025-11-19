@@ -288,8 +288,8 @@ sudo usermod -aG docker $USER
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="https://ysocialtwin.github.io/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
-<a href="https://ysocialtwin.github.io/ysocial" class="cta-secondary">📖 Manual Installation</a>
+<a href="/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="/ysocial" class="cta-secondary">📖 Manual Installation</a>
 </div>
 </div>
 

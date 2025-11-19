@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ysocialtwin.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ysocialtwin.github.io/" rel="alternate" type="text/html" /><updated>2025-11-09T15:13:36+01:00</updated><id>https://ysocialtwin.github.io/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🔥 Progress in Motion</title><link href="https://ysocialtwin.github.io/blog/2025/ysights/" rel="alternate" type="text/html" title="🔥 Progress in Motion" /><published>2025-10-26T18:00:00+01:00</published><updated>2025-10-26T18:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2025/ysights</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2025/ysights/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2025-11-19T13:41:59+00:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🔥 Progress in Motion</title><link href="https://y-not.social/blog/2025/ysights/" rel="alternate" type="text/html" title="🔥 Progress in Motion" /><published>2025-10-26T17:00:00+00:00</published><updated>2025-10-26T17:00:00+00:00</updated><id>https://y-not.social/blog/2025/ysights</id><content type="html" xml:base="https://y-not.social/blog/2025/ysights/"><![CDATA[<style>
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -440,7 +440,7 @@ python y_social.py <span class="nt">--no_notebook</span>
 
 </div></div>
 
-</div></div>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[YSocial continues to evolve! Discover the latest features, including multi-DBMS support, enhanced population customization, and the new ySights data analysis library.]]></summary></entry><entry><title type="html">🚀 The Zero-Code Platform is Here!</title><link href="https://ysocialtwin.github.io/blog/2025/yweb/" rel="alternate" type="text/html" title="🚀 The Zero-Code Platform is Here!" /><published>2025-03-13T17:00:00+01:00</published><updated>2025-03-13T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2025/yweb</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2025/yweb/"><![CDATA[<div class="container py-3">
+</div></div>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[YSocial continues to evolve! Discover the latest features, including multi-DBMS support, enhanced population customization, and the new ySights data analysis library.]]></summary></entry><entry><title type="html">🚀 The Zero-Code Platform is Here!</title><link href="https://y-not.social/blog/2025/yweb/" rel="alternate" type="text/html" title="🚀 The Zero-Code Platform is Here!" /><published>2025-03-13T16:00:00+00:00</published><updated>2025-03-13T16:00:00+00:00</updated><id>https://y-not.social/blog/2025/yweb</id><content type="html" xml:base="https://y-not.social/blog/2025/yweb/"><![CDATA[<div class="container py-3">
 <div class="row">
 <div class="col-md-8">
 
@@ -453,22 +453,22 @@ python y_social.py <span class="nt">--no_notebook</span>
       <div class="custom-carousel" style="margin: 2rem 0;">
   <div class="carousel-container">
     <div class="carousel-item active">
-      <img src="//assets/images/web/ysocial1.png" alt="Login Interface" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <img src="/assets/images/web/ysocial1.png" alt="Login Interface" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </div>
     <div class="carousel-item">
-      <img src="//assets/images/web/ysocial_timeline.png" alt="Timeline View" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <img src="/assets/images/web/ysocial_timeline.png" alt="Timeline View" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </div>
     <div class="carousel-item">
-      <img src="//assets/images/web/ysocial_profile.png" alt="Profile Page" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <img src="/assets/images/web/ysocial_profile.png" alt="Profile Page" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </div>
     <div class="carousel-item">
-      <img src="//assets/images/web/admin_dash.png" alt="Admin Dashboard" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <img src="/assets/images/web/admin_dash.png" alt="Admin Dashboard" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </div>
     <div class="carousel-item">
-      <img src="//assets/images/web/admin_exp.png" alt="Experiment Configuration" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <img src="/assets/images/web/admin_exp.png" alt="Experiment Configuration" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </div>
     <div class="carousel-item">
-      <img src="//assets/images/web/admin_page.png" alt="News Pages Management" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <img src="/assets/images/web/admin_page.png" alt="News Pages Management" style="border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </div>
   </div>
   <button class="prev">&#10094;</button>
@@ -562,7 +562,7 @@ python y_social.py <span class="nt">--no_notebook</span>
       <p>Ready to dive in? It’s easier than ever to get started with the <strong>Zero-Code Platform</strong>:</p>
 
       <ol>
-        <li><strong><a href="//ysocial">Install Y Social</a></strong> or use <strong><a href="//docker">Docker</a></strong></li>
+        <li><strong><a href="/ysocial">Install Y Social</a></strong> or use <strong><a href="/docker">Docker</a></strong></li>
         <li>Access the <strong>Zero-Code simulation tools</strong> at <a href="http://localhost:8080">http://localhost:8080</a></li>
         <li>Start creating and experimenting with your very own simulations!</li>
       </ol>
@@ -672,7 +672,7 @@ function updateCarousel() {
   items.forEach(item => item.classList.remove('active'));
   items[currentIndex].classList.add('active');
 }
-</script>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[A new era for social simulations]]></summary></entry><entry><title type="html">Pages, Multimodal Contents and Dynamic Interests</title><link href="https://ysocialtwin.github.io/blog/2024/pages/" rel="alternate" type="text/html" title="Pages, Multimodal Contents and Dynamic Interests" /><published>2024-11-20T17:00:00+01:00</published><updated>2024-11-20T17:00:00+01:00</updated><id>https://ysocialtwin.github.io/blog/2024/pages</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2024/pages/"><![CDATA[<div class="container py-3">
+</script>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[A new era for social simulations]]></summary></entry><entry><title type="html">Pages, Multimodal Contents and Dynamic Interests</title><link href="https://y-not.social/blog/2024/pages/" rel="alternate" type="text/html" title="Pages, Multimodal Contents and Dynamic Interests" /><published>2024-11-20T16:00:00+00:00</published><updated>2024-11-20T16:00:00+00:00</updated><id>https://y-not.social/blog/2024/pages</id><content type="html" xml:base="https://y-not.social/blog/2024/pages/"><![CDATA[<div class="container py-3">
 <div class="row">
 <div class="col-md-8">
 
@@ -712,7 +712,7 @@ function updateCarousel() {
       <p>Yes, you read that right — <code class="language-plaintext highlighter-rouge">Y Social</code> naming convention is inspired by the characters of the Cosmere universe created by Brandon Sanderson.</p>
 
       <div style="text-align: center; margin: 2rem 0;">
-<img src="//assets/images/pages.jpg" style="width: 100%; max-width: 700px; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+<img src="/assets/images/pages.jpg" style="width: 100%; max-width: 700px; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
       <h2 id="news-pages-bringing-real-world-news-into-your-simulations">📰 News Pages: Bringing Real-World News into Your Simulations</h2>
@@ -823,7 +823,7 @@ function updateCarousel() {
 </div>
 
 </div>
-</div>]]></content><author><name></name></author><category term="news" /><category term="features" /><category term="update" /><summary type="html"><![CDATA[Pages, Multimodal Contents and Dynamic Interests]]></summary></entry><entry><title type="html">(Here) We are Y!</title><link href="https://ysocialtwin.github.io/blog/2024/intro/" rel="alternate" type="text/html" title="(Here) We are Y!" /><published>2024-08-01T18:00:00+02:00</published><updated>2024-08-01T18:00:00+02:00</updated><id>https://ysocialtwin.github.io/blog/2024/intro</id><content type="html" xml:base="https://ysocialtwin.github.io/blog/2024/intro/"><![CDATA[<div class="container py-3">
+</div>]]></content><author><name></name></author><category term="news" /><category term="features" /><category term="update" /><summary type="html"><![CDATA[Pages, Multimodal Contents and Dynamic Interests]]></summary></entry><entry><title type="html">(Here) We are Y!</title><link href="https://y-not.social/blog/2024/intro/" rel="alternate" type="text/html" title="(Here) We are Y!" /><published>2024-08-01T16:00:00+00:00</published><updated>2024-08-01T16:00:00+00:00</updated><id>https://y-not.social/blog/2024/intro</id><content type="html" xml:base="https://y-not.social/blog/2024/intro/"><![CDATA[<div class="container py-3">
 <div class="row">
 <div class="col-md-8">
 
@@ -842,7 +842,7 @@ function updateCarousel() {
       <p>Digital twins are virtual replicas of physical systems, allowing for detailed analysis and experimentation.</p>
 
       <div style="text-align: center; margin: 2rem 0;">
-<img src="//assets/images/dt.jpg" style="width: 100%; max-width: 700px; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+<img src="/assets/images/dt.jpg" style="width: 100%; max-width: 700px; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
       <p>In the realm of social media, digital twins like Y open up new possibilities for understanding complex online interactions.
@@ -873,7 +873,7 @@ By providing a safe space to explore how users interact, share information, and 
       <p>Y represents a new frontier in social media research, offering a powerful tool for exploring the intricate dynamics of online interactions.</p>
 
       <div class="alert-info-custom" style="margin-top: 2rem;">
-<strong>🚀 Ready to get started?</strong> Check out our <a href="//ysocial">installation guide</a> and start exploring Y Social today!
+<strong>🚀 Ready to get started?</strong> Check out our <a href="/ysocial">installation guide</a> and start exploring Y Social today!
 </div>
 
       <p><em>Stay with us as we explore the world of Y and uncover the fascinating insights it has to offer.</em></p>

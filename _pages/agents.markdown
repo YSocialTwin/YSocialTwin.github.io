@@ -245,7 +245,7 @@ Summary: {article.summary}
 
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="https://ysocialtwin.github.io/modeling" class="cta-primary" style="margin-right: 1rem;">🚀 Modeling Choices</a>
+<a href="/modeling" class="cta-primary" style="margin-right: 1rem;">🚀 Modeling Choices</a>
 </div>
 
 </div>

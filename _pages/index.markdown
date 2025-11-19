@@ -326,7 +326,7 @@ Perfect for researchers in computational social science, YSocial allows you to s
             </div>
             
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://ysocialtwin.github.io/ysocial" class="cta-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Your First Simulation →</a>
+                <a href="/ysocial" class="cta-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Your First Simulation →</a>
             </div>
         </div>
     </div>

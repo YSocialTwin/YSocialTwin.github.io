@@ -1,1 +1,1 @@
-Sitemap: https://ysocialtwin.github.io/sitemap.xml
+Sitemap: https://y-not.social/sitemap.xml
