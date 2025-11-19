@@ -46,11 +46,9 @@ navbar:
   nav:
     - title: 🚀 Get Started
       child:
-        - title: 📥 Download #Label
+        - title: Download #Label
           url: /download  #url
-        - title: Introduction #Label
-          url: /key_features  #url
-        - title: Quick Start #Label
+        - title: Developer #Label
           url: /ysocial  #url
         - title: Docker #Label
           url: /docker  #url
@@ -60,9 +58,11 @@ navbar:
 
     - title: 📖 Inside YSocial
       child:
-        - title: 🎭 LLM Agents #Label
+        - title: Introduction #Label
+          url: /key_features  #url
+        - title: LLM Agents #Label
           url: /agents #url
-        - title: 🎰 Modeling Choices #Label
+        - title: Modeling Choices #Label
           url: /modeling  #url
 
       #  - title: 🎬 Scenario Design #Label

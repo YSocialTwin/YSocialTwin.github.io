@@ -34,7 +34,7 @@ Transform your social media research with our powerful Digital Twin platform. Ch
 Download for Linux
 </a>
 <div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
-<a href="https://github.com/YSocialTwin/YSocial" style="color: white; text-decoration: underline;">View on GitHub</a>
+
 </div>
 </div>
 
@@ -46,7 +46,6 @@ Download for Linux
 Download for macOS
 </a>
 <div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
-<a href="https://github.com/YSocialTwin/YSocial" style="color: white; text-decoration: underline;">View on GitHub</a>
 </div>
 </div>
 
@@ -58,7 +57,6 @@ Download for macOS
 Download for Windows
 </a>
 <div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
-<a href="https://github.com/YSocialTwin/YSocial" style="color: white; text-decoration: underline;">View on GitHub</a>
 </div>
 </div>
 
@@ -78,6 +76,8 @@ Download for Windows
 
 <div style="background: #f8f9fa; border-left: 4px solid #2563eb; padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0;">
 
+{% capture content %}
+
 ### 📊 GDPR-Compliant Data Collection
 
 Y Social respects your privacy and is fully compliant with GDPR regulations. We collect minimal, anonymized telemetry data to improve the platform. Here's exactly what we track:
@@ -89,36 +89,37 @@ Y Social respects your privacy and is fully compliant with GDPR regulations. We 
 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
 <h5 style="color: #2563eb; margin-bottom: 0.5rem;">📈 Usage Analytics</h5>
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Feature usage patterns (anonymized)</li>
-<li>Session duration</li>
-<li>Platform type and version</li>
-<li>Performance metrics</li>
+<li># Experiments/Populations</li>
+<li># Agents/Pages</li>
+<li>Recommendation system used</li>
+<li>Simulation duration</li>
+<li>Preferred LLM model</li>
 </ul>
 </div>
 
 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
 <h5 style="color: #2563eb; margin-bottom: 0.5rem;">💾 Installation Data</h5>
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Installation success/failure (anonymized)</li>
-<li>Operating system version</li>
-<li>Installation method used</li>
-<li>Time to complete installation</li>
+<li>Installation/Update date</li>
+<li>YSocial version</li>
+<li>Operating system snd locale</li>
 </ul>
 </div>
 
 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
 <h5 style="color: #2563eb; margin-bottom: 0.5rem;">🐛 Error Logs</h5>
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Crash reports (anonymized)</li>
 <li>Error types and frequency</li>
-<li>Stack traces (without personal data)</li>
-<li>System configuration at time of error</li>
+<li>Stack traces (anonymized)</li>
 </ul>
 </div>
 
 </div>
 
 #### What We DON'T Collect
+
+{% endcapture %}
+{{ content | markdownify }}
 
 <div style="background: #ecfdf5; border: 1px solid #10b981; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
 <strong style="color: #059669;">✅ Your Privacy is Protected</strong>
@@ -132,38 +133,29 @@ Y Social respects your privacy and is fully compliant with GDPR regulations. We 
 </ul>
 </div>
 
+
+{% capture content1 %}
 #### Your Rights & Control
+{% endcapture %}
+{{ content1 | markdownify }}
 
 <div style="margin: 1rem 0;">
 
-**🎛️ Opt-Out Anytime**: You have full control over telemetry data collection. To disable it:
-
-```bash
-# During installation
-python y_social.py --no-telemetry
-
-# Or set environment variable
-export YSOCIAL_TELEMETRY=false
-
-# Docker users
-docker run -e YSOCIAL_TELEMETRY=false ysocial:latest
-```
-
-**📧 Data Requests**: Under GDPR, you have the right to:
-- Request access to any data we've collected
-- Request deletion of your data
-- Object to data processing
-- Request data portability
-
-Contact us at: [ysocial.digitaltwin@gmail.com](mailto:ysocial.digitaltwin@gmail.com)
+{% capture content2 %}
+**🎛️ Opt-Out Anytime**: You have full control over telemetry data collection. To disable just set the appropriate toggle in the admin panel.
 
 **🔐 Data Security**: All telemetry data is:
-- Encrypted in transit (TLS 1.3)
+- Anonymized and aggregated to protect your identity
 - Stored securely with access controls
-- Automatically deleted after 90 days
+- Used solely for improving Y Social
 - Never shared with third parties
 
+{% endcapture %}
+{{ content2 | markdownify }}
 </div>
+
+{% capture content3 %}
+
 
 #### Why We Collect Data
 
@@ -176,7 +168,12 @@ We use this information to:
 
 **Our Commitment**: We believe in transparency and respect for user privacy. This telemetry helps us build a better product without compromising your privacy.
 
+{% endcapture %}
+{{ content3 | markdownify }}
+
 </div>
+
+
 
 ---
 
