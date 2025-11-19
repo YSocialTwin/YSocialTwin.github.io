@@ -46,6 +46,8 @@ navbar:
   nav:
     - title: 🚀 Get Started
       child:
+        - title: 📥 Download #Label
+          url: /download  #url
         - title: Introduction #Label
           url: /key_features  #url
         - title: Quick Start #Label
