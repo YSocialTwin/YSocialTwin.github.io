@@ -28,37 +28,43 @@ v2.0.0 (Nalthis - [changelog](https://github.com/YSocialTwin/YSocial/releases/ta
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; padding: 2rem; color: white; text-align: center; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); transition: transform 0.3s;">
-<div style="font-size: 3rem; margin-bottom: 1rem;">🐧</div>
-<h3 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">Linux</h3>
-<p style="opacity: 0.9; margin-bottom: 1.5rem;">Ubuntu, Fedora, Debian & more</p>
-<a href="#" class="cta-primary" style="background: white; color: #667eea; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<i class="fab fa-linux"></i>
+</div>
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Linux</h3>
+<p style="color: #6c757d; margin-bottom: 1.5rem;">Ubuntu, Fedora, Debian & more</p>
+<a href="#" class="cta-primary" style="margin-right: 0;">
 Download for Linux
 </a>
-<div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
+<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
 
 </div>
 </div>
 
-<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 1rem; padding: 2rem; color: white; text-align: center; box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3); transition: transform 0.3s;">
-<div style="font-size: 3rem; margin-bottom: 1rem;">🍎</div>
-<h3 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">macOS</h3>
-<p style="opacity: 0.9; margin-bottom: 1.5rem;">Sequoia (macOS 15) or later</p>
-<a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="background: white; color: #f5576c; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<i class="fab fa-apple"></i>
+</div>
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">macOS</h3>
+<p style="color: #6c757d; margin-bottom: 1.5rem;">Sequoia (macOS 15) or later</p>
+<a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="margin-right: 0;">
 Download for macOS
 </a>
-<div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
+<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
 </div>
 </div>
 
-<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 1rem; padding: 2rem; color: white; text-align: center; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3); transition: transform 0.3s;">
-<div style="font-size: 3rem; margin-bottom: 1rem;">🪟</div>
-<h3 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">Windows</h3>
-<p style="opacity: 0.9; margin-bottom: 1.5rem;">Windows 10 and later</p>
-<a href="#" class="cta-primary" style="background: white; color: #4facfe; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<i class="fab fa-windows"></i>
+</div>
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Windows</h3>
+<p style="color: #6c757d; margin-bottom: 1.5rem;">Windows 10 and later</p>
+<a href="#" class="cta-primary" style="margin-right: 0;">
 Download for Windows
 </a>
-<div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
+<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
 </div>
 </div>
 
@@ -208,12 +214,12 @@ We use this information to:
 
 ---
 
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; color: white;">
-<h3 style="color: white; margin-bottom: 1rem;">🎓 Perfect for Researchers</h3>
-<p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.1rem; opacity: 0.95;">
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">
+<h3 style="color: #212529; margin-bottom: 1rem;">🎓 Perfect for Researchers</h3>
+<p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #6c757d;">
 Y Social has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment.
 </p>
-<a href="/about" class="cta-primary" style="background: white; color: #667eea; font-weight: 700;">Learn About Our Team</a>
+<a href="/about" class="cta-primary">Learn About Our Team</a>
 </div>
 
 </div>
@@ -222,11 +228,12 @@ Y Social has been conceived as a tool to support Computational Social Science st
 
 <style>
 @media (hover: hover) {
-  [style*="transition: transform"] {
+  [style*="transition: all"] {
     cursor: pointer;
   }
-  [style*="transition: transform"]:hover {
-    transform: translateY(-5px);
+  [style*="transition: all"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   }
 }
 </style>
