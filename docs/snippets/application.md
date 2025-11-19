@@ -1,0 +1,1 @@
+![Schema](../assets/images/application.png)
