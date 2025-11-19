@@ -1,7 +1,7 @@
 - name: Getting Started
   url:  "assets/images/landscape.jpg"
-  description: "Install Y Social"
-  path: "ysocial"
+  description: "Download Y Social"
+  path: "download"
 - name: Experiments
   url:  "assets/images/header3.jpg"
   description: "Behind the curtains"
