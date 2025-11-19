@@ -24,13 +24,15 @@ Transform your social media research with our powerful Digital Twin platform. Ch
 
 ## 📥 Download for Your Platform
 
+v2.0.0 (Nalthis - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag/v2.0.0)) is available for the following operating systems:
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; padding: 2rem; color: white; text-align: center; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); transition: transform 0.3s;">
 <div style="font-size: 3rem; margin-bottom: 1rem;">🐧</div>
 <h3 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">Linux</h3>
 <p style="opacity: 0.9; margin-bottom: 1.5rem;">Ubuntu, Fedora, Debian & more</p>
-<a href="https://github.com/YSocialTwin/YSocial/releases/latest/download/ysocial-linux-x64.tar.gz" class="cta-primary" style="background: white; color: #667eea; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
+<a href="#" class="cta-primary" style="background: white; color: #667eea; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
 Download for Linux
 </a>
 <div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
@@ -41,8 +43,8 @@ Download for Linux
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 1rem; padding: 2rem; color: white; text-align: center; box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3); transition: transform 0.3s;">
 <div style="font-size: 3rem; margin-bottom: 1rem;">🍎</div>
 <h3 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">macOS</h3>
-<p style="opacity: 0.9; margin-bottom: 1.5rem;">macOS 11 (Big Sur) and later</p>
-<a href="https://github.com/YSocialTwin/YSocial/releases/latest/download/ysocial-macos-x64.dmg" class="cta-primary" style="background: white; color: #f5576c; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
+<p style="opacity: 0.9; margin-bottom: 1.5rem;">Sequoia (macOS 15) or later</p>
+<a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="background: white; color: #f5576c; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
 Download for macOS
 </a>
 <div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
@@ -53,7 +55,7 @@ Download for macOS
 <div style="font-size: 3rem; margin-bottom: 1rem;">🪟</div>
 <h3 style="color: white; font-weight: 700; margin-bottom: 0.5rem;">Windows</h3>
 <p style="opacity: 0.9; margin-bottom: 1.5rem;">Windows 10 and later</p>
-<a href="https://github.com/YSocialTwin/YSocial/releases/latest/download/ysocial-windows-x64.exe" class="cta-primary" style="background: white; color: #4facfe; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
+<a href="#" class="cta-primary" style="background: white; color: #4facfe; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; transition: all 0.3s;">
 Download for Windows
 </a>
 <div style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
