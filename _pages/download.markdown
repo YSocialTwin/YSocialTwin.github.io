@@ -1,7 +1,7 @@
 ---
 layout: default-full
 title: "Y Social"
-subtitle: "Download Y Social"
+subtitle: "Get Started now!"
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/server1.jpg

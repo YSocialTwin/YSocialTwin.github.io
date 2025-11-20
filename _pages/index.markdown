@@ -4,7 +4,7 @@
 
 layout: default-full
 title: "Home"
-subtitle: "Where the Digital World Comes to Life"
+subtitle: "Simulating Societies... Why not?"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/header3.jpg
@@ -139,29 +139,19 @@ header_title: "Y Social"
 }
 </style>
 
-           
-
-<!-- Introduction Section -->
-<div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">
-                    Where the Digital World Comes to Life
-                </h2>
-                <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
-                    YSocial is an open-source platform designed to simulate realistic social media environments using AI-powered agents. Perfect for researchers in computational social science, it enables you to study social dynamics, recommender systems effects, misinformation spread, and user behavior in a controlled setting.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Video Section -->
 <div class="container py-4">
     <div class="row">
+<div class="col-md-12">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+                    YSocial is an <mark>open-source</mark> <mark>AI-driven</mark> <mark>social media simulator</mark> for studying social dynamics, recommender effects, and misinformation in a controlled environment.
+                </p>
+            </div>
+        </div>
         <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700; color: #212529;">See YSocial in Action</h2>
+            <!-- <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700; color: #212529;">See YSocial in Action</h2> -->
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
                 <iframe 
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
