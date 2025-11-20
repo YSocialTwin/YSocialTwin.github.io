@@ -3,12 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default-full
-title:  "Y Social"
-subtitle: "Docker Installation Guide"
+title:  "Docker"
+subtitle: "Run YSocial with Docker"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/server1.jpg
-header_title: "Y Social"
+header_title: "Docker"
 vega: true
 ---
 
@@ -16,9 +16,12 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-<div class="alert-info-custom">
-<strong>💡 Want a hassle-free installation?</strong> Y Social can be easily deployed with a preconfigured Docker container that includes everything you need to get started.
+<div style="text-align: center; margin: 2rem 0;">
+<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+Need to deploy on a <mark>server</mark>? Use the preconfigured Docker container.
+</p>
 </div>
+
 
 <div class="alert-info-custom">
 <strong>✅ Platform Compatibility:</strong> Docker works on <strong>GNU/Linux</strong>, <strong>MacOS</strong>, and <strong>Windows</strong>. This is the recommended installation method for Windows users.
@@ -288,8 +291,8 @@ sudo usermod -aG docker $USER
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
-<a href="/ysocial" class="cta-secondary">📖 Manual Installation</a>
+<a href="/download" class="cta-primary" style="margin-right: 1rem;">🚀 Download</a>
+<a href="/ysocial" class="cta-secondary">📖 Developer set up </a>
 </div>
 </div>
 

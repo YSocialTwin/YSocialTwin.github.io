@@ -14,9 +14,8 @@ vega: true
 <div class="col-md-12" markdown="1">
 
 <div style="text-align: center; margin: 2rem 0;">
-<h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">🚀 Get Y Social</h1>
 <p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-Transform your social media research with our powerful Digital Twin platform. Choose your platform and start simulating realistic social interactions today.
+Transform your social media research with our powerful <mark>Digital Twin platform</mark>. Choose your platform and start simulating realistic social interactions today.
 </p>
 </div>
 
@@ -71,7 +70,10 @@ Download for Windows
 </div>
 
 <div class="alert-warning-custom">
-<strong>⚠️ Note: </strong> OS-specific releases provide a zero-configuration quick start at a cost: no JupyterLab support and longer startup times.
+<strong>⚠️ Note 1: </strong> OS-specific releases provide a zero-configuration quick start at a cost: no JupyterLab support and longer startup times.
+<br>
+<strong>⚠️ Note 2: </strong> YSocial assumes you have access to an OpenAI-compatible LLM model (either commercial or self-hosted). 
+
 </div>
 
 <div class="alert-info-custom">

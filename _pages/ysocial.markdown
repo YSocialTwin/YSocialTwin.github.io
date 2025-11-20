@@ -3,12 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default-full
-title:  "Y Social"
-subtitle: "Quick Start"
+title:  "Developer"
+subtitle: "Set up your local YSocial instance"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/server1.jpg
-header_title: "Y Social"
+header_title: "Developer"
 vega: true
 ---
 
@@ -16,15 +16,15 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-<div class="alert-info-custom">
-<strong>💡 Do you want "complete control" on your YSocial instance?</strong> Follow this guide to prepare your local setup.
+
+<div style="text-align: center; margin: 2rem 0;">
+<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+Want <mark>full control</mark> over YSocial? Set up your local environment.
+</p>
 </div>
 
 <div class="alert-info-custom">
-<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong>, <strong>MacOS</strong> and <strong>Windows</strong>. 
-
-Note: Windows users should generally have no trouble installing or running YSocial. 
-However, if something mysteriously refuses to cooperate, they are encouraged to try either <strong><a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL</a></strong> or <strong><a href="https://www.docker.com/">Docker</a></strong> <small>(...or simply install GNU/Linux)</small>.
+<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong>, <strong>MacOS</strong> and <strong>Windows</strong>.
 </div>
 
 ---
@@ -219,7 +219,7 @@ Once logged in, you can start configuring your experiments and interacting with 
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Introduction to YSocial</a>
+<a href="/download" class="cta-primary" style="margin-right: 1rem;">🚀 Download </a>
 <a href="/docker" class="cta-secondary">📖 Install with Docker</a>
 </div>
 
