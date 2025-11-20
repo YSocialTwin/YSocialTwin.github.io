@@ -174,7 +174,7 @@ We use this information to:
 - 🎯 Prioritize development efforts
 - 🔒 Enhance security
 
-**Our Commitment**: We believe in transparency and respect for user privacy. This telemetry helps us build a better product without compromising your privacy.
+**Our Commitment**: We believe in transparency and respect for user privacy. This telemetry helps us build a better product without compromising your privacy. Check with your own eyes what we collect in the service dedicated repository ([yTelemetry](https://github.com/YSocialTwin/yTelemetry)) and make an informed decision.
 
 {% endcapture %}
 {{ content3 | markdownify }}
