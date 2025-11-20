@@ -151,38 +151,7 @@ Perfect for researchers in computational social science, YSocial allows you to s
 </div>
 
 
-<div class="container py-4">
-    <div class="row">
-        <div class="col-md-12">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.5rem;">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                    src="https://www.youtube.com/embed/IJsNHs1foQQ?cc_load_policy=1&cc_lang_pref=en"
-                    title="Y Social Introduction Video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-<div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Simulations Run</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Research Institutions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Open Source</div>
-                </div>
-            </div>
 
 
 <div class="container py-4">
@@ -218,9 +187,41 @@ Perfect for researchers in computational social science, YSocial allows you to s
     </div>
 
 
+<!--
+<div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Simulations Run</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Research Institutions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+            </div>
+-->
 
-
-
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <div style="width: 80%;">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 0.5rem;">
+                    <iframe 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        src="https://www.youtube.com/embed/IJsNHs1foQQ?cc_load_policy=1&cc_lang_pref=en"
+                        title="Y Social Introduction Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="container py-4" style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">

@@ -70,13 +70,21 @@ Download for Windows
 
 </div>
 
-<div class="alert-info-custom">
-<strong>💡 Prefer Docker?</strong> For a hassle-free installation with all dependencies included, check out our <a href="/docker">Docker installation guide</a>. Recommended for Windows users or those who want a pre-configured environment.
+<div class="alert-warning-custom">
+<strong>⚠️ Note: </strong> OS-specific releases provide a zero-configuration quick start at a cost: no JupyterLab support and longer startup times.
 </div>
 
 <div class="alert-info-custom">
 <strong>🛠️ Want full control?</strong> Follow our <a href="/ysocial">manual installation guide</a> to install Y Social with Python and customize every aspect of your setup.
 </div>
+
+<div class="alert-info-custom">
+<strong>💡 Prefer Docker?</strong> For a hassle-free installation with all dependencies included, check out our <a href="/docker">Docker installation guide</a>. 
+</div>
+
+
+
+
 
 ---
 
@@ -110,7 +118,7 @@ Y Social respects your privacy and is fully compliant with GDPR regulations. We 
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
 <li>Installation/Update date</li>
 <li>YSocial version</li>
-<li>Operating system snd locale</li>
+<li>Operating system and locale</li>
 </ul>
 </div>
 
@@ -200,7 +208,7 @@ We use this information to:
 <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💬</div>
 <h4>Join Community</h4>
 <p style="color: #666; margin-bottom: 1rem;">Get help and share your experiences</p>
-<a href="https://github.com/YSocialTwin/YSocial/discussions" class="cta-secondary">GitHub Discussions</a>
+<a href="https://github.com/orgs/YSocialTwin/discussions" class="cta-secondary">GitHub Discussions</a>
 </div>
 
 <div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
