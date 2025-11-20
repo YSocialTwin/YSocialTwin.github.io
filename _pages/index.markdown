@@ -115,24 +115,27 @@ header_title: "Y Social"
     margin: 2rem 0;
 }
 .use-case-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: white;
+    border: 1px solid #e5e7eb;
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;
     transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .use-case-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .use-case-title {
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: #2563eb;
 }
 .use-case-desc {
     font-size: 0.85rem;
-    opacity: 0.9;
+    color: #6c757d;
 }
 </style>
 
@@ -267,30 +270,30 @@ Perfect for researchers in computational social science, YSocial allows you to s
 
 
 
-<div class="container py-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; color: white;">
+<div class="container py-4" style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">
     <div class="row">
         <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; color: white; font-weight: 700;">Perfect for Your Research Needs</h2>
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #212529; font-weight: 700;">Perfect for Your Research Needs</h2>
             
             <div class="use-case-grid">
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">🎓 Academic Research</div>
-                    <div class="use-case-desc">Study opinion dynamics, misinformation spread, and social phenomena</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">🎓 Academic Research</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Study opinion dynamics, misinformation spread, and social phenomena</div>
                 </div>
                 
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">💼 Industry Analysis</div>
-                    <div class="use-case-desc">Test market dynamics, brand perception, and consumer behavior</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">💼 Industry Analysis</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Test market dynamics, brand perception, and consumer behavior</div>
                 </div>
                 
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">📚 Education</div>
-                    <div class="use-case-desc">Teach computational social science and simulation methods</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">📚 Education</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Teach computational social science and simulation methods</div>
                 </div>
                 
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">🏛️ Policy Making</div>
-                    <div class="use-case-desc">Test policy impacts and intervention strategies</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">🏛️ Policy Making</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Test policy impacts and intervention strategies</div>
                 </div>
             </div>
         </div>
