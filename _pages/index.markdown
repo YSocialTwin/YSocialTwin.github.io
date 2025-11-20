@@ -154,63 +154,16 @@ Perfect for researchers in computational social science, YSocial allows you to s
 <div class="container py-4">
     <div class="row">
         <div class="col-md-12">
-
-            <div class="custom-carousel">
-  <div class="carousel-container">
-    <div class="carousel-item active">
-      <img src="../assets/images/screen/login.png" alt="Slide 1" >
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin0.png" alt="Slide 3">
-    </div>
-    <div class="carousel-item">
-      <img src="../assets/images/screen/admin1.png" alt="Slide 2">
-    </div>
- <div class="carousel-item">
-      <img src="../assets/images/screen/admin2.png" alt="Slide 3">
-    </div>
- <div class="carousel-item">
-      <img src="../assets/images/screen/admin3.png" alt="Slide 3">
-    </div>
-    <div class="carousel-item">
-      <img src="../assets/images/screen/admin4.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin5.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin6.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin7.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin8.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin9.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin10.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/pl1.png" alt="Slide 3">
-    </div><div class="carousel-item">
-      <img src="../assets/images/screen/pl2.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/pl3.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/pl4.png" alt="Slide 3">
-    </div>
-
-
-  </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
-
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.5rem;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/IJsNHs1foQQ?cc_load_policy=1&cc_lang_pref=en"
+                    title="Y Social Introduction Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </div>
 </div>
@@ -354,34 +307,6 @@ Perfect for researchers in computational social science, YSocial allows you to s
     </div>
 </div>
 
-
-{% raw %}
-<script>
-// Initialize all carousels on the page
-document.querySelectorAll('.custom-carousel').forEach((carousel) => {
-  let currentIndex = 0;
-  const items = carousel.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-  const nextBtn = carousel.querySelector('.next');
-  const prevBtn = carousel.querySelector('.prev');
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalItems; 
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    items.forEach(item => item.classList.remove('active'));
-    items[currentIndex].classList.add('active');
-  }
-});
-</script>
-{% endraw %}
 
 <!--
 <div class="container py-3 mb-0 bg-color-full bg-color">
