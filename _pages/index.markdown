@@ -141,31 +141,54 @@ header_title: "Y Social"
 
            
 
-<div class="container py-3">
-    
-<div class="alert-info-custom">
-<strong>💡 YSocial </strong>  is an open-source platform designed to simulate realistic social media environments using AI-powered agents. 
-<br><br>
-Perfect for researchers in computational social science, YSocial allows you to study social dynamics, recommender systems effects, misinformation spread, and user behavior in a controlled setting.
- </div>
+<!-- Introduction Section -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">
+                    Where the Digital World Comes to Life
+                </h2>
+                <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+                    YSocial is an open-source platform designed to simulate realistic social media environments using AI-powered agents. Perfect for researchers in computational social science, it enables you to study social dynamics, recommender systems effects, misinformation spread, and user behavior in a controlled setting.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
-
-
+<!-- Video Section -->
 <div class="container py-4">
     <div class="row">
         <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700; color: #212529;">See YSocial in Action</h2>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/IJsNHs1foQQ?cc_load_policy=1&cc_lang_pref=en"
+                    title="Y Social Introduction Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Key Features Section -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Key Features</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <div class="feature-title">AI Simulation</div>
-                        <div class="feature-description">Agent-based modeling meets Generative AI for a more "realistic" simulation experience</div>
-                    </div>
+                    <div class="feature-icon">🧠</div>
+                    <div class="feature-title">AI Simulation</div>
+                    <div class="feature-description">Agent-based modeling meets Generative AI for a more "realistic" simulation experience</div>
+                </div>
 
-            <div class="feature-card">
+                <div class="feature-card">
                     <div class="feature-icon">🔧</div>
                     <div class="feature-title">No Code Simulation</div>
                     <div class="feature-description">Web interface to complete control simulations, agent management, and scenario configuration</div>
@@ -181,42 +204,6 @@ Perfect for researchers in computational social science, YSocial allows you to s
                     <div class="feature-icon">📊</div>
                     <div class="feature-title">Integrated Analytics</div>
                     <div class="feature-description">Analyze simulation with ySights from embeedded and simulation-tuned Jupyter Lab</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<!--
-<div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Simulations Run</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Research Institutions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Open Source</div>
-                </div>
-            </div>
--->
-
-<div class="container py-4">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            <div style="width: 80%;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 0.5rem;">
-                    <iframe 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                        src="https://www.youtube.com/embed/IJsNHs1foQQ?cc_load_policy=1&cc_lang_pref=en"
-                        title="Y Social Introduction Video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
                 </div>
             </div>
         </div>
@@ -254,10 +241,12 @@ Perfect for researchers in computational social science, YSocial allows you to s
     </div>
 </div>
 
-<div class="container py-4">
+
+<!-- Get Started Section -->
+<div class="container py-5">
     <div class="row">
         <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700;">Get Started in 3 Simple Steps</h2>
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Get Started in 3 Simple Steps</h2>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
                 <div style="text-align: center; padding: 2rem;">
@@ -288,22 +277,30 @@ Perfect for researchers in computational social science, YSocial allows you to s
         </div>
     </div>
 </div>
-<br>
-<div class="row pb-5">
-    <div class="col-md-12 col-sm-12">
-        <div class="card-container">
-            {% for image in site.data.home-cards %}
-            <div class="card" style="width: 18rem;">
+
+<!-- Explore More Section -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Explore More</h2>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-md-12 col-sm-12">
+            <div class="card-container">
+                {% for image in site.data.home-cards %}
+                <div class="card" style="width: 18rem;">
                     <a href="{{site.baseurl}}{{ image.path}}">
-                    <div class="card-img"  ><img src="{{site.baseurl}}{{ image.url}}" class="card-img-top" alt="{{ image.name }}">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ image.name }}</h5>
-                        <p class="card-text">{{ image.description }}</p>
-                    </div>
+                        <div class="card-img"><img src="{{site.baseurl}}{{ image.url}}" class="card-img-top" alt="{{ image.name }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ image.name }}</h5>
+                            <p class="card-text">{{ image.description }}</p>
+                        </div>
                     </a>    
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
