@@ -78,7 +78,7 @@ YSocial is the result of a joint effort of <mark><a href="https://www.isti.cnr.i
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/atomasevic.png" style="width:100%; height:auto;">
-      <div>Dr. Aleksandar Tomasevic<small>Researcher - Comp. Social Science</small><br><a href="https://x.com/atomasevic">@atomasevic</a></div>
+      <div>Dr. Aleksandar Tomasevic<small> Researcher - Comp. Social Science</small><br><a href="https://x.com/atomasevic">@atomasevic</a></div>
     </div>
   </div>
 
