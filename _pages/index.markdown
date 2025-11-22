@@ -4,7 +4,7 @@
 
 layout: default-full
 title: "Home"
-subtitle: "Where the Digital World Comes to Life"
+subtitle: "Simulating Societies... Why not?"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
 header_img: assets/images/header3.jpg
@@ -115,132 +115,70 @@ header_title: "Y Social"
     margin: 2rem 0;
 }
 .use-case-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: white;
+    border: 1px solid #e5e7eb;
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;
     transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .use-case-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .use-case-title {
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: #2563eb;
 }
 .use-case-desc {
     font-size: 0.85rem;
-    opacity: 0.9;
+    color: #6c757d;
 }
 </style>
 
-           
 
-<div class="container py-3">
-    
-<div class="alert-info-custom">
-<strong>💡 YSocial </strong>  is an open-source platform designed to simulate realistic social media environments using AI-powered agents. 
-<br><br>
-Perfect for researchers in computational social science, YSocial allows you to study social dynamics, recommender systems effects, misinformation spread, and user behavior in a controlled setting.
- </div>
-</div>
-
-
+<!-- Video Section -->
 <div class="container py-4">
     <div class="row">
+<div class="col-md-12">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+                    YSocial is an <mark>open-source</mark> <mark>AI-driven</mark> <mark>social media simulator</mark> for studying social dynamics, recommender effects, and misinformation in a controlled environment.
+                </p>
+            </div>
+        </div>
         <div class="col-md-12">
-
-            <div class="custom-carousel">
-  <div class="carousel-container">
-    <div class="carousel-item active">
-      <img src="../assets/images/screen/login.png" alt="Slide 1" >
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin0.png" alt="Slide 3">
-    </div>
-    <div class="carousel-item">
-      <img src="../assets/images/screen/admin1.png" alt="Slide 2">
-    </div>
- <div class="carousel-item">
-      <img src="../assets/images/screen/admin2.png" alt="Slide 3">
-    </div>
- <div class="carousel-item">
-      <img src="../assets/images/screen/admin3.png" alt="Slide 3">
-    </div>
-    <div class="carousel-item">
-      <img src="../assets/images/screen/admin4.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin5.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin6.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin7.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin8.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin9.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/admin10.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/pl1.png" alt="Slide 3">
-    </div><div class="carousel-item">
-      <img src="../assets/images/screen/pl2.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/pl3.png" alt="Slide 3">
-    </div>
-<div class="carousel-item">
-      <img src="../assets/images/screen/pl4.png" alt="Slide 3">
-    </div>
-
-
-  </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
-
+            <!-- <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700; color: #212529;">See YSocial in Action</h2> -->
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/IJsNHs1foQQ?cc_load_policy=1&cc_lang_pref=en"
+                    title="Y Social Introduction Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </div>
 </div>
 
-
-<div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Simulations Run</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Research Institutions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Open Source</div>
-                </div>
-            </div>
-
-
-<div class="container py-4">
+<!-- Key Features Section -->
+<div class="container py-5">
     <div class="row">
         <div class="col-md-12">
-
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Key Features</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <div class="feature-title">AI Simulation</div>
-                        <div class="feature-description">Agent-based modeling meets Generative AI for a more "realistic" simulation experience</div>
-                    </div>
+                    <div class="feature-icon">🧠</div>
+                    <div class="feature-title">AI Simulation</div>
+                    <div class="feature-description">Agent-based modeling meets Generative AI for a more "realistic" simulation experience</div>
+                </div>
 
-            <div class="feature-card">
+                <div class="feature-card">
                     <div class="feature-icon">🔧</div>
                     <div class="feature-title">No Code Simulation</div>
                     <div class="feature-description">Web interface to complete control simulations, agent management, and scenario configuration</div>
@@ -260,47 +198,45 @@ Perfect for researchers in computational social science, YSocial allows you to s
             </div>
         </div>
     </div>
+</div>
 
 
-
-
-
-
-
-<div class="container py-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; color: white;">
+<div class="container py-4" style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">
     <div class="row">
         <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; color: white; font-weight: 700;">Perfect for Your Research Needs</h2>
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #212529; font-weight: 700;">Perfect for Your Research Needs</h2>
             
             <div class="use-case-grid">
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">🎓 Academic Research</div>
-                    <div class="use-case-desc">Study opinion dynamics, misinformation spread, and social phenomena</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">🎓 Academic Research</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Study opinion dynamics, misinformation spread, and social phenomena</div>
                 </div>
                 
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">💼 Industry Analysis</div>
-                    <div class="use-case-desc">Test market dynamics, brand perception, and consumer behavior</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">💼 Industry Analysis</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Test market dynamics, brand perception, and consumer behavior</div>
                 </div>
                 
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">📚 Education</div>
-                    <div class="use-case-desc">Teach computational social science and simulation methods</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">📚 Education</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Teach computational social science and simulation methods</div>
                 </div>
                 
-                <div class="use-case-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
-                    <div class="use-case-title">🏛️ Policy Making</div>
-                    <div class="use-case-desc">Test policy impacts and intervention strategies</div>
+                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
+                    <div class="use-case-title" style="color: #2563eb;">🏛️ Policy Making</div>
+                    <div class="use-case-desc" style="color: #6c757d;">Test policy impacts and intervention strategies</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container py-4">
+
+<!-- Get Started Section -->
+<div class="container py-5">
     <div class="row">
         <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700;">Get Started in 3 Simple Steps</h2>
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Get Started in 3 Simple Steps</h2>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
                 <div style="text-align: center; padding: 2rem;">
@@ -326,59 +262,39 @@ Perfect for researchers in computational social science, YSocial allows you to s
             </div>
             
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="/ysocial" class="cta-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Your First Simulation →</a>
+                <a href="/download" class="cta-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Your First Simulation →</a>
             </div>
         </div>
     </div>
 </div>
-<br>
-<div class="row pb-5">
-    <div class="col-md-12 col-sm-12">
-        <div class="card-container">
-            {% for image in site.data.home-cards %}
-            <div class="card" style="width: 18rem;">
+
+<!-- Explore More Section -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Explore More</h2>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-md-12 col-sm-12">
+            <div class="card-container">
+                {% for image in site.data.home-cards %}
+                <div class="card" style="width: 18rem;">
                     <a href="{{site.baseurl}}{{ image.path}}">
-                    <div class="card-img"  ><img src="{{site.baseurl}}{{ image.url}}" class="card-img-top" alt="{{ image.name }}">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ image.name }}</h5>
-                        <p class="card-text">{{ image.description }}</p>
-                    </div>
+                        <div class="card-img"><img src="{{site.baseurl}}{{ image.url}}" class="card-img-top" alt="{{ image.name }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ image.name }}</h5>
+                            <p class="card-text">{{ image.description }}</p>
+                        </div>
                     </a>    
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
 
-
-{% raw %}
-<script>
-// Initialize all carousels on the page
-document.querySelectorAll('.custom-carousel').forEach((carousel) => {
-  let currentIndex = 0;
-  const items = carousel.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-  const nextBtn = carousel.querySelector('.next');
-  const prevBtn = carousel.querySelector('.prev');
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalItems; 
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    items.forEach(item => item.classList.remove('active'));
-    items[currentIndex].classList.add('active');
-  }
-});
-</script>
-{% endraw %}
 
 <!--
 <div class="container py-3 mb-0 bg-color-full bg-color">
