@@ -23,7 +23,7 @@ Transform your social media research with our powerful <mark>Digital Twin platfo
 
 ## 📥 Download for Your Platform
 
-v2.0.0 (Nalthis - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag/v2.0.0)) is available for the following operating systems:
+v2.5.0 (Canticle - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag/v2.5.0)) is available for the following operating systems:
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
 
