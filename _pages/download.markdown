@@ -79,7 +79,7 @@ Once started, access YSocial using the credentials: <mark>admin@y-not.social</ma
 </div>
 
 <div class="alert-info-custom">
-<strong>🛠️ Want full control?</strong> Follow our <a href="/ysocial">manual installation guide</a> to install Y Social with Python and customize every aspect of your setup.
+<strong>🛠️ Want full control?</strong> Follow our <a href="/ysocial">developer installation guide</a> to install Y Social with Python and customize every aspect of your setup.
 </div>
 
 <div class="alert-info-custom">
