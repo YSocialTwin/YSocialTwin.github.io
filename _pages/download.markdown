@@ -69,6 +69,8 @@ Download for Windows
 
 </div>
 
+Once started, access YSocial using the credentials: <mark>admin@y-not.social</mark> / <mark>admin</mark>
+
 <div class="alert-warning-custom">
 <strong>⚠️ Note 1: </strong> OS-specific releases provide a zero-configuration quick start at a cost: no JupyterLab support and longer startup times.
 <br>

@@ -205,8 +205,8 @@ python y_social.py --no_notebook
 
 To access the **admin panel**, use the default credentials:
 
-- **Email:** `admin@ysocial.com`
-- **Password:** `test`
+- **Email:** `admin@y-not.social`
+- **Password:** `admin`
 
 Once logged in, you can start configuring your experiments and interacting with the platform.
 

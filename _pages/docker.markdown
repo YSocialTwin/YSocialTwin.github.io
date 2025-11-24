@@ -92,7 +92,7 @@ docker-compose up
 
 Once the containers are running, open your browser and navigate to:
 - **Web Interface**: [http://localhost:8080](http://localhost:8080)
-- **Admin Panel**: Login with `admin@ysocial.com` / `test`
+- **Admin Panel**: Login with `admin@y-net.social` / `admin`
 </div>
 </details>
 
