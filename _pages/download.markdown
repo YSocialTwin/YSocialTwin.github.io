@@ -60,9 +60,14 @@ Download for macOS
 </div>
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Windows</h3>
 <p style="color: #6c757d; margin-bottom: 1.5rem;">Windows 10 and later</p>
+<div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
 <a href="#" class="cta-primary" style="margin-right: 0;">
-Download for Windows
+Download x86
 </a>
+<a href="#" class="cta-primary" style="margin-right: 0;">
+Download ARM
+</a>
+</div>
 <div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
 </div>
 </div>
