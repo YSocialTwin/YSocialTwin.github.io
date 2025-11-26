@@ -25,63 +25,63 @@ Transform your social media research with our powerful <mark>Digital Twin platfo
 
 v2.5.0 (Canticle - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag/v2.5.0)) is available for the following operating systems:
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0;">
 
-<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
-<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
 <i class="fab fa-linux"></i>
 </div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Linux</h3>
-<p style="color: #6c757d; margin-bottom: 1.5rem;">Ubuntu, Fedora, Debian & more</p>
-<a href="#" class="cta-primary" style="margin-right: 0;">
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Linux</h3>
+<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Ubuntu, Fedora, Debian & more</p>
+<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download for Linux
 </a>
-<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
+<div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
 
 </div>
 </div>
 
-<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
-<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
 <i class="fab fa-apple"></i>
 </div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">macOS</h3>
-<p style="color: #6c757d; margin-bottom: 1.5rem;">Sequoia (macOS 15) or later</p>
-<a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="margin-right: 0;">
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">macOS</h3>
+<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Sequoia (macOS 15) or later</p>
+<a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download for macOS
 </a>
-<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
+<div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
 </div>
 </div>
 
-<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
-<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
 <i class="fab fa-windows"></i>
 </div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Windows</h3>
-<p style="color: #6c757d; margin-bottom: 1.5rem;">Windows 10 and later</p>
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Windows</h3>
+<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Windows 10 and later</p>
 <div style="display: flex; gap: 0.5rem; justify-content: center;">
-<a href="#" class="cta-primary" style="margin-right: 0;">
+<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
 x86
 </a>
-<a href="#" class="cta-primary" style="margin-right: 0;">
+<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
 ARM
 </a>
 </div>
-<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
+<div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
 </div>
 </div>
 
-<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
-<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
 <i class="fas fa-code"></i>
 </div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Source Code</h3>
-<p style="color: #6c757d; margin-bottom: 1.5rem;">Latest version ZIP archive</p>
-<a href="#" class="cta-primary" style="margin-right: 0;">
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Source Code</h3>
+<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Latest version ZIP archive</p>
+<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download Source
 </a>
-<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
+<div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
 </div>
 </div>
 
