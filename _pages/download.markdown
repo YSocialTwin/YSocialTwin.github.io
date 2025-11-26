@@ -32,7 +32,7 @@ v2.5.0 (Canticle - [changelog](https://github.com/YSocialTwin/YSocial/releases/t
 <i class="fab fa-linux"></i>
 </div>
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Linux</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Ubuntu, Fedora, Debian & more</p>
+<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Ubuntu, Fedora & more</p>
 <a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download for Linux
 </a>
@@ -46,7 +46,7 @@ Download for Linux
 <i class="fab fa-apple"></i>
 </div>
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">macOS</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Sequoia (macOS 15) or later</p>
+<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Silicon (M1 or later)</p>
 <a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download for macOS
 </a>
