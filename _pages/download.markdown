@@ -72,6 +72,19 @@ ARM
 </div>
 </div>
 
+<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s;">
+<div style="font-size: 4rem; margin-bottom: 1rem; color: #333;">
+<i class="fas fa-code"></i>
+</div>
+<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Source Code</h3>
+<p style="color: #6c757d; margin-bottom: 1.5rem;">Latest version ZIP archive</p>
+<a href="#" class="cta-primary" style="margin-right: 0;">
+Download Source
+</a>
+<div style="margin-top: 1rem; font-size: 0.875rem; color: #6c757d;">
+</div>
+</div>
+
 </div>
 
 Once started, access YSocial using the credentials: <mark>admin@y-not.social</mark> / <mark>admin</mark>
