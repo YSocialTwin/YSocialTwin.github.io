@@ -415,4 +415,31 @@ details:not([open]) summary::after {
   transition: all 0.3s;
 }
 
+.download-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .download-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .download-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.download-box {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
 /*# sourceMappingURL=custom.css.map */
