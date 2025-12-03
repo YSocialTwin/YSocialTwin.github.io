@@ -1,4 +1,377 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2025-11-19T14:49:29+01:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🔥 Progress in Motion</title><link href="https://y-not.social/blog/2025/ysights/" rel="alternate" type="text/html" title="🔥 Progress in Motion" /><published>2025-10-26T18:00:00+01:00</published><updated>2025-10-26T18:00:00+01:00</updated><id>https://y-not.social/blog/2025/ysights</id><content type="html" xml:base="https://y-not.social/blog/2025/ysights/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2025-12-03T10:25:44+01:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🚀 YSocial v3.0.0 — Journey before destination!</title><link href="https://y-not.social/blog/2025/ynot/" rel="alternate" type="text/html" title="🚀 YSocial v3.0.0 — Journey before destination!" /><published>2025-12-03T00:00:00+01:00</published><updated>2025-12-03T00:00:00+01:00</updated><id>https://y-not.social/blog/2025/ynot</id><content type="html" xml:base="https://y-not.social/blog/2025/ynot/"><![CDATA[<style>
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cta-primary {
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+.cta-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    color: white;
+    text-decoration: none;
+}
+.cta-secondary {
+    background: transparent;
+    color: #2563eb;
+    padding: 0.75rem 2rem;
+    border: 2px solid #2563eb;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+.cta-secondary:hover {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+}
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    text-align: center;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+.feature-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 0.5rem;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+.stat-label {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.use-case-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+.use-case-card:hover {
+    transform: scale(1.05);
+}
+.use-case-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.use-case-desc {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+</style>
+
+<div class="container py-3">
+<div class="row">
+<div class="col-md-8">
+
+      <div class="alert-info-custom" style="margin-bottom: 2rem;">
+🎊 Start your Social Simulations. Cross-platform. Smarter. Easier. More connected! 
+</div>
+
+      <hr />
+
+      <p>Every YSocial release tells part of a story, a new step of <mark>our journey</mark>.</p>
+
+      <p>From the very beginning, YSocial had a bold vision: build a <mark>social media simulator</mark> so intuitive that <mark>anyone</mark> — not just computer scientists — could use it effortlessly.</p>
+
+      <p>We started with a precise roadmap:</p>
+      <ul>
+        <li><strong>v0.x</strong> focused on establishing a solid simulation core (YServer and YClient) and basic social media features, designed for researchers to use.</li>
+        <li><strong>v1.x</strong> made a first step towards usability, introducing the web interface to make simulations configuration and visualization more accessible.</li>
+        <li><strong>v2.x</strong> expanded on that foundation, adding more features, improving stability, and refining the user experience based on community feedback.</li>
+      </ul>
+
+      <p>With <strong>v3.0.0</strong>, we’re taking a giant leap forward towards our ultimate goal: making YSocial a <mark>truly accessible</mark> platform for <mark>everyone</mark>.</p>
+
+      <p>This release is about <strong>accessibility</strong>, <strong>reliability</strong>, and <strong>communication</strong>.<br />
+And it brings some of the most meaningful upgrades we’ve ever shipped.</p>
+
+      <hr />
+
+      <h3 id="a-new-home">🌐 A New Home</h3>
+      <p>Let’s start from the outside.</p>
+
+      <p>YSocial now lives at <a href="y-not.social"><strong>www.y-not.social</strong></a>, a domain that reflects the project’s spirit:<br />
+<em><mark>Why not</mark> experiment? <mark>Why not</mark> simulate? <mark>Why not</mark> rethink how online societies work?</em></p>
+
+      <p>The website has been reorganized — cleaner structure, clearer navigation.<br />
+Resources are easier to find, and the documentation has been revamped for clarity.</p>
+
+      <p>It’s the new hub for the entire YSocial ecosystem.</p>
+
+      <hr />
+
+      <h3 id="meet-ysocial">🎬 Meet YSocial</h3>
+      <p>Understanding what YSocial does is now easier than ever.</p>
+
+      <p>Thanks to <a href="https://notebooklm.google.com/"><strong>NotebookLM</strong></a>, we’ve created and accessible <strong>video introduction</strong> that explains the project’s purpose, capabilities, and scientific vision.</p>
+
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/tjo7N_Cx3Ds?cc_load_policy=1&amp;cc_lang_pref=en" title="Y Social Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+                </iframe>
+            </div>
+
+      <p>Perfect for newcomers, classrooms, and presentations.</p>
+
+      <p>Share it, embed it, and spread the word!</p>
+
+      <hr />
+
+      <h3 id="one-click-installation">⚡ One-Click Installation</h3>
+
+      <p>YSocial v3.0.0 brings one of the most impactful improvements in the project’s history: <strong>true accessibility for everyone</strong>.</p>
+
+      <p>For the first time, YSocial includes <strong>native support for <mark>Linux</mark>, <mark>macOS</mark>, and <mark>Windows</mark></strong>, eliminating OS-specific hacks and ensuring a unified experience across all major platforms. 
+Whether you’re a researcher, educator, or student, YSocial now runs seamlessly on your preferred environment.</p>
+
+      <p>And to make things even easier, we’re introducing a brand-new <strong><mark>one-click installer</mark></strong>. 
+It automatically handles dependencies and configuration, allowing anyone to get started without setup headaches.</p>
+
+      <p>It may take a moment to launch — that’s the trade-off of a single-file app — but once it’s running, it just works.</p>
+
+      <p><img src="../../../assets/images/blog/os_support.png" alt="OS Support" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;" /></p>
+
+      <p><mark>Cross-platform freedom</mark> and <mark>frictionless installation</mark> together make v3.0.0 our most accessible and user-friendly release to date.</p>
+
+      <hr />
+
+      <h3 id="new-onboarding-experience">🎉 New Onboarding Experience</h3>
+      <p>Getting started with YSocial has never been easier.</p>
+
+      <p>The new <strong>onboarding experience</strong> <mark>tutorial</mark> is designed to guide you through the creation of your first, simple, experiment.<br />
+Learn quickly the basis, and elements, of the platform’s and start experimenting right away.</p>
+
+      <p>Just focus on the essentials:</p>
+      <ul>
+        <li>Create your first population</li>
+        <li>Create your first experiment</li>
+        <li>Configure your first client</li>
+        <li>Run your first simulation</li>
+      </ul>
+
+      <p><img src="../../../assets/images/screen/onboarding.png" alt="Onboarding" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;" /></p>
+
+      <p>All the details and advanced options can be explored later, once you’re comfortable with the basics.</p>
+
+      <p>Restart the tutorial anytime to <mark>revisit key concepts</mark>.</p>
+
+      <p><img src="../../../assets/images/screen/highlight.png" alt="Onboarding" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;" /></p>
+
+      <p>Moreover, if you’re unsure how to navigate the admin interface, many pages now include their own <mark>guided tour</mark>, which you can start with a single click.</p>
+
+      <hr />
+
+      <h3 id="experiments-upgraded">🕵️‍♂️ Experiments Upgraded</h3>
+
+      <p>In this release we introduced several improvements to the experiment system, including:</p>
+      <ul>
+        <li><strong>Experiment Import/Export</strong>: Easily share and reuse experiment configurations across different installations.</li>
+        <li><strong>Duplicate Experiment</strong>: Quickly clone existing experiments to modify parameters without starting from scratch.</li>
+        <li><strong>Experiment Scheduling</strong>: Effortlessly automate experiment runs — schedule multiple groups to run sequentially while running experiments in parallel within each group, all with a single click.</li>
+        <li><strong>Watchdog Support</strong>: Monitor running experiments and automatically restart them if they crash or hang, ensuring long-running simulations complete successfully.</li>
+        <li><strong>Experiment Execution stats</strong>: New graphs and charts to track experiment progress and performance over time.</li>
+      </ul>
+
+      <hr />
+
+      <h3 id="hierarchical-users-roles">👥 Hierarchical Users Roles</h3>
+
+      <p>Managing multiple types of users is now more straightforward with the introduction of <strong>hierarchical user roles</strong>.
+Assign different permissions to users based on their roles:</p>
+      <ul>
+        <li><strong>Admin</strong>: Full access to all features and settings.</li>
+        <li><strong>Researcher</strong>: Access to experiment creation and management.</li>
+        <li><strong>User</strong>: Access only to the hybrid simulations they are assigned to.</li>
+      </ul>
+
+      <p>This structure allows to compartmentalize experiment management (each researcher can manage their own experiments without interfering with others) and improves security by limiting access to sensitive features.</p>
+
+      <p>Additionally, <mark>non-privileged</mark> user management now makes it easy to run hybrid simulations with human participants—without giving access to admin features.</p>
+
+      <hr />
+
+      <h3 id="smarter-diagnostics-with-ytelemetry">📊 Smarter Diagnostics with yTelemetry</h3>
+      <p>As YSocial grows, so does the need to understand how it performs in real-world environments.</p>
+
+      <p><strong>yTelemetry</strong> is our new, fully <mark>**GDPR-compliant**</mark> telemetry and diagnostics service. It collects:</p>
+
+      <ul>
+        <li>Anonymous usage patterns</li>
+        <li>Crash stack traces</li>
+        <li>Non-identifying system information</li>
+      </ul>
+
+      <p>All strictly opt-out and designed with privacy in mind.<br />
+This allows us to catch rare bugs early and keep YSocial stable for everyone.
+Check out all details about what we collect in the <a href="y-not.social/download">download</a> page and feel free to inspect its <a href="https://github.com/YSocialTwin/YSocial">implementation</a>.</p>
+
+      <p>And don’t worry — if you prefer not to share any data, you can easily disable telemetry in the settings.
+Although we <em>strongly encourage</em> keeping it enabled to help us improve YSocial for the entire community.</p>
+
+      <hr />
+
+      <h3 id="in-app-y-announcements--news">🔔 In App Y Announcements &amp; News</h3>
+      <p>Communication shouldn’t require leaving your workspace.</p>
+
+      <p>v3.0.0 adds <strong>in-app announcements</strong> that notify you about:</p>
+
+      <ul>
+        <li>New versions</li>
+        <li>Bug-fix releases</li>
+        <li>Important project updates</li>
+      </ul>
+
+      <p>Think of it as a tiny newsroom inside YSocial.</p>
+
+      <p>No more checking websites or GitHub commits — stay informed without breaking your flow.</p>
+
+      <hr />
+
+      <h3 id="together-into-the-next-phase">🎉 Together Into the Next Phase</h3>
+      <p>YSocial v3.0.0 isn’t just a feature update — it’s the beginning of a more <mark>accessible</mark>, more <mark>polished</mark>, and more <mark>communicative</mark> era for the project.</p>
+
+      <p>With a new domain, improved onboarding, smarter diagnostics, and a clearer web presence, YSocial is ready to support a growing global community of researchers and developers.</p>
+
+      <p><strong>Start exploring the new release at <a href="https://www.y-not.social">www.y-not.social</a></strong><br />
+And thank you for being part of this journey and remember:</p>
+
+      <blockquote>
+        <p><small>Life before death, strength before weakness, <mark>journey before destination</mark>. <br /><br />
+                          — The Stormlight Archive, The Way of Kings</small></p>
+      </blockquote>
+
+      <hr />
+
+      <div style="text-align: center; margin: 2rem 0;">
+<a href="https://y-not.social/download" class="cta-primary" style="margin-right: 1rem;">🚀 Download YSocial</a>
+</div>
+
+    </div>
+
+
+
+<div class="col-md-4">
+<div class="blog-sidebar" style="position: sticky; top: 20px;">
+
+<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Recent Posts</h4>
+
+<div style="margin-bottom: 2rem;">
+
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #2563eb;">
+  <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
+    🚀 YSocial v3.0.0  — Journey before destination!
+  </a>
+  <small style="color: #6b7280;">Dec 03, 2025</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🔥 Progress in Motion
+  </a>
+  <small style="color: #6b7280;">Oct 26, 2025</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/yweb/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🚀 The Zero-Code Platform is Here!
+  </a>
+  <small style="color: #6b7280;">Mar 13, 2025</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2024/pages/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    Pages, Multimodal Contents and Dynamic Interests
+  </a>
+  <small style="color: #6b7280;">Nov 20, 2024</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2024/intro/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    (Here) We are Y!
+  </a>
+  <small style="color: #6b7280;">Aug 01, 2024</small>
+</div>
+
+</div>
+
+<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Navigation</h4>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+  
+    <a href="/blog/2025/ysights/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+      ← 🔥 Progress in Motion
+    </a>
+  
+  
+</div>
+
+
+</div></div>
+
+</div></div>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[Discover YSocial v3.0.0 with cross-platform support, one-click installation, GDPR-compliant telemetry, and in-app announcements. Elevate your social media research experience today!]]></summary></entry><entry><title type="html">🔥 Progress in Motion</title><link href="https://y-not.social/blog/2025/ysights/" rel="alternate" type="text/html" title="🔥 Progress in Motion" /><published>2025-10-26T18:00:00+01:00</published><updated>2025-10-26T18:00:00+01:00</updated><id>https://y-not.social/blog/2025/ysights</id><content type="html" xml:base="https://y-not.social/blog/2025/ysights/"><![CDATA[<style>
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -397,6 +770,13 @@ python y_social.py <span class="nt">--no_notebook</span>
 <div style="margin-bottom: 2rem;">
 
 
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🚀 YSocial v3.0.0  — Journey before destination!
+  </a>
+  <small style="color: #6b7280;">Dec 03, 2025</small>
+</div>
+
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #2563eb;">
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
     🔥 Progress in Motion
@@ -434,6 +814,10 @@ python y_social.py <span class="nt">--no_notebook</span>
       ← 🚀 The Zero-Code Platform is Here!
     </a>
   
+  
+    <a href="/blog/2025/ynot/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+      🚀 YSocial v3.0.0  — Journey before destination! →
+    </a>
   
 </div>
 
@@ -602,6 +986,13 @@ python y_social.py <span class="nt">--no_notebook</span>
 
 <div style="margin-bottom: 2rem;">
 
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🚀 YSocial v3.0.0  — Journey before destination!
+  </a>
+  <small style="color: #6b7280;">Dec 03, 2025</small>
+</div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
@@ -776,6 +1167,13 @@ function updateCarousel() {
 
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🚀 YSocial v3.0.0  — Journey before destination!
+  </a>
+  <small style="color: #6b7280;">Dec 03, 2025</small>
+</div>
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🔥 Progress in Motion
   </a>
@@ -887,6 +1285,13 @@ By providing a safe space to explore how users interact, share information, and 
 
 <div style="margin-bottom: 2rem;">
 
+
+<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
+  <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
+    🚀 YSocial v3.0.0  — Journey before destination!
+  </a>
+  <small style="color: #6b7280;">Dec 03, 2025</small>
+</div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
