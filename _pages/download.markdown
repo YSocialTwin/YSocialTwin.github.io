@@ -33,7 +33,7 @@ v3.0.0 (Roshar - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag
 </div>
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Linux</h3>
 <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Ubuntu, Fedora & more</p>
-<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+<a href="https://releases.y-not.social/latest/YSocial_v3_linux" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download for Linux
 </a>
 <div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
@@ -47,7 +47,7 @@ Download for Linux
 </div>
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">macOS</h3>
 <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Silicon (M1 or later)</p>
-<a href="https://releases.y-not.social/latest/YSocial-2.0.0.dmg" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+<a href="https://releases.y-not.social/latest/YSocial_v3.dmg" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download for macOS
 </a>
 <div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
@@ -61,10 +61,10 @@ Download for macOS
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Windows</h3>
 <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Windows 10 and later</p>
 <div style="display: flex; gap: 0.5rem; justify-content: center;">
-<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
+<a href="https://releases.y-not.social/latest/YSocial_v3_x86.exe" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
 x86
 </a>
-<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
+<a href="https://releases.y-not.social/latest/YSocial_v3_arm.exe" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
 ARM
 </a>
 </div>
@@ -78,7 +78,7 @@ ARM
 </div>
 <h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Source Code</h3>
 <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Latest version ZIP archive</p>
-<a href="#" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+<a href="https://releases.y-not.social/latest/YSocial_v3_source.zip" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
 Download Source
 </a>
 <div style="margin-top: 0.75rem; font-size: 0.875rem; color: #6c757d;">
