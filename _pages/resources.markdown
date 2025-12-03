@@ -12,11 +12,14 @@ header_title: "Resources"
 vega: true
 ---
 
-<div class="container py-3">
-<div class="row">
-<div class="alert-info-custom">
-💡 Here you can find some datasets generated with YSocial, as well as collections of predefined thematic agent populations and news pages.
+<div style="text-align: center; margin: 2rem 0;">
+<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+Explore YSocial-generated <mark>datasets</mark>, discover our <mark>research outreach</mark>, <br> and find out <mark>who’s citing us</mark>!
+</p>
 </div>
+
+<div class="container py-3">
+
 
 <div class="col-md-12" markdown="1">
 
@@ -163,6 +166,6 @@ Let us know and we will add your publication to the list!
 
 </div>
 </div>
-</div>
+
 
 

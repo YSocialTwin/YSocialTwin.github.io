@@ -16,11 +16,14 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-<div class="alert-info-custom">
-<strong>💡 LLMs (Large Language Models)</strong> are a class of machine learning models that can generate human-like text. 
-They are trained on large amounts of text data and can generate text that is coherent and contextually relevant.
+<div style="text-align: center; margin: 2rem 0;">
+<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+<mark>LLMs</mark> are AI models trained on vast text corpora, able to generate <mark>human-like</mark>, coherent, and context-aware language.
+</p>
+</div>
 
-Since LLM agents are the core of YSocial simulations, it is important to understand how they work and how they interact with each other.
+<div class="alert-info-custom">
+💡 Since LLM agents are the core of YSocial simulations, it is important to understand how they work and how they interact with each other.
 
 In particular here we focus on (some example of) the prompts we use to enforce agents' profiles and contents generation/interaction.
 </div>
@@ -243,9 +246,9 @@ Summary: {article.summary}
 </div>
 
 
-
 <div style="text-align: center; margin: 2rem 0;">
-<a href="/modeling" class="cta-primary" style="margin-right: 1rem;">🚀 Modeling Choices</a>
+<a href="/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Key Features </a>
+<a href="/modeling" class="cta-secondary">📖 Modeling Choices </a>
 </div>
 
 </div>

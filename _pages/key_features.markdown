@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default-full
-title:  "Y Social"
+title:  "Introducing YSocial"
 subtitle: "Key Features"
 show_sidetoc: true
 header_type: hero #base, post, hero,image, splash
@@ -16,8 +16,10 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-<div class="alert-info-custom">
-<strong>💡 Perfect for Researchers:</strong> Y Social has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment, where users can interact with each other and with AI-driven agents to study and analyze social media dynamics.
+<div style="text-align: center; margin: 2rem 0;">
+<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+YSocial is built for Computational Social Science, offering a <mark>realistic social media simulation</mark> where <mark>humans</mark> and <mark>AI agents</mark> interact.
+</p>
 </div>
 
 ---
@@ -191,8 +193,8 @@ Easily configure and manage simulations through:
 
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="/ysocial" class="cta-primary" style="margin-right: 1rem;">🚀 Get Started Now</a>
-<a href="/docker" class="cta-secondary">📖 Install with Docker</a>
+<a href="/agents" class="cta-primary" style="margin-right: 1rem;">🚀 Know the Agents </a>
+<a href="/modeling" class="cta-secondary">📖 Modeling Choices </a>
 </div>
 
 </div>

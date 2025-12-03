@@ -16,10 +16,13 @@ vega: true
 <div class="row">
 <div class="col-md-12" markdown="1">
 
-<div class="alert-info-custom">
-<strong>💡Who are we? </strong> <br> YSocial is the result of a joint effort of <a href="https://www.isti.cnr.it/en/">ISTI-CNR</a>, <a href="https://www.unipi.it">University of Pisa</a>, <a href="https://www.unitn.it/">University of Trento</a>, <a href="https://www.univ-lyon1.fr/">Université Lyon 1</a> and <a href="https://www.ipb.ac.rs/en/research/laboratories/scientific-computing-laboratory/"> University of Belgrade</a>.
-
+<div style="text-align: center; margin: 2rem 0;">
+<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+YSocial is the result of a joint effort of <mark><a href="https://www.isti.cnr.it/en/">ISTI-CNR</a></mark>, <mark><a href="https://www.unipi.it">University of Pisa</a></mark>, <br> <mark><a href="https://www.unitn.it/">University of Trento</a></mark>, <mark><a href="https://www.univ-lyon1.fr/">Université Lyon 1</a></mark> and <mark><a href="https://www.ipb.ac.rs/en/research/laboratories/scientific-computing-laboratory/"> University of Belgrade</a></mark>.
+</p>
 </div>
+
+
 {% raw %}
 <div style="display:flex; flex-direction:column; align-items:center; gap:2rem; width:100%; box-sizing:border-box; text-align:center;">
 
@@ -75,7 +78,7 @@ vega: true
     </div>
     <div style="max-width:240px; text-align:center;">
       <img src="../assets/images/atomasevic.png" style="width:100%; height:auto;">
-      <div>Dr. Aleksandar Tomasevic<small>Researcher - Comp. Social Science</small><br><a href="https://x.com/atomasevic">@atomasevic</a></div>
+      <div>Dr. Aleksandar Tomasevic<small> Researcher - Comp. Social Science</small><br><a href="https://x.com/atomasevic">@atomasevic</a></div>
     </div>
   </div>
 
