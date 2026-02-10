@@ -59,6 +59,8 @@ cd YSocial
 ###### Sync the YClient and YServer submodules
 ```bash
 git submodule update --init --recursive
+git submodule update --remote
+git submodule foreach 'git checkout main && git pull'
 ```
 
 ###### Install the required dependencies
