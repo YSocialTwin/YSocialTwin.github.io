@@ -141,7 +141,7 @@ header_img: assets/images/blog.jpg
 <div class="col-md-8" markdown="1">
 
 <div class="alert-info-custom" style="margin-bottom: 2rem;">
-🎊 Start your Social Simulations. Cross-platform. Smarter. Easier. More connected! 
+🎊 YSocial paper is out, a little bit later than expected but we made it!
 </div>
 
 ****
@@ -150,11 +150,11 @@ header_img: assets/images/blog.jpg
 
 Some papers take longer journeys than others.
 
-After many months of reviews, revisions, acceptance, proofs, and an unexpectedly long production process, we're finally happy to share that our paper 
+After many months of reviews, revisions, acceptance (in early February), proofs, and an unexpectedly long (excessively long) production process, we're finally happy to share that 
 
 **["YSocial: An artificial intelligence powered social media Virtual Twin"](https://journals.sagepub.com/doi/10.1177/20539517261431576)** 
 
-has been officially published in *Big Data & Society*!
+has been officially published in **Big Data & Society**!
 
 <img src="../../../assets/images/blog/bigdata_and_society.png" alt="Paper" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;">
 

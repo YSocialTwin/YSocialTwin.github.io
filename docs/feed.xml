@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2026-07-23T16:07:55+02:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🎉 Finally Published!</title><link href="https://y-not.social/blog/2026/bigdata_and_society/" rel="alternate" type="text/html" title="🎉 Finally Published!" /><published>2026-07-23T00:00:00+02:00</published><updated>2026-07-23T00:00:00+02:00</updated><id>https://y-not.social/blog/2026/bigdata_and_society</id><content type="html" xml:base="https://y-not.social/blog/2026/bigdata_and_society/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2026-07-23T16:10:34+02:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🎉 Finally Published!</title><link href="https://y-not.social/blog/2026/bigdata_and_society/" rel="alternate" type="text/html" title="🎉 Finally Published!" /><published>2026-07-23T00:00:00+02:00</published><updated>2026-07-23T00:00:00+02:00</updated><id>https://y-not.social/blog/2026/bigdata_and_society</id><content type="html" xml:base="https://y-not.social/blog/2026/bigdata_and_society/"><![CDATA[<style>
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -128,7 +128,7 @@
 <div class="col-md-8">
 
       <div class="alert-info-custom" style="margin-bottom: 2rem;">
-🎊 Start your Social Simulations. Cross-platform. Smarter. Easier. More connected! 
+🎊 YSocial paper is out, a little bit later than expected but we made it!
 </div>
 
       <hr />
@@ -137,11 +137,11 @@
 
       <p>Some papers take longer journeys than others.</p>
 
-      <p>After many months of reviews, revisions, acceptance, proofs, and an unexpectedly long production process, we’re finally happy to share that our paper</p>
+      <p>After many months of reviews, revisions, acceptance (in early February), proofs, and an unexpectedly long (excessively long) production process, we’re finally happy to share that</p>
 
       <p><strong><a href="https://journals.sagepub.com/doi/10.1177/20539517261431576">“YSocial: An artificial intelligence powered social media Virtual Twin”</a></strong></p>
 
-      <p>has been officially published in <em>Big Data &amp; Society</em>!</p>
+      <p>has been officially published in <strong>Big Data &amp; Society</strong>!</p>
 
       <p><img src="../../../assets/images/blog/bigdata_and_society.png" alt="Paper" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;" /></p>
 
