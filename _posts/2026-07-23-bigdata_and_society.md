@@ -152,16 +152,31 @@ Some papers take longer journeys than others.
 
 After many months of reviews, revisions, acceptance, proofs, and an unexpectedly long production process, we're finally happy to share that our paper 
 
-**"YSocial: An artificial intelligence powered social media Virtual Twin"** 
+**["YSocial: An artificial intelligence powered social media Virtual Twin"](https://journals.sagepub.com/doi/10.1177/20539517261431576)** 
 
 has been officially published in *Big Data & Society*!
 
 <img src="../../../assets/images/blog/bigdata_and_society.png" alt="Paper" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;">
 
+Read the paper [online](https://journals.sagepub.com/doi/10.1177/20539517261431576), download the [PDF](https://journals.sagepub.com/doi/reader/10.1177/20539517261431576), and check out the [supplementary materials](https://journals.sagepub.com/doi/suppl/10.1177/20539517261431576/suppl_file/sj-pdf-2-bds-10.1177_20539517261431576.pdf).
 
-📄 **Paper:** https://journals.sagepub.com/doi/10.1177/20539517261431576
+Or, if you prefer, listen to the [podcast](https://journals.sagepub.com/doi/suppl/10.1177/20539517261431576/suppl_file/sj-wav-1-bds-10.1177_20539517261431576.wav) where we discuss the paper and its implications for computational social science.
 
----
+And... don't forget to cite it if you use YSocial in your research:
+
+```bibtex
+@article{doi:10.1177/20539517261431576,
+author = {Giulio Rossetti and Massimo Stella and Rémy Cazabet and Katherine Abramski and Salvatore Citraro and Erica Cau and Andrea Failla and Virginia Morini and Valentina Pansanella},
+title ={YSocial: An artificial intelligence powered social media virtual twin},
+journal = {Big Data \& Society},
+volume = {13},
+number = {3},
+pages = {20539517261431576},
+year = {2026},
+doi = {10.1177/20539517261431576},
+URL = {https://doi.org/10.1177/20539517261431576},
+}
+```
 
 ## Why YSocial?
 

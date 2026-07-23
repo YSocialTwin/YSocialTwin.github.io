@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2026-07-23T16:01:27+02:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🎉 Finally Published!</title><link href="https://y-not.social/blog/2026/bigdata_and_society/" rel="alternate" type="text/html" title="🎉 Finally Published!" /><published>2026-07-23T00:00:00+02:00</published><updated>2026-07-23T00:00:00+02:00</updated><id>https://y-not.social/blog/2026/bigdata_and_society</id><content type="html" xml:base="https://y-not.social/blog/2026/bigdata_and_society/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2026-07-23T16:07:55+02:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🎉 Finally Published!</title><link href="https://y-not.social/blog/2026/bigdata_and_society/" rel="alternate" type="text/html" title="🎉 Finally Published!" /><published>2026-07-23T00:00:00+02:00</published><updated>2026-07-23T00:00:00+02:00</updated><id>https://y-not.social/blog/2026/bigdata_and_society</id><content type="html" xml:base="https://y-not.social/blog/2026/bigdata_and_society/"><![CDATA[<style>
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -139,15 +139,30 @@
 
       <p>After many months of reviews, revisions, acceptance, proofs, and an unexpectedly long production process, we’re finally happy to share that our paper</p>
 
-      <p><strong>“YSocial: An artificial intelligence powered social media Virtual Twin”</strong></p>
+      <p><strong><a href="https://journals.sagepub.com/doi/10.1177/20539517261431576">“YSocial: An artificial intelligence powered social media Virtual Twin”</a></strong></p>
 
       <p>has been officially published in <em>Big Data &amp; Society</em>!</p>
 
       <p><img src="../../../assets/images/blog/bigdata_and_society.png" alt="Paper" style="width:100%; height:auto; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 1.5rem 0;" /></p>
 
-      <p>📄 <strong>Paper:</strong> https://journals.sagepub.com/doi/10.1177/20539517261431576</p>
+      <p>Read the paper <a href="https://journals.sagepub.com/doi/10.1177/20539517261431576">online</a>, download the <a href="https://journals.sagepub.com/doi/reader/10.1177/20539517261431576">PDF</a>, and check out the <a href="https://journals.sagepub.com/doi/suppl/10.1177/20539517261431576/suppl_file/sj-pdf-2-bds-10.1177_20539517261431576.pdf">supplementary materials</a>.</p>
 
-      <hr />
+      <p>Or, if you prefer, listen to the <a href="https://journals.sagepub.com/doi/suppl/10.1177/20539517261431576/suppl_file/sj-wav-1-bds-10.1177_20539517261431576.wav">podcast</a> where we discuss the paper and its implications for computational social science.</p>
+
+      <p>And… don’t forget to cite it if you use YSocial in your research:</p>
+
+      <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@article</span><span class="p">{</span><span class="nl">doi:10.1177/20539517261431576</span><span class="p">,</span>
+<span class="na">author</span> <span class="p">=</span> <span class="s">{Giulio Rossetti and Massimo Stella and Rémy Cazabet and Katherine Abramski and Salvatore Citraro and Erica Cau and Andrea Failla and Virginia Morini and Valentina Pansanella}</span><span class="p">,</span>
+<span class="na">title</span> <span class="p">=</span><span class="s">{YSocial: An artificial intelligence powered social media virtual twin}</span><span class="p">,</span>
+<span class="na">journal</span> <span class="p">=</span> <span class="s">{Big Data \&amp; Society}</span><span class="p">,</span>
+<span class="na">volume</span> <span class="p">=</span> <span class="s">{13}</span><span class="p">,</span>
+<span class="na">number</span> <span class="p">=</span> <span class="s">{3}</span><span class="p">,</span>
+<span class="na">pages</span> <span class="p">=</span> <span class="s">{20539517261431576}</span><span class="p">,</span>
+<span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1177/20539517261431576}</span><span class="p">,</span>
+<span class="na">URL</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1177/20539517261431576}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>      </div>
 
       <h2 id="why-ysocial">Why YSocial?</h2>
 
