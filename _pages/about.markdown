@@ -123,14 +123,16 @@ YSocial is the result of a joint effort of <mark><a href="https://www.isti.cnr.i
 If you use `YSocial` in your research, please cite the following paper:
 
 ```bibtex
-@article{rossetti2024ysocial,
-  title={Y Social: an LLM-powered Social Media Digital Twin},
-  author={Rossetti, Giulio and Stella, Massimo and Cazabet, Rémy and 
-  Abramski, Katherine and Cau, Erica and Citraro, Salvatore and 
-  Failla, Andrea and Improta, Riccardo and Morini, Virginia and 
-  Pansanella, Virginia},
-  journal={arXiv preprint arXiv:2408.00818},
-  year={2024}
+@article{doi:10.1177/20539517261431576,
+author = {Giulio Rossetti and Massimo Stella and Rémy Cazabet and Katherine Abramski and Salvatore Citraro and Erica Cau and Andrea Failla and Virginia Morini and Valentina Pansanella},
+title ={YSocial: An artificial intelligence powered social media virtual twin},
+journal = {Big Data \& Society},
+volume = {13},
+number = {3},
+pages = {20539517261431576},
+year = {2026},
+doi = {10.1177/20539517261431576},
+URL = {https://doi.org/10.1177/20539517261431576},
 }
 ```
 
