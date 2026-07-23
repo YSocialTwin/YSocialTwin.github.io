@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2026-07-23T15:46:15+02:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🎉 Finally Published!</title><link href="https://y-not.social/blog/2026/bigdata_and_society/" rel="alternate" type="text/html" title="🎉 Finally Published!" /><published>2026-07-23T00:00:00+02:00</published><updated>2026-07-23T00:00:00+02:00</updated><id>https://y-not.social/blog/2026/bigdata_and_society</id><content type="html" xml:base="https://y-not.social/blog/2026/bigdata_and_society/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://y-not.social/feed.xml" rel="self" type="application/atom+xml" /><link href="https://y-not.social/" rel="alternate" type="text/html" /><updated>2026-07-23T15:55:05+02:00</updated><id>https://y-not.social/feed.xml</id><title type="html">Y Social</title><subtitle>Y Social is a cutting-edge Digital Twin of a microblogging platform. It enables realistic social media simulations by integrating Large Language Models (LLMs) agents. Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.</subtitle><entry><title type="html">🎉 Finally Published!</title><link href="https://y-not.social/blog/2026/bigdata_and_society/" rel="alternate" type="text/html" title="🎉 Finally Published!" /><published>2026-07-23T00:00:00+02:00</published><updated>2026-07-23T00:00:00+02:00</updated><id>https://y-not.social/blog/2026/bigdata_and_society</id><content type="html" xml:base="https://y-not.social/blog/2026/bigdata_and_society/"><![CDATA[<style>
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -257,13 +257,6 @@ The broader vision is to build increasingly realistic <strong>Social Virtual Twi
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🚀 YSocial v3.0.0  — Journey before destination!
   </a>
@@ -303,7 +296,7 @@ The broader vision is to build increasingly realistic <strong>Social Virtual Twi
 <h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Navigation</h4>
 <div style="display: flex; flex-direction: column; gap: 0.5rem;">
   
-    <a href="/blog/2025/scadrial/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+    <a href="/blog/2025/ynot/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
       ← 🚀 YSocial v3.0.0  — Journey before destination!
     </a>
   
@@ -643,13 +636,6 @@ And thank you for being part of this journey and remember:</p>
   <small style="color: #6b7280;">Jul 23, 2026</small>
 </div>
 
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #2563eb;">
   <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
     🚀 YSocial v3.0.0  — Journey before destination!
@@ -692,390 +678,6 @@ And thank you for being part of this journey and remember:</p>
   
     <a href="/blog/2025/ysights/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
       ← 🔥 Progress in Motion
-    </a>
-  
-  
-    <a href="/blog/2025/scadrial/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-      🚀 YSocial v3.0.0  — Journey before destination! →
-    </a>
-  
-</div>
-
-
-</div></div>
-
-</div></div>]]></content><author><name></name></author><category term="news" /><category term="platform" /><category term="web" /><summary type="html"><![CDATA[Discover YSocial v3.0.0 with cross-platform support, one-click installation, GDPR-compliant telemetry, and in-app announcements. Elevate your social media research experience today!]]></summary></entry><entry><title type="html">🚀 YSocial v3.0.0 — Journey before destination!</title><link href="https://y-not.social/blog/2025/scadrial/" rel="alternate" type="text/html" title="🚀 YSocial v3.0.0 — Journey before destination!" /><published>2025-12-03T00:00:00+01:00</published><updated>2025-12-03T00:00:00+01:00</updated><id>https://y-not.social/blog/2025/scadrial</id><content type="html" xml:base="https://y-not.social/blog/2025/scadrial/"><![CDATA[<style>
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.cta-primary {
-    background: #2563eb;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: inline-block;
-}
-.cta-primary:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    color: white;
-    text-decoration: none;
-}
-.cta-secondary {
-    background: transparent;
-    color: #2563eb;
-    padding: 0.75rem 2rem;
-    border: 2px solid #2563eb;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: inline-block;
-}
-.cta-secondary:hover {
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-}
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-    text-align: center;
-}
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-.feature-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #1f2937;
-}
-.feature-description {
-    color: #6b7280;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-.stats-bar {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-    padding: 2rem;
-    background: rgba(37, 99, 235, 0.05);
-    border-radius: 0.5rem;
-}
-.stat-item {
-    text-align: center;
-}
-.stat-number {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2563eb;
-}
-.stat-label {
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-top: 0.25rem;
-}
-.use-case-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-.use-case-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    transition: all 0.3s;
-}
-.use-case-card:hover {
-    transform: scale(1.05);
-}
-.use-case-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-.use-case-desc {
-    font-size: 0.85rem;
-    opacity: 0.9;
-}
-</style>
-
-<div class="container py-3">
-<div class="row">
-<div class="col-md-8">
-
-      <div class="alert-info-custom" style="margin-bottom: 2rem;">
-🎊 Start your Social Simulations. Cross-platform. Smarter. Easier. More connected! 
-</div>
-
-      <hr />
-
-      <h1 id="ysocial-v400-the-moment-the-simulation-became-a-world">YSocial v4.0.0: The Moment the Simulation Became a World</h1>
-
-      <p>Some releases add features.
-Others change the shape of the system itself.</p>
-
-      <p><strong>YSocial v4.0.0 — codename: <em>Scadrial</em> — is the latter.</strong></p>
-
-      <p>Fans of Brandon Sanderson’s <em>Mistborn</em> know Scadrial as a world driven by hidden mechanics, interacting forces, and emergent consequences. Nothing exists in isolation. Every system influences another. Power compounds. Narratives collide. Small changes ripple outward.</p>
-
-      <p>That became the perfect metaphor for this release.</p>
-
-      <p>With <strong>v3.0.0</strong>, YSocial was fundamentally a focused microblogging simulator: useful, intentional, and deliberately constrained.</p>
-
-      <p>With <strong>v4.0.0</strong>, YSocial evolves into something much larger:</p>
-
-      <blockquote>
-        <p>a modular environment for studying multiple forms of social behavior at once.</p>
-      </blockquote>
-
-      <p>This is the release where YSocial stops feeling like a single simulator and starts feeling like an ecosystem.</p>
-
-      <hr />
-
-      <h1 id="beyond-microblogging">Beyond Microblogging</h1>
-
-      <p>Scadrial introduces two major expansions to the simulation stack:</p>
-
-      <ul>
-        <li>a <strong>Reddit-style forum simulator</strong></li>
-        <li><strong>high-performance microblogging (HPC) workflows</strong> for large-scale experimentation</li>
-      </ul>
-
-      <p>That shift matters more than it may initially appear.</p>
-
-      <p>Social systems behave differently depending on the structure of interaction itself. A fast-moving microblog feed produces different incentives, visibility dynamics, and narrative flows than threaded community discussion. Scaling those systems under heavier computational workloads introduces yet another layer of complexity.</p>
-
-      <p>YSocial can now explore all three dimensions:</p>
-
-      <ul>
-        <li>broadcast-driven social streams</li>
-        <li>community-centric threaded discourse</li>
-        <li>high-scale execution environments</li>
-      </ul>
-
-      <p>The platform is no longer tied to a single “grammar” of social interaction.</p>
-
-      <p>It can model multiple worlds.</p>
-
-      <hr />
-
-      <h1 id="agents-become-extensible">Agents Become Extensible</h1>
-
-      <p>One of the most important architectural changes in Scadrial is the introduction of <strong>agent plugins</strong>.</p>
-
-      <p>Before v4, agent behavior largely lived inside tightly coupled simulation flows. Powerful, but rigid. Extending behaviors often meant modifying internal logic directly, creating friction for experimentation and custom research scenarios.</p>
-
-      <p>Now, behaviors can be composed and extended far more cleanly.</p>
-
-      <p>Researchers can introduce specialized roles, experimental reasoning paths, domain-specific actions, and custom interaction logic without destabilizing the platform itself.</p>
-
-      <p>This transforms agents from static actors into modular entities.</p>
-
-      <p>YSocial no longer assumes there is only one correct way for agents to behave.</p>
-
-      <hr />
-
-      <h1 id="opinion-dynamics-moves-to-the-core">Opinion Dynamics Moves to the Core</h1>
-
-      <p>Another major evolution in Scadrial is the elevation of <strong>opinion dynamics</strong> into a first-class system.</p>
-
-      <p>What was previously experimental is now central.</p>
-
-      <p>Configuration is more explicit. Control is more intentional. Comparative experimentation is dramatically easier.</p>
-
-      <p>This opens the door to deeper studies around:</p>
-
-      <ul>
-        <li>polarization</li>
-        <li>convergence</li>
-        <li>influence propagation</li>
-        <li>narrative drift</li>
-        <li>consensus formation</li>
-        <li>ideological fragmentation</li>
-      </ul>
-
-      <p>Instead of approximating social change through a handful of implicit parameters, researchers can now shape and inspect these dynamics directly.</p>
-
-      <p>The simulation becomes less opaque — and far more expressive.</p>
-
-      <hr />
-
-      <h1 id="agents-you-can-actually-talk-to">Agents You Can Actually Talk To</h1>
-
-      <p>One of the most transformative additions in v4.0.0 is the introduction of <strong>agent interviews and chat workflows</strong>.</p>
-
-      <p>Traditionally, simulation agents are black boxes. They produce outputs, but understanding <em>why</em> they behaved a certain way often requires indirect interpretation.</p>
-
-      <p>Scadrial changes that.</p>
-
-      <p>Researchers can now interact with agents directly to inspect reasoning patterns, memory traces, internal consistency, and behavioral evolution through conversational interfaces.</p>
-
-      <p>This creates an entirely new layer of interpretability.</p>
-
-      <p>More importantly, the system was designed with resilience in mind. Even when simulations are paused or runtime services become partially unavailable, interview workflows remain useful for ongoing inspection and analysis.</p>
-
-      <p>The agents do not simply emit content anymore.</p>
-
-      <p>They can explain themselves.</p>
-
-      <hr />
-
-      <h1 id="a-ui-designed-for-complexity">A UI Designed for Complexity</h1>
-
-      <p>As YSocial expanded into a multi-simulator platform, the interface had to evolve with it.</p>
-
-      <p>Scadrial introduces a substantial redesign across both user and administrative workflows — not as cosmetic refresh, but as structural necessity.</p>
-
-      <p>Complex systems fail when interfaces obscure them.</p>
-
-      <p>The new UI/UX focuses on:</p>
-
-      <ul>
-        <li>clearer experiment configuration</li>
-        <li>improved monitoring flows</li>
-        <li>simplified admin operations</li>
-        <li>more coherent navigation</li>
-        <li>better visibility into simulation state and behavior</li>
-      </ul>
-
-      <p>Profiles, feeds, experiment controls, and admin pathways were all reworked to reduce friction as the platform’s scope expanded.</p>
-
-      <p>YSocial now behaves like the platform it has become — not the smaller simulator it once was.</p>
-
-      <hr />
-
-      <h1 id="the-turning-point">The Turning Point</h1>
-
-      <p>YSocial v4.0.0 marks a fundamental transition in the project’s trajectory.</p>
-
-      <p>The leap from a single microblogging simulator to a platform that supports:</p>
-
-      <ul>
-        <li>forums</li>
-        <li>HPC execution</li>
-        <li>plugin-based agents</li>
-        <li>opinion dynamics</li>
-        <li>conversational agent analysis</li>
-      </ul>
-
-      <p>changes the kinds of questions the system can answer.</p>
-
-      <p>Researchers can now study not only <em>what</em> agents say, but:</p>
-
-      <ul>
-        <li>how communities shape discussion</li>
-        <li>how narratives mutate over time</li>
-        <li>how belief systems evolve</li>
-        <li>how reasoning patterns emerge</li>
-        <li>how large-scale social effects propagate under pressure</li>
-      </ul>
-
-      <p>Scadrial is ultimately about interacting systems.</p>
-
-      <p>And with v4.0.0, YSocial begins to feel less like a simulation engine — and more like a living world.</p>
-
-      <div style="text-align: center; margin: 2rem 0;">
-<a href="https://y-not.social/download" class="cta-primary" style="margin-right: 1rem;">🚀 Download YSocial</a>
-</div>
-
-    </div>
-
-
-
-<div class="col-md-4">
-<div class="blog-sidebar" style="position: sticky; top: 20px;">
-
-<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Recent Posts</h4>
-
-<div style="margin-bottom: 2rem;">
-
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2026/bigdata_and_society/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-     🎉 Finally Published!
-  </a>
-  <small style="color: #6b7280;">Jul 23, 2026</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #2563eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 700; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/ysights/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🔥 Progress in Motion
-  </a>
-  <small style="color: #6b7280;">Oct 26, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/yweb/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 The Zero-Code Platform is Here!
-  </a>
-  <small style="color: #6b7280;">Mar 13, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2024/pages/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    Pages, Multimodal Contents and Dynamic Interests
-  </a>
-  <small style="color: #6b7280;">Nov 20, 2024</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2024/intro/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    (Here) We are Y!
-  </a>
-  <small style="color: #6b7280;">Aug 01, 2024</small>
-</div>
-
-</div>
-
-<h4 style="font-weight: 700; margin-bottom: 1rem; color: #1f2937;">Navigation</h4>
-<div style="display: flex; flex-direction: column; gap: 0.5rem;">
-  
-    <a href="/blog/2025/ynot/" class="nav-button" style="display: block; padding: 0.75rem 1rem; background: #eff6ff; color: #2563eb; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-      ← 🚀 YSocial v3.0.0  — Journey before destination!
     </a>
   
   
@@ -1495,13 +1097,6 @@ python y_social.py <span class="nt">--no_notebook</span>
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🚀 YSocial v3.0.0  — Journey before destination!
   </a>
@@ -1726,13 +1321,6 @@ python y_social.py <span class="nt">--no_notebook</span>
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🚀 YSocial v3.0.0  — Journey before destination!
   </a>
@@ -1919,13 +1507,6 @@ function updateCarousel() {
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
   <a href="/blog/2025/ynot/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
     🚀 YSocial v3.0.0  — Journey before destination!
   </a>
@@ -2050,13 +1631,6 @@ By providing a safe space to explore how users interact, share information, and 
      🎉 Finally Published!
   </a>
   <small style="color: #6b7280;">Jul 23, 2026</small>
-</div>
-
-<div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
-  <a href="/blog/2025/scadrial/" style="text-decoration: none; color: #1f2937; font-weight: 500; display: block; margin-bottom: 0.25rem;">
-    🚀 YSocial v3.0.0  — Journey before destination!
-  </a>
-  <small style="color: #6b7280;">Dec 03, 2025</small>
 </div>
 
 <div class="sidebar-post" style="padding: 1rem; margin-bottom: 1rem; background: #f9fafb; border-radius: 0.5rem; border-left: 3px solid #e5e7eb;">
