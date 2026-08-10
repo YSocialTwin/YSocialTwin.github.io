@@ -175,7 +175,7 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:info@y-not.social"
+      url: "mailto:giulio.rossetti@gmail.com"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/YSocialTwin"
