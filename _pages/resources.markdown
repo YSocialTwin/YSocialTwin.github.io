@@ -124,35 +124,145 @@ Here a slide deck about the `YSocial` project.
 {% capture research %}
 
 
-Here are some publications related, or citing, the `YSocial` project. Last updated: October 2025.
+Here are some publications related, or citing, the `YSocial` project. Last updated: August 2026.
 
-- *Rossetti, Giulio* et al. "[Y Social: an LLM-powered Social Media Digital Twin](https://arxiv.org/abs/2408.00818)", arXiv:2408.00818, 2024.
-- *Cau, Erica* et al. "Selective agreement, not sycophancy: investigating opinion dynamics in LLM interactions." EPJ Data Science 14.1, 2025: 59.
-- *Cau, Erica,* et al. "Bots of a Feather: Mixing Biases in LLMs’ Opinion Dynamics." International Conference on Complex Networks and Their Applications. Cham: Springer Nature Switzerland, 2024.
-- *Morini, Virginia*. "The Duality of Social Media Discourse: Characterizing Polluted and Supportive Online Behaviors.", 2025.
-- Xie, Chengxing, et al. "Can large language model agents simulate human trust behavior?." Advances in neural information processing systems 37, 2024: 15674-15729.
-- Ashery, Ariel Flint et al. "Emergent social conventions and collective bias in LLM populations." Science Advances 11.20, 2025. eadu9368.
-- Giorgi, Tommaso, et al. "Human and LLM biases in hate speech annotations: A socio-demographic analysis of annotators and targets." Proceedings of the International AAAI Conference on Web and Social Media. Vol. 19. 2025.
-- Zhao, Bingxi, et al. "Llm-based agentic reasoning frameworks: A survey from methods to scenarios." arXiv preprint arXiv:2508.17692, 2025.
-- Mao, Rui, et al. "Bridging Minds and Machines: Toward an Integration of AI and Cognitive Science." arXiv preprint arXiv:2508.20674, 2025.
-- Mumuni, Alhassan, and Fuseini Mumuni. "Large language models for artificial general intelligence (AGI): A survey of foundational principles and approaches." arXiv preprint arXiv:2501.03151, 2025.
-- De Duro, Edoardo Sebastiano, et al. "Measuring and identifying factors of individuals' trust in Large Language Models." arXiv preprint arXiv:2502.21028, 2025.
-- Coppolillo, Erica et al. "Unmasking conversational bias in ai multiagent systems." arXiv preprint arXiv:2501.14844, 2025.
-- Cerina, Roberto. "Possum: A protocol for surveying social-media users with multimodal llms." arXiv preprint arXiv:2503.05529, 2025.
-- Qiu, Zhongyi, et al. "Can LLMs Simulate Social Media Engagement? A Study on Action-Guided Response Generation." arXiv preprint arXiv:2502.12073, 2025.
-- Liu, Qi, et al. "GATSim: Urban Mobility Simulation with Generative Agents." arXiv preprint arXiv:2506.23306, 2025.
-- Hong, Yoojin, et al. "Prototyping Digital Social Spaces through Metaphor-Driven Design: Translating Spatial Concepts into an Interactive Social Simulation." arXiv preprint arXiv:2510.02759, 2025.
-- Composta, Elisa, et al. "Simulating Online Social Media Conversations on Controversial Topics Using AI Agents Calibrated on Real-World Data." arXiv preprint arXiv:2509.18985, 2025.
-- De Marzo, Giordano, et al. "AI agents can coordinate beyond human scale." arXiv preprint arXiv:2409.02822, 2024.
-- Breve, Bernardo, et al. "Leveraging EUD and Generative AI for Ethical Phishing Campaigns." International Symposium on End User Development. Cham: Springer Nature Switzerland, 2025.
-- Lee, HwiJoon, et al. "Inject, Fork, Compare: Defining an Interaction Vocabulary for Multi-Agent Simulation Platforms." arXiv preprint arXiv:2509.13712, 2025.
-- Kleiman, Jacob, et al. "Simulation Agent: A Framework for Integrating Simulation and Large Language Models for Enhanced Decision-Making." arXiv preprint arXiv:2505.13761, 2025.
-- Zignani, Matteo, et al. "Network Science Meets AI: A Converging Frontier." ESANN 2025: Proceedings. i6doc. com, 2025.
-- He, Zihao. Aligning Large Language Models With Human Perspectives. Diss. University of Southern California, 2025.
-- Sen, Indira, et al. "VALIDATING GENERATIVE AGENT-BASED MODELS." 2025.
-- Wang, Zixu, et al. "A Survey on LLM-based Agents for Social Simulation: Taxonomy, Evaluation and Applications.", 2025
-- Münker, Simon et al. "twony: A Micro-Simulation of the Impact of OSN Mechanics on the Emotionality of Online Discourse." 2025.
+#. Mou, Xinyi, et al. "From individual to society: A survey on social simulation driven by large language model-based agents." *ACM Computing Surveys* 58.11 (2026): 1-41.
 
+#. Zhao, Bingxi, et al. "Llm-based agentic reasoning frameworks: A survey from methods to scenarios." *arXiv preprint arXiv:2508.17692* (2025).
+
+#. Ashery, Ariel Flint, Luca Maria Aiello, and Andrea Baronchelli. "Emergent social conventions and collective bias in LLM populations." *Science Advances* 11.20 (2025): eadu9368.
+
+#. Jia, Feiran, et al. "Can large language model agents simulate human trust behavior?." *Advances in Neural Information Processing Systems* 37 (2024): 15674-15729.
+
+#. Giorgi, Tommaso, et al. "Human and LLM biases in hate speech annotations: A socio-demographic analysis of annotators and targets." *Proceedings of the International AAAI Conference on Web and Social Media*. Vol. 19. 2025.
+
+#. Mumuni, Alhassan, and Fuseini Mumuni. "Large language models for artificial general intelligence (agi): A survey of foundational principles and approaches." *arXiv preprint arXiv:2501.03151* (2025).
+
+#. Chen, Chaoran, et al. "Towards a design guideline for rpa evaluation: A survey of large language model-based role-playing agents." *Findings of the Association for Computational Linguistics: ACL 2025*. 2025.
+
+#. Papachristou, Marios, and Yuan Yuan. "Network formation and dynamics among multi-llms." *PNAS Nexus* 4.12 (2025): pgaf317.
+
+#. Nudo, Jacopo, et al. "Generative exaggeration in LLM social agents: Consistency, bias, and toxicity." *Online Social Networks and Media* 51 (2026): 100344.
+
+#. Naik, Akshat, et al. "Agentmisalignment: Measuring the propensity for misaligned behaviour in llm-based agents." *arXiv preprint arXiv:2506.04018* (2025).
+
+#. Liu, Qi, Can Li, and Wanjing Ma. "GATSim: Urban mobility simulation with generative agents." *Transportation Research Part C: Emerging Technologies* 186 (2026): 105576.
+
+#. De Duro, Edoardo Sebastiano, et al. "Measuring and identifying factors of individuals' trust in Large Language Models." *arXiv preprint arXiv:2502.21028* (2025).
+
+#. Jiang, Shuyu, et al. "Large language models for spreading dynamics in complex systems." *Physics Reports* 1171 (2026): 1-50.
+
+#. Coppolillo, Erica, Giuseppe Manco, and Luca Maria Aiello. "Unmasking conversational bias in ai multiagent systems." *arXiv preprint arXiv:2501.14844* (2025).
+
+#. Lu, Zhuoran, Gionnieve Lim, and Ming Yin. "Large Language Model (LLM)-driven Adversarial Social Influences in Online Information Spread: Risks and Interventions." *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems*. 2026.
+
+#. Bouleimen, Azza, et al. "The collective turing test: large language models can generate realistic multi-user discussions." *Scientific Reports* (2026).
+
+#. Mao, Rui, et al. "Bridging minds and machines: Toward an integration of AI and cognitive science." *arXiv preprint arXiv:2508.20674* (2025).
+
+#. De Duro, Edoardo Sebastiano, et al. "Cognitive networks identify AI biases on societal issues in Large Language Models." *EPJ Data Science* 15.1 (2025): 7.
+
+#. Qiu, Zhongyi, et al. "Can llms simulate social media engagement? a study on action-guided response generation." *arXiv preprint arXiv:2502.12073* (2025).
+
+#. De Marzo, Giordano, Claudio Castellano, and David Garcia. "AI agents can coordinate beyond human scale." *arXiv preprint arXiv:2409.02822* (2024).
+
+#. Bahi, Abderaouf, et al. "A Comprehensive Survey of LLMs for Sustainable and Renewable Energy Systems." *Inf.* 17.3 (2026): 271.
+
+#. Jeon, Min Soo, et al. "Simulating conversations on social media with generative agent-based models." *EPJ Data Science* 14.1 (2025): 79.
+
+#. Kleiman, Jacob, et al. "Simulation agent: A framework for integrating simulation and large language models for enhanced decision-making." *arXiv preprint arXiv:2505.13761* (2025).
+
+#. Carrillo, Alexis, et al. "Talk2AI: A Longitudinal Dataset of Human--AI Persuasive Conversations." *arXiv preprint arXiv:2604.04354* (2026).
+
+#. Taday Morocho, Erika Elizabeth, et al. "Assessing the Reliability of Persona-Conditioned LLMs as Synthetic Survey Respondents." *Companion Proceedings of the ACM Web Conference 2026*.
+
+#. Lu, Zhixiang, et al. "PRISM: A personality-driven multi-agent framework for social media simulation." *arXiv preprint arXiv:2512.19933* (2025).
+
+#. Torres, Andrés Martínez, and Davide Morselli. "Phenomenologically human: Fine-tuning LLMs to simulate online group identity." *Computers in Human Behavior: Artificial Humans* 7 (2026): 100272.
+
+#. Chen, Weiyue, et al. "Experimental evidence on the emergent social network patterns of LLM-driven multi-agent system for edge service collaboration." *Tsinghua Science and Technology* (2026).
+
+#. Fidone, Giacomo, Lucia Passaro, and Riccardo Guidotti. "Evaluating online moderation via LLM-powered counterfactual simulations." *Proceedings of the AAAI Conference on Artificial Intelligence*. Vol. 40. No. 45. 2026.
+
+#. Cau, Erica, Andrea Failla, and Giulio Rossetti. "Bots of a feather: mixing biases in LLMs’ opinion dynamics." *International Conference on Complex Networks and Their Applications*. Cham: Springer Nature Switzerland, 2024.
+
+#. Ardebili, Ali Aghazadeh, and Massimo Stella. "Mapping how LLMs debate societal issues when shadowing human personality traits, sociodemographics and social media behavior." *arXiv preprint arXiv:2604.27624* (2026).
+
+#. La Gatta, Valerio, et al. "From Who They Are to How They Act: Behavioral Traits in Generative Agent-Based Models of Social Media." *arXiv preprint arXiv:2601.15114* (2026).
+
+#. Cerina, Roberto. "Possum: a protocol for surveying social-media users with multimodal llms." *arXiv preprint arXiv:2503.05529* (2025).
+
+#. Pappalardo, Luca, et al. "A survey on the impacts of recommender systems on users, items, and human-AI ecosystems." *arXiv preprint arXiv:2407.01630* (2024).
+
+#. Antelmi, Alessia, et al. "Political Persuasion and Endorsement in Large Language Models." *arXiv preprint arXiv:2606.05961* (2026).
+
+#. Carrillo, Alexis, et al. "LLMs can persuade only psychologically susceptible humans on societal issues, via trust in AI and emotional appeals, amid logical fallacies." *arXiv preprint arXiv:2604.16935* (2026).
+
+#. Esposito, Naomi, et al. "Math Education Digital Shadows for facilitating learning with LLMs: Math performance, anxiety and confidence in simulated students and AIs." *arXiv preprint arXiv:2604.27618* (2026).
+
+#. Wei, Shaopeng, et al. "Eco3S: Complex Socio-Economic System Simulation via Agent-Based Models." *arXiv preprint arXiv:2607.26588* (2026).
+
+#. Münker, Simon, and Achim Rettinger. "twony: A Micro-Simulation of the Impact of OSN Mechanics on the Emotionality of Online Discourse." *ESWC-JP*. 2025.
+
+#. Cau, Erica, Andrea Failla, and Giulio Rossetti. "Network Effects and Agreement Drift in LLM Debates." *arXiv preprint arXiv:2604.11312* (2026).
+
+#. Hong, Yoojin, et al. "Prototyping Digital Social Spaces through Metaphor-Driven Design: Translating Spatial Concepts into an Interactive Social Simulation." *arXiv preprint arXiv:2510.02759* (2025).
+
+#. Morini, Virginia, et al. "Joint Effects of Recommender Systems and Network Structure on the Visibility of Content and Creators." *arXiv preprint arXiv:2607.00258* (2026).
+
+#. Zhang, Haoting, et al. "LLM-Augmented Digital Twin for Policy Evaluation in Short-Video Platforms." *arXiv preprint arXiv:2603.11333* (2026).
+
+#. Shen, Hanyang, Jie Wu, and Zhulin Tao. "Before You Simulate: A Pre-Study Benchmark for Large Language Model Stability in Political Role-Playing Simulations." *Applied Sciences* 16.4 (2026): 2027.
+
+#. Shen, Hanyang, Jie Wu, and Zhulin Tao. "Before You Simulate: A Pre-Study Benchmark for Large Language Model Stability in Political Role-Playing Simulations." *Applied Sciences* 16.4 (2026): 2027.
+
+#. Ji, Jiarui, et al. "GRAPHIA: Harnessing Social Graph Data to Enhance LLM-Based Social Simulation." *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*. 2026.
+
+#. Wang, Zixu, et al. "A Survey on LLM-based Agents for Social Simulation: Taxonomy, Evaluation and Applications." *arXiv preprint* (2025).
+
+#. López, Alejandro Buitrago, et al. "Evaluating the Realism of LLM-powered Social Agents: A Case Study of Reactions to Spanish Online News." *arXiv preprint arXiv:2605.28598* (2026).
+
+#. Cau, Erica, et al. "Social Simulations: from Agent-Based Modeling to Digital Twins." *arXiv preprint arXiv:2607.13693* (2026).
+
+#. Huang, Ming, and Zi-Ke Zhang. "Influence in Motion: Tracing Persuasive Dynamics via Multi‐Agent Networks." *Computational Communication Research* 8.2 (2026): 1.
+
+#. Zignani, Matteo, et al. "Network Science Meets AI: A Converging Frontier." *ESANN*. 2025.
+
+#. Burmester, Julian. *Influencing Belief in LLM-Based Agent Networks: An Empirically Validated Simulation of Bot-Driven Manipulation*. Diss. Medien-und Informationszentrum, Leuphana Universität Lüneburg, 2026.
+
+#. Gerard, Patrick, Aiden Chang, and Svitlana Volkova. "Community-Aligned Behavior Under Uncertainty: Evidence of Epistemic Stance Transfer in LLMs." *arXiv preprint arXiv:2511.17572* (2025).
+
+#. Lee, HwiJoon, et al. "Inject, Fork, Compare: Defining an Interaction Vocabulary for Multi-Agent Simulation Platforms." *arXiv preprint arXiv:2509.13712* (2025).
+
+#. White, Benjamin, and Anastasia Shimorina. "Social-Media Based Personas Challenge: Hybrid Prediction of Common and Rare User Actions on Bluesky." *arXiv preprint arXiv:2511.17241* (2025).
+
+#. Wu, Shiyu, et al. "Towards Large Language Model–Enabled Cognitive Digital Twins for Urban Mobility Systems." *2026 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD)*. IEEE, 2026.
+
+#. Münker, Simon, Achim Rettinger, and Damian Trilling. "Challenging the Myth: A Research Arc on LLMs as Human Simulacra." *Proceedings of The Big Picture v2: Crafting a Research Narrative*. 2026.
+
+#. Yu, Yaoning, et al. "MiroBench: Benchmarking Realism in Agentic Simulation of Real-world Discussions." *arXiv preprint arXiv:2606.14715* (2026).
+
+#. Tsirmpas, Dimitris, Ion Androutsopoulos, and John Pavlopoulos. "Designing Synthetic Discussion Generation Systems: A Case Study for Online Facilitation." *arXiv preprint arXiv:2503.16505* (2025).
+
+#. Morini, Virginia. "The Duality of Social Media Discourse: Characterizing Polluted and Supportive Online Behaviors." (2025).
+
+#. Breve, Bernardo, et al. "Leveraging EUD and Generative AI for Ethical Phishing Campaigns." *International Symposium on End User Development*. Cham: Springer Nature Switzerland, 2025.
+
+#. Franchino, Emma, et al. "Digital shadows in mental health map how LLMs simulate depression, anxiety, and stress through language and psychometrics." (2026).
+
+#. Cima, Lorenzo. "ADDRESSING ONLINE HARMS THROUGH CONTENT MODERATION: DETECTION OF MISBEHAVIOR AND INTERVENTION STRATEGIES." (2026).
+
+#. White, Benjamin, and Anastasia Shimorina. "Predicting Social Media User Actions: A Hybrid Approach for Common and Rare Behavior Prediction on Bluesky." *The 1st Workshop on Social Context (SoCon) & The 2nd Workshop on Integrating NLP and Psychology to Study Social Interactions (NLPSI)@ LREC 2026*. 2026.
+
+#. Avhad, Atharv S. "Cyber Security Education by integrating Digital Twins and Generative AI." (2025).
+
+#. He, Zihao. *Aligning Large Language Models With Human Perspectives*. Diss. University of Southern California, 2025.
+
+#. Sen, Indira, et al. "VALIDATING GENERATIVE AGENT-BASED MODELS." (2025).
+
+#. Brown, Jason Ross, et al. "AgentMisalignment: Measuring the Propensity for Misaligned Behaviour in LLM-Based Agents."
+
+#. Rakhi, Allah, and Beth Goldie. "Exploring the role of llms in e-commerce: From sentiment analysis to causal reasoning in customer feedback." (2024).
 
 
 Are you using `YSocial` in your research? <br>
