@@ -29,7 +29,7 @@ header_title: "ySights"
 <div style="display:flex; flex-direction:column; align-items:center; gap:2rem; width:100%; box-sizing:border-box; text-align:center;">
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:500px; text-align:center;">
-      <img src="/assets/images/libs/ysigth.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/ysigth.png" alt="ySights architecture overview" loading="lazy" style="width:100%; height:auto;">
     </div>
   </div>
 
@@ -66,19 +66,19 @@ To enhance its network analysis capabilities, `ySights` integrates by design wit
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
 
 <div style="max-width:180px; text-align:center;">
-      <img src="/assets/images/libs/DyNetx%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/DyNetx%20v.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dynamic Network<br><a href="https://dynetx.readthedocs.io">DyNetX</a></div>
     </div>
     <div style="max-width:180px; text-align:center;">
-      <img src="/assets/images/libs/CDlib%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/CDlib%20v.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Community Detection<br><a href="https://cdlib.readthedocs.io">CDlib</a></div>
     </div>
     <div style="max-width:180px; text-align:center;">
-      <img src="/assets/images/libs/NDlib%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/NDlib%20v.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Opinion Dynamics<br><a href="https://ndlib.readthedocs.io">NDlib</a></div>
     </div>
     <div style="max-width:180px; text-align:center;">
-      <img src="/assets/images/libs/ASH%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/ASH%20v.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Higher-order Network<br><a href="https://ash-model.readthedocs.i">ASH</a></div>
     </div>
   </div>

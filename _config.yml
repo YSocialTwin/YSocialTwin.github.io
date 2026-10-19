@@ -29,6 +29,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 # Current release, shown in the navbar, download page and footer
 ysocial_version: "4.0.0"
+# Direct download folder of that release (keep in sync with the line above)
+release_url: "https://github.com/YSocialTwin/YSocial/releases/download/v4.0.0"
 
 
 # Riportare il github del gruppo di progetto e quello del sito web (se differente).
@@ -49,15 +51,9 @@ navbar:
   nav:
     - title: Get started
       child:
-        - title: Download
-          desc: Installers for macOS, Windows and Linux
+        - title: Download and install
+          desc: Installer, pip, Docker or source
           url: /download
-        - title: Docker
-          desc: One command, runs anywhere
-          url: /docker
-        - title: From source
-          desc: pip wheel and developer setup
-          url: /ysocial
         - title: What's new in 4.0.0
           desc: Release highlights
           url: /whats_new

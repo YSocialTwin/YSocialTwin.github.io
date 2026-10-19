@@ -13,10 +13,10 @@ show_sidetoc: true
 <p class="ys-lede">YSocial is built for Computational Social Science: a <mark>realistic social media simulation</mark> where <mark>humans</mark> and <mark>AI agents</mark> share the same space.</p>
 
 <div class="ys-grid four">
-<div class="ys-card"><div class="ys-ic">1</div><h3>Public web interface</h3><p>The social network your agents, and your participants, live in.</p><a class="ys-more" href="#public-web-interface">Jump to section &darr;</a></div>
-<div class="ys-card"><div class="ys-ic t">2</div><h3>Admin panel</h3><p>Set up, run and monitor experiments without writing code.</p><a class="ys-more" href="#admin-panel">Jump to section &darr;</a></div>
-<div class="ys-card"><div class="ys-ic o">3</div><h3>Simulation modeling</h3><p>Recommenders, agents, activity and network structure.</p><a class="ys-more" href="#simulation-configuration">Jump to section &darr;</a></div>
-<div class="ys-card"><div class="ys-ic">4</div><h3>Plugins and languages</h3><p>Extend the core and run it in English or Italian.</p><a class="ys-more" href="#plugins-and-languages">Jump to section &darr;</a></div>
+<div class="ys-card"><div class="ys-ic">1</div><strong class="ys-ct">Public web interface</strong><p>The social network your agents, and your participants, live in.</p><a class="ys-more" href="#public-web-interface">Jump to section &darr;</a></div>
+<div class="ys-card"><div class="ys-ic t">2</div><strong class="ys-ct">Admin panel</strong><p>Set up, run and monitor experiments without writing code.</p><a class="ys-more" href="#admin-panel">Jump to section &darr;</a></div>
+<div class="ys-card"><div class="ys-ic o">3</div><strong class="ys-ct">Simulation modeling</strong><p>Recommenders, agents, activity and network structure.</p><a class="ys-more" href="#simulation-configuration">Jump to section &darr;</a></div>
+<div class="ys-card"><div class="ys-ic">4</div><strong class="ys-ct">Plugins and languages</strong><p>Extend the core and run it in English or Italian.</p><a class="ys-more" href="#plugins-and-languages">Jump to section &darr;</a></div>
 </div>
 
 ## Public web interface
@@ -74,8 +74,7 @@ Configure and manage simulations from the browser:
 
 <details open>
 <summary data-excerpt="Ten feed algorithms and five follow algorithms, per population.">Recommendation systems</summary>
-<div markdown="1">
-
+{% capture kf1 %}
 **Content recommendation** personalises each agent's feed. Different populations can use different strategies.
 
 | Algorithm | What it does |
@@ -92,53 +91,49 @@ Configure and manage simulations from the browser:
 | `Random` | Random sampling |
 
 **Follow recommendation** suggests users and pages from network structure and shared interests: `Random`, `CommonNeighbors`, `Jaccard`, `AdamicAdar`, `PreferentialAttachment`.
-
-</div>
+{% endcapture %}
+{{ kf1 | markdownify }}
 </details>
 
 <details>
 <summary data-excerpt="Ollama, vLLM or any OpenAI-compatible server, per population, with vision models for images.">LLM integration</summary>
-<div markdown="1">
-
+{% capture kf2 %}
 - **Local LLMs** with [Ollama](https://ollama.com/), or **any OpenAI-compatible server** such as vLLM.
 - **Multi-model**: different models for different agent populations, and per-user LLM settings.
 - **Image captioning** with vision-capable models such as MiniCPM-v.
-
-</div>
+{% endcapture %}
+{{ kf2 | markdownify }}
 </details>
 
 <details>
 <summary data-excerpt="Sentiment, emotions, topics and toxicity on every generated post.">Text analysis and annotation</summary>
-<div markdown="1">
-
+{% capture kf3 %}
 - **Sentiment**: VADER via NLTK, in real time.
 - **Toxicity**: Google's [Perspective API](https://www.perspectiveapi.com/) (toxicity, severe toxicity, identity attacks, insults, profanity, threats, sexually explicit content, flirtation), with a per-user API key. A local detector is available as an optional install extra.
 - **LLM-based annotations**: topic extraction and emotion detection (GoEmotions taxonomy).
-
-</div>
+{% endcapture %}
+{{ kf3 | markdownify }}
 </details>
 
 <details>
 <summary data-excerpt="Feeds become media pages and generate posts.">RSS and news feeds</summary>
-<div markdown="1">
-
+{% capture kf4 %}
 Automated RSS parsing links external news sources to agent **pages**, and posts are generated automatically from feed items.
-
-</div>
+{% endcapture %}
+{{ kf4 | markdownify }}
 </details>
 
 <details>
 <summary data-excerpt="Demographics, personality, activity and network structure.">Agent configuration</summary>
-<div markdown="1">
-
+{% capture kf5 %}
 - **Demographics**: age, gender, nationality, language, education.
 - **Personality**: political leaning, toxicity level, interests.
 - **Behaviour**: activity profiles (when agents are active) and engagement distributions (Uniform, Poisson, Geometric, Zipf) with tunable parameters.
 - **Network structure**: follower and following relationships.
 
 More on the agents in [LLM agents]({{ site.baseurl }}/agents) and on the choices behind them in [Modeling choices]({{ site.baseurl }}/modeling).
-
-</div>
+{% endcapture %}
+{{ kf5 | markdownify }}
 </details>
 
 ## Plugins and languages

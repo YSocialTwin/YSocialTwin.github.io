@@ -36,7 +36,7 @@
       }
     });
     doc.addEventListener('click', function (e) { if (!nav.contains(e.target)) closeDrops(); });
-    doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeDrops(); setMenu(false); } });
+    doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var o = $('.ys-drop.open .ys-drop-btn', nav); closeDrops(); setMenu(false); if (o && nav.contains(doc.activeElement)) o.focus(); } });
     function setMenu(on) {
       nav.classList.toggle('menu-open', on); doc.body.classList.toggle('ys-lock', on);
       if (burger) { burger.setAttribute('aria-expanded', on ? 'true' : 'false'); var i = $('i', burger); if (i) i.className = on ? 'fas fa-times' : 'fas fa-bars'; }
@@ -153,6 +153,7 @@
       b.addEventListener('click', function () { var p = host.tagName === 'PRE' ? host : $('pre', host); copyText((p || host).innerText.replace(/\s+$/, ''), b); });
       host.appendChild(b);
     });
+    $$('pre').forEach(function (p) { if (p.scrollWidth > p.clientWidth + 1) p.setAttribute('tabindex', '0'); });
     $$('.ys-cmd').forEach(function (c) {
       if ($('.ys-copy', c)) return;
       var b = doc.createElement('button'); b.type = 'button'; b.className = 'ys-copy'; b.textContent = 'Copy'; b.setAttribute('aria-label', 'Copy command');
@@ -221,9 +222,62 @@
     var label = $('#ys-detected'); if (label && os) label.textContent = { windows: 'Windows', macos: 'macOS', linux: 'Linux' }[os];
   }
 
+
+  /* ---------- tabs (install page). Without JS every panel is simply shown. ---------- */
+  function initTabs() {
+    $$('[data-tabs]').forEach(function (box) {
+      var panels = $$(':scope > .ys-tabpanel', box); if (!panels.length) return;
+      var list = doc.createElement('div'); list.className = 'ys-tablist'; list.setAttribute('role', 'tablist'); list.setAttribute('aria-label', 'Installation method');
+      var tabs = panels.map(function (p, i) {
+        var b = doc.createElement('button'); b.type = 'button'; b.className = 'ys-tab'; b.id = 'tab-' + p.id; b.setAttribute('role', 'tab');
+        b.setAttribute('aria-controls', p.id); b.textContent = p.getAttribute('data-title') || p.id;
+        p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', b.id); p.setAttribute('tabindex', '0');
+        b.addEventListener('click', function () { show(i, true); });
+        b.addEventListener('keydown', function (e) {
+          var n = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : e.key === 'Home' ? 0 : e.key === 'End' ? panels.length - 1 : null;
+          if (n === null) return; e.preventDefault(); n = (n + panels.length) % panels.length; show(n, true); tabs[n].focus();
+        });
+        list.appendChild(b); return b;
+      });
+      box.insertBefore(list, box.firstChild); box.classList.add('is-tabbed');
+      function show(i, push) {
+        panels.forEach(function (p, k) { p.classList.toggle('on', k === i); tabs[k].setAttribute('aria-selected', k === i ? 'true' : 'false'); tabs[k].setAttribute('tabindex', k === i ? '0' : '-1'); });
+        if (push && history.replaceState) history.replaceState(null, '', '#' + panels[i].id);
+      }
+      function fromHash() {
+        var id = decodeURIComponent(location.hash.slice(1)), t = id && doc.getElementById(id), i = -1;
+        if (t) panels.forEach(function (p, k) { if (p === t || p.contains(t)) i = k; });
+        if (i >= 0) { show(i, false); if (t !== panels[i]) t.scrollIntoView(); return true; }
+        return false;
+      }
+      var os = doc.documentElement.getAttribute('data-os');
+      if (!fromHash()) show(0, false);
+      window.addEventListener('hashchange', fromHash);
+      $$('a[href^="#"]', doc).forEach(function (a) { var id = a.getAttribute('href').slice(1); if (panels.some(function (p) { return p.id === id; })) a.addEventListener('click', function () { setTimeout(fromHash, 0); var b = box.getBoundingClientRect(); window.scrollTo({ top: b.top + window.pageYOffset - 90, behavior: reduce ? 'auto' : 'smooth' }); }); });
+    });
+  }
+
+  /* ---------- publication filter (resources page) ---------- */
+  function initFilter() {
+    var ol = $$('#maincontent details ol').filter(function (o) { return $$(':scope > li', o).length > 20; })[0]; if (!ol) return;
+    var items = $$(':scope > li', ol), years = {};
+    items.forEach(function (li) { var m = li.textContent.match(/\((20\d\d)\)/) || li.textContent.match(/\b(20\d\d)\b/); li._y = m ? m[1] : ''; if (li._y) years[li._y] = 1; });
+    var bar = doc.createElement('div'); bar.className = 'ys-filter';
+    bar.innerHTML = '<label class="sr-only" for="ys-q">Search publications</label><input id="ys-q" type="search" placeholder="Search title, author, venue" autocomplete="off"><label class="sr-only" for="ys-y">Filter by year</label><select id="ys-y"><option value="">All years</option>' +
+      Object.keys(years).sort().reverse().map(function (y) { return '<option>' + y + '</option>'; }).join('') + '</select><span class="ys-count" role="status" aria-live="polite"></span>';
+    ol.parentNode.insertBefore(bar, ol);
+    var q = $('#ys-q', bar), y = $('#ys-y', bar), c = $('.ys-count', bar);
+    function apply() {
+      var t = q.value.toLowerCase().trim(), yy = y.value, n = 0;
+      items.forEach(function (li) { var ok = (!yy || li._y === yy) && (!t || li.textContent.toLowerCase().indexOf(t) > -1); li.hidden = !ok; if (ok) n++; });
+      c.textContent = n + ' of ' + items.length;
+    }
+    q.addEventListener('input', apply); y.addEventListener('change', apply); apply();
+  }
+
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initTables, initCopy, initDetails, initCarousels, initReveal, initOS].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initFilter].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();

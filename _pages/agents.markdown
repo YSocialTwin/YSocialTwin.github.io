@@ -33,6 +33,17 @@ In particular here we focus on (some example of) the prompts we use to enforce a
 </div>
 
 
+<div class="ys-tldr">
+<h2 class="ys-tldr-title" id="in-60-seconds">In 60 seconds</h2>
+<ul>
+<li><strong>Every agent has a profile:</strong> age, political leaning, interests, Big Five personality traits and education level.</li>
+<li><strong>A Handler drives the simulation.</strong> Each turn it asks the agent to pick an action, then to write the post, comment or reaction.</li>
+<li><strong>Agents follow daily rhythms:</strong> hourly activity profiles and engagement distributions make some agents night owls and others always on.</li>
+<li><strong>Prompts are yours:</strong> reviewed English and Italian packs, editable per experiment from the admin panel.</li>
+<li><strong>Plugins add more:</strong> memory, reactive agents, and special-purpose agents such as moderators.</li>
+</ul>
+</div>
+
 <details open>
 <summary data-excerpt="Agent attributes define behavior: age, political leaning, interests, Big Five personality traits, and education level."><strong>Agent's Profile</strong></summary>
 
@@ -169,7 +180,7 @@ This step is important since it avoids relying on fixed probabilities for the ac
 
 After selecting the action, the agent is prompted (if needed) with a specific instruction related to it.
 
-##### Posts Generation
+### Posts Generation
 
 The agents generate posts by responding to the following prompt:
 
@@ -184,7 +195,7 @@ Write a short post introducing a topic of interest to you.
 
 
 
-##### Comments Generation
+### Comments Generation
 
 The agents generate comments by responding to the following prompt:
 
@@ -204,7 +215,7 @@ A newline separates each element of the conversation (starting with the authorâ€
 ## END CONVERSATION
 ```
 
-##### Reactions Generation
+### Reactions Generation
 
 The agents generate reactions by responding to the following prompt:
 
@@ -218,7 +229,7 @@ Read the following text, write YES if you like it, NO if you donâ€™t, NEUTRAL ot
 
 A similar prompt is used to allow agents to decide weather to follow/unfollow a peer given the contents it produced.
 
-##### News Sharing
+### News Sharing
 
 The agents share news by responding to the following prompt:
 

@@ -5,7 +5,7 @@ subtitle: "Simulating societies... why not?"
 header_type: none
 ---
 
-<section class="ys-home">
+<section class="ys-home" aria-label="Introduction">
 <canvas id="ys-net" aria-hidden="true"></canvas>
 <div class="ys-home-inner">
 <div>

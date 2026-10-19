@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign ht = include.headertype | default: page.header_type -%}
 {%- if ht != 'none' and ht != 'home' -%}
-<section class="ys-pagehead">
+<section class="ys-pagehead" aria-label="Page header">
   {%- if page.eyebrow -%}<span class="ys-eyebrow">{{ page.eyebrow }}</span>{%- endif -%}
   <h1>{{ page.header_title | default: page.title }}</h1>
   {%- if page.subtitle -%}<p class="ys-sub">{{ page.subtitle }}</p>{%- endif -%}

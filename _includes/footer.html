@@ -5,14 +5,14 @@
       <p>{{ site.subtitle }}. An open-source digital twin of online social media, populated by LLM agents.</p>
     </div>
     <div>
-      <h4>Get started</h4>
-      <a href="{{ site.baseurl }}/download">Download</a>
-      <a href="{{ site.baseurl }}/docker">Docker</a>
-      <a href="{{ site.baseurl }}/ysocial">From source</a>
+      <p class="ys-fh">Get started</p>
+      <a href="{{ site.baseurl }}/download">Download and install</a>
+      <a href="{{ site.baseurl }}/download#docker">Docker</a>
+      <a href="{{ site.baseurl }}/download#source">From source</a>
       <a href="{{ site.baseurl }}/whats_new">What's new in {{ site.ysocial_version | default: '4.0.0' }}</a>
     </div>
     <div>
-      <h4>Explore</h4>
+      <p class="ys-fh">Explore</p>
       <a href="{{ site.baseurl }}/key_features">Key features</a>
       <a href="{{ site.baseurl }}/plugins">Plugins</a>
       <a href="{{ site.baseurl }}/agents">LLM agents</a>
@@ -21,7 +21,7 @@
       <a href="{{ site.baseurl }}/blog">Blog</a>
     </div>
     <div>
-      <h4>Community</h4>
+      <p class="ys-fh">Community</p>
       {%- for l in site.footer.links -%}
       <a href="{{ l.url }}"{% unless l.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>{{ l.label }}</a>
       {%- endfor -%}

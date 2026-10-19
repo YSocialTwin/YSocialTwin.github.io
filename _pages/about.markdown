@@ -29,19 +29,19 @@ YSocial is the result of a joint effort of <mark><a href="https://www.isti.cnr.i
   <!-- Row 1 -->
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/giulio_rossetti.png" style="width:100%; height:auto;">
+      <img src="/assets/images/giulio_rossetti.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Giulio Rossetti<br><small>Senior Researcher - YSocial PI</small><br><a href="https://x.com/GiulioRossetti">@GiulioRossetti</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/massimo_stella.png" style="width:100%; height:auto;">
+      <img src="/assets/images/massimo_stella.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Massimo Stella<br><small>Associate Prof. - Cognitive NetSci</small><br><a href="https://x.com/MassimoSt">@MassimoSt</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/remy_cazabet.png" style="width:100%; height:auto;">
+      <img src="/assets/images/remy_cazabet.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Rèmy Cazabet<br><small>Associate Prof. -Network Science</small><br><a href="https://x.com/Yquetzal">@Yquetzal</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/andrea_failla.png" style="width:100%; height:auto;">
+      <img src="/assets/images/andrea_failla.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Andrea Failla<br><small>PhD Student - Higher-order Modeling</small><br><a href="https://x.com/AndreaFailla4">@AndreaFailla4</a></div>
     </div>
   </div>
@@ -49,19 +49,19 @@ YSocial is the result of a joint effort of <mark><a href="https://www.isti.cnr.i
   <!-- Row 2 -->
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/katherine_abramski.png" style="width:100%; height:auto;">
+      <img src="/assets/images/katherine_abramski.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Katherine Abramski<br><small>PhD Student - LLMs & Cognition</small> <br><a href="https://x.com/katie_abramski">@katie_abramski</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/erica_cau.png" style="width:100%; height:auto;">
+      <img src="/assets/images/erica_cau.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Erica Cau<br><small>PhD Student - LLMs Opinion Dynamics</small><br><a href="https://x.com/CauErica">@CauErica</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/salvatore_citraro.png" style="width:100%; height:auto;">
+      <img src="/assets/images/salvatore_citraro.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Salvatore Citraro<br><small>Researcher - Feature-rich Modeling</small><br><a href="https://x.com/dsalvaz">@dsalvaz</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/valentina_pansanella.png" style="width:100%; height:auto;">
+      <img src="/assets/images/valentina_pansanella.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Valentina Pansanella<br><small>Researcher - Opinion Modeling</small><br><a href="https://x.com/VPansanella">@VPansanella</a></div>
     </div>
   </div>
@@ -69,15 +69,15 @@ YSocial is the result of a joint effort of <mark><a href="https://www.isti.cnr.i
   <!-- Row 3 -->
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/virginia_morini.png" style="width:100%; height:auto;">
+      <img src="/assets/images/virginia_morini.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Virginia Morini<br><small>Researcher - Comp. Social Science</small><br><a href="https://x.com/Virgiiim">@Virgiiim</a></div>
     </div>
 <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/veronicamesina.png" style="width:100%; height:auto;">
+      <img src="/assets/images/veronicamesina.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Veronica Mesina<br><small>Phd Student - Silent Majorities</small><br><a href="https://www.linkedin.com/in/veronica-mesina/">LinkedIn</a></div>
     </div>
     <div style="max-width:240px; text-align:center;">
-      <img src="/assets/images/atomasevic.png" style="width:100%; height:auto;">
+      <img src="/assets/images/atomasevic.png" alt="" loading="lazy" style="width:100%; height:auto;">
       <div>Dr. Aleksandar Tomasevic<small> Researcher - Comp. Social Science</small><br><a href="https://x.com/atomasevic">@atomasevic</a></div>
     </div>
   </div>
@@ -138,7 +138,7 @@ URL = {https://doi.org/10.1177/20539517261431576},
 
 <br>
 
-#### Supporting Projects
+## Supporting projects
 
 YSocial has been developed thanks to the support of the following national and european projects:
 
