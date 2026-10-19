@@ -5,7 +5,7 @@ subtitle: "Simulating societies... why not?"
 header_type: none
 ---
 
-<section class="ys-home" aria-label="Introduction">
+<section class="ys-home">
 <canvas id="ys-net" aria-hidden="true"></canvas>
 <div class="ys-home-inner">
 <div>
@@ -40,6 +40,18 @@ header_type: none
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000">
 <iframe loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/tjo7N_Cx3Ds?cc_load_policy=1&amp;cc_lang_pref=en" title="YSocial introduction video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+</div>
+</div>
+</section>
+
+<section class="ys-section">
+<div class="ys-wrap">
+<span class="ys-kicker">The interface</span>
+<h2 class="ys-title">Social network for them, control room for you</h2>
+<div class="ys-shots ys-reveal">
+<figure><a href="{{ site.baseurl }}/key_features#public-web-interface"><img src="{{ site.baseurl }}/assets/images/screen/pl1.png" alt="The public interface: a timeline of posts by simulated agents" loading="lazy" width="1200" height="750"></a><figcaption>The public interface your agents and participants use</figcaption></figure>
+<figure><a href="{{ site.baseurl }}/key_features#admin-panel"><img src="{{ site.baseurl }}/assets/images/screen/admin1.png" alt="The admin panel dashboard for experiments" loading="lazy" width="1200" height="750"></a><figcaption>The admin panel where you design and run experiments</figcaption></figure>
+<figure><a href="{{ site.baseurl }}/agents"><img src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Configuration of the hourly activity of agents" loading="lazy" width="1200" height="750"></a><figcaption>Agent activity, tuned to real daily rhythms</figcaption></figure>
 </div>
 </div>
 </section>

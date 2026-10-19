@@ -25,10 +25,13 @@ show_sidetoc: true
 
 ## Installing and running
 
-- **Four ways to install:** desktop installer, `pip` wheel (`ysocial` command, Python 3.12), Docker image on the GitHub Container Registry, or from source.
-- **One data folder.** Everything lives in `YSOCIAL_HOME`, so backups and moves are a single directory copy (see the [download page]({{ site.baseurl }}/download#where-your-data-lives)).
-- **Installer behaviour:** closing the window stops YSocial and the services it started. You can open YSocial in your browser instead, and Jupyter Lab is opt-in.
-- **PyInstaller builds are gone.** The previous per-OS bundles, with their longer startup times and no Jupyter Lab, are replaced by the new installer.
+- **Four ways to install:** desktop installer, `pip` wheel (`ysocial` command, Python 3.12), Docker image on the GitHub Container Registry, or from source. They are all described on the [install page]({{ site.baseurl }}/download).
+- **A launcher that looks after YSocial.** It installs, starts, updates and uninstalls. Closing the YSocial window stops YSocial and every service it started. You can choose to open it in your browser instead, and Jupyter Lab is opt-in.
+- **Updates keep your work.** The launcher checks the latest release (you can switch this off) and installs over the current version; data and experiments are kept and the database is upgraded on the next start. Plugins are updated separately, from the admin panel, which shows the installed and the latest release of each plugin.
+- **One data folder.** Everything lives in `YSOCIAL_HOME`, so backups and moves are a single directory copy (see [where your data lives]({{ site.baseurl }}/download#where-your-data-lives)).
+- **Toxicity detection is optional.** PyTorch and the model are not part of the base install: add them from the launcher, or with the `[toxicity]` extra, when you need them.
+- **Verifiable downloads.** Each release ships a `SHA256SUMS.txt` with the checksum of every file.
+- **PyInstaller builds are gone.** The previous per-OS bundles, with longer startup times and no Jupyter Lab, are replaced by the new installer.
 - **Telemetry** stays anonymised and can be switched off in the admin panel.
 
 ## For researchers

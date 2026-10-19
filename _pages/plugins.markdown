@@ -18,7 +18,7 @@ show_sidetoc: true
 
 {% for cat in site.data.plugins %}
 <h2>{{ cat.category }}</h2>
-<p class="ys-intro" style="text-align:left;margin-bottom:18px">{{ cat.blurb }}</p>
+<p class="ys-intro" style="text-align:left;margin:0 0 18px">{{ cat.blurb }}</p>
 <div class="ys-grid three">
 {%- for p in cat.items %}
 <a class="ys-card hover" href="{{ p.repo }}" target="_blank" rel="noopener"><span class="ys-pill">{{ p.group }}</span><h3>{{ p.name }}</h3><p>{{ p.desc }}</p><span class="ys-more">Repository &rarr;</span></a>

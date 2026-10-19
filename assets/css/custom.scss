@@ -468,3 +468,125 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 :root:not([data-theme="light"]) .ys-pill { color: #aee6ee; }
 :root:not([data-theme="light"]) .ys-pill.v { color: #dcd9f5; }
 th { color: var(--text) !important; }
+
+/* ==========================================================================
+   v4.0.0 harmonisation: fewer boxes, flatter surfaces, readable tables.
+   Rule of thumb: a boxed surface means "interactive or important" (download
+   picks, blog cards, notes, code). Everything else is ruled, not boxed.
+   ========================================================================== */
+:root { --rule: rgba(255, 255, 255, .13); --surface: rgba(255, 255, 255, .045); }
+:root[data-theme="light"] { --rule: rgba(8, 32, 42, .14); --surface: rgba(8, 32, 42, .035); }
+
+/* no frosted glass on content, only on the sticky navigation */
+.ys-card, .feature-card, .use-case-card, .download-box, .blog-card, .card, .stats-highlight, .ys-toc, .ys-footer, details { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
+/* grids of cards become ruled columns: icon, title, text, with a hairline on top */
+.ys-article .ys-grid { gap: 28px 36px; margin: 1.6rem 0 2.2rem; }
+.ys-article .ys-grid > .ys-card { background: transparent !important; border: 0 !important; border-top: 1px solid var(--rule) !important; border-radius: 0 !important; padding: 18px 0 0; transform: none !important; box-shadow: none !important; }
+.ys-article .ys-grid > .ys-card:hover { border-top-color: var(--accent) !important; background: transparent !important; }
+.ys-article .ys-grid > a.ys-card:hover { transform: none !important; }
+.ys-article .ys-grid > .ys-card h3, .ys-article .ys-grid > .ys-card .ys-ct { margin-top: 10px; }
+.ys-article .ys-grid > .ys-card .ys-ic { width: 34px; height: 34px; font-size: .9rem; }
+/* the install chooser and platform picks stay boxed, as they are actions */
+.ys-pick .ys-card, .ys-grid.boxed > .ys-card { background: var(--surface) !important; border: 1px solid var(--rule) !important; border-radius: var(--radius-sm) !important; padding: 18px !important; }
+.ys-pick .ys-card:hover, .ys-grid.boxed > .ys-card:hover { border-color: var(--accent) !important; background: var(--card) !important; transform: none !important; }
+
+/* accordions: a plain list with hairlines, no boxes, no shadows */
+details { border: 0 !important; border-top: 1px solid var(--rule) !important; border-radius: 0 !important; background: transparent !important; margin: 0 !important; box-shadow: none !important; overflow: visible; }
+details:last-of-type { border-bottom: 1px solid var(--rule) !important; }
+details[open] { border-color: var(--rule) !important; box-shadow: none !important; }
+details > summary { padding: 16px 4px !important; border-radius: 8px !important; }
+details > summary:hover { background: var(--surface) !important; }
+details > *:not(summary) { padding-left: 4px; padding-right: 4px; }
+details > *:nth-child(2) { padding-top: 2px; } details > *:last-child { padding-bottom: 22px; }
+details > pre, details > div.highlighter-rouge { margin-left: 4px; margin-right: 4px; }
+.ys-expand { margin: 0 0 8px; }
+
+/* tables: open, aligned, no frame; the wrapper only provides horizontal scroll */
+.ys-table-wrap { border: 0 !important; background: transparent !important; border-radius: 0 !important; margin: 1.2rem 0 1.6rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+details > .ys-table-wrap { padding-left: 4px !important; padding-right: 4px !important; }
+table { display: table !important; width: 100%; table-layout: auto; border-collapse: collapse; font-size: .94rem; line-height: 1.4; }
+.ys-table-wrap > table { width: 100% !important; min-width: 520px; margin: 0; }
+th { padding: .45rem 1rem .45rem 0 !important; background: transparent !important; border-bottom: 2px solid var(--rule) !important; font-size: .74rem; letter-spacing: .1em; color: var(--muted) !important; white-space: nowrap; }
+td { padding: .5rem 1rem .5rem 0 !important; border-bottom: 1px solid var(--rule) !important; vertical-align: top; }
+th:last-child, td:last-child { padding-right: 0 !important; }
+td:first-child { font-weight: 600; color: var(--heading); white-space: nowrap; }
+td:first-child code { font-weight: 500; }
+tbody tr:hover td { background: var(--surface) !important; }
+tbody tr:last-child td { border-bottom: 1px solid var(--rule) !important; }
+/* code inside tables and headings: tinted text, not a pill */
+td code, th code { background: transparent !important; border: 0 !important; padding: 0 !important; color: var(--inline-code); font-size: .92em; }
+@media (max-width: 700px) { td:first-child { white-space: normal; } th, td { padding-right: .7rem !important; } }
+
+/* notes and summaries: a quiet left bar instead of tinted gradient boxes */
+.alert-info-custom, .alert-warning-custom, .ys-note, .ys-warn, .ys-tip, .ys-tldr { background: var(--surface) !important; border: 0 !important; border-left: 3px solid var(--accent) !important; border-radius: 4px var(--radius-sm) var(--radius-sm) 4px !important; box-shadow: none !important; padding: 14px 20px !important; }
+.alert-warning-custom, .ys-warn { border-left-color: var(--warn) !important; }
+.ys-tldr { margin: 1.4rem 0 1.8rem; }
+:root[data-theme="light"] .alert-warning-custom, :root[data-theme="light"] .ys-warn { border-left-color: #b86a00 !important; }
+
+/* screenshots: one thin frame, no stacked rounded boxes */
+.custom-carousel { max-width: 860px; margin: 1.4rem auto 2.4rem; }
+.custom-carousel .carousel-container { border-radius: var(--radius-sm) !important; border: 1px solid var(--rule) !important; background: var(--surface) !important; box-shadow: none !important; padding: 0 !important; overflow: hidden; }
+.custom-carousel img { border-radius: 0 !important; border: 0 !important; }
+.ys-shots figure { background: transparent; border: 0; padding: 0; transform: none !important; }
+.ys-shots figure:hover { transform: none; }
+.ys-shots img { border: 1px solid var(--rule); border-radius: var(--radius-sm); }
+
+/* reading rhythm: shorter line length, clearer sections */
+.ys-article { max-width: 1040px; }
+.ys-article > p, .ys-article > ul, .ys-article > ol, .ys-article details p, .ys-article details ul, .ys-article details ol { max-width: 74ch; }
+.ys-article > .ys-lede, .ys-article > .ys-intro { max-width: 820px; }
+.ys-article > h2 { margin-top: 3rem; margin-bottom: .9rem; }
+.ys-article > h3 { margin-top: 2rem; }
+.ys-article li { margin: .28rem 0; }
+
+/* "on this page" chips for long pages (shown where the side TOC is hidden) */
+.ys-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 1.8rem; list-style: none; padding: 0 0 14px; border-bottom: 1px solid var(--rule); max-width: none !important; }
+.ys-jump a { display: inline-block; padding: 6px 13px; min-height: 32px; border: 1px solid var(--rule); border-radius: 999px; font-size: .86rem; color: var(--muted); text-decoration: none !important; }
+.ys-jump a:hover, .ys-jump a.on { color: var(--heading); border-color: var(--accent); }
+@media (min-width: 1500px) { .ys-jump { display: none; } }
+@media (max-width: 700px) { .ys-jump { flex-wrap: nowrap; overflow-x: auto; } .ys-jump a { white-space: nowrap; } }
+
+details:not([open]) > summary::after { flex: 0 1 46%; margin-left: auto; }
+
+/* ---------- blog: list as ruled entries, posts with a reading column (CSS only) ---------- */
+#maincontent .container > .row > .col-md-12 { max-width: 820px; margin-left: auto; margin-right: auto; }
+.blog-card, .blog-card.featured-post { background: transparent !important; border: 0 !important; border-top: 1px solid var(--rule) !important; border-left: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 28px 0 30px !important; margin: 0 !important; transform: none !important; }
+.blog-card:hover { background: transparent !important; box-shadow: none !important; transform: none !important; border-top-color: var(--accent) !important; }
+.blog-card:last-of-type { border-bottom: 1px solid var(--rule) !important; }
+.blog-card .blog-title { font-size: 1.5rem !important; line-height: 1.25; margin: 0 0 .5rem !important; padding: 0 !important; border: 0 !important; }
+.blog-card.featured-post .blog-title { font-size: 1.95rem !important; }
+.blog-card.featured-post::before { content: "Latest"; display: block; margin-bottom: 8px; font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.blog-card .blog-title a { color: var(--heading) !important; }
+.blog-card .blog-title a:hover { color: var(--accent) !important; }
+.blog-meta { gap: .6rem 1rem !important; margin-bottom: .6rem !important; }
+.blog-tag { background: transparent !important; border: 1px solid var(--rule) !important; color: var(--muted) !important; padding: .1rem .6rem !important; border-radius: 999px !important; font-size: .8rem !important; }
+.blog-excerpt:empty { display: none; }
+.blog-excerpt { max-width: 66ch; }
+.read-more { color: var(--accent) !important; font-weight: 700; }
+.read-more:hover { text-decoration: underline !important; }
+.pagination a { background: transparent !important; border: 1px solid var(--rule); color: var(--text) !important; }
+.pagination a:hover { border-color: var(--accent); transform: none !important; }
+#maincontent .row > .col-md-8 { font-size: 1.04rem; line-height: 1.75; max-width: 760px; }
+@media (min-width: 768px) { #maincontent .row > .col-md-8 { flex: 0 0 calc(100% - 300px); max-width: 760px; } #maincontent .row > .col-md-8 + .col-md-4 { flex: 0 0 280px; max-width: 280px; margin-left: auto; } }
+#maincontent .row > .col-md-8 > p, #maincontent .row > .col-md-8 > ul, #maincontent .row > .col-md-8 > ol { margin-bottom: 1.1rem; }
+#maincontent .row > .col-md-8 h2 { margin-top: 2.6rem; }
+#maincontent .row > .col-md-8 h3 { margin-top: 2rem; font-size: 1.25rem; }
+#maincontent .row > .col-md-8 hr { margin: 2.2rem 0; border-top: 1px solid var(--rule); opacity: 1; }
+#maincontent .row > .col-md-8 img { max-width: 100%; height: auto; box-shadow: none !important; border-radius: var(--radius-sm) !important; }
+/* post sidebar: plain ruled list, overriding its inline light-theme styles */
+.blog-sidebar h4 { color: var(--muted) !important; font-size: .74rem !important; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 .6rem !important; }
+.blog-sidebar .sidebar-post { background: transparent !important; border: 0 !important; border-top: 1px solid var(--rule) !important; border-radius: 0 !important; padding: .7rem 0 !important; margin: 0 !important; }
+.blog-sidebar .sidebar-post a { color: var(--text) !important; font-weight: 500 !important; line-height: 1.35; }
+.blog-sidebar .sidebar-post a:hover { color: var(--accent) !important; }
+.blog-sidebar .sidebar-post[style*="2563eb"] a { color: var(--accent) !important; font-weight: 700 !important; }
+.blog-sidebar .sidebar-post small { color: var(--muted) !important; }
+.blog-sidebar a[style*="background"], .blog-sidebar a[style*="border"] { background: transparent !important; border: 1px solid var(--rule) !important; color: var(--text) !important; border-radius: 999px !important; }
+.blog-sidebar div[style*="margin-bottom: 2rem"] { margin-bottom: 1.6rem !important; }
+
+/* carousel dots: 24px hit area, small visible dot */
+.ys-dots { gap: 0; margin-top: 4px; }
+.ys-dots button { width: 24px; height: 24px; border-radius: 0; background: radial-gradient(circle, var(--rule) 0 4px, transparent 4.5px) !important; transform: none; }
+.ys-dots button.on { background: radial-gradient(circle, var(--accent) 0 5px, transparent 5.5px) !important; transform: none; }
+:root[data-theme="light"] .ys-pill { color: #08515f; }
+:root[data-theme="light"] .ys-pill.o { color: #9a3410; }

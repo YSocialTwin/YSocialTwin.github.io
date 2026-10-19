@@ -132,6 +132,17 @@
     }
   }
 
+
+  function initJump() {
+    var art = $('.ys-article'); if (!art || art.classList.contains('ys-moved') || art.querySelector('.ys-jump')) return;
+    var hs = $$('h2[id]', art).filter(function (h) { return !h.classList.contains('ys-tldr-title'); });
+    if (hs.length < 4) return;
+    var ul = doc.createElement('ul'); ul.className = 'ys-jump'; ul.setAttribute('aria-label', 'On this page');
+    ul.innerHTML = hs.map(function (h) { var t = h.textContent.replace(/[#\u00b6]/g, '').trim(); return '<li style="display:contents"><a href="#' + h.id + '">' + t + '</a></li>'; }).join('');
+    var anchor = $('.ys-lede', art) || $('.ys-tldr', art);
+    if (anchor && anchor.parentNode === art) anchor.insertAdjacentElement('afterend', ul); else art.insertBefore(ul, art.firstChild);
+  }
+
   function initTables() {
     $$('#maincontent table').forEach(function (t) {
       if (t.parentNode.classList.contains('ys-table-wrap') || t.closest('.ys-no-wrap')) return;
@@ -278,6 +289,6 @@
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initFilter].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initFilter].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();

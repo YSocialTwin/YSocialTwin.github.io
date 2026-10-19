@@ -13,10 +13,10 @@ show_sidetoc: true
 <p class="ys-lede">Start with the <mark>desktop installer</mark> if you just want to try YSocial. Use <mark>pip</mark>, <mark>Docker</mark> or the <mark>source</mark> when you need a server, automation or a hackable setup.</p>
 
 <div class="ys-grid four ys-pick">
-<a class="ys-card hover" href="#installer"><span class="ys-pill">Easiest</span><h3>Desktop installer</h3><p>No terminal, no Python. macOS, Windows, Linux.</p></a>
-<a class="ys-card hover" href="#pip"><span class="ys-pill v">Command line</span><h3>pip wheel</h3><p>Python 3.12 and the <code>ysocial</code> command.</p></a>
-<a class="ys-card hover" href="#docker"><span class="ys-pill o">Servers</span><h3>Docker</h3><p>One command, data in a volume.</p></a>
-<a class="ys-card hover" href="#source"><span class="ys-pill v">Developers</span><h3>From source</h3><p>Clone, add plugins, run <code>y_social.py</code>.</p></a>
+<a class="ys-card hover" href="#installer"><span class="ys-pill">Easiest</span><strong class="ys-ct">Desktop installer</strong><p>No terminal, no Python. macOS, Windows, Linux.</p></a>
+<a class="ys-card hover" href="#pip"><span class="ys-pill v">Command line</span><strong class="ys-ct">pip wheel</strong><p>Python 3.12 and the <code>ysocial</code> command.</p></a>
+<a class="ys-card hover" href="#docker"><span class="ys-pill o">Servers</span><strong class="ys-ct">Docker</strong><p>One command, data in a volume.</p></a>
+<a class="ys-card hover" href="#source"><span class="ys-pill v">Developers</span><strong class="ys-ct">From source</strong><p>Clone, add plugins, run <code>y_social.py</code>.</p></a>
 </div>
 
 ## Choose how to install
@@ -194,7 +194,7 @@ PostgreSQL settings come from `PG_USER`, `PG_PASSWORD`, `PG_HOST`, `PG_PORT`, `P
 ## Requirements
 
 {% capture t_req %}
-| | Desktop installer | pip | Docker | Source |
+| Need | Desktop installer | pip | Docker | Source |
 | --- | --- | --- | --- | --- |
 | Python needed | No (private environment) | 3.12 | No | 3.12 |
 | Internet at install | Yes | Yes | Yes (pull) | Yes |
