@@ -3,12 +3,12 @@ layout: default-full
 title: "ySights"
 subtitle: "Streamline Y Social Data Analysis"
 show_sidetoc: true
+eyebrow: "Analytics"
 header_type: hero
-header_img: assets/images/politics1.jpg
 header_title: "ySights"
 ---
 
-<div class="container py-3">
+<div class="container py-3 ys-article">
 <div class="row">
 <div class="col-md-12" markdown="1">
 
@@ -29,26 +29,26 @@ header_title: "ySights"
 <div style="display:flex; flex-direction:column; align-items:center; gap:2rem; width:100%; box-sizing:border-box; text-align:center;">
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
     <div style="max-width:500px; text-align:center;">
-      <img src="../assets/images/libs/ysigth.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/ysigth.png" style="width:100%; height:auto;">
     </div>
   </div>
 
 </div>
 {% endraw %}
 
-🔍 **Data Extraction**
+ **Data Extraction**
 - Easy access to simulation databases (via SQLite and PostgreSQL): connect to and query simulation data.
 - Streamlined querying of agent interactions: retrieve posts, comments, likes, shares, and other interactions.
 - Export capabilities for further analysis..
 
-📈 **Analytics Tools**
+ **Analytics Tools**
 - Network analysis of social connections and interactions: analyze follower networks, interaction graphs, and community structures.
 - Temporal evolution tracking: monitor how agent behaviors and network structures change over time.
 - Content and sentiment analysis: evaluate the nature of posts, comments, and interactions among agents.
 - Agent behavior profiling: categorize agents based on activity patterns, influence, and engagement levels.
 - Recommendation system impact assessment: study how recommendation algorithms affect information spread and agent behavior.
 
-📊 **Visualization**
+ **Visualization**
 - Built-in plotting functions: generate graphs and charts directly from analysis results.
 - Timeline visualizations: track activity over time
 - Network graph rendering: visualize social connections
@@ -66,19 +66,19 @@ To enhance its network analysis capabilities, `ySights` integrates by design wit
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; width:100%;">
 
 <div style="max-width:180px; text-align:center;">
-      <img src="../assets/images/libs/DyNetx%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/DyNetx%20v.png" style="width:100%; height:auto;">
       <div>Dynamic Network<br><a href="https://dynetx.readthedocs.io">DyNetX</a></div>
     </div>
     <div style="max-width:180px; text-align:center;">
-      <img src="../assets/images/libs/CDlib%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/CDlib%20v.png" style="width:100%; height:auto;">
       <div>Community Detection<br><a href="https://cdlib.readthedocs.io">CDlib</a></div>
     </div>
     <div style="max-width:180px; text-align:center;">
-      <img src="../assets/images/libs/NDlib%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/NDlib%20v.png" style="width:100%; height:auto;">
       <div>Opinion Dynamics<br><a href="https://ndlib.readthedocs.io">NDlib</a></div>
     </div>
     <div style="max-width:180px; text-align:center;">
-      <img src="../assets/images/libs/ASH%20v.png" style="width:100%; height:auto;">
+      <img src="/assets/images/libs/ASH%20v.png" style="width:100%; height:auto;">
       <div>Higher-order Network<br><a href="https://ash-model.readthedocs.i">ASH</a></div>
     </div>
   </div>
@@ -97,7 +97,7 @@ To enhance its network analysis capabilities, `ySights` integrates by design wit
 {% capture getting_started %}
 
 <div class="alert-warning-custom">
-⚠️ <strong>Requirements</strong>: ySights requires Python 3.8+ and is designed to work with YSocial simulation databases.
+ <strong>Requirements</strong>: ySights requires Python 3.8+ and is designed to work with YSocial simulation databases.
 </div>
 
 `ySights` can be easily installed via pip. Once installed, you can connect it to your existing `YSocial` simulation database (SQLite or PostgreSQL) to start analyzing data.
@@ -166,12 +166,12 @@ Moreover, `ySights` is extensible, allowing users to build custom analyses tailo
 </details>
 
 <div class="alert-info-custom">
-📚 Related Resources: Explore our <a href="/resources">datasets</a> to practice with ySights on real simulation data.
+ Related Resources: Explore our <a href="{{ site.baseurl }}/resources">datasets</a> to practice with ySights on real simulation data.
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
   <a href="https://ysocialtwin.github.io/ysights" class="cta-primary" style="display: inline-block; padding: 1rem 2rem; text-decoration: none;">
-    📖 View Full Documentation
+     View Full Documentation
   </a>
 </div>
 

@@ -6,13 +6,13 @@ layout: default-full
 title:  "Modeling Choices"
 subtitle: "Available Actions, Recommender Systems and more!"
 show_sidetoc: true
+eyebrow: "Inside YSocial"
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/server2.jpg
 header_title: "Modeling Choices"
 vega: true
 ---
 
-<div class="container py-3">
+<div class="container py-3 ys-article">
 <div class="row">
 <div class="col-md-12" markdown="1">
 
@@ -23,7 +23,7 @@ YSocial simulations recreate <mark>online dynamics</mark> by placing LLM agents 
 </div>
 
 <div class="alert-info-custom">
-💡YSocial agents don’t just exist — they act, post, comment, and react in ways that mirror real-world social behavior. 
+YSocial agents don’t just exist — they act, post, comment, and react in ways that mirror real-world social behavior. 
 
 Let's see a few of the features that make YSocial simulations so engaging!
 </div>
@@ -35,7 +35,7 @@ Let's see a few of the features that make YSocial simulations so engaging!
 
 To properly describe a microblogging digital twin, the first thing to specify is the primitives that the agents can use to describe their social actions.
 
-<img src="../assets/images/screen/agents.png" alt="AgentProfile"
+<img src="{{ site.baseurl }}/assets/images/screen/agents.png" alt="AgentProfile"
      style="display: block; margin: 0 auto 1rem auto; width: 700px;" />
 
 We designed `YSocial` 's primitives to resemble the ones offered by platforms like X/Twitter, Mastodon, and BlueSky Social.
@@ -68,7 +68,7 @@ In an online environment, the way contents are selected deeply affects the discu
 For such a reason, `Y` natively integrates several standard recommender systems for content and social interaction suggestion.
 
 
-<img src="../assets/images/algo.jpg" alt="Algorithmic Bias"
+<img src="{{ site.baseurl }}/assets/images/algo.jpg" alt="Algorithmic Bias"
      style="display: block; margin: 0 auto 1rem auto; width: 500px;" />
 
 ##### Content Recommendations
@@ -130,7 +130,7 @@ Every post an agent makes is driven by its **current** set of interests.
 But these interests aren’t static: they change as agents interact with posts from others. 
 Each time an agent engages with a post, it **inherits the post's topic** into its own interest set, reflecting a natural shift in attention.
 
-<img src="../assets/images/screen/topics1.png" alt="Topics Evolution"
+<img src="{{ site.baseurl }}/assets/images/screen/topics1.png" alt="Topics Evolution"
      style="display: block; margin: 0 auto 1rem auto; width: 600px;" />
 
 What makes this process fascinating is that when agents generate new posts, their interests are sampled from the most recent topics they engaged with — weighted by the number of interactions. 
@@ -140,7 +140,7 @@ To keep the simulation fresh and diverse, peculiar agents (**News Pages**) act a
 These specialized agents fetch **real-world news through RSS feeds**, using topic modeling techniques to identify and introduce trending subjects into the simulated discourse. 
 As a result, the ecosystem stays connected to global narratives, ensuring organic topic emergence.
 
-<img src="../assets/images/screen/topics2.png" alt="Page News Topics"
+<img src="{{ site.baseurl }}/assets/images/screen/topics2.png" alt="Page News Topics"
      style="display: block; margin: 0 auto 1rem auto; width: 600px;" />
 
 But **interests don’t last forever**. 
@@ -185,8 +185,8 @@ This intricate dance of evolving interests, news injections, and fading attentio
 </div>
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Key Features </a>
-<a href="/agents" class="cta-secondary">📖 Know the Agents </a>
+<a href="{{ site.baseurl }}/key_features" class="cta-primary" style="margin-right: 1rem;"> Key Features </a>
+<a href="{{ site.baseurl }}/agents" class="cta-secondary"> Know the Agents </a>
 </div>
 
 

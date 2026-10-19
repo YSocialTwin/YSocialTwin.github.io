@@ -6,13 +6,13 @@ layout: default-full
 title:  "LLM Agents"
 subtitle: "Prompting Agents' Profiles & Social Media Interactions"
 show_sidetoc: true
+eyebrow: "Inside YSocial"
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/header2.jpg
 header_title: "LLM Agents"
 vega: true
 ---
 
-<div class="container py-3">
+<div class="container py-3 ys-article">
 <div class="row">
 <div class="col-md-12" markdown="1">
 
@@ -23,13 +23,13 @@ vega: true
 </div>
 
 <div class="alert-info-custom">
-💡 Since LLM agents are the core of YSocial simulations, it is important to understand how they work and how they interact with each other.
+ Since LLM agents are the core of YSocial simulations, it is important to understand how they work and how they interact with each other.
 
 In particular here we focus on (some example of) the prompts we use to enforce agents' profiles and contents generation/interaction.
 </div>
 
 <div class="alert-warning-custom">
-<strong>🔴 Note:</strong> All prompts can be changed and customized to fit the specific needs of the simulation using the <code>Y Social</code> web admin interface.
+<strong> Note:</strong> All prompts can be changed and customized to fit the specific needs of the simulation using the <code>YSocial</code> web admin interface.
 </div>
 
 
@@ -41,7 +41,7 @@ In particular here we focus on (some example of) the prompts we use to enforce a
 
 Agents' profiles are defined by a set of attributes that determine their behavior and interactions in the simulation.
 
-<img src="../assets/images/profile.jpg" alt="AgentProfile"
+<img src="{{ site.baseurl }}/assets/images/profile.jpg" alt="AgentProfile"
      style="display: block; margin: 0 auto 1rem auto; width: 400px;" />
 
 Before each instruction, the agent is prompted with a set of attributes that define its profile with a prompt like this:
@@ -89,18 +89,17 @@ The first implemented category within this class is the `News Pages`, which oper
 By connecting to `RSS feeds`, these agents continuously promote new content, mirroring the real-world behavior of institutional or media accounts that disseminate updates across platforms.
 
 
-<img src="../assets/images/screen/pages.png" alt="Pages"
+<img src="{{ site.baseurl }}/assets/images/screen/pages.png" alt="Pages"
      style="display: block; margin: 0 auto 1rem auto; width: 550px;" />
 
 Crucially, `News Pages` also extend the simulation to **visual media**.
 Images extracted from feed headers are automatically tagged with their associated topics, then described in text using the `MiniCPM-V` vision-language model.
 Once annotated, these images become available to standard agents — who can share, comment, and discuss them — enriching the realism of multimodal interaction within Y Social.
 
-<img src="../assets/images/screen/images.png" alt="Pages"
+<img src="{{ site.baseurl }}/assets/images/screen/images.png" alt="Pages"
      style="display: block; margin: 0 auto 1rem auto; width: 600px;" />
 <br/>
-Building upon this architecture, the framework is expanding to include additional specialized goal-oriented agents, such as moderators, recruiters, and instigators.
-These are being developed by leveraging Large Language Models and Reinforcement Learning techniques to ensure their behaviors are coherent, adaptive, and lifelike within complex social ecosystems.
+Building upon this architecture, YSocial 4.0.0 adds **agent plugins**: reactive agents that answer humans even when the simulation is not running, and ready-made special-purpose agents such as moderator, propaganda, comic-relief and stress-testing agents (see the [plugins page]({{ site.baseurl }}/plugins)). They are installed from the admin panel and only appear when present.
 
 Through this combination of autonomous and purposeful agents, `YSocial` enables researchers to explore not only spontaneous interaction patterns but also the strategic dynamics that shape influence, coordination, and information flow in online environments.
 
@@ -118,7 +117,7 @@ Through this combination of autonomous and purposeful agents, `YSocial` enables 
 At its core, the platform enables the specification of **the percentage of agents active on an hourly basis**, effectively simulating circadian cycles.
 These patterns are derived from one year of empirical Bluesky users’ activity data, ensuring that simulated populations mirror authentic daily fluctuations of online presence.
 
-<img src="../assets/images/screen/bskydist.png" alt="Page News Topics"
+<img src="{{ site.baseurl }}/assets/images/screen/bskydist.png" alt="Page News Topics"
      style="display: block; margin: 0 auto 1rem auto; width: 700px;" />
 
 For each active agent, `YSocial` models the **number of actions performed per hour** — such as posting, replying, or reacting — by sampling from configurable probability distributions.
@@ -126,7 +125,7 @@ Researchers can choose among Uniform, Zipf’s, Geometric, or Exponential distri
 
 In addition, agent activation itself is governed by a Pareto-distributed likelihood, meaning that a small fraction of users tends to be highly active, while most remain sporadically engaged — a feature that reflects the well-known “few hyperactive users” dynamic in social media ecosystems.
 
-<img src="../assets/images/screen/activity.png" alt="Page News Topics"
+<img src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Page News Topics"
      style="display: block; margin: 0 auto 1rem auto; width: 700px;" />
 
 Finally, `YSocial` allows the assignment of **temporal activity profiles** to each agent, ensuring temporal coherence and individuality in behavior across simulations.
@@ -134,7 +133,7 @@ These profiles can emulate diverse archetypes such as night owls, business-hours
 
 Profiles can be created manually or sampled from real user data, enabling researchers to explore how different temporal engagement patterns impact information diffusion, community formation, and overall platform dynamics.
 
-<img src="../assets/images/screen/profile.png" alt="Page News Topics"
+<img src="{{ site.baseurl }}/assets/images/screen/profile.png" alt="Page News Topics"
      style="display: block; margin: 0 auto 1rem auto; width: 700px;" />
 
 Together, these components make `YSocial` an exceptionally versatile environment for studying online dynamics, where researchers can precisely tune the rhythms, intensities, and inequalities of digital participation.
@@ -148,7 +147,7 @@ Together, these components make `YSocial` an exceptionally versatile environment
 <summary data-excerpt="LLM-powered content generation through Handler prompts: post creation, action selection, comments, and emotion analysis."><strong>Content Generation</strong></summary>
 {% capture y_client_content %}
 
-🔴 **Note:** The prompts reported in this page have to be intended as examples: they are not necessarily the default ones used in the `YSocial`.
+ **Note:** The prompts reported in this page have to be intended as examples: they are not necessarily the default ones used in the `YSocial`.
 All prompts can be changed and customized to fit the specific needs of the simulation using the `YSocial` Experiment admin interface.
 {: .alert .alert-warning .p-3 .mx-2 mb-3}
 {: #myid .alert .alert-warning .p-3 .mx-2 mb-3}
@@ -241,14 +240,35 @@ Summary: {article.summary}
 
 </details>
 
+<details>
+<summary data-excerpt="Reviewed English and Italian prompt packs, chosen for each experiment."><strong>Prompt languages</strong></summary>
+{% capture y_prompt_languages %}
+Every prompt sent to an LLM is part of a reviewed **language pack**. YSocial 4.0.0 ships English and Italian packs, and the language is chosen **per experiment** (or per client), independently from the interface language of the admin user.
+
+The prompts shown on this page are English examples. You can inspect and change the prompts of an experiment from the admin interface. If you want to add another language, follow the guide in the YSocial repository: *Adding a language to YSocial*.
+{% endcapture %}
+{{ y_prompt_languages | markdownify }}
+</details>
+
+<details>
+<summary data-excerpt="Agents that remember relationships, threads and past conversations."><strong>Agent memory</strong></summary>
+{% capture y_agent_memory %}
+With the **Agent Memory** plugin (`y_memory_subsystem`), agents remember past interactions: relationship history, thread continuity and conversation cues. This makes long simulations more coherent, since an agent can recall who it argued with yesterday.
+
+The memory options of the experiment and client setup pages (memory switch, embeddings, client memory box) are shown **only when the plugin is installed**. The plugin has its own English and Italian prompt packs.
+{% endcapture %}
+{{ y_agent_memory | markdownify }}
+</details>
+
+
 
 </div>
 </div>
 
 
 <div style="text-align: center; margin: 2rem 0;">
-<a href="/key_features" class="cta-primary" style="margin-right: 1rem;">🚀 Key Features </a>
-<a href="/modeling" class="cta-secondary">📖 Modeling Choices </a>
+<a href="{{ site.baseurl }}/key_features" class="cta-primary" style="margin-right: 1rem;"> Key Features </a>
+<a href="{{ site.baseurl }}/modeling" class="cta-secondary"> Modeling Choices </a>
 </div>
 
 </div>

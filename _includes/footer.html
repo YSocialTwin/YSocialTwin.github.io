@@ -1,125 +1,50 @@
-<!-- Footer -->
-<footer class="footer-chulapa text-left mt-0 pt-5 pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                {%- if site.github_repo -%}
-                <p>
-                    <strong>Repositories</strong>
-                </p>
-                <p>
-                    YSocial software and tools are available on <a href="https://github.com/YSocialTwin">GitHub</a>.
-                </p>
-                <div role="navigation"
-                     class="d-flex flex-wrap justify-content-left">
-                    {%- for gitirepo in site.github_repo -%}
-                    <a href={{ gitirepo.url }}>
-                        <i class="fa-pull-left fab fa-github"
-                           style="vertical-align: middle; font-size: 1rem;
-                    line-height: 1.5rem"></i>
-                        {{ gitirepo.name }}</a>
-
-
-                    {%- endfor -%}
-                    {%- endif -%}
-
-                </div>
-            </div>
-             <div class="col-md-4">
-                 <!--
-                <p style="padding-left: 1.2rem">
-                    <strong> Project by</strong>
-                </p>
-                {%- if site.data.members -%}
-                <ol>
-                    {% for member in site.data.members %}
-                    <li>
-                        <a href="https://github.com/{{ member.github }}">
-                            {{ member.name }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ol>
-                {%- endif -%}
-                 -->
-            </div>
-            <div class="col-md-4">
-                <div class="mb-2">
-                    <img style="margin-left: 0; margin-right:0; ;"
-                         src="../assets/images/Ysocial.png"
-                         alt="Y Social Logo">
-                </div>
-                {%- if site.footer.links -%}
-                <hr>
-                <div role="navigation"
-                     class="d-flex flex-wrap justify-content-left">
-                    {%- for social in site.footer.links -%}
-                    {%- assign urlslice = social.url | slice: 0,4 -%}
-                    {%- if urlslice == "http" -%}
-                    <a href="{{ social.url | absolute_url }}"
-                       title="footer{{ social.label }}"
-                       class="chulapa-footer-sociallink lead"
-                       target="_blank">
-                        {%- elsif social.url contains "@" -%}
-                        <a href="mailto:{{- social.url -}}?subject={{ site.title | append: ' web contact' | strip_html | uri_escape }}"
-                           title="footer{{ social.label }}"
-                           class="chulapa-footer-sociallink lead" target="_blank">
-                            {%- else -%}
-                            <a href="{{ social.url | absolute_url }}"
-                               title="footer{{ social.label }}"
-                               class="chulapa-footer-sociallink lead" target="_blank">
-                                {%- endif -%}
-                                <span class="fa-stack fa-lg"
-                                      aria-hidden="true">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="{{ social.icon }} fa-stack-1x fa-inverse"></i>
-              </span><span class="sr-only">{{ social.label }}</span>
-                            </a>
-                            {%- endfor -%}
-                </div>
-                {%- endif -%}
-                <hr>
-                <p class="mt-2 mb-3">
-                    {%- if site.footer.copyright -%}
-
-                    {{ site.footer.copyright }}
-
-                    {%- endif -%}
-                </p>
-                <p>
-                    <!-- Do not remove this in order to give  attributions -->
-                    Website powered by <a href="https://jekyllrb.com/"
-                                          target="_blank">Jekyll</a>
-                    <!-- End  attributions -->
-                </p>
-
-            </div>
-        </div>
+<footer class="ys-footer">
+  <div class="ys-footer-grid">
+    <div>
+      <a class="ys-flogo" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/images/Ysocial_logo.png" alt="" width="34" height="34"> Y Social</a>
+      <p>{{ site.subtitle }}. An open-source digital twin of online social media, populated by LLM agents.</p>
     </div>
-
-    <script>
-document.querySelectorAll('.custom-carousel').forEach((carousel) => {
-  let currentIndex = 0;
-  const items = carousel.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-  const nextBtn = carousel.querySelector('.next');
-  const prevBtn = carousel.querySelector('.prev');
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalItems;
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    items.forEach(item => item.classList.remove('active'));
-    items[currentIndex].classList.add('active');
-  }
+    <div>
+      <h4>Get started</h4>
+      <a href="{{ site.baseurl }}/download">Download</a>
+      <a href="{{ site.baseurl }}/docker">Docker</a>
+      <a href="{{ site.baseurl }}/ysocial">From source</a>
+      <a href="{{ site.baseurl }}/whats_new">What's new in {{ site.ysocial_version | default: '4.0.0' }}</a>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="{{ site.baseurl }}/key_features">Key features</a>
+      <a href="{{ site.baseurl }}/plugins">Plugins</a>
+      <a href="{{ site.baseurl }}/agents">LLM agents</a>
+      <a href="{{ site.baseurl }}/ysights_library">ySights</a>
+      <a href="{{ site.baseurl }}/resources">Resources</a>
+      <a href="{{ site.baseurl }}/blog">Blog</a>
+    </div>
+    <div>
+      <h4>Community</h4>
+      {%- for l in site.footer.links -%}
+      <a href="{{ l.url }}"{% unless l.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>{{ l.label }}</a>
+      {%- endfor -%}
+      <a href="https://github.com/YSocialTwin/YSocial/releases" target="_blank" rel="noopener">Releases</a>
+      <a href="{{ site.baseurl }}/about">About &amp; citation</a>
+    </div>
+  </div>
+  <div class="ys-footer-bottom">
+    <span>&copy; {{ site.footer.copyright }}</span>
+    <span>Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> &middot; <a href="https://github.com/YSocialTwin/YSocialTwin.github.io" target="_blank" rel="noopener">site source</a></span>
+  </div>
+</footer>
+<button id="ys-top" type="button" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+{%- if page.url contains '/blog' -%}
+<script>
+/* legacy carousel kept only for blog posts, whose content is not modified */
+window.ysLegacyCarousel = true;
+document.querySelectorAll('.custom-carousel').forEach(function (carousel) {
+  var currentIndex = 0, items = carousel.querySelectorAll('.carousel-item'), total = items.length;
+  var nextBtn = carousel.querySelector('.next'), prevBtn = carousel.querySelector('.prev');
+  function update() { items.forEach(function (i) { i.classList.remove('active'); }); items[currentIndex].classList.add('active'); }
+  if (nextBtn) nextBtn.addEventListener('click', function () { currentIndex = (currentIndex + 1) % total; update(); });
+  if (prevBtn) prevBtn.addEventListener('click', function () { currentIndex = (currentIndex - 1 + total) % total; update(); });
 });
 </script>
-</footer>
-<!-- Footer -->
+{%- endif -%}

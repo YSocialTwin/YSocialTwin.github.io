@@ -1,260 +1,140 @@
 ---
 layout: default-full
-title: "Y Social"
-subtitle: "Get Started now!"
-show_sidetoc: true
+title: "Download"
+subtitle: "Pick your platform and start simulating in minutes."
+eyebrow: "Version 4.0.0"
+header_title: "Download YSocial"
 header_type: hero
-header_img: assets/images/server1.jpg
-header_title: "Download Y Social"
-vega: true
+show_sidetoc: true
 ---
 
-<div class="container py-3">
-<div class="row">
-<div class="col-md-12" markdown="1">
+<div class="ys-article" markdown="1">
 
-<div style="text-align: center; margin: 2rem 0;">
-<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-Transform your social media research with our powerful <mark>Digital Twin platform</mark>. Choose your platform and start simulating realistic social interactions today.
-</p>
-</div>
+<p class="ys-lede">Install YSocial with a <mark>desktop installer</mark>, a <mark>pip wheel</mark> or <mark>Docker</mark>. Same platform, your choice of how much control you want.</p>
 
----
+## Desktop installer
 
-## 📥 Download for Your Platform
+Version **{{ site.ysocial_version }}** is on GitHub. No terminal and no Python needed: the installer prepares a private Python environment the first time you run it (a few minutes, internet required).
 
-v3.0.0 (Roshar - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag/v2.5.0)) is available for the following operating systems:
+<p class="ys-intro" style="margin-bottom:10px">We think you are on <strong id="ys-detected">your system</strong>, highlighted below.</p>
 
 <div class="download-grid">
-
+<div class="download-box" data-os="macos">
+<span class="ys-mine">Your system</span>
+<span class="os-ic"><i class="fab fa-apple" aria-hidden="true"></i></span>
+<h3>macOS</h3>
+<p>Apple silicon and Intel, <code>.dmg</code></p>
+<div class="ys-dl">
+<a class="ys-btn primary small" href="https://github.com/YSocialTwin/YSocial/releases/latest">Apple silicon (arm64)</a>
+<a class="ys-btn ghost small" href="https://github.com/YSocialTwin/YSocial/releases/latest">Intel (x64)</a>
+</div>
+</div>
+<div class="download-box" data-os="windows">
+<span class="ys-mine">Your system</span>
+<span class="os-ic"><i class="fab fa-windows" aria-hidden="true"></i></span>
+<h3>Windows</h3>
+<p>Windows 10 and later, <code>.exe</code></p>
+<div class="ys-dl">
+<a class="ys-btn primary small" href="https://github.com/YSocialTwin/YSocial/releases/latest">Windows (x64)</a>
+</div>
+</div>
+<div class="download-box" data-os="linux">
+<span class="ys-mine">Your system</span>
+<span class="os-ic"><i class="fab fa-linux" aria-hidden="true"></i></span>
+<h3>Linux</h3>
+<p>x64 and arm64, <code>.AppImage</code> or <code>.deb</code></p>
+<div class="ys-dl">
+<a class="ys-btn primary small" href="https://github.com/YSocialTwin/YSocial/releases/latest">Linux (x64)</a>
+<a class="ys-btn ghost small" href="https://github.com/YSocialTwin/YSocial/releases/latest">Linux (arm64)</a>
+</div>
+</div>
 <div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fab fa-linux"></i>
+<span class="os-ic"><i class="fas fa-code" aria-hidden="true"></i></span>
+<h3>Source code</h3>
+<p>Clone it and run it your way</p>
+<div class="ys-dl">
+<a class="ys-btn ghost small" href="https://github.com/YSocialTwin/YSocial">GitHub repository</a>
+<a class="ys-btn ghost small" href="{{ site.baseurl }}/ysocial">Developer guide</a>
 </div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Linux</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Ubuntu, Fedora & more</p>
-<a href="https://releases.y-not.social/latest/YSocial_v3_linux" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-Download for Linux
-</a>
-</div>
-
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fab fa-apple"></i>
-</div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">macOS</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Silicon (M1 or later)</p>
-<a href="https://releases.y-not.social/latest/YSocial_v3.dmg" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-Download for macOS
-</a>
-</div>
-
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fab fa-windows"></i>
-</div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Windows</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Windows 10 and later</p>
-<div style="display: flex; gap: 0.5rem; justify-content: center;">
-<a href="https://releases.y-not.social/latest/YSocial_v3_x86.exe" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
-x86
-</a>
-<a href="https://releases.y-not.social/latest/YSocial_v3_arm.exe" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
-ARM
-</a>
 </div>
 </div>
 
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fas fa-code"></i>
-</div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Source Code</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Latest version ZIP archive</p>
-<a href="https://releases.y-not.social/latest/YSocial_v3_source.zip" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-Download Source
-</a>
-</div>
+All buttons open the [latest release](https://github.com/YSocialTwin/YSocial/releases/latest), where each installer is attached as `YSocial-<version>-<system>.<ext>` (for example `YSocial-{{ site.ysocial_version }}-macos-arm64.dmg`). The same files are listed in the [release changelog](https://github.com/YSocialTwin/YSocial/releases).
 
-</div>
+### First run
 
-Once started, access YSocial using the credentials: <mark>admin@y-not.social</mark> / <mark>admin</mark>
+1. **Open the installer** and press *Install YSocial*, then **Start**. YSocial opens in its own window. Closing the window stops YSocial and the services it started.
+2. **Log in** with <mark>admin@y-not.social</mark> / <mark>admin</mark>, then change the password.
+3. **Connect an LLM** from the admin panel (see the notes below), create an experiment and press start.
 
 <div class="alert-warning-custom">
-<strong>⚠️ Note 1: </strong> OS-specific releases provide a zero-configuration quick start at a cost: no JupyterLab support and longer startup times.
-<br>
-<strong>⚠️ Note 2: </strong> YSocial assumes you have access to an OpenAI-compatible LLM model (either commercial or self-hosted). 
-
+<strong>Installers are not code-signed.</strong> On macOS, right-click the app and choose <em>Open</em> (or run <code>xattr -dr com.apple.quarantine</code> on it). On Windows, choose <em>More info</em> and then <em>Run anyway</em>.
 </div>
 
 <div class="alert-info-custom">
-<strong>🛠️ Want full control?</strong> Follow our <a href="/ysocial">developer installation guide</a> to install Y Social with Python and customize every aspect of your setup.
+<strong>Good to know.</strong> YSocial needs an OpenAI-compatible LLM endpoint, commercial or self-hosted (Ollama and vLLM work well). Jupyter Lab is opt-in in the installer. You can open YSocial in your browser instead of its own window if you prefer.
+</div>
+
+## pip and Docker
+
+Prefer the command line? Both options below give you the same platform.
+
+<div class="ys-grid two">
+<div class="ys-card">
+<span class="ys-pill">Python 3.12</span>
+<h3>pip wheel</h3>
+<p>Download <code>ysocial-&lt;version&gt;-py3-none-any.whl</code> and <code>constraints.txt</code> from the release page, then:</p>
+<div class="ys-cmd" style="margin-top:12px"><code>pip install ysocial-&lt;version&gt;-py3-none-any.whl -c constraints.txt</code></div>
+<div class="ys-cmd" style="margin-top:8px"><code>ysocial --host localhost --port 8080</code></div>
+<p style="margin-top:12px">Optional extra <code>[toxicity]</code> adds toxicity detection. Details in the <a href="{{ site.baseurl }}/ysocial">developer guide</a>.</p>
+</div>
+<div class="ys-card">
+<span class="ys-pill v">Container</span>
+<h3>Docker</h3>
+<p>One command, data kept in a named volume:</p>
+<div class="ys-cmd" style="margin-top:12px"><code>docker run -d --name ysocial -p 5000:5000 -v ysocial-data:/data ghcr.io/ysocialtwin/ysocial:latest</code></div>
+<p style="margin-top:12px">Then open <a href="http://localhost:5000">localhost:5000</a>. Compose, PostgreSQL and GPU notes in the <a href="{{ site.baseurl }}/docker">Docker guide</a>.</p>
+</div>
+</div>
+
+## Where your data lives
+
+YSocial keeps everything in a single data folder (`YSOCIAL_HOME`), so backing up or moving an installation is a matter of copying one directory.
+
+| System | Default data folder |
+| --- | --- |
+| macOS | `~/Library/Application Support/YSocial` |
+| Windows | `%USERPROFILE%\AppData\Local\YSocial` |
+| Linux | `~/.ysocial` |
+| Docker | `/data` (the `ysocial-data` volume) |
+
+## Privacy and telemetry
+
+<details>
+<summary data-excerpt="Minimal, anonymised usage data. You can switch it off in the admin panel.">Anonymised telemetry, and how to turn it off</summary>
+<div markdown="1">
+
+YSocial collects minimal, anonymised telemetry to help us fix bugs and prioritise work. You can disable it at any time from the admin panel. The code that receives it is public: [yTelemetry](https://github.com/YSocialTwin/yTelemetry).
+
+**What is collected:** number of experiments, populations, agents and pages; the recommender system and LLM model in use; simulation duration; installation or update date, YSocial version, operating system and locale; error types, frequency and anonymised stack traces.
+
+**What is not collected:** personal data, IP addresses or location, simulation content or user-generated data, emails, passwords or credentials, or any tracking of individuals across sessions.
+
+Telemetry data is aggregated, stored with access controls, used only to improve YSocial and never shared with third parties.
+
+</div>
+</details>
+
+## What next?
+
+<div class="ys-grid three">
+<a class="ys-card hover" href="{{ site.baseurl }}/key_features"><h3>Read the features</h3><p>What a simulation looks like and what you can configure.</p><span class="ys-more">Key features &rarr;</span></a>
+<a class="ys-card hover" href="https://github.com/orgs/YSocialTwin/discussions" target="_blank" rel="noopener"><h3>Join the community</h3><p>Ask for help and share your experiments.</p><span class="ys-more">GitHub Discussions &rarr;</span></a>
+<a class="ys-card hover" href="https://github.com/YSocialTwin/YSocial/issues" target="_blank" rel="noopener"><h3>Report an issue</h3><p>Found a bug? Tell us, with logs if you can.</p><span class="ys-more">Open an issue &rarr;</span></a>
 </div>
 
 <div class="alert-info-custom">
-<strong>💡 Prefer Docker?</strong> For a hassle-free installation with all dependencies included, check out our <a href="/docker">Docker installation guide</a>. 
-</div>
-
-
-
-
-
----
-
-## 🔒 Privacy & Telemetry
-
-<div style="background: #f8f9fa; border-left: 4px solid #2563eb; padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0;">
-
-{% capture content %}
-
-### 📊 GDPR-Compliant Data Collection
-
-Y Social respects your privacy and is fully compliant with GDPR regulations. We collect minimal, anonymized telemetry data to improve the platform. Here's exactly what we track:
-
-#### What We Collect
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-
-<div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-<h5 style="color: #2563eb; margin-bottom: 0.5rem;">📈 Usage Analytics</h5>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li># Experiments/Populations</li>
-<li># Agents/Pages</li>
-<li>Recommendation system used</li>
-<li>Simulation duration</li>
-<li>Preferred LLM model</li>
-</ul>
-</div>
-
-<div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-<h5 style="color: #2563eb; margin-bottom: 0.5rem;">💾 Installation Data</h5>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Installation/Update date</li>
-<li>YSocial version</li>
-<li>Operating system and locale</li>
-</ul>
-</div>
-
-<div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-<h5 style="color: #2563eb; margin-bottom: 0.5rem;">🐛 Error Logs</h5>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Error types and frequency</li>
-<li>Stack traces (anonymized)</li>
-</ul>
+<strong>Using YSocial in a paper?</strong> Please cite it. The reference is on the <a href="{{ site.baseurl }}/about#how-to-cite">About page</a>.
 </div>
 
 </div>
-
-#### What We DON'T Collect
-
-{% endcapture %}
-{{ content | markdownify }}
-
-<div style="background: #ecfdf5; border: 1px solid #10b981; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-<strong style="color: #059669;">✅ Your Privacy is Protected</strong>
-<ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;">
-<li>❌ No personally identifiable information (PII)</li>
-<li>❌ No IP addresses or location data</li>
-<li>❌ No simulation content or user-generated data</li>
-<li>❌ No email addresses or contact information</li>
-<li>❌ No passwords or authentication credentials</li>
-<li>❌ No tracking of individual users across sessions</li>
-</ul>
-</div>
-
-
-{% capture content1 %}
-#### Your Rights & Control
-{% endcapture %}
-{{ content1 | markdownify }}
-
-<div style="margin: 1rem 0;">
-
-{% capture content2 %}
-**🎛️ Opt-Out Anytime**: You have full control over telemetry data collection. To disable just set the appropriate toggle in the admin panel.
-
-**🔐 Data Security**: All telemetry data is:
-- Anonymized and aggregated to protect your identity
-- Stored securely with access controls
-- Used solely for improving Y Social
-- Never shared with third parties
-
-{% endcapture %}
-{{ content2 | markdownify }}
-</div>
-
-{% capture content3 %}
-
-
-#### Why We Collect Data
-
-We use this information to:
-- 🐛 Identify and fix bugs faster
-- 📊 Understand which features are most valuable
-- ⚡ Improve performance and reliability
-- 🎯 Prioritize development efforts
-- 🔒 Enhance security
-
-**Our Commitment**: We believe in transparency and respect for user privacy. This telemetry helps us build a better product without compromising your privacy. Check with your own eyes what we collect in the service dedicated repository ([yTelemetry](https://github.com/YSocialTwin/yTelemetry)) and make an informed decision.
-
-{% endcapture %}
-{{ content3 | markdownify }}
-
-</div>
-
-
-
----
-
-## 📚 Next Steps
-
-<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
-
-<div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
-<div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📖</div>
-<h4>Read the Docs</h4>
-<p style="color: #666; margin-bottom: 1rem;">Learn how to set up your first simulation</p>
-<a href="/key_features" class="cta-secondary">View Features</a>
-</div>
-
-<div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
-<div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💬</div>
-<h4>Join Community</h4>
-<p style="color: #666; margin-bottom: 1rem;">Get help and share your experiences</p>
-<a href="https://github.com/orgs/YSocialTwin/discussions" class="cta-secondary">GitHub Discussions</a>
-</div>
-
-<div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
-<div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🐛</div>
-<h4>Report Issues</h4>
-<p style="color: #666; margin-bottom: 1rem;">Found a bug? Let us know!</p>
-<a href="https://github.com/YSocialTwin/YSocial/issues" class="cta-secondary">Report Bug</a>
-</div>
-
-</div>
-
----
-
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">
-<h3 style="color: #212529; margin-bottom: 1rem;">🎓 Perfect for Researchers</h3>
-<p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #6c757d;">
-Y Social has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment.
-</p>
-<a href="/about" class="cta-primary">Learn About Our Team</a>
-</div>
-
-</div>
-</div>
-</div>
-
-<style>
-@media (hover: hover) {
-  [style*="transition: all"] {
-    cursor: pointer;
-  }
-  [style*="transition: all"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  }
-}
-</style>

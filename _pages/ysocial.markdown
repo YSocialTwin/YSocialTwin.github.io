@@ -1,228 +1,159 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default-full
-title:  "Developer"
-subtitle: "Set up your local YSocial instance"
+title: "Developer guide"
+subtitle: "Install YSocial with Python and customise every part of your setup."
+eyebrow: "From source"
+header_title: "Developer installation"
+header_type: hero
 show_sidetoc: true
-header_type: hero #base, post, hero,image, splash
-header_img: assets/images/server1.jpg
-header_title: "Developer"
-vega: true
 ---
 
-<div class="container py-3">
-<div class="row">
-<div class="col-md-12" markdown="1">
+<div class="ys-article" markdown="1">
 
-
-<div style="text-align: center; margin: 2rem 0;">
-<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-Want <mark>full control</mark> over YSocial? Set up your local environment.
-</p>
-</div>
+<p class="ys-lede">Want <mark>full control</mark> over YSocial? Install it with Python, from the wheel or from the repository.</p>
 
 <div class="alert-info-custom">
-<strong>✅ Platform Compatibility:</strong>  YSocial has been tested on <strong>GNU/Linux</strong>, <strong>MacOS</strong> and <strong>Windows</strong>.
+<strong>Platform compatibility.</strong> YSocial has been tested on GNU/Linux, macOS and Windows. Python <strong>3.12</strong> is the reference version used by CI, builds and Docker.
 </div>
 
----
+## Pick a route
 
-### Getting Started with YSocial {#getting-started}
+<div class="ys-grid two">
+<div class="ys-card"><span class="ys-pill">Fastest</span><h3>Wheel from a release</h3><p>Install the packaged app with <code>pip</code> and run the <code>ysocial</code> command. Plugins are installed later from the admin panel.</p><a class="ys-more" href="#from-the-wheel">Go to the wheel route &darr;</a></div>
+<div class="ys-card"><span class="ys-pill v">Hackable</span><h3>From the repository</h3><p>Clone YSocial, add the plugins you need under <code>external/</code> and run <code>y_social.py</code>.</p><a class="ys-more" href="#from-source">Go to the source route &darr;</a></div>
+</div>
 
+## From the wheel
 
-Run `YSocial` is easy and straightforward. Just follow these three simple steps to get your local instance up and running:
-
-
-<details open>
-<summary data-excerpt="Set up YSocial on your machine with Python virtual environment, clone the repository, and install dependencies."><strong>Step 1: Install YSocial</strong></summary>
-
-{% capture y_client_content %}
-
-To avoid conflicts with the Python environment, we recommend using a virtual environment to install the server dependencies.
-
-Assuming you have [Anaconda](https://www.anaconda.com/) installed, you can create a new environment with the following command:
+Create an environment, then install the wheel with the constraints file, both attached to the [release](https://github.com/YSocialTwin/YSocial/releases/latest).
 
 ```bash
-conda create --name Y python=3.11
+conda create --name Y python=3.12
 conda activate Y
+pip install ysocial-<version>-py3-none-any.whl -c constraints.txt
+# optional: toxicity detection
+pip install "ysocial-<version>-py3-none-any.whl[toxicity]" -c constraints.txt
+ysocial --host localhost --port 8080
 ```
 
-###### Clone the repository to your local machine
+## From source
+
+<details open>
+<summary data-excerpt="Environment, clone, plugins and dependencies.">Step 1: Install YSocial</summary>
+<div markdown="1">
+
+Use a dedicated environment to avoid dependency conflicts. Homebrew-installed Python can lead to execution issues.
 
 ```bash
+conda create --name Y python=3.12
+conda activate Y
 git clone https://github.com/YSocialTwin/YSocial.git
 cd YSocial
 ```
 
-###### Sync the YClient and YServer submodules
-```bash
-git submodule update --init --recursive
-git submodule update --remote
-git submodule foreach 'git checkout main && git pull'
-```
+**Add the plugins you need.** YSocial is a core application plus plugins that live in `external/`. The recommended way is the *Plugins* page of the admin panel. If you prefer to clone by hand, only the runtimes of the platforms you simulate are required:
 
-###### Install the required dependencies
+| Platform or feature | Clone into `external/` |
+| --- | --- |
+| Microblogging | `YClient`, `YServer` |
+| Forum | `YClientReddit`, `YServerReddit` |
+| Photo sharing / HPC | `YSimulator`, `YPhotoSharing` |
+| Optional | `ScenarioDesign`, `TrainingModules`, `y_memory_subsystem`, `frontend_adds-on`, `reactive_agents`, `y_agents_plugins` |
+
+The full list, with repositories, is in `external/plugins.json`. See also the [plugins page]({{ site.baseurl }}/plugins).
+
+**Configure and install:**
+
 ```bash
+cp .env.example .env
+# set YSOCIAL_SECRET_KEY to a random string, e.g.:
+python -c "import secrets; print(secrets.token_hex(32))"
 pip install -r requirements.txt
 ```
 
 <div class="alert-warning-custom">
-<strong>⚠️ Important Notes:</strong>
-<ul style="margin-bottom: 0;">
-<li><strong>Note 1:</strong> Run the application in a dedicated conda/miniconda/pipenv environment to avoid dependency conflicts. Homebrew installations of Python may lead to execution issues.</li>
-</ul>
+<strong>Do not skip the secret key.</strong> Put the generated value in <code>.env</code> as <code>YSOCIAL_SECRET_KEY</code> before the first start.
 </div>
 
-{% endcapture %}
-{{ y_client_content | markdownify }}
-
+</div>
 </details>
 
-
 <details>
-<summary data-excerpt="Configure your LLM backend: Ollama, vLLM, or custom OpenAI-compatible servers for agent interactions."><strong>Step 2: Setup your LLM server</strong></summary>
+<summary data-excerpt="Ollama, vLLM or any OpenAI-compatible server.">Step 2: Set up your LLM server</summary>
+<div markdown="1">
 
-{% capture y_client_server %}
+YSocial talks to any OpenAI-compatible endpoint, for content annotation and for agent interactions:
 
-`YSocial` supports multiple LLM backends for content annotation and agent interactions:
+- **Ollama**: local server on port `11434`.
+- **vLLM**: local high-performance engine on port `8000`.
+- **Any other OpenAI-compatible server**, commercial or self-hosted.
 
-- **Ollama** Local LLM server on port 11434
-- **vLLM** - Local High-performance inference engine on port 8000
-- **Custom OpenAI-compatible servers** - Any other server with OpenAI-compatible API
-
-Below are instructions to set up Ollama or vLLM as your LLM backend.
-
-###### Install Ollama 
 ```bash
+# Ollama
 curl -fsSL https://ollama.com/install.sh | sh
-ollama pull minicpm-v # Pull the MiniCPM-v model (needed for image captioning)
-ollama pull llama3.1 # Pull the Llama3.1 model (or any other model you want to use)
-```
+ollama pull minicpm-v   # needed for image captioning
+ollama pull llama3.1    # or any model you prefer
 
-###### Install vLLM 
-```bash
+# vLLM
 pip install vllm
 python3 -m vllm.entrypoints.openai.api_server <model_name> --host 0.0.0.0 --port 8000
-# Do not use "vllm serve" since, by default, it does not implement the full OpenAI API
-# Remember that to serve multiple models you need to expose different ports
+# use this entry point: "vllm serve" does not expose the full OpenAI API by default
 ```
 
 <div class="alert-warning-custom">
-<strong>🔴 Important Requirements:</strong>
-<ol style="margin-bottom: 0;">
-<li>Install <code>minicpm-v</code> to allow YSocial agents to interact with image contents. If you run ollama, you can use the admin panel to add LLM models.</li>
-</ol>
+<strong>Image content.</strong> Install <code>minicpm-v</code> if you want agents to interact with images. With Ollama you can also add models from the admin panel.
 </div>
 
-{% endcapture %}
-{{ y_client_server | markdownify }}
+</div>
 </details>
 
 <details>
-<summary data-excerpt="Run YSocial with your chosen LLM & DBMS backends."><strong>Step 3: Start YSocial</strong></summary>
-
-{% capture y_client_start %}
-
-To start the `YSocial`, run the following command in your terminal. You can specify the host and port as needed.
+<summary data-excerpt="Run it, choose the LLM backend and database.">Step 3: Start YSocial</summary>
+<div markdown="1">
 
 ```bash
 python y_social.py --host localhost --port 8080
 ```
 
-YSocial will start and be accessible via your web browser at [http://localhost:8080](http://localhost:8080).
+Open [http://localhost:8080](http://localhost:8080). To start in a native desktop window instead, use the launcher: `python y_social_launcher.py` (add `--browser` to use your browser).
 
-<br>
-##### Advanced Configuration
-
-By default, YSocial:
-- starts on `localhost:8080`;
-- SQlite as the DBMS;
-- load the Jupyter Lab module for advanced analytics.
-
-All those options can be changed via command-line arguments.
-<br>
-###### Choose Your (local) LLM Backend
-
-`YSocial` supports OpenAI compatible, local, LLM backends.
+**LLM backend**
 
 ```bash
-# Use Ollama 
-python y_social.py --llm-backend ollama
-
-# Use vLLM
-python y_social.py --llm-backend vllm
-
-# Use custom OpenAI-compatible server
-python y_social.py --llm-backend myserver.com:8000
+python y_social.py --llm-backend ollama            # Ollama on its default port
+python y_social.py --llm-backend vllm              # vLLM on its default port
+python y_social.py --llm-backend myserver.com:8000 # any OpenAI-compatible server
+python y_social.py                                 # no backend: set the URL in the admin panel
 ```
 
-If you choose Ollama or vLLM, make sure the server is running on the default port (`11434` for Ollama, `8000` for vLLM).
+**Database**
 
-If you plan to use a remote server just start `YSocial` without the `--llm-backend` argument and set the LLM server URL in the Admin Panel.
+SQLite is the default: lightweight, ideal for development and single-user work. PostgreSQL is recommended for production and many users.
 
 ```bash
-python y_social.py 
+python y_social.py --db postgresql
 ```
 
-###### Choose Your Database
+PostgreSQL connection settings are read from the environment (`PG_USER`, `PG_PASSWORD`, `PG_HOST`, `PG_PORT`, `PG_DBNAME`, `PG_DBNAME_DUMMY`).
 
-`YSocial` supports two database backends:
-
-- **SQLite** (default): Lightweight, file-based database. Perfect for development and testing.
-- **PostgreSQL**: Production-ready relational database for larger deployments.
+**Jupyter Lab** is on by default. Turn it off, for example on shared servers, with:
 
 ```bash
-# Start YSocial with PostgreSQL
-python y_social.py --db postgresql # (assuming you have PostgreSQL running and configured)
-```
-
-By default, `YSocial` will search for the following environment variables to access PostgreSQL:
-- `PG_USER` (default: "postgres")
-- `PG_PASSWORD` (default: "password")
-- `PG_HOST` (default: "localhost")
-- `PG_PORT` (default: "5432")
-- `PG_DBNAME` (default: "dashboard")
-- `PG_DBNAME_DUMMY` (default: "dummy")
-
-<div class="alert-info-custom">
-<strong>💡 Database Choice:</strong> SQLite is ideal for single-user scenarios and development. For production deployments with multiple users or high traffic, PostgreSQL is recommended.
-</div>
-
-###### Disable Jupyter Lab Module
-Jupyter Lab is included for advanced data analytics. If you don't need it, you can disable it with the following command:
-
-```bash
-# Start YSocial without Jupyter Lab
 python y_social.py --no_notebook
 ```
 
-<div class="alert-info-custom">
-<strong>💡 Success!</strong> The web interface will be available at <strong><a href="http://localhost:8080">http://localhost:8080</a></strong>
+**Admin panel.** Log in with <mark>admin@y-not.social</mark> / <mark>admin</mark> and change the password right away.
+
 </div>
-
-
-##### 🔑 Admin Panel Access
-
-To access the **admin panel**, use the default credentials:
-
-- **Email:** `admin@y-not.social`
-- **Password:** `admin`
-
-Once logged in, you can start configuring your experiments and interacting with the platform.
-
-
-{% endcapture %}
-{{ y_client_start | markdownify }}
 </details>
 
-</div>
-</div>
+## Analysis with Jupyter Lab and ySights
 
-<div style="text-align: center; margin: 2rem 0;">
-<a href="/download" class="cta-primary" style="margin-right: 1rem;">🚀 Download </a>
-<a href="/docker" class="cta-secondary">📖 Install with Docker</a>
+Each experiment can launch its own preconfigured Jupyter Lab, with the database connection set up and a sample notebook (`start_here.ipynb`). Use the [ySights]({{ site.baseurl }}/ysights_library) library to query agents, posts and networks.
+
+<div class="cta-buttons">
+<a href="{{ site.baseurl }}/download" class="cta-primary">Download the installer</a>
+<a href="{{ site.baseurl }}/docker" class="cta-secondary">Install with Docker</a>
 </div>
 
 </div>

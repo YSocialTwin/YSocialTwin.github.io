@@ -1,299 +1,128 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default-full
-title:  "Docker"
-subtitle: "Run YSocial with Docker"
+title: "Docker"
+subtitle: "Deploy YSocial on a server or a laptop with one command."
+eyebrow: "Container"
+header_title: "Install with Docker"
+header_type: hero
 show_sidetoc: true
-header_type: hero #base, post, hero,image, splash
-header_img: assets/images/server1.jpg
-header_title: "Docker"
-vega: true
 ---
 
-<div class="container py-3">
-<div class="row">
-<div class="col-md-12" markdown="1">
+<div class="ys-article" markdown="1">
 
-<div style="text-align: center; margin: 2rem 0;">
-<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-Need to deploy on a <mark>server</mark>? Use the preconfigured Docker container.
-</p>
-</div>
-
+<p class="ys-lede">Need to deploy on a <mark>server</mark>, or just keep your machine clean? Use the prebuilt container image.</p>
 
 <div class="alert-info-custom">
-<strong>✅ Platform Compatibility:</strong> Docker works on <strong>GNU/Linux</strong>, <strong>MacOS</strong>, and <strong>Windows</strong>. This is the recommended installation method for Windows users.
+<strong>Platform compatibility.</strong> Docker works on GNU/Linux, macOS and Windows, and is a good choice for Windows users who prefer not to install Python.
 </div>
 
+## Quick start
 
+The image is published on the GitHub Container Registry. Your data lives in the `ysocial-data` volume, so it survives restarts and upgrades.
 
----
+<div class="ys-cmd"><code>docker run -d --name ysocial -p 5000:5000 -v ysocial-data:/data ghcr.io/ysocialtwin/ysocial:latest</code></div>
 
-#### 🐳 What is Docker?
+Open [http://localhost:5000](http://localhost:5000) and log in with <mark>admin@y-not.social</mark> / <mark>admin</mark>. Change the password afterwards.
 
-Docker is a platform for developing, shipping, and running applications in containers. Containers package your application and all its dependencies together, ensuring it runs consistently across different environments.
-
-Don't want to deal with dependencies? Y Social provides a **Dockerized setup** that includes:
-- **[Ollama](https://ollama.com/)** for running LLMs locally
-- **Y Server / Y Client** for managing simulations
-- **Y Social** web interface
-- Pre-configured environment with all dependencies
-
----
-
-#### Prerequisites
-
-Before you begin, ensure you have:
-- **Docker** installed (version 20.10+)
-  - [Install Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose)
-  - Or install Docker Engine for Linux
-- **Docker Compose** (usually included with Docker Desktop)
-- At least **8GB RAM** available
-- **10GB free disk space**
-
-<div class="alert-info-custom">
-<strong>💡 Check Your Installation:</strong>
-<pre><code>docker --version
-docker-compose --version</code></pre>
+<div class="alert-warning-custom">
+<strong>The LLM server runs outside the container.</strong> YSocial needs an OpenAI-compatible endpoint (Ollama, vLLM or a commercial API). Set its address from the admin panel. To reach Ollama on your host from the container use <code>http://host.docker.internal:11434</code> (with plain <code>docker run</code> on Linux, add <code>--add-host=host.docker.internal:host-gateway</code>).
 </div>
 
----
+## Prerequisites
 
-<details>
-<summary data-excerpt="Clone the YSocial repository, build the Docker container, and launch the web interface.">📦 Basic Installation</summary>
+- **Docker** (Docker Desktop includes Compose), or Docker Engine on Linux.
+- Enough resources for your simulation: a few GB of RAM and free disk space for the data volume. The LLM server needs its own resources.
 
+```bash
+docker --version
+docker compose version
+```
+
+## Options
+
+<details open>
+<summary data-excerpt="Build the image yourself and start it with Compose.">Docker Compose from the repository</summary>
 <div markdown="1">
 
-##### Step 1: Clone the Repository
+The repository ships `docker/compose.yml`. It builds the image and starts YSocial with SQLite:
 
 ```bash
 git clone https://github.com/YSocialTwin/YSocial.git
 cd YSocial
+docker compose -f docker/compose.yml up
 ```
 
-##### Step 2: Build & Run with Docker Compose
+The web interface is on [http://localhost:5000](http://localhost:5000). Use `YSOCIAL_PORT` to change the host port:
 
 ```bash
-docker-compose -f docker-compose.yml build
-docker-compose up
+YSOCIAL_PORT=8080 docker compose -f docker/compose.yml up
 ```
 
-<div class="alert-info-custom">
-<strong>💡 Success!</strong> The web interface will be available at <strong><a href="http://localhost:8080">http://localhost:8080</a></strong>
-</div>
-
-<div class="alert-warning-custom">
-<strong>⚠️ First Run:</strong> The initial build may take 5-10 minutes as it downloads and installs all dependencies and LLM models.
-</div>
-
-##### Step 3: Access the Application
-
-Once the containers are running, open your browser and navigate to:
-- **Web Interface**: [http://localhost:8080](http://localhost:8080)
-- **Admin Panel**: Login with `admin@y-net.social` / `admin`
 </div>
 </details>
 
 <details>
-<summary data-excerpt="Configure the OpenAI compatible LLM inference service.">🔧 LLM Backend Configuration</summary>
-
+<summary data-excerpt="Add a PostgreSQL service for larger deployments.">PostgreSQL</summary>
 <div markdown="1">
 
-
-Y Social supports multiple LLM backends through Docker environment variables:
-
-###### Using Ollama (Default)
-
-Ollama is included in the Docker container by default:
+SQLite is the default and is ideal for development and single-user use. For many users or heavier traffic, enable the `postgres` profile, which adds a PostgreSQL 16 service with its own volume:
 
 ```bash
-docker-compose up
+docker compose -f docker/compose.yml --profile postgres up
 ```
 
-Or explicitly specify:
+Database name and credentials can be overridden with `POSTGRES_DB`, `POSTGRES_USER` and `POSTGRES_PASSWORD`. Change the defaults before exposing the service.
 
-```bash
-docker run -e LLM_BACKEND=ollama -p 8080:8080 ysocial:latest
-```
-
-###### Using vLLM
-
-For high-performance inference with vLLM:
-
-```bash
-docker run -e LLM_BACKEND=vllm -p 8080:8080 ysocial:latest
-```
-
-<div class="alert-info-custom">
-<strong>💡 Note:</strong> When using vLLM, you need to start a separate vLLM server or configure it in your docker-compose.yml
-</div>
-
-###### Using Custom LLM Server
-
-Connect to any OpenAI-compatible LLM server:
-
-```bash
-docker run -e LLM_BACKEND=myserver.com:8000 -p 8080:8080 ysocial:latest
-```
 </div>
 </details>
 
 <details>
-<summary data-excerpt="Enable NVIDIA GPU acceleration for faster LLM inference.">⚡ GPU Support (NVIDIA Only)</summary>
+<summary data-excerpt="Build the image with detoxify and torch included.">Toxicity detection</summary>
 <div markdown="1">
-For users with NVIDIA GPUs who want accelerated LLM inference:
 
-##### Prerequisites
-- NVIDIA GPU with CUDA support
-- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed
-
-##### Build & Run with GPU Support
+Toxicity detection pulls in large dependencies, so it is off by default. To build an image that includes it:
 
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose_gpu.yml build
-docker-compose up --gpus all
+WITH_TOXICITY=1 docker compose -f docker/compose.yml build
 ```
 
-<div class="alert-warning-custom">
-<strong>⚠️ Note:</strong> MacOS does not support GPU pass-through in Docker. MacOS users should use the CPU-only configuration.
-</div>
 </div>
 </details>
 
 <details>
-<summary data-excerpt="Choose between SQLite (default, ideal for development) and PostgreSQL (recommended for production).">💾 Database Configuration</summary>
+<summary data-excerpt="Logs, stop, update and shell access.">Everyday commands</summary>
 <div markdown="1">
-Choose your database backend with environment variables:
-
-##### Using SQLite (Default)
-
-SQLite is the default database, perfect for development and single-user scenarios:
 
 ```bash
-docker-compose up
+docker logs -f ysocial                       # follow logs
+docker stop ysocial && docker start ysocial  # stop and start
+docker exec -it ysocial bash                 # shell inside the container
+
+# update to the latest image, keeping your data
+docker pull ghcr.io/ysocialtwin/ysocial:latest
+docker rm -f ysocial
+docker run -d --name ysocial -p 5000:5000 -v ysocial-data:/data ghcr.io/ysocialtwin/ysocial:latest
 ```
 
-##### Using PostgreSQL
+Back up the `ysocial-data` volume before major upgrades. It holds the data folder (`YSOCIAL_HOME=/data`).
 
-For production deployments with multiple users:
-
-```yaml
-# Add to your docker-compose.yml or use environment variable
-services:
-  ysocial:
-    environment:
-      - DB_TYPE=postgresql
-      - DB_HOST=postgres
-      - DB_PORT=5432
-      - DB_NAME=ysocial
-      - DB_USER=ysocial
-      - DB_PASSWORD=your_password
-```
-
-Or via command line:
-
-```bash
-docker run \
-  -e DB_TYPE=postgresql \
-  -e DB_HOST=your-postgres-host \
-  -e DB_PORT=5432 \
-  -p 8080:8080 \
-  ysocial:latest
-```
-
-<div class="alert-info-custom">
-<strong>💡 Database Choice:</strong>
-<ul style="margin-bottom: 0;">
-<li><strong>SQLite:</strong> Ideal for development, testing, and single-user scenarios</li>
-<li><strong>PostgreSQL:</strong> Recommended for production with multiple users or high traffic</li>
-</ul>
-</div>
 </div>
 </details>
 
 <details>
-<summary data-excerpt="Essential Docker commands: start/stop services, view logs, rebuild containers, access shell.">🛠️ Common Docker Commands</summary>
+<summary data-excerpt="Common problems and how to fix them.">Troubleshooting</summary>
 <div markdown="1">
-##### Start Services
-```bash
-docker-compose up
-```
 
-##### Start in Background (Detached Mode)
-```bash
-docker-compose up -d
-```
+- **Port already in use.** Map another host port, for example `-p 8081:5000`.
+- **Agents cannot reach Ollama.** Inside a container, `localhost` is the container itself. Use `http://host.docker.internal:11434`, and make sure Ollama listens on an address reachable from Docker.
+- **Lost data after removing the container.** Always mount a volume on `/data`.
 
-##### Stop Services
-```bash
-docker-compose down
-```
-
-##### View Logs
-```bash
-docker-compose logs -f
-```
-
-##### Rebuild After Changes
-```bash
-docker-compose down
-docker-compose build --no-cache
-docker-compose up
-```
-
-##### Access Container Shell
-```bash
-docker-compose exec ysocial /bin/bash
-```
 </div>
 </details>
 
-<details>
-<summary data-excerpt="Solutions for common issues: port conflicts, container startup failures, disk space problems, and permission errors on Linux systems.">❓ Troubleshooting</summary>
-<div markdown="1">
-##### Port Already in Use
-
-If port 8080 is already in use, modify the port mapping in `docker-compose.yml`:
-
-```yaml
-ports:
-  - "8081:8080"  # Use port 8081 instead
-```
-
-##### Container Won't Start
-
-Check the logs:
-```bash
-docker-compose logs
-```
-
-##### Out of Disk Space
-
-Remove unused Docker images and containers:
-```bash
-docker system prune -a
-```
-
-##### Permission Issues
-
-On Linux, you may need to run Docker commands with `sudo` or add your user to the docker group:
-```bash
-sudo usermod -aG docker $USER
-# Log out and log back in for changes to take effect
-```
-</div>
-</details>
-
-
-</div>
+<div class="cta-buttons">
+<a href="{{ site.baseurl }}/download" class="cta-primary">Desktop installer</a>
+<a href="{{ site.baseurl }}/ysocial" class="cta-secondary">Developer installation</a>
 </div>
 
-<div style="text-align: center; margin: 2rem 0;">
-<a href="/download" class="cta-primary" style="margin-right: 1rem;">🚀 Download</a>
-<a href="/ysocial" class="cta-secondary">📖 Developer set up </a>
 </div>
-</div>
-
-

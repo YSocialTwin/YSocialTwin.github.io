@@ -6,8 +6,8 @@ layout: default-full
 title:  "Resources"
 subtitle: "Datasets, Publications and more"
 show_sidetoc: true
+eyebrow: "Open data and outreach"
 header_type: hero #base, post, hero,image, splash
-header_img: assets/images/resources.png
 header_title: "Resources"
 vega: true
 ---
@@ -18,7 +18,7 @@ Explore YSocial-generated <mark>datasets</mark>, discover our <mark>research out
 </p>
 </div>
 
-<div class="container py-3">
+<div class="container py-3 ys-article">
 
 
 <div class="col-md-12" markdown="1">
@@ -30,13 +30,13 @@ To analyze these datasets, you can use our [ySights](https://ysocialtwin.github.
 
 | Dataset Name | LLM          | Number of Starting Agents | Content Recsys                     | Follow Recsys | Starting Graph | Days | File                                                       |
 |--------------|--------------|---------------------------|------------------------------------|---------------|----------------|------|------------------------------------------------------------|
-| `Recsys1`    | LLama3.1-8B  | 1000                      | Reverse Chrono                     | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_ReverseChrono_ER_database.db.zip) |
-| `Recsys2`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Popularity_ER_database.db.zip) |
-| `Recsys2a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Scale-free     | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Popularity_BA_database.db.zip) |
-| `Recsys3`    | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Follower_ER_database.db.zip) |
-| `Recsys3a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Scale-free     | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Follower_BA_database.db.zip) |
-| `Recsys4`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Random Graph   | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_FollowerPopularity_ER_database.db.zip) |
-| `Recsys4a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Scale-free     | 60   | [📕](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_FollowerPopularity_BA_database.db.zip) |
+| `Recsys1`    | LLama3.1-8B  | 1000                      | Reverse Chrono                     | Disabled      | Random Graph   | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_ReverseChrono_ER_database.db.zip) |
+| `Recsys2`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Random Graph   | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Popularity_ER_database.db.zip) |
+| `Recsys2a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity          | Disabled      | Scale-free     | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Popularity_BA_database.db.zip) |
+| `Recsys3`    | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Random Graph   | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Follower_ER_database.db.zip) |
+| `Recsys3a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Follower            | Disabled      | Scale-free     | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_Follower_BA_database.db.zip) |
+| `Recsys4`    | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Random Graph   | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_FollowerPopularity_ER_database.db.zip) |
+| `Recsys4a`   | LLama3.1-8B  | 1000                      | Reverse Chrono Popularity Follower | Disabled      | Scale-free     | 60   | [Download](https://github.com/YSocialTwin/YSocialTwin.github.io/blob/main/assets/datasets/1k_60d_FollowerPopularity_BA_database.db.zip) |
 
 Sometimes sqlite files might appear as corrupted when downloaded. 
 In such an eventuality, recover them by running the following command:

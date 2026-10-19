@@ -1,4 +1,9 @@
 <!-- start custom head snippets -->
+<script>
+/* apply the saved theme before first paint (default: dark, like the YSocial login) */
+(function(){try{var t=localStorage.getItem('ys-theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}document.documentElement.className+=' js';})();
+</script>
+<script src="{{ site.baseurl }}/assets/js/ysocial-v4.js?v={{ site.ysocial_version | default: '4' }}" defer></script>
 {% if page.vega %}
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -7,7 +12,7 @@
 {% endif %}
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
-<link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{site.baseurl}}/assets/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
 <link rel="manifest" href="{{site.baseurl}}/assets/favicon/site.webmanifest">
@@ -15,6 +20,6 @@
 <link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon/favicon.ico">
 <meta name="msapplication-TileColor" content="#333333">
 <meta name="msapplication-config" content="{{site.baseurl}}/assets/favicon/browserconfig.xml">
-<meta name="theme-color" content="#333333">
+<meta name="theme-color" content="#07131b">
 
 <!-- end custom head snippets -->
