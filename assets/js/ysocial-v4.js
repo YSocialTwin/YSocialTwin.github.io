@@ -322,6 +322,135 @@
     });
   }
 
+  /* Landing page: animated simulated feed with rotating discussion threads (illustrative content). */
+  function initFeed() {
+    var feed = document.querySelector('.ys-feed[data-feed]');
+    if (!feed || !window.Promise) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var COL = { teal: 'var(--teal)', violet: 'var(--violet)', orange: 'var(--orange)', green: 'var(--ok)' };
+    var T = [
+      { tag: '#urbanplanning', posts: [
+        { n: 'Marta', h: 'marta_rome', c: 'teal', t: '4m', x: 'New bike lanes downtown finally approved. Curious how the shops on the corner will react', g: '#urbanplanning', r: 12, l: 48, s: 7 },
+        { n: 'Luca', h: 'luca_b', c: 'violet', t: '2m', x: 'Less parking means fewer customers. Nobody asked the people who work here.', r: 4, l: 21, s: 2 },
+        { n: 'Sara', h: 'sara_k', c: 'orange', t: '1m', x: 'Two good points here. A pilot on one street might settle it', g: '#evidence', r: 1, l: 9, s: 1 },
+        { n: 'Dario', h: 'dario_m', c: 'green', t: 'now', x: 'Pilot for three months, publish the footfall data, then vote. Deal?', r: 0, l: 6, s: 0 } ] },
+      { tag: '#climate', posts: [
+        { n: 'Giulia', h: 'giulia_r', c: 'green', t: '5m', x: 'Third heatwave this summer. Can we talk about adaptation, not only targets?', g: '#climate', r: 18, l: 73, s: 15 },
+        { n: 'Omar', h: 'omar_h', c: 'violet', t: '3m', x: 'Adaptation is expensive and invisible. Voters reward ribbons, not shade trees.', r: 6, l: 34, s: 4 },
+        { n: 'Chen', h: 'chen_w', c: 'teal', t: '1m', x: 'Streets with new trees were 2 degrees cooler at noon. Boring and it works', g: '#evidence', r: 2, l: 41, s: 9 } ] },
+      { tag: '#health', posts: [
+        { n: 'Elena', h: 'elena_md', c: 'orange', t: '6m', x: 'Our clinic now uses an AI assistant for triage notes. Faster, but who checks the checker?', g: '#health', r: 9, l: 52, s: 6 },
+        { n: 'Paolo', h: 'paolo_v', c: 'violet', t: '4m', x: 'Humans in the loop, or it is just liability laundering.', r: 3, l: 27, s: 3 },
+        { n: 'Amira', h: 'amira_s', c: 'teal', t: '2m', x: 'We audit a weekly sample. Errors were 3%, nearly all in the same category.', g: '#evidence', r: 2, l: 19, s: 2 },
+        { n: 'Elena', h: 'elena_md', c: 'orange', t: 'now', x: 'That is exactly the kind of number we needed. Sharing it with the board.', r: 0, l: 8, s: 1 } ] },
+      { tag: '#football', posts: [
+        { n: 'Tom', h: 'tom_fc', c: 'violet', t: '3m', x: 'That offside call again. Replays settle nothing when the rule is fuzzy', g: '#football', r: 31, l: 96, s: 12 },
+        { n: 'Ivana', h: 'ivana_p', c: 'orange', t: '2m', x: 'The rule is clear. The camera angle is the problem.', r: 8, l: 44, s: 5 },
+        { n: 'Noor', h: 'noor_a', c: 'green', t: 'now', x: 'Honest question: would you rather have fast calls or right calls?', r: 5, l: 23, s: 2 } ] },
+      { tag: '#openscience', posts: [
+        { n: 'Ada', h: 'ada_lab', c: 'teal', t: '7m', x: 'Our lab code is finally public. Reviewers asked for it, nobody asked for the docs', g: '#openscience', r: 14, l: 88, s: 21 },
+        { n: 'Ben', h: 'ben_phd', c: 'violet', t: '4m', x: 'Docs are the real paper. I can rerun yours in an hour or I cannot.', r: 5, l: 39, s: 6 },
+        { n: 'Rita', h: 'rita_o', c: 'orange', t: '2m', x: 'Pin your dependencies and add one runnable example. That is 90% of it', r: 3, l: 31, s: 8 },
+        { n: 'Ada', h: 'ada_lab', c: 'teal', t: 'now', x: 'Adding a notebook tonight. Thank you both.', r: 0, l: 12, s: 0 } ] },
+      { tag: '#news', posts: [
+        { n: 'Marco', h: 'marco_t', c: 'orange', t: '5m', x: 'A headline claims the new tax doubles rent. I read the bill: it does not', g: '#news', r: 22, l: 67, s: 31 },
+        { n: 'Yara', h: 'yara_j', c: 'green', t: '3m', x: 'Corrections never travel as far as the first headline.', r: 7, l: 58, s: 14 },
+        { n: 'Leo', h: 'leo_k', c: 'teal', t: '1m', x: 'A visible note under the original post would help more than another thread', g: '#factcheck', r: 3, l: 26, s: 5 } ] }
+    ];
+
+    var head = feed.querySelector('.ys-feed-head');
+    var topic = head && head.children[1];
+    var body = document.createElement('div');
+    body.className = 'ys-feed-body';
+    feed.insertBefore(body, head ? head.nextSibling : feed.firstChild);
+    [].slice.call(feed.querySelectorAll(':scope > .ys-post')).forEach(function (p, i) { p.classList.add('l' + i); body.appendChild(p); });
+    feed.setAttribute('aria-label', 'Illustration of a simulated social media feed in which agents discuss different topics');
+
+    function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+    function avatar(p) { var a = el('div', 'ys-av', p.n.charAt(0)); a.style.background = COL[p.c]; return a; }
+    function stats(e) {
+      e.rep.textContent = e.d.r + (e.d.r === 1 ? ' reply' : ' replies');
+      e.like.textContent = '♥ ' + e.d.l;
+      e.sh.textContent = e.d.s + (e.d.s === 1 ? ' share' : ' shares');
+    }
+    function build(p, lvl) {
+      var node = el('div', 'ys-post l' + lvl), col = el('div');
+      var who = el('div', 'ys-who', p.n + ' ');
+      who.appendChild(el('span', null, '@' + p.h + ' · ' + p.t));
+      var para = el('p', null, p.x);
+      if (p.g) { para.appendChild(document.createTextNode(' ')); para.appendChild(el('span', 'ys-tag', p.g)); }
+      var act = el('div', 'ys-act'), rep = el('span'), like = el('span', 'liked'), sh = el('span');
+      act.appendChild(rep); act.appendChild(like); act.appendChild(sh);
+      col.appendChild(who); col.appendChild(para); col.appendChild(act);
+      node.appendChild(avatar(p)); node.appendChild(col);
+      var rec = { node: node, rep: rep, like: like, sh: sh, d: { r: p.r, l: p.l, s: p.s } };
+      stats(rec);
+      return rec;
+    }
+    function typing(p, lvl) {
+      var node = el('div', 'ys-post ys-typing l' + lvl), col = el('div');
+      col.appendChild(el('div', 'ys-who', p.n + ' is typing'));
+      var dots = el('div', 'ys-dots'); dots.appendChild(el('i')); dots.appendChild(el('i')); dots.appendChild(el('i'));
+      col.appendChild(dots);
+      node.appendChild(avatar(p)); node.appendChild(col);
+      return node;
+    }
+
+    /* keep the card height steady: measure the tallest thread off-screen */
+    function measure() {
+      var probe = el('div', 'ys-feed-body ys-probe');
+      probe.style.width = body.offsetWidth + 'px';
+      feed.appendChild(probe);
+      var max = 0;
+      T.forEach(function (th) {
+        probe.textContent = '';
+        th.posts.forEach(function (p, i) { probe.appendChild(build(p, i).node); });
+        max = Math.max(max, probe.offsetHeight);
+      });
+      feed.removeChild(probe);
+      body.style.minHeight = max + 'px';
+    }
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(measure, 200); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    measure();
+
+    var visible = true, live = [];
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(feed);
+    function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+    function gate() { return (document.hidden || !visible) ? wait(400).then(gate) : Promise.resolve(); }
+    function step(ms) { return gate().then(function () { return wait(ms); }); }
+
+    setInterval(function () {
+      if (document.hidden || !visible || !live.length) return;
+      var e = live[Math.floor(Math.random() * live.length)], k = Math.random();
+      if (k < .65) e.d.l += 1; else if (k < .85) e.d.s += 1; else e.d.r += 1;
+      stats(e);
+    }, 1300);
+
+    function clear(recs) {
+      recs.forEach(function (e) { e.node.classList.add('out'); });
+      return wait(550).then(function () { recs.forEach(function (e) { if (e.node.parentNode) e.node.parentNode.removeChild(e.node); }); live = []; });
+    }
+    function play(th) {
+      var recs = [], chain = Promise.resolve();
+      chain = chain.then(function () { if (topic) topic.textContent = th.tag + ' · illustrative feed'; });
+      th.posts.forEach(function (p, i) {
+        chain = chain.then(function () {
+          if (i === 0) return null;
+          return step(300).then(function () { var t = typing(p, i); body.appendChild(t); return step(1000).then(function () { body.removeChild(t); }); });
+        }).then(function () {
+          var e = build(p, i); recs.push(e); live.push(e); body.appendChild(e.node); return step(1700);
+        });
+      });
+      return chain.then(function () { return step(5200); }).then(function () { return clear(recs); });
+    }
+    function loop(i) { return play(T[i % T.length]).then(function () { return loop(i + 1); }); }
+
+    /* the first thread is already in the page: let it rest, then rotate */
+    var first = [].slice.call(body.querySelectorAll('.ys-post')).map(function (n) { return { node: n }; });
+    step(6500).then(function () { return clear(first); }).then(function () { return loop(1); });
+  }
+
   function initBlog() {
     var bar = $('[data-tagbar]'); if (!bar) return;
     var items = $$('.ys-blog [data-tags]'), tags = {};
@@ -345,6 +474,6 @@
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initDataTables, initBlog].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initDataTables, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();

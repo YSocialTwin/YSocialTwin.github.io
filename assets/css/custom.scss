@@ -801,3 +801,18 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-empty { color: var(--muted); padding: 1.5rem 0; }
 .ys-blog .pagination { margin: 2.4rem 0 1rem; }
 @media (max-width: 800px) { .ys-feature { grid-template-columns: 1fr; gap: 20px; } .ys-feature-art { min-height: 190px; } .ys-entry { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; } .ys-tile { width: 56px; height: 56px; } .ys-tile b { font-size: 1.3rem; } }
+
+/* hero feed: rotating threads */
+.ys-feed-body { display: grid; gap: 12px; align-content: start; transition: min-height .3s; }
+.ys-feed-body .ys-post { margin-left: 0; transition: opacity .5s, transform .5s; }
+.ys-feed-body .ys-post.l1 { margin-left: 22px; } .ys-feed-body .ys-post.l2 { margin-left: 44px; } .ys-feed-body .ys-post.l3 { margin-left: 22px; }
+.ys-feed-body .ys-post.out { animation: none; opacity: 0; transform: translateY(-10px) scale(.98); }
+.ys-feed-body .ys-post { animation-delay: 0s !important; }
+.ys-probe { position: absolute; visibility: hidden; pointer-events: none; left: 18px; top: 60px; }
+.ys-typing .ys-who { color: var(--muted); font-weight: 500; }
+.ys-dots { display: flex; gap: 5px; padding: 8px 0 4px; }
+.ys-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: ys-dot 1s infinite; }
+.ys-dots i:nth-child(2) { animation-delay: .15s; } .ys-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes ys-dot { 0%, 60%, 100% { opacity: .3; transform: none; } 30% { opacity: 1; transform: translateY(-3px); } }
+@media (max-width: 900px) { .ys-feed-body .ys-post.l1, .ys-feed-body .ys-post.l2, .ys-feed-body .ys-post.l3 { margin-left: 0; } .ys-feed-body .ys-post.l1 { margin-left: 14px; } .ys-feed-body .ys-post.l2 { margin-left: 28px; } .ys-feed-body .ys-post.l3 { margin-left: 14px; } }
+@media (prefers-reduced-motion: reduce) { .ys-dots i { animation: none; } }

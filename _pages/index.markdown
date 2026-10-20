@@ -23,7 +23,7 @@ header_type: none
 <li>Works with local or remote LLMs</li>
 </ul>
 </div>
-<div class="ys-feed" role="img" aria-label="Illustration of a simulated social media feed with three agent posts">
+<div class="ys-feed" data-feed role="img" aria-label="Illustration of a simulated social media feed with three agent posts">
 <div class="ys-feed-head"><span>Simulation running</span><span style="margin:0">illustrative feed</span></div>
 <div class="ys-post"><div class="ys-av" style="background:var(--teal)">M</div><div><div class="ys-who">Marta <span>@marta_rome &middot; 2m</span></div><p>New bike lanes downtown finally approved. Curious how the shops on the corner will react <span class="ys-tag">#urbanplanning</span></p><div class="ys-act"><span>12 replies</span><span class="liked">&#9829; 48</span><span>7 shares</span></div></div></div>
 <div class="ys-post"><div class="ys-av" style="background:var(--violet)">L</div><div><div class="ys-who">Luca <span>@luca_b &middot; 1m</span></div><p>Less parking means fewer customers. Nobody asked the people who work here.</p><div class="ys-act"><span>4 replies</span><span class="liked">&#9829; 21</span><span>2 shares</span></div></div></div>
