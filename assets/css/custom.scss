@@ -727,3 +727,8 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-lib .t { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
 .ys-lib strong { color: var(--heading); font-size: .95rem; } .ys-lib .t span { color: var(--muted); font-size: .78rem; }
 @media (max-width: 700px) { .ys-lib { flex-direction: column; text-align: center; padding: 8px 4px; gap: 4px; } .ys-lib img { width: 32px; height: 32px; } .ys-lib strong { font-size: .8rem; } .ys-lib .t span { font-size: .68rem; } }
+
+/* events list inside a year */
+.ys-events dd ul { list-style: none; margin: 0; padding: 0; }
+.ys-events dd li { padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.ys-events dd li:first-child { padding-top: 0; } .ys-events dd li:last-child { border-bottom: 0; padding-bottom: 0; }

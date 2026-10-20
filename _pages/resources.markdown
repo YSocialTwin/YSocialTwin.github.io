@@ -66,14 +66,22 @@ After the recovery, the database is ready to be queried.
 
 <p class="ys-intro" style="text-align:left;margin:0 0 14px"><code>YSocial</code> is a research project and we are always looking for collaborations. It has been presented at conferences, workshops and schools.</p>
 
-<dl class="ys-feat one">
-<div><dt>2025</dt><dd>
-<a href="{{ site.baseurl }}/events/hhai">Tutorial &ldquo;LLM-powered Simulations of Social Media Environments&rdquo;</a> at <a href="https://hhai-conference.org/2025/">HHAI</a>;
-workshop &ldquo;Simulating Societies&rdquo; at the <a href="https://ccs25.cssociety.org/">Conference on Complex Systems</a>;
-<a href="https://summerschool2025.sobigdata.eu/">SoBigData Summer School</a>, From Data to Social Innovation;
-<a href="https://tcn2025.wordpress.com/tcn2025/">The Threads of Complex Networks</a> Summer School;
-<a href="https://www.fairconference2025.it/">FAIR</a> workshop and conference; ICT4Intel Trends.</dd></div>
-<div><dt>2024</dt><dd>ASONAM (Advances in Social Networks Analysis and Mining); Complex Networks and their Applications; CS2Italy (Italian Conference on Computational Social Science); ICT4Intel Trends.</dd></div>
+<dl class="ys-feat one ys-events">
+<div><dt>2025</dt><dd><ul>
+<li><a href="{{ site.baseurl }}/events/hhai">Tutorial &ldquo;LLM-powered Simulations of Social Media Environments&rdquo;</a> at <a href="https://hhai-conference.org/2025/">HHAI</a></li>
+<li>Workshop &ldquo;Simulating Societies&rdquo; at the <a href="https://ccs25.cssociety.org/">Conference on Complex Systems</a></li>
+<li><a href="https://summerschool2025.sobigdata.eu/">SoBigData Summer School</a>, From Data to Social Innovation</li>
+<li><a href="https://tcn2025.wordpress.com/tcn2025/">The Threads of Complex Networks</a> Summer School</li>
+<li>Future Artificial Intelligence Research (FAIR) workshop</li>
+<li><a href="https://www.fairconference2025.it/">FAIR 2025 Conference</a></li>
+<li>ICT4Intel Trends</li>
+</ul></dd></div>
+<div><dt>2024</dt><dd><ul>
+<li>International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</li>
+<li>International Conference on Complex Networks and their Applications</li>
+<li>Italian Conference on Computational Social Science (CS2Italy)</li>
+<li>ICT4Intel Trends</li>
+</ul></dd></div>
 </dl>
 
 <p>A slide deck about the project:</p>
