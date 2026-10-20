@@ -693,3 +693,28 @@ details > summary .ys-scope { margin-left: 10px; vertical-align: middle; white-s
 .ys-article .ys-tabs .ys-tabpanel { padding: 10px 0 0; }
 .ys-article table td:nth-child(2):not(:last-child) { white-space: nowrap; }
 .ys-card .ys-muted { color: var(--muted); font-size: .88rem; margin-top: .5rem; padding-top: .5rem; border-top: 1px solid var(--rule); }
+
+/* sortable, searchable data tables */
+table.ys-data { font-size: .88rem; }
+table.ys-data th, table.ys-data td { padding: .32rem .8rem .32rem 0 !important; }
+table.ys-data td:first-child { white-space: nowrap; }
+table.ys-data th .ys-sort { all: unset; cursor: pointer; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; display: inline-flex; align-items: center; gap: 4px; }
+table.ys-data th .ys-sort:hover, table.ys-data th[aria-sort="ascending"] .ys-sort, table.ys-data th[aria-sort="descending"] .ys-sort { color: var(--heading); }
+table.ys-data th .ys-sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+table.ys-data th .ys-sort::after { content: "\2195"; opacity: .4; font-size: .9em; }
+table.ys-data th[aria-sort="ascending"] .ys-sort::after { content: "\2191"; opacity: 1; }
+table.ys-data th[aria-sort="descending"] .ys-sort::after { content: "\2193"; opacity: 1; }
+table.ys-data tr[hidden] { display: none; }
+table.ys-data:not(.ys-pubs) td { white-space: nowrap; }
+.ys-article .ys-table-wrap > table.ys-pubs { table-layout: fixed; min-width: 760px; }
+table.ys-pubs th:nth-child(1), table.ys-pubs td:nth-child(1) { width: 64px; }
+table.ys-pubs th:nth-child(3), table.ys-pubs td:nth-child(3) { width: 21%; }
+table.ys-pubs th:nth-child(4), table.ys-pubs td:nth-child(4) { width: 22%; }
+table.ys-pubs td { white-space: normal !important; overflow-wrap: anywhere; }
+table.ys-pubs td:first-child { font-variant-numeric: tabular-nums; }
+table.ys-pubs td:nth-child(2) { font-weight: 500; color: var(--heading); }
+table.ys-pubs td:nth-child(3), table.ys-pubs td:nth-child(4) { color: var(--muted); }
+.ys-article .ys-table-wrap > table.ys-data:not(.ys-pubs) { min-width: 700px; }
+table.ys-data:not(.ys-pubs) td:nth-child(5) { white-space: normal; min-width: 150px; }
+.ys-article .ys-table-wrap > table.ys-data:not(.ys-pubs) { min-width: 0; }
+table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: .6rem !important; }

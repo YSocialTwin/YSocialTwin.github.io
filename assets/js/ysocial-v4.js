@@ -273,26 +273,58 @@
   }
 
   /* ---------- publication filter (resources page) ---------- */
-  function initFilter() {
-    var ol = $$('#maincontent details ol').filter(function (o) { return $$(':scope > li', o).length > 20; })[0]; if (!ol) return;
-    var items = $$(':scope > li', ol), years = {};
-    items.forEach(function (li) { var m = li.textContent.match(/\((20\d\d)\)/) || li.textContent.match(/\b(20\d\d)\b/); li._y = m ? m[1] : ''; if (li._y) years[li._y] = 1; });
-    var bar = doc.createElement('div'); bar.className = 'ys-filter';
-    bar.innerHTML = '<label class="sr-only" for="ys-q">Search publications</label><input id="ys-q" type="search" placeholder="Search title, author, venue" autocomplete="off"><label class="sr-only" for="ys-y">Filter by year</label><select id="ys-y"><option value="">All years</option>' +
-      Object.keys(years).sort().reverse().map(function (y) { return '<option>' + y + '</option>'; }).join('') + '</select><span class="ys-count" role="status" aria-live="polite"></span>';
-    ol.parentNode.insertBefore(bar, ol);
-    var q = $('#ys-q', bar), y = $('#ys-y', bar), c = $('.ys-count', bar);
-    function apply() {
-      var t = q.value.toLowerCase().trim(), yy = y.value, n = 0;
-      items.forEach(function (li) { var ok = (!yy || li._y === yy) && (!t || li.textContent.toLowerCase().indexOf(t) > -1); li.hidden = !ok; if (ok) n++; });
-      c.textContent = n + ' of ' + items.length;
-    }
-    q.addEventListener('input', apply); y.addEventListener('change', apply); apply();
+  function initDataTables() {
+    $$('#maincontent table.ys-data').forEach(function (t, ti) {
+      var body = t.tBodies[0]; if (!body) return;
+      var rows = $$('tr', body), heads = $$('thead th', t), id = 'ys-dt-' + ti;
+      var label = t.getAttribute('data-label') || 'Filter rows';
+      var yc = t.getAttribute('data-year-col'); yc = yc === null ? -1 : parseInt(yc, 10);
+      var bar = doc.createElement('div'); bar.className = 'ys-filter';
+      var h = '<label class="sr-only" for="' + id + '-q">' + label + '</label><input id="' + id + '-q" type="search" placeholder="' + (t.getAttribute('data-placeholder') || 'Search') + '" autocomplete="off">';
+      var years = {};
+      if (yc > -1) rows.forEach(function (r) { var y = r.cells[yc].textContent.trim(); if (y) years[y] = 1; });
+      if (yc > -1) h += '<label class="sr-only" for="' + id + '-y">Filter by year</label><select id="' + id + '-y"><option value="">All years</option>' + Object.keys(years).sort().reverse().map(function (y) { return '<option>' + y + '</option>'; }).join('') + '</select>';
+      h += '<span class="ys-count" role="status" aria-live="polite"></span>';
+      bar.innerHTML = h;
+      var host = t.closest('.ys-table-wrap') || t; host.parentNode.insertBefore(bar, host);
+      var q = $('#' + id + '-q', bar), ys = yc > -1 ? $('#' + id + '-y', bar) : null, c = $('.ys-count', bar);
+      rows.forEach(function (r, i) { r._i = i; r._t = r.textContent.toLowerCase(); });
+      function apply() {
+        var term = q.value.toLowerCase().trim(), yy = ys ? ys.value : '', n = 0;
+        rows.forEach(function (r) {
+          var ok = (!yy || r.cells[yc].textContent.trim() === yy) && (!term || r._t.indexOf(term) > -1);
+          r.hidden = !ok; if (ok) n++;
+        });
+        c.textContent = n + ' of ' + rows.length;
+      }
+      q.addEventListener('input', apply); if (ys) ys.addEventListener('change', apply); apply();
+      function key(r, col) {
+        var cell = r.cells[col], v = cell.getAttribute('data-v'); if (v === null) v = cell.textContent.trim();
+        var num = parseFloat(String(v).replace(/[^0-9.\-]/g, ''));
+        return (!isNaN(num) && /^[\sv0-9.,\-]+$/i.test(String(v))) ? num : String(v).toLowerCase();
+      }
+      heads.forEach(function (th, col) {
+        if (th.hasAttribute('data-nosort')) return;
+        var txt = th.textContent; th.textContent = '';
+        var btn = doc.createElement('button'); btn.type = 'button'; btn.className = 'ys-sort'; btn.textContent = txt;
+        th.appendChild(btn); th.setAttribute('aria-sort', 'none');
+        btn.addEventListener('click', function () {
+          var dir = th.getAttribute('aria-sort') === 'ascending' ? 'descending' : 'ascending';
+          heads.forEach(function (o) { if (o.hasAttribute('aria-sort')) o.setAttribute('aria-sort', 'none'); });
+          th.setAttribute('aria-sort', dir);
+          var m = dir === 'ascending' ? 1 : -1;
+          rows.slice().sort(function (a, b) {
+            var x = key(a, col), y = key(b, col);
+            if (x < y) return -m; if (x > y) return m; return a._i - b._i;
+          }).forEach(function (r) { body.appendChild(r); });
+        });
+      });
+    });
   }
 
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initFilter].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initDataTables].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();
