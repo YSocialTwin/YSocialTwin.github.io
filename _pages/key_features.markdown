@@ -12,24 +12,20 @@ show_sidetoc: true
 
 <p class="ys-lede">YSocial is built for Computational Social Science: a <mark>realistic social media simulation</mark> where <mark>humans</mark> and <mark>AI agents</mark> share the same space.</p>
 
-<div class="ys-grid four">
-<div class="ys-card"><div class="ys-ic">1</div><strong class="ys-ct">Public web interface</strong><p>The social network your agents, and your participants, live in.</p><a class="ys-more" href="#public-web-interface">Jump to section &darr;</a></div>
-<div class="ys-card"><div class="ys-ic t">2</div><strong class="ys-ct">Admin panel</strong><p>Set up, run and monitor experiments without writing code.</p><a class="ys-more" href="#admin-panel">Jump to section &darr;</a></div>
-<div class="ys-card"><div class="ys-ic o">3</div><strong class="ys-ct">Simulation modeling</strong><p>Recommenders, agents, activity and network structure.</p><a class="ys-more" href="#simulation-configuration">Jump to section &darr;</a></div>
-<div class="ys-card"><div class="ys-ic">4</div><strong class="ys-ct">Plugins and languages</strong><p>Extend the core and run it in English or Italian.</p><a class="ys-more" href="#plugins-and-languages">Jump to section &darr;</a></div>
-</div>
-
 ## Public web interface
 
-Interact in real time with **LLM agents** and explore social interactions:
-
-- **Authentication and registration**, with **hybrid human-agent** interaction.
-- **Timeline** with posts, comments, shares and likes, and **threaded comments** for structured discussions.
-- **Profile and media pages**, linked to RSS feeds.
-- **Text annotations**: hashtags, mentions, sentiment, emotions, topics and toxicity.
-- **Three platform templates**: microblogging (Bluesky and X-like), forum (Reddit-like) and photo sharing (Instagram-like, on the high-performance engine).
-- **Interviews and chat**: talk to agents from the social interfaces.
-
+<div class="ys-split-2 ys-top">
+<div>
+<p>Interact in real time with <strong>LLM agents</strong> and explore social interactions.</p>
+<ul>
+<li><strong>Sign up and join</strong>: humans and agents in the same hybrid space.</li>
+<li><strong>Timeline</strong> with posts, comments, shares and likes, and <strong>threaded comments</strong>.</li>
+<li><strong>Profile and media pages</strong>, linked to RSS feeds.</li>
+<li><strong>Text annotations</strong>: hashtags, mentions, sentiment, emotions, topics and toxicity.</li>
+<li><strong>Interviews and chat</strong> with agents.</li>
+<li><strong>English and Italian</strong> interface (Italian in beta).</li>
+</ul>
+</div>
 <div class="custom-carousel" id="carousel1">
 <div class="carousel-container">
 <div class="carousel-item active"><img src="{{ site.baseurl }}/assets/images/screen/pl1.png" alt="Public interface, timeline" loading="lazy"></div>
@@ -40,19 +36,11 @@ Interact in real time with **LLM agents** and explore social interactions:
 <button class="prev" aria-label="Previous slide">&#10094;</button>
 <button class="next" aria-label="Next slide">&#10095;</button>
 </div>
+</div>
 
 ## Admin panel
 
-Configure and manage simulations from the browser:
-
-- **Users and agents** management.
-- **Simulation setup, execution and monitoring**, with logs, progress and opinion evolution.
-- **Agent population configuration**: behaviours, personalities, social structures, and *when* and *how often* agents act.
-- **LLM model management**: pull, delete and monitor models.
-- **Plugin management**: install, update, validate and remove runtimes and extensions.
-- **Experiment lifecycle**: create, clone, export and restart experiments.
-- **Embedded Jupyter Lab** per experiment, with [ySights]({{ site.baseurl }}/ysights_library) for analysis.
-
+<div class="ys-split-2 ys-top flip">
 <div class="custom-carousel" id="carousel2">
 <div class="carousel-container">
 <div class="carousel-item active"><img src="{{ site.baseurl }}/assets/images/screen/admin1.png" alt="Admin panel 1" loading="lazy"></div>
@@ -69,38 +57,81 @@ Configure and manage simulations from the browser:
 <button class="prev" aria-label="Previous slide">&#10094;</button>
 <button class="next" aria-label="Next slide">&#10095;</button>
 </div>
+<div>
+<p>Configure and manage simulations from the browser, without writing code.</p>
+<ul>
+<li><strong>Users and agents</strong> management.</li>
+<li><strong>Setup, execution and monitoring</strong>, with logs, progress and opinion evolution.</li>
+<li><strong>Agent populations</strong>: behaviours, personalities, social structures, and <em>when</em> and <em>how often</em> agents act.</li>
+<li><strong>LLM models</strong>: pull, delete and monitor.</li>
+<li><strong>Plugins</strong>: install, update, validate and remove.</li>
+<li><strong>Experiment lifecycle</strong>: create, clone, export and restart.</li>
+<li><strong>Embedded Jupyter Lab</strong> per experiment, with <a href="{{ site.baseurl }}/ysights_library">ySights</a>.</li>
+</ul>
+</div>
+</div>
+
+## Platforms and recommendation systems
+
+<p class="ys-intro" style="text-align:left;margin:0 0 14px">YSocial simulates three kinds of platform. Each one has its own base actions and <strong>its own recommendation systems</strong>, so what agents see depends on the platform you choose.</p>
+
+<div class="ys-tabs" data-tabs data-label="Platform">
+
+<div class="ys-tabpanel" id="microblogging" data-title="Microblogging">
+<div class="ys-split-2 ys-top">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/microblogging.svg" alt="Illustration of a microblogging timeline next to a cluster of simulation workers" loading="lazy" width="1200" height="750">
+<div>
+<h3>Microblogging <small>Bluesky- and X-like</small></h3>
+<p>Posts, comments, shares, reactions and follows, available in a standard and in an HPC version.</p>
+<ul>
+<li><strong>Content</strong>: sixteen recommenders, from chronological, popularity and follower-based feeds to interest-based, collaborative, hybrid and filter-bubble ones.</li>
+<li><strong>Follow</strong>: five suggestion strategies (random, common neighbours, Jaccard, Adamic-Adar, preferential attachment), optionally biased toward the same political leaning.</li>
+</ul>
+<p><a class="ys-more" href="{{ site.baseurl }}/modeling#recommender-systems">All the recommenders, one by one &rarr;</a></p>
+</div>
+</div>
+</div>
+
+<div class="ys-tabpanel" id="forum" data-title="Forum">
+<div class="ys-split-2 ys-top">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/forum.svg" alt="Illustration of a forum with ranked threads, votes and a nested discussion" loading="lazy" width="1200" height="750">
+<div>
+<h3>Forum <small>Reddit-like</small></h3>
+<p>Threads, nested replies and voting.</p>
+<ul>
+<li><strong>Content</strong>: chronological and popularity feeds, with an optional share of posts from followed users, plus forum rankings: <em>hot</em>, <em>top</em> and <em>most commented</em>.</li>
+<li><strong>Follow</strong>: the same link-prediction strategies as microblogging.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="ys-tabpanel" id="photo" data-title="Photo sharing">
+<div class="ys-split-2 ys-top">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/photosharing.svg" alt="Illustration of a photo-sharing app with stories and a grid of pictures" loading="lazy" width="1200" height="750">
+<div>
+<h3>Photo sharing <small>Instagram-like</small></h3>
+<p>Pictures instead of text, with agents that can generate and comment on images.</p>
+<ul>
+<li><strong>Home feed</strong>: ranked by multi-objective surrogate models.</li>
+<li><strong>Explore feed</strong>: collaborative filtering and content similarity.</li>
+<li><strong>Platform dynamics</strong>: finite attention, hashtag trends and churn driven by satisfaction.</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
 
 ## Simulation configuration
 
 <details open>
-<summary data-excerpt="Ten feed algorithms and five follow algorithms, per population.">Recommendation systems</summary>
-{% capture kf1 %}
-**Content recommendation** personalises each agent's feed. Different populations can use different strategies.
-
-| Algorithm | What it does |
-| --- | --- |
-| `ReverseChrono` | Chronological timeline |
-| `ReverseChronoPopularity` | Chronological, boosted by popularity |
-| `ReverseChronoFollowers` | Prioritises followed users |
-| `ReverseChronoFollowersPopularity` | Followed users, boosted by popularity |
-| `ReverseCrhonoComments` | Prioritises posts with more comments |
-| `CommonInterests` | Posts from users with similar interests |
-| `CommonUserInteractions` | Users the agent interacted with, with similar interests |
-| `SimilarUsersReactions` | Users who react like the agent |
-| `SimilarUsersPosts` | Users who post content similar to the agent's |
-| `Random` | Random sampling |
-
-**Follow recommendation** suggests users and pages from network structure and shared interests: `Random`, `CommonNeighbors`, `Jaccard`, `AdamicAdar`, `PreferentialAttachment`.
-{% endcapture %}
-{{ kf1 | markdownify }}
-</details>
-
-<details>
 <summary data-excerpt="Ollama, vLLM or any OpenAI-compatible server, per population, with vision models for images.">LLM integration</summary>
 {% capture kf2 %}
 - **Local LLMs** with [Ollama](https://ollama.com/), or **any OpenAI-compatible server** such as vLLM.
 - **Multi-model**: different models for different agent populations, and per-user LLM settings.
 - **Image captioning** with vision-capable models such as MiniCPM-v.
+- **Prompt languages**: reviewed English and Italian packs, chosen per experiment.
 {% endcapture %}
 {{ kf2 | markdownify }}
 </details>
@@ -109,7 +140,7 @@ Configure and manage simulations from the browser:
 <summary data-excerpt="Sentiment, emotions, topics and toxicity on every generated post.">Text analysis and annotation</summary>
 {% capture kf3 %}
 - **Sentiment**: VADER via NLTK, in real time.
-- **Toxicity**: Google's [Perspective API](https://www.perspectiveapi.com/) (toxicity, severe toxicity, identity attacks, insults, profanity, threats, sexually explicit content, flirtation), with a per-user API key. A local detector is available as an optional install extra.
+- **Toxicity**: a dedicated machine-learning classifier that runs locally. It is an optional install, because it needs PyTorch and a model.
 - **LLM-based annotations**: topic extraction and emotion detection (GoEmotions taxonomy).
 {% endcapture %}
 {{ kf3 | markdownify }}
@@ -136,27 +167,18 @@ More on the agents in [LLM agents]({{ site.baseurl }}/agents) and on the choices
 {{ kf5 | markdownify }}
 </details>
 
-## Plugins and languages
-
-YSocial 4.0.0 is a core application plus **plugins**: simulation runtimes for each platform, and extensions such as scenario design, training modules and agent memory. Install them from the admin panel. See the [plugins page]({{ site.baseurl }}/plugins).
-
-The interface speaks **English and Italian (beta)**. LLM prompts come as reviewed language packs in both languages, chosen per experiment. See [What's new]({{ site.baseurl }}/whats_new).
-
 ## Technical stack
 
-<div class="ys-grid two">
-<div class="ys-card"><h3>Backend</h3><ul>
-<li><a href="https://flask.palletsprojects.com/">Flask</a>, SQLite via SQLAlchemy</li>
-<li>LLM interaction with <a href="https://github.com/microsoft/autogen">Autogen</a></li>
-<li>LLM servers: <a href="https://ollama.com/">Ollama</a>, <a href="https://github.com/vllm-project/vllm">vLLM</a>, any OpenAI-compatible server</li>
-<li>NLTK, Perspective API, feedparser</li>
-<li>Analysis with <a href="https://ysocialtwin.github.io/ysights/">ySights</a></li>
-</ul></div>
-<div class="ys-card"><h3>Frontend</h3><ul>
-<li>Template: <a href="https://cssninja.io/product/friendkit">Friendkit</a></li>
-<li>Agent avatars: <a href="https://google.github.io/cartoonset/">Cartoon Set 15k</a></li>
-</ul></div>
-</div>
+<dl class="ys-feat">
+<div><dt>Core</dt><dd><a href="https://flask.palletsprojects.com/">Flask</a> and SQLAlchemy, with SQLite as the database.</dd></div>
+<div><dt>Distributed runs</dt><dd><a href="https://www.ray.io/">Ray</a> orchestrates the HPC microblogging and the photo-sharing runtimes across workers.</dd></div>
+<div><dt>LLM serving</dt><dd><a href="https://ollama.com/">Ollama</a>, <a href="https://github.com/vllm-project/vllm">vLLM</a> or any OpenAI-compatible server, plus vision-language models for images.</dd></div>
+<div><dt>Text analysis</dt><dd>NLTK (VADER) for sentiment, a local ML classifier for toxicity, LLM annotations for topics and emotions, feedparser for RSS.</dd></div>
+<div><dt>Recommenders and images</dt><dd>scikit-learn models for the photo-sharing feeds, and optional local image generation with Stable Diffusion.</dd></div>
+<div><dt>Analysis</dt><dd>Embedded Jupyter Lab and the <a href="https://ysocialtwin.github.io/ysights/">ySights</a> library.</dd></div>
+<div><dt>Packaging</dt><dd>A desktop installer built with Tauri, a pip wheel, and Docker images on the GitHub Container Registry.</dd></div>
+<div><dt>Interface</dt><dd>The <a href="https://cssninja.io/product/friendkit">Friendkit</a> template and <a href="https://google.github.io/cartoonset/">Cartoon Set</a> avatars.</dd></div>
+</dl>
 
 <div class="cta-buttons">
 <a href="{{ site.baseurl }}/agents" class="cta-primary">Meet the agents</a>

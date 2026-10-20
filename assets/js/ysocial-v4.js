@@ -238,7 +238,7 @@
   function initTabs() {
     $$('[data-tabs]').forEach(function (box) {
       var panels = $$(':scope > .ys-tabpanel', box); if (!panels.length) return;
-      var cards = box.hasAttribute('data-cards'); var list = doc.createElement('div'); list.className = 'ys-tablist' + (cards ? ' as-cards' : ''); list.setAttribute('role', 'tablist'); list.setAttribute('aria-label', 'Installation method');
+      var cards = box.hasAttribute('data-cards'); var list = doc.createElement('div'); list.className = 'ys-tablist' + (cards ? ' as-cards' : ''); list.setAttribute('role', 'tablist'); list.setAttribute('aria-label', box.getAttribute('data-label') || 'Sections');
       var tabs = panels.map(function (p, i) {
         var b = doc.createElement('button'); b.type = 'button'; b.className = 'ys-tab'; b.id = 'tab-' + p.id; b.setAttribute('role', 'tab');
         b.setAttribute('aria-controls', p.id);

@@ -667,3 +667,28 @@ details:not([open]) > summary::after { flex: 0 1 46%; margin-left: auto; }
 .ys-tab.ys-tabcard .ys-pill { white-space: nowrap; align-self: flex-start; }
 @media (max-width: 600px) { .download-box:not(.is-mine) .ys-mine { display: none; } }
 details > summary .ys-scope { margin-left: 10px; vertical-align: middle; white-space: nowrap; font-weight: 700; }
+
+/* chips and variants (plugins page) */
+.ys-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 0; }
+.ys-chip { display: inline-block; padding: 4px 12px; border: 1px solid var(--rule); border-radius: 999px; font-family: var(--mono); font-size: .84rem; color: var(--text) !important; text-decoration: none !important; background: var(--surface); }
+.ys-chip:hover { border-color: var(--accent); color: var(--accent) !important; }
+.ys-variants { list-style: none; padding: 0; margin: .6rem 0 0; }
+.ys-variants li { padding: 12px 0; border-top: 1px solid var(--rule); margin: 0; }
+.ys-variants li:first-child { border-top: 0; padding-top: 4px; }
+.ys-runtimes .ys-row img.ys-row-img { border: 1px solid var(--rule); border-radius: var(--radius-sm); }
+.ys-runtimes .ys-row h3 { margin: 10px 0 6px; font-size: 1.6rem; }
+.ys-runtimes .ys-row p { max-width: 52ch; }
+.ys-article .ys-rows { margin-top: 1.4rem; gap: clamp(40px, 6vw, 72px); }
+.ys-article .ys-row { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+.ys-article .ys-row.flip { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+
+/* split blocks inside articles */
+.ys-article .ys-split-2.ys-top { align-items: start; margin: 1rem 0 2rem; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+.ys-article .ys-split-2.ys-top.flip { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+.ys-article .ys-split-2 > img.ys-row-img { width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius-sm); }
+.ys-article .ys-split-2 .custom-carousel { margin: 0; max-width: none; }
+.ys-article .ys-split-2 h3 { margin: 0 0 .4rem; font-size: 1.5rem; }
+.ys-article .ys-split-2 h3 small { display: block; font-size: .85rem; font-weight: 600; color: var(--muted); letter-spacing: .02em; margin-top: 2px; }
+.ys-article .ys-split-2 ul { padding-left: 1.1rem; }
+.ys-article .ys-tabs .ys-tabpanel { padding: 10px 0 0; }
+.ys-article table td:nth-child(2):not(:last-child) { white-space: nowrap; }

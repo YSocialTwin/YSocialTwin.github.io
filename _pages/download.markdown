@@ -14,7 +14,7 @@ show_sidetoc: true
 
 ## Choose how to install
 
-<div class="ys-tabs" data-tabs data-cards>
+<div class="ys-tabs" data-tabs data-cards data-label="Installation method">
 
 <div class="ys-tabpanel" id="installer" data-title="Desktop installer" data-kicker="Easiest" data-pill="" data-desc="No terminal, no Python. macOS, Windows, Linux.">
 <p>Version <strong>{{ site.ysocial_version }}</strong>. The installer prepares a private Python environment the first time you run it (a few minutes, internet required).</p>
