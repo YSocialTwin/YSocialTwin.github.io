@@ -759,3 +759,14 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-inst a { height: 64px; padding: 8px 12px; }
 @media (max-width: 700px) { .ys-inst { flex-wrap: wrap; } .ys-inst li, .ys-inst li:first-child { flex: 1 1 42%; } .ys-inst li:first-child { flex-basis: 100%; } }
 .ys-article ul.ys-team, .ys-article ul.ys-logos { max-width: none; width: 100%; }
+
+/* about: smaller portraits, centred funders */
+.ys-article ul.ys-team, .ys-team { grid-template-columns: repeat(auto-fill, 148px); gap: 22px 22px; justify-content: start; }
+@media (max-width: 900px) { .ys-team { grid-template-columns: repeat(auto-fill, 148px); } }
+@media (max-width: 600px) { .ys-team { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 18px 12px; } }
+.ys-person strong { font-size: .95rem; }
+.ys-funders { justify-content: center; }
+.ys-funders li { flex: 0 1 240px; }
+.ys-banner { max-width: 760px; margin-left: auto; margin-right: auto; }
+.ys-article img.ys-banner { margin-left: auto !important; margin-right: auto !important; max-width: 760px; }
+.ys-article p:has(> img.ys-banner) { max-width: none; }
