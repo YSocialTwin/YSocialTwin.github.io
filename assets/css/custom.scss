@@ -732,3 +732,30 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-events dd ul { list-style: none; margin: 0; padding: 0; }
 .ys-events dd li { padding: 6px 0; border-bottom: 1px solid var(--rule); }
 .ys-events dd li:first-child { padding-top: 0; } .ys-events dd li:last-child { border-bottom: 0; padding-bottom: 0; }
+
+/* about: team grid and logo walls */
+.ys-article h3 + ul.ys-team { margin-top: .8rem; }
+.ys-team { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 18px; }
+.ys-person { display: flex; flex-direction: column; gap: 3px; margin: 0; padding: 0; }
+.ys-person::marker { content: none; }
+.ys-person img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--rule); margin-bottom: 8px; transition: transform .25s, border-color .25s; }
+.ys-person:hover img { transform: translateY(-3px); border-color: var(--accent); }
+.ys-person strong { color: var(--heading); font-size: 1rem; line-height: 1.25; }
+.ys-person .ys-role { color: var(--muted); font-size: .86rem; line-height: 1.35; }
+.ys-person a { font-size: .86rem; margin-top: 2px; }
+@media (max-width: 900px) { .ys-team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ys-team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; } }
+.ys-logos { list-style: none; margin: 1.4rem 0 1rem; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.ys-logos li { margin: 0; padding: 0; flex: 1 1 150px; }
+.ys-logos a { display: flex; align-items: center; justify-content: center; height: 72px; padding: 10px 16px; background: #fff; border: 1px solid var(--rule); border-radius: var(--radius-sm); transition: transform .2s, border-color .2s; }
+.ys-logos a:hover { transform: translateY(-2px); border-color: var(--accent); }
+.ys-logos img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+.ys-funders li { flex: 1 1 200px; }
+.ys-funders a { height: 84px; }
+.ys-banner { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); margin: 0 0 1.6rem; }
+.ys-inst { flex-wrap: nowrap; }
+.ys-inst li { flex: 1 1 0; min-width: 0; }
+.ys-inst li:first-child { flex: 2 1 0; }
+.ys-inst a { height: 64px; padding: 8px 12px; }
+@media (max-width: 700px) { .ys-inst { flex-wrap: wrap; } .ys-inst li, .ys-inst li:first-child { flex: 1 1 42%; } .ys-inst li:first-child { flex-basis: 100%; } }
+.ys-article ul.ys-team, .ys-article ul.ys-logos { max-width: none; width: 100%; }
