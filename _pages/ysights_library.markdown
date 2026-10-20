@@ -56,10 +56,10 @@ show_sidetoc: true
 <p class="ys-intro" style="text-align:left;margin:0 0 14px">For network analysis, ySights integrates by design with task-oriented libraries.</p>
 
 <div class="ys-libs">
-<a class="ys-lib" href="https://dynetx.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/DyNetx%20v.png" alt="" loading="lazy"><strong>DyNetX</strong><span>Dynamic networks</span></a>
-<a class="ys-lib" href="https://cdlib.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/CDlib%20v.png" alt="" loading="lazy"><strong>CDlib</strong><span>Community detection</span></a>
-<a class="ys-lib" href="https://ndlib.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/NDlib%20v.png" alt="" loading="lazy"><strong>NDlib</strong><span>Opinion dynamics</span></a>
-<a class="ys-lib" href="https://ash-model.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/ASH%20v.png" alt="" loading="lazy"><strong>ASH</strong><span>Higher-order networks</span></a>
+<a class="ys-lib" href="https://dynetx.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/DyNetx%20v.png" alt="" loading="lazy"><span class="t"><strong>DyNetX</strong><span>Dynamic networks</span></span></a>
+<a class="ys-lib" href="https://cdlib.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/CDlib%20v.png" alt="" loading="lazy"><span class="t"><strong>CDlib</strong><span>Community detection</span></span></a>
+<a class="ys-lib" href="https://ndlib.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/NDlib%20v.png" alt="" loading="lazy"><span class="t"><strong>NDlib</strong><span>Opinion dynamics</span></span></a>
+<a class="ys-lib" href="https://ash-model.readthedocs.io"><img src="{{ site.baseurl }}/assets/images/libs/ASH%20v.png" alt="" loading="lazy"><span class="t"><strong>ASH</strong><span>Higher-order networks</span></span></a>
 </div>
 
 ## Get started

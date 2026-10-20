@@ -718,3 +718,12 @@ table.ys-pubs td:nth-child(3), table.ys-pubs td:nth-child(4) { color: var(--mute
 table.ys-data:not(.ys-pubs) td:nth-child(5) { white-space: normal; min-width: 150px; }
 .ys-article .ys-table-wrap > table.ys-data:not(.ys-pubs) { min-width: 0; }
 table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: .6rem !important; }
+
+/* library logos: one compact row */
+.ys-libs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0 0 1.6rem; }
+.ys-lib { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border: 1px solid var(--rule); border-radius: var(--radius-sm); text-decoration: none; color: var(--text); transition: border-color .15s; min-width: 0; }
+.ys-lib:hover { border-color: var(--accent); text-decoration: none; }
+.ys-lib img { width: 40px; height: 40px; flex: none; object-fit: contain; background: #fff; border-radius: 8px; padding: 3px; }
+.ys-lib .t { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.ys-lib strong { color: var(--heading); font-size: .95rem; } .ys-lib .t span { color: var(--muted); font-size: .78rem; }
+@media (max-width: 700px) { .ys-lib { flex-direction: column; text-align: center; padding: 8px 4px; gap: 4px; } .ys-lib img { width: 32px; height: 32px; } .ys-lib strong { font-size: .8rem; } .ys-lib .t span { font-size: .68rem; } }
