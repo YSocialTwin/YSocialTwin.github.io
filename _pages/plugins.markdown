@@ -10,7 +10,7 @@ show_sidetoc: true
 
 <div class="ys-article" markdown="1">
 
-<p class="ys-lede">YSocial is a core application (<code>y_web</code>) plus <mark>optional plugins</mark>. Install what your experiment needs, from the admin panel or by cloning into <code>external/</code>.</p>
+<p class="ys-lede">YSocial is a core application plus <mark>optional plugins</mark>. Install what your experiment needs, from the admin panel or by cloning into <code>external/</code>.</p>
 
 <div class="alert-info-custom">
 <strong>How installation works.</strong> Open the <em>Plugins</em> page of the admin panel, pick a plugin from the public registry, and install it from its GitHub release or a git checkout. Dependencies are installed automatically. Plugins can also be updated, validated and removed from the same page.

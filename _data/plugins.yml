@@ -26,17 +26,17 @@
       group: Photo sharing
       desc: Simulation runtime for photo-sharing experiments, with an Instagram-like platform.
       repo: https://github.com/YSocialTwin/YPhotoSharing
-- category: Backend extensions
-  blurb: Tools to prepare experiments and to teach with them.
-  items:
-    - name: Scenario Design
-      group: Backend settings
-      desc: Design multi-round interaction scenarios (threads, posts and their timing) before running an experiment.
-      repo: https://github.com/YSocialTwin/ScenarioDesign
-    - name: Training Modules
-      group: Backend settings
-      desc: Build training courses from ordered steps (YSocial scenarios, questionnaires or external pages), assign them to students and export their activity.
-      repo: https://github.com/YSocialTwin/TrainingModules
+#- category: Backend extensions
+  #blurb: Tools to prepare experiments and to teach with them.
+  #items:
+   # - name: Scenario Design
+   #   group: Backend settings
+   #   desc: Design multi-round interaction scenarios (threads, posts and their timing) before running an experiment.
+   #   repo: https://github.com/YSocialTwin/ScenarioDesign
+   # - name: Training Modules
+   #   group: Backend settings
+   #   desc: Build training courses from ordered steps (YSocial scenarios, questionnaires or external pages), assign them to students and export their activity.
+   #   repo: https://github.com/YSocialTwin/TrainingModules
 - category: Frontend extensions
   blurb: Extras for the participant interface.
   items:
