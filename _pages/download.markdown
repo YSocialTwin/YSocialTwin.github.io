@@ -56,7 +56,10 @@ Open the installer, press *Install YSocial*, then **Start**. YSocial opens in it
 {% endcapture %}
 {{ t_installer | markdownify }}
 <div class="alert-warning-custom">
-<strong>macOS:</strong> right-click the app and choose <em>Open</em> (or run <code>xattr -dr com.apple.quarantine /Applications/YSocial.app</code>). <strong>Windows:</strong> choose <em>More info</em> and then <em>Run anyway</em>.
+<p><strong>macOS:</strong> if you see <em>"The application cannot be opened"</em> (or that it is damaged or from an unverified developer), macOS has quarantined the download. Drag <em>YSocial</em> to <em>Applications</em>, then run this once in Terminal:</p>
+<pre><code>xattr -cr /Applications/YSocial.app</code></pre>
+<p>Then open the app again. Without Terminal: right-click the app, choose <em>Open</em>, and confirm; on recent macOS versions also use <em>System Settings → Privacy &amp; Security → Open Anyway</em>.</p>
+<p><strong>Windows:</strong> choose <em>More info</em> and then <em>Run anyway</em>.</p>
 </div>
 {% capture t_installer2 %}
 Under *More options* you can open YSocial in your default browser instead of its own window, start Jupyter Lab (off by default), change the address and port (`127.0.0.1:8080` by default), and switch off the update check.
