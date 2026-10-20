@@ -146,7 +146,7 @@ The interface speaks **English and Italian (beta)**. LLM prompts come as reviewe
 
 <div class="ys-grid two">
 <div class="ys-card"><h3>Backend</h3><ul>
-<li><a href="https://flask.palletsprojects.com/">Flask</a>, SQLite or PostgreSQL via SQLAlchemy</li>
+<li><a href="https://flask.palletsprojects.com/">Flask</a>, SQLite via SQLAlchemy</li>
 <li>LLM interaction with <a href="https://github.com/microsoft/autogen">Autogen</a></li>
 <li>LLM servers: <a href="https://ollama.com/">Ollama</a>, <a href="https://github.com/vllm-project/vllm">vLLM</a>, any OpenAI-compatible server</li>
 <li>NLTK, Perspective API, feedparser</li>

@@ -37,7 +37,7 @@ header_title: "ySights"
 {% endraw %}
 
  **Data Extraction**
-- Easy access to simulation databases (via SQLite and PostgreSQL): connect to and query simulation data.
+- Easy access to simulation databases (SQLite): connect to and query simulation data.
 - Streamlined querying of agent interactions: retrieve posts, comments, likes, shares, and other interactions.
 - Export capabilities for further analysis..
 
@@ -100,7 +100,7 @@ To enhance its network analysis capabilities, `ySights` integrates by design wit
  <strong>Requirements</strong>: ySights requires Python 3.8+ and is designed to work with YSocial simulation databases.
 </div>
 
-`ySights` can be easily installed via pip. Once installed, you can connect it to your existing `YSocial` simulation database (SQLite or PostgreSQL) to start analyzing data.
+`ySights` can be easily installed via pip. Once installed, you can connect it to your existing `YSocial` simulation database (SQLite) to start analyzing data.
 
 **Installation:**
 
@@ -116,7 +116,7 @@ Here is a quick example to get you started with `ySights`.
 from ysights import YSocialAnalyzer
 
 # Load simulation data
-analyzer = YSocialAnalyzer('path/to/database.db') // For PostgreSQL, use connection string
+analyzer = YSocialAnalyzer('path/to/database.db')
 
 # Get basic statistics
 stats = analyzer.get_statistics()
