@@ -14,9 +14,9 @@ show_sidetoc: true
 
 ## Choose how to install
 
-<div class="ys-tabs" data-tabs>
+<div class="ys-tabs" data-tabs data-cards>
 
-<div class="ys-tabpanel" id="installer" data-title="Desktop installer">
+<div class="ys-tabpanel" id="installer" data-title="Desktop installer" data-kicker="Easiest" data-pill="" data-desc="No terminal, no Python. macOS, Windows, Linux.">
 <p>Version <strong>{{ site.ysocial_version }}</strong>. The installer prepares a private Python environment the first time you run it (a few minutes, internet required).</p>
 <p class="ys-detect">We think you are on <strong id="ys-detected">your system</strong>, highlighted below.</p>
 <div class="download-grid">
@@ -24,31 +24,29 @@ show_sidetoc: true
 <span class="ys-mine">Your system</span>
 <span class="os-ic"><i class="fab fa-apple" aria-hidden="true"></i></span>
 <h3>macOS</h3>
-<p>Apple silicon and Intel, <code>.dmg</code></p>
+<p>Apple silicon and Intel</p>
 <div class="ys-dl">
-<a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-macos-arm64.dmg">Apple silicon (arm64)</a>
-<a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-macos-x64.dmg">Intel (x64)</a>
+<div class="ys-dlrow"><span>Apple silicon</span><a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-macos-arm64.dmg">.dmg</a></div>
+<div class="ys-dlrow"><span>Intel</span><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-macos-x64.dmg">.dmg</a></div>
 </div>
 </div>
 <div class="download-box" data-os="windows">
 <span class="ys-mine">Your system</span>
 <span class="os-ic"><i class="fab fa-windows" aria-hidden="true"></i></span>
 <h3>Windows</h3>
-<p>Windows 10 and later, <code>.exe</code></p>
+<p>Windows 10 and later</p>
 <div class="ys-dl">
-<a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-windows-x64.exe">Windows (x64)</a>
+<div class="ys-dlrow"><span>x64</span><a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-windows-x64.exe">.exe</a></div>
 </div>
 </div>
 <div class="download-box" data-os="linux">
 <span class="ys-mine">Your system</span>
 <span class="os-ic"><i class="fab fa-linux" aria-hidden="true"></i></span>
 <h3>Linux</h3>
-<p>x64 and arm64, <code>.AppImage</code> or <code>.deb</code></p>
+<p>x64 and arm64</p>
 <div class="ys-dl">
-<a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-x64.AppImage">x64 AppImage</a>
-<a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-x64.deb">x64 .deb</a>
-<a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-arm64.AppImage">arm64 AppImage</a>
-<a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-arm64.deb">arm64 .deb</a>
+<div class="ys-dlrow"><span>x64</span><a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-x64.AppImage">AppImage</a><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-x64.deb">.deb</a></div>
+<div class="ys-dlrow"><span>arm64</span><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-arm64.AppImage">AppImage</a><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-arm64.deb">.deb</a></div>
 </div>
 </div>
 </div>
@@ -66,7 +64,7 @@ Under *More options* you can open YSocial in your default browser instead of its
 {{ t_installer2 | markdownify }}
 </div>
 
-<div class="ys-tabpanel" id="pip" data-title="pip wheel">
+<div class="ys-tabpanel" id="pip" data-title="pip wheel" data-kicker="Command line" data-pill="v" data-desc="Python 3.12 and the <code>ysocial</code> command.">
 {% capture t_pip %}
 Use this on servers, in notebooks or in scripts. You need **Python 3.12**.
 
@@ -89,7 +87,7 @@ Open [http://localhost:8080](http://localhost:8080). Plugins are installed after
 {{ t_pip | markdownify }}
 </div>
 
-<div class="ys-tabpanel" id="docker" data-title="Docker">
+<div class="ys-tabpanel" id="docker" data-title="Docker" data-kicker="Servers" data-pill="o" data-desc="One command, data in a volume.">
 {% capture t_docker %}
 The image is published on the GitHub Container Registry, for every release. Your data lives in the `ysocial-data` volume, so it survives restarts and upgrades.
 
@@ -118,7 +116,7 @@ YSOCIAL_PORT=8080 docker compose -f docker/compose.yml up     # another host por
 {{ t_docker | markdownify }}
 </div>
 
-<div class="ys-tabpanel" id="source" data-title="From source">
+<div class="ys-tabpanel" id="source" data-title="From source" data-kicker="Developers" data-pill="v" data-desc="Clone, add plugins, run <code>y_social.py</code>.">
 {% capture t_source %}
 For development and customisation. Python **3.12** is the reference version (CI, builds and Docker).
 

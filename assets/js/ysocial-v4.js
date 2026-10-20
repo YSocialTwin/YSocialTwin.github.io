@@ -238,10 +238,14 @@
   function initTabs() {
     $$('[data-tabs]').forEach(function (box) {
       var panels = $$(':scope > .ys-tabpanel', box); if (!panels.length) return;
-      var list = doc.createElement('div'); list.className = 'ys-tablist'; list.setAttribute('role', 'tablist'); list.setAttribute('aria-label', 'Installation method');
+      var cards = box.hasAttribute('data-cards'); var list = doc.createElement('div'); list.className = 'ys-tablist' + (cards ? ' as-cards' : ''); list.setAttribute('role', 'tablist'); list.setAttribute('aria-label', 'Installation method');
       var tabs = panels.map(function (p, i) {
         var b = doc.createElement('button'); b.type = 'button'; b.className = 'ys-tab'; b.id = 'tab-' + p.id; b.setAttribute('role', 'tab');
-        b.setAttribute('aria-controls', p.id); b.textContent = p.getAttribute('data-title') || p.id;
+        b.setAttribute('aria-controls', p.id);
+        if (cards && p.getAttribute('data-desc')) {
+          b.className += ' ys-tabcard';
+          b.innerHTML = '<span class="ys-pill ' + (p.getAttribute('data-pill') || '') + '">' + p.getAttribute('data-kicker') + '</span><strong>' + (p.getAttribute('data-title') || p.id) + '</strong><span class="ys-tabdesc">' + p.getAttribute('data-desc') + '</span>';
+        } else b.textContent = p.getAttribute('data-title') || p.id;
         p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', b.id); p.setAttribute('tabindex', '0');
         b.addEventListener('click', function () { show(i, true); });
         b.addEventListener('keydown', function (e) {

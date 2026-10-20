@@ -643,3 +643,26 @@ details:not([open]) > summary::after { flex: 0 1 46%; margin-left: auto; }
 .ys-cols td:first-child { white-space: normal; }
 @media (max-width: 800px) { .ys-cols { grid-template-columns: 1fr; } }
 .ys-feat.one { grid-template-columns: 1fr; }
+
+/* install method chooser: the tabs are four cards */
+.ys-tablist.as-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; padding: 0; background: transparent; border: 0; border-radius: 0; margin: 1rem 0 1.8rem; }
+.ys-tab.ys-tabcard { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; text-align: left; padding: 16px 16px 14px; min-height: 0; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); font-weight: 400; box-shadow: none; transition: border-color .2s, background .2s; }
+.ys-tab.ys-tabcard strong { font-size: 1.05rem; color: var(--heading); }
+.ys-tab.ys-tabcard .ys-tabdesc { font-size: .88rem; color: var(--muted); line-height: 1.4; }
+.ys-tab.ys-tabcard:hover { background: var(--card); border-color: color-mix(in srgb, var(--accent) 60%, var(--rule)); }
+.ys-tab.ys-tabcard[aria-selected="true"], :root[data-theme="light"] .ys-tab.ys-tabcard[aria-selected="true"] { background: var(--card-hi); color: var(--text); border-color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent); }
+@media (max-width: 900px) { .ys-tablist.as-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* OS cards: centred row, equal cards, aligned rows */
+.download-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 20px; margin: 1.6rem auto; }
+.download-box { flex: 0 1 270px; display: flex; flex-direction: column; align-items: center; padding: 1.5rem 1.2rem 1.3rem !important; }
+.download-box p { margin: 0 0 1.1rem; min-height: 1.4em; }
+.download-box .ys-dl { width: 100%; display: grid; gap: 14px; margin-top: 0; }
+.ys-dlrow { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+.ys-dlrow > span { flex: 0 0 100%; font-size: .76rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.ys-dlrow .ys-btn { flex: 1 1 0; justify-content: center; text-align: center; }
+.download-box .ys-mine { display: inline-block; visibility: hidden; margin-bottom: 6px; }
+.download-box.is-mine .ys-mine { visibility: visible; }
+@media (max-width: 600px) { .download-box { flex-basis: 100%; } }
+.ys-tab.ys-tabcard .ys-pill { white-space: nowrap; align-self: flex-start; }
+@media (max-width: 600px) { .download-box:not(.is-mine) .ys-mine { display: none; } }
