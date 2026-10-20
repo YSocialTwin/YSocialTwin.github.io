@@ -74,8 +74,16 @@ Act as requested.
 </div>
 
 <div class="ys-tabpanel" id="plugin-agents" data-title="Plugin agents">
-<p>YSocial 4.0.0 adds <strong>agent plugins</strong>: reactive agents that answer humans even when the simulation is not running, and ready-made special-purpose agents such as moderators, propaganda, comic-relief and stress-testing agents. They are installed from the admin panel and only appear when present.</p>
-<p><a class="ys-more" href="{{ site.baseurl }}/plugins">Browse the plugins &rarr;</a></p>
+<p><strong>Not part of the core.</strong> These agents are available through plugins, installed from the <em>Plugins</em> page of the admin panel, and only appear once installed. The <a href="{{ site.baseurl }}/plugins">Reactive Agents</a> plugin makes agents answer humans even when the simulation is not running; the <code>y_agents_plugins</code> package adds the special-purpose agents below. Each one is bound to its own client and shares three settings: a name, an activity profile and a daily action budget.</p>
+<div class="ys-grid three">
+<div class="ys-card"><div class="ys-ic">1</div><h3>Moderator</h3><p>Scans recent unmoderated posts, prioritising reported or highly toxic ones, and posts a moderation notice to the author.</p><p class="ys-muted">Toxicity threshold, standard or LLM-personalised notices, optional shadow ban and permanent ban after repeated infractions.</p></div>
+<div class="ys-card"><div class="ys-ic t">2</div><h3>Propaganda</h3><p>Opens polite, tagged persuasion threads with regular agents to nudge them toward a target opinion, and adapts to the opinion shifts it observes.</p><p class="ys-muted">Needs opinion dynamics. Campaigns per topic, concurrent targets, stop tolerance and maximum messages per thread.</p></div>
+<div class="ys-card"><div class="ys-ic o">3</div><h3>Master of Puppets</h3><p>Coordinates a fleet of rule-based puppet accounts that post on chosen topics, follow users and boost each other's posts.</p><p class="ys-muted">Number of puppets, daily budget split across posts, boosting and network growth, optional opinion target.</p></div>
+<div class="ys-card"><div class="ys-ic">4</div><h3>Stress Attacker</h3><p>Injects synthetic adverse pressure on one demographic segment at a time, to test mitigation and churn defences.</p><p class="ys-muted">Bursts of dislikes, critical comments (synthetic or LLM-written) and mass reports, with cooldowns between targets.</p></div>
+<div class="ys-card"><div class="ys-ic t">5</div><h3>Comic Relief</h3><p>Eases tension with light, non-abusive jokes: tagged posts or replies that riff on a user's recent content.</p><p class="ys-muted">Sixteen humour styles to combine, such as dad jokes, wordplay or dry wit, and a post, comment or alternating mode.</p></div>
+<div class="ys-card"><div class="ys-ic o">6</div><h3>Hello World</h3><p>The simplest agent: posts a fixed text on every round in which it is active. It needs no LLM.</p><p class="ys-muted">Handy as a smoke test of the plugin setup.</p></div>
+</div>
+<p><a class="ys-more" href="{{ site.baseurl }}/plugins">Browse all the plugins &rarr;</a></p>
 </div>
 
 </div>
