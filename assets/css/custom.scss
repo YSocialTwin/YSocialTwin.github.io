@@ -666,3 +666,4 @@ details:not([open]) > summary::after { flex: 0 1 46%; margin-left: auto; }
 @media (max-width: 600px) { .download-box { flex-basis: 100%; } }
 .ys-tab.ys-tabcard .ys-pill { white-space: nowrap; align-self: flex-start; }
 @media (max-width: 600px) { .download-box:not(.is-mine) .ys-mine { display: none; } }
+details > summary .ys-scope { margin-left: 10px; vertical-align: middle; white-space: nowrap; font-weight: 700; }

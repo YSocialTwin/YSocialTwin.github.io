@@ -205,7 +205,7 @@ python y_social.py --no_notebook                           # disable Jupyter Lab
 ## Looking after your installation
 
 <details open>
-<summary data-excerpt="One folder to back up or move.">Where your data lives</summary>
+<summary data-excerpt="One folder to back up or move.">Where your data lives <span class="ys-pill ys-scope">Desktop installer only</span></summary>
 {% capture t_data %}
 YSocial keeps everything in a single data folder (`YSOCIAL_HOME`), so backing up or moving an installation means copying one directory.
 
@@ -214,7 +214,6 @@ YSocial keeps everything in a single data folder (`YSOCIAL_HOME`), so backing up
 | macOS | `~/Library/Application Support/YSocial` |
 | Windows | `%USERPROFILE%\AppData\Local\YSocial` |
 | Linux | `~/.ysocial` |
-| Docker | `/data` (the `ysocial-data` volume) |
 
 If YSocial does not start, the last lines of `logs/launch.log` inside the data folder say why.
 {% endcapture %}
@@ -222,7 +221,7 @@ If YSocial does not start, the last lines of `logs/launch.log` inside the data f
 </details>
 
 <details>
-<summary data-excerpt="Your data and experiments are kept.">Updating and uninstalling</summary>
+<summary data-excerpt="Your data and experiments are kept.">Updating and uninstalling <span class="ys-pill ys-scope">Desktop installer only</span></summary>
 {% capture t_upd %}
 With the desktop installer, the launcher checks the latest published release when it opens (you can switch this off). **Update** installs the new version over the current one after you confirm, and the database is upgraded on the next start. Plugins are updated separately, from the plugin page of the admin panel.
 
