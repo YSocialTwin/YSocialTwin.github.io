@@ -118,7 +118,7 @@
   }
 
   function initToc() {
-    var a = article(); if (!a || isBlog || $('.ys-toc')) return;
+    var a = article(); if (!a || isBlog || $('.ys-toc') || $('.ys-home') || !$('.ys-article', a)) return;
     var hs = $$('h2', a).filter(function (h) { return !h.closest('details, .ys-card'); });
     if (hs.length < 3) return;
     var toc = doc.createElement('nav'); toc.className = 'ys-toc'; toc.setAttribute('aria-label', 'On this page');
