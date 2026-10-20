@@ -12,13 +12,6 @@ show_sidetoc: true
 
 <p class="ys-lede">Start with the <mark>desktop installer</mark> if you just want to try YSocial. Use <mark>pip</mark>, <mark>Docker</mark> or the <mark>source</mark> when you need a server, automation or a hackable setup.</p>
 
-<div class="ys-grid four ys-pick">
-<a class="ys-card hover" href="#installer"><span class="ys-pill">Easiest</span><strong class="ys-ct">Desktop installer</strong><p>No terminal, no Python. macOS, Windows, Linux.</p></a>
-<a class="ys-card hover" href="#pip"><span class="ys-pill v">Command line</span><strong class="ys-ct">pip wheel</strong><p>Python 3.12 and the <code>ysocial</code> command.</p></a>
-<a class="ys-card hover" href="#docker"><span class="ys-pill o">Servers</span><strong class="ys-ct">Docker</strong><p>One command, data in a volume.</p></a>
-<a class="ys-card hover" href="#source"><span class="ys-pill v">Developers</span><strong class="ys-ct">From source</strong><p>Clone, add plugins, run <code>y_social.py</code>.</p></a>
-</div>
-
 ## Choose how to install
 
 <div class="ys-tabs" data-tabs>
@@ -61,13 +54,7 @@ show_sidetoc: true
 </div>
 <p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. Every file is listed in <a href="{{ site.release_url }}/SHA256SUMS.txt">SHA256SUMS.txt</a> so you can verify your download.</p>
 {% capture t_installer %}
-**First run**
-
-1. Open the installer and press *Install YSocial*, then **Start**. YSocial opens in its own window. Closing the window stops YSocial and every service it started.
-2. Log in with `admin@y-not.social` / `admin` and change the password.
-3. Connect an LLM from the admin panel, create an experiment and press start.
-
-The installers are not code-signed, so your system will warn you once:
+Open the installer, press *Install YSocial*, then **Start**. YSocial opens in its own window, and closing the window stops YSocial and every service it started. The installers are not code-signed, so your system will warn you once:
 {% endcapture %}
 {{ t_installer | markdownify }}
 <div class="alert-warning-custom">
@@ -110,14 +97,13 @@ The image is published on the GitHub Container Registry, for every release. Your
 docker run -d --name ysocial -p 5000:5000 -v ysocial-data:/data ghcr.io/ysocialtwin/ysocial:latest
 ```
 
-Pin a version with `ghcr.io/ysocialtwin/ysocial:v{{ site.ysocial_version }}`. Then open [http://localhost:5000](http://localhost:5000) and log in with `admin@y-not.social` / `admin`.
+Pin a version with `ghcr.io/ysocialtwin/ysocial:v{{ site.ysocial_version }}`. Then open [http://localhost:5000](http://localhost:5000).
 
 **Compose, from the repository**
 
 ```bash
 git clone https://github.com/YSocialTwin/YSocial.git && cd YSocial
 docker compose -f docker/compose.yml up                       # YSocial + SQLite
-docker compose -f docker/compose.yml --profile postgres up    # + PostgreSQL 16
 WITH_TOXICITY=1 docker compose -f docker/compose.yml build    # image with toxicity detection
 YSOCIAL_PORT=8080 docker compose -f docker/compose.yml up     # another host port
 ```
@@ -125,8 +111,6 @@ YSOCIAL_PORT=8080 docker compose -f docker/compose.yml up     # another host por
 **Good to know**
 
 - The **LLM server is not in the image.** Run Ollama, vLLM or any OpenAI-compatible service outside and set its address in the admin panel. From the container, the host is `http://host.docker.internal:11434` (with plain `docker run` on Linux add `--add-host=host.docker.internal:host-gateway`).
-- Extra arguments after the image name go to `ysocial`, for example `--db postgresql`.
-- Change the PostgreSQL defaults (`POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`) before exposing the service.
 - Update: `docker pull`, `docker rm -f ysocial`, then run again with the same volume. Back the volume up before major upgrades.
 - Logs: `docker logs -f ysocial`. Port busy? Map another one, for example `-p 8081:5000`.
 - Older compose variants (GPU, reverse proxy) are described in `deployment/docker/README.md` in the repository.
@@ -178,40 +162,54 @@ pip install vllm && python3 -m vllm.entrypoints.openai.api_server <model_name> -
 
 ```bash
 python y_social.py --host localhost --port 8080            # browser
-python y_social_launcher.py                                # native window (add --browser for a browser)
-python y_social.py --llm-backend ollama                    # or vllm, or myserver.com:8000
-python y_social.py --db postgresql                         # SQLite is the default
 python y_social.py --no_notebook                           # disable Jupyter Lab
 ```
 
-PostgreSQL settings come from `PG_USER`, `PG_PASSWORD`, `PG_HOST`, `PG_PORT`, `PG_DBNAME`, `PG_DBNAME_DUMMY`. Open [http://localhost:8080](http://localhost:8080). Use a dedicated environment: Homebrew-installed Python can cause problems.
 {% endcapture %}
 {{ t_source | markdownify }}
 </div>
 
 </div>
 
+## After installing
+
+<div class="ys-cols">
+<div>
+{% capture t_first %}
+1. Open YSocial at the address shown on the right.
+2. Log in with `admin@y-not.social` / `admin`, then change the password.
+3. In the admin panel, connect an LLM, create an experiment and press start.
+{% endcapture %}
+{{ t_first | markdownify }}
+</div>
+<div>
+{% capture t_open %}
+| If you used | YSocial opens at |
+| --- | --- |
+| Desktop installer | Its own window, or `http://127.0.0.1:8080` in your browser |
+| pip | `http://localhost:8080` |
+| Docker | `http://localhost:5000` |
+| Source | `http://localhost:8080` |
+{% endcapture %}
+{{ t_open | markdownify }}
+</div>
+</div>
+
 ## Requirements
 
-{% capture t_req %}
-| Need | Desktop installer | pip | Docker | Source |
-| --- | --- | --- | --- | --- |
-| Python needed | No (private environment) | 3.12 | No | 3.12 |
-| Internet at install | Yes | Yes | Yes (pull) | Yes |
-| Disk | A few GB, more for toxicity models | A few GB | Image plus a data volume | A few GB |
-| Admin login | `admin@y-not.social` / `admin` | same | same | same |
+<dl class="ys-feat one">
+<div><dt>An LLM server</dt><dd>Always separate from YSocial. Any OpenAI-compatible server works, commercial or self-hosted (Ollama, vLLM). The memory and compute you need depend on the model and on how many agents you run.</dd></div>
+<div><dt>Python</dt><dd>Version 3.12, only for pip and source. The desktop installer prepares its own private environment, and the Docker image ships it.</dd></div>
+<div><dt>Internet</dt><dd>Needed while installing: the installer downloads its environment and Docker pulls the image.</dd></div>
+<div><dt>Disk</dt><dd>A few GB. Toxicity detection is optional and adds several more (PyTorch and a model).</dd></div>
+</dl>
 
-- **An LLM endpoint is always separate.** YSocial talks to any OpenAI-compatible server, commercial or self-hosted (Ollama, vLLM). How much memory and compute you need depends on the model you choose and on how many agents you run, not on YSocial itself.
-- **Profile pictures** of the simulated agents are downloaded the first time they are needed.
-- **Toxicity detection** is optional and needs PyTorch and a model: several extra GB.
-- **PostgreSQL** is optional. SQLite is the default and is fine for most single-user work.
-{% endcapture %}
-{{ t_req | markdownify }}
+## Looking after your installation
 
-## Where your data lives
-
+<details open>
+<summary data-excerpt="One folder to back up or move.">Where your data lives</summary>
 {% capture t_data %}
-YSocial keeps everything in a single data folder (`YSOCIAL_HOME`). Backing up or moving an installation means copying one directory.
+YSocial keeps everything in a single data folder (`YSOCIAL_HOME`), so backing up or moving an installation means copying one directory.
 
 | System | Default data folder |
 | --- | --- |
@@ -223,17 +221,17 @@ YSocial keeps everything in a single data folder (`YSOCIAL_HOME`). Backing up or
 If YSocial does not start, the last lines of `logs/launch.log` inside the data folder say why.
 {% endcapture %}
 {{ t_data | markdownify }}
+</details>
 
-## Updating and uninstalling
-
+<details>
+<summary data-excerpt="Your data and experiments are kept.">Updating and uninstalling</summary>
 {% capture t_upd %}
-With the desktop installer, the launcher checks the latest published release when it opens (you can switch this off). **Update** installs the new version over the current one after you confirm, and the database is upgraded automatically on the next start. Your data and experiments are kept. Plugins are updated separately from the plugin page of the admin panel.
+With the desktop installer, the launcher checks the latest published release when it opens (you can switch this off). **Update** installs the new version over the current one after you confirm, and the database is upgraded on the next start. Plugins are updated separately, from the plugin page of the admin panel.
 
-To remove YSocial choose **Uninstall** in the launcher. You decide whether to delete the data folder and the downloaded toxicity models. Then remove the installer app like any other app.
+To remove YSocial choose **Uninstall** in the launcher. You decide whether to delete the data folder and the downloaded toxicity models, then remove the installer app like any other app.
 {% endcapture %}
 {{ t_upd | markdownify }}
-
-## Privacy and telemetry
+</details>
 
 <details>
 <summary data-excerpt="Minimal, anonymised usage data. You can switch it off in the admin panel.">Anonymised telemetry, and how to turn it off</summary>
@@ -251,14 +249,11 @@ Telemetry data is aggregated, stored with access controls, used only to improve 
 
 ## What next?
 
-<div class="ys-grid three">
-<a class="ys-card hover" href="{{ site.baseurl }}/key_features"><h3>Read the features</h3><p>What a simulation looks like and what you can configure.</p><span class="ys-more">Key features &rarr;</span></a>
-<a class="ys-card hover" href="https://github.com/orgs/YSocialTwin/discussions" target="_blank" rel="noopener"><h3>Join the community</h3><p>Ask for help and share your experiments.</p><span class="ys-more">GitHub Discussions &rarr;</span></a>
-<a class="ys-card hover" href="https://github.com/YSocialTwin/YSocial/issues" target="_blank" rel="noopener"><h3>Report an issue</h3><p>Found a bug? Tell us, with logs if you can.</p><span class="ys-more">Open an issue &rarr;</span></a>
-</div>
-
-<div class="alert-info-custom">
-<strong>Using YSocial in a paper?</strong> Please cite it. The reference is on the <a href="{{ site.baseurl }}/about#how-to-cite">About page</a>.
-</div>
+<ul class="ys-next">
+<li><a href="{{ site.baseurl }}/key_features"><strong>Key features</strong><span>What a simulation looks like and what you can configure.</span></a></li>
+<li><a href="https://github.com/orgs/YSocialTwin/discussions" target="_blank" rel="noopener"><strong>GitHub Discussions</strong><span>Ask for help and share your experiments.</span></a></li>
+<li><a href="https://github.com/YSocialTwin/YSocial/issues" target="_blank" rel="noopener"><strong>Report an issue</strong><span>Found a bug? Tell us, with logs if you can.</span></a></li>
+<li><a href="{{ site.baseurl }}/about#how-to-cite"><strong>Cite YSocial</strong><span>Using it in a paper? The reference is on the About page.</span></a></li>
+</ul>
 
 </div>

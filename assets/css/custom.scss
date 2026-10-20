@@ -634,3 +634,12 @@ details:not([open]) > summary::after { flex: 0 1 46%; margin-left: auto; }
 .ys-next span { color: var(--muted); font-size: .94rem; }
 @media (max-width: 800px) { .ys-next { grid-template-columns: 1fr; } }
 .ys-section.ys-alt { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding-left: 0; padding-right: 0; }
+
+/* two-column blocks inside articles (steps next to a reference table) */
+.ys-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 8px 48px; align-items: start; margin: 1rem 0 1.6rem; }
+.ys-cols > div > *:first-child { margin-top: 0; }
+.ys-cols .ys-table-wrap { margin-top: 0; }
+.ys-cols .ys-table-wrap > table { min-width: 0; }
+.ys-cols td:first-child { white-space: normal; }
+@media (max-width: 800px) { .ys-cols { grid-template-columns: 1fr; } }
+.ys-feat.one { grid-template-columns: 1fr; }
