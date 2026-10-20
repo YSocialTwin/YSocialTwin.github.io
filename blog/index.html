@@ -1,175 +1,65 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default-full
-title:  "Blog"
+title: "Blog"
 subtitle: "News from the agents"
-show_sidetoc: true
-header_type: hero #base, post, hero,image, splash
+eyebrow: "News and releases"
+header_type: hero
 header_img: assets/images/blog.jpg
 header_title: "Blog"
-vega: true
 ---
 
-<div class="container py-3">
-<div class="row">
-<div class="col-md-12">
+<div class="ys-article ys-blog">
 
-<style>
-.blog-card {
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    transition: all 0.3s ease;
-    border-left: 4px solid #2563eb;
-}
-.blog-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    transform: translateY(-2px);
-}
-.blog-card.featured-post {
-    background: linear-gradient(to right, #eff6ff 0%, white 100%);
-    border-left: 6px solid #2563eb;
-    padding: 2.5rem;
-}
-.blog-card.featured-post .blog-title {
-    font-size: 2rem;
-}
-.blog-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #1f2937;
-}
-.blog-title a {
-    color: #1f2937;
-    text-decoration: none;
-}
-.blog-title a:hover {
-    color: #2563eb;
-}
-.blog-meta {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-.blog-date {
-    font-weight: 500;
-}
-.blog-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-.blog-tag {
-    background: #eff6ff;
-    color: #2563eb;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-.blog-excerpt {
-    color: #4b5563;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-.read-more {
-    display: inline-block;
-    color: #2563eb;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-.read-more:hover {
-    color: #1d4ed8;
-    text-decoration: none;
-}
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 3rem 0;
-}
-.pagination a, .pagination span {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-}
-.pagination a {
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-.pagination a:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-}
-.pagination span {
-    color: #6b7280;
-}
-</style>
+<p class="ys-lede">Keep up with the latest news, updates and insights from our team: <mark>advancements</mark>, <mark>project releases</mark> and <mark>ongoing research</mark>.</p>
 
-    <div style="text-align: center; margin: 1rem 0;">
-<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-Keep up with the latest news, updates, and insights from our team. Explore articles on YSocial <mark>advancements</mark>, <mark>project releases</mark>, and <mark>ongoing research</mark>.
-</p>
-</div>
+<div class="ys-tagbar" data-tagbar aria-label="Filter posts by tag"></div>
 
+{% assign last_year = "" %}
 {% for post in paginator.posts %}
-<article class="blog-card{% if forloop.first %} featured-post{% endif %}">
-    <h2 class="blog-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <div class="blog-meta">
-        <span class="blog-date">📅 {{ post.date | date: "%B %d, %Y" }}</span>
-        {% if post.tags %}
-        <div class="blog-tags">
-            {% for tag in post.tags %}
-            <span class="blog-tag">#{{ tag }}</span>
-            {% endfor %}
-        </div>
-        {% endif %}
-    </div>
-    <div class="blog-excerpt">
-        {% if forloop.first %}
-            {{ post.excerpt | strip_html | truncatewords: 100 }}
-        {% else %}
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
-        {% endif %}
-    </div>
-    <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+{% assign words = post.content | number_of_words %}
+{% assign minutes = words | divided_by: 220 | plus: 1 %}
+{% assign tag_list = post.tags | join: "," %}
+{% if paginator.page == 1 and forloop.first %}
+<article class="ys-feature" data-tags="{{ tag_list }}">
+  <a class="ys-feature-art" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <span class="ys-feature-label">Latest</span>
+    <span class="ys-feature-date"><b>{{ post.date | date: "%d" }}</b>{{ post.date | date: "%b %Y" }}</span>
+  </a>
+  <div class="ys-feature-body">
+    <p class="ys-entry-meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time> · {{ minutes }} min read{% for tag in post.tags %} <span class="ys-tag">#{{ tag }}</span>{% endfor %}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title | strip }}</a></h2>
+    <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 40 }}</p>
+    <a class="ys-more" href="{{ post.url | relative_url }}">Read the post &rarr;</a>
+  </div>
 </article>
+{% else %}
+{% assign year = post.date | date: "%Y" %}
+{% if year != last_year %}
+{% unless last_year == "" %}</div>{% endunless %}
+<h2 class="ys-year" id="y{{ year }}">{{ year }}</h2>
+<div class="ys-entries">
+{% assign last_year = year %}
+{% endif %}
+<article class="ys-entry" data-tags="{{ tag_list }}">
+  <a class="ys-tile" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><b>{{ post.date | date: "%d" }}</b>{{ post.date | date: "%b" }}</a>
+  <div>
+    <p class="ys-entry-meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time> · {{ minutes }} min read{% for tag in post.tags %} <span class="ys-tag">#{{ tag }}</span>{% endfor %}</p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title | strip }}</a></h3>
+    <p class="ys-entry-ex">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+  </div>
+</article>
+{% endif %}
 {% endfor %}
+{% unless last_year == "" %}</div>{% endunless %}
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      ← Previous
-    </a>
-  {% else %}
-    <span class="previous">← Previous</span>
-  {% endif %}
-   <span class="page_number">
-    Page {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next →</a>
-  {% else %}
-    <span class="next">Next →</span>
-  {% endif %}
-</div>
+<p class="ys-empty" hidden>No posts with this tag on this page.</p>
 
-</div>
-</div>
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Blog pages">
+  {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}" class="previous">&larr; Previous</a>{% else %}<span class="previous">&larr; Previous</span>{% endif %}
+  <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}" class="next">Next &rarr;</a>{% else %}<span class="next">Next &rarr;</span>{% endif %}
+</nav>
+{% endif %}
+
 </div>

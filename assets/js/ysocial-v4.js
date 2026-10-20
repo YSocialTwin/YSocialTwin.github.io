@@ -322,9 +322,29 @@
     });
   }
 
+  function initBlog() {
+    var bar = $('[data-tagbar]'); if (!bar) return;
+    var items = $$('.ys-blog [data-tags]'), tags = {};
+    items.forEach(function (a) { (a.getAttribute('data-tags') || '').split(',').forEach(function (t) { t = t.trim(); if (t) tags[t] = (tags[t] || 0) + 1; }); });
+    var names = Object.keys(tags).sort(); if (names.length < 2) { bar.hidden = true; return; }
+    var cur = '';
+    function render() {
+      bar.innerHTML = ['All'].concat(names).map(function (n) {
+        var on = (n === 'All' && !cur) || n === cur;
+        return '<button type="button" class="ys-chip' + (on ? ' on' : '') + '" aria-pressed="' + on + '" data-t="' + (n === 'All' ? '' : n) + '">' + (n === 'All' ? 'All' : '#' + n) + '</button>';
+      }).join('');
+      var shown = 0;
+      items.forEach(function (a) { var ok = !cur || (a.getAttribute('data-tags') || '').split(',').indexOf(cur) > -1; a.hidden = !ok; if (ok) shown++; });
+      $$('.ys-entries').forEach(function (g) { var any = $$('.ys-entry:not([hidden])', g).length > 0; g.hidden = !any; if (g.previousElementSibling && g.previousElementSibling.classList.contains('ys-year')) g.previousElementSibling.hidden = !any; });
+      var e = $('.ys-empty'); if (e) e.hidden = shown > 0;
+    }
+    bar.addEventListener('click', function (ev) { var b = ev.target.closest('button[data-t]'); if (!b) return; cur = b.getAttribute('data-t'); render(); var f = $('[data-t="' + cur + '"]', bar); if (f) f.focus(); });
+    render();
+  }
+
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initDataTables].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initReveal, initOS, initTabs, initDataTables, initBlog].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();

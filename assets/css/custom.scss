@@ -771,3 +771,33 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-article img.ys-banner { margin-left: auto !important; margin-right: auto !important; max-width: 760px; }
 .ys-article p:has(> img.ys-banner) { max-width: none; }
 @media (min-width: 901px) { .ys-article ul.ys-team, .ys-team { grid-template-columns: repeat(4, 148px); } }
+
+/* ---------- blog index: featured post, year-grouped entries, tag filter ---------- */
+.ys-tagbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 2rem; }
+.ys-tagbar .ys-chip { cursor: pointer; font-family: inherit; min-height: 36px; }
+.ys-tagbar .ys-chip.on { background: var(--accent); color: #04222a !important; border-color: var(--accent); font-weight: 600; }
+.ys-feature { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; align-items: center; padding: 0 0 2.4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+.ys-feature[hidden], .ys-entry[hidden], .ys-entries[hidden], .ys-year[hidden] { display: none; }
+.ys-feature-art { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 250px; padding: 22px 24px; border-radius: var(--radius-sm); text-decoration: none !important; overflow: hidden; color: #fff !important;
+  background: radial-gradient(120% 90% at 85% 0%, rgba(255,138,77,.55), transparent 55%), radial-gradient(90% 90% at 0% 100%, rgba(109,195,208,.45), transparent 60%), linear-gradient(135deg, #0d2a37, #25205a); }
+.ys-feature-art::after { content: ""; position: absolute; right: -40px; top: -40px; width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 0 0 36px rgba(255,255,255,.05), 0 0 0 78px rgba(255,255,255,.03); }
+.ys-feature-label { position: absolute; top: 18px; left: 22px; font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); padding: 3px 12px; border-radius: 999px; }
+.ys-feature-date { display: flex; flex-direction: column; font-size: .95rem; color: rgba(255,255,255,.85); line-height: 1.1; }
+.ys-feature-date b { font-size: 4rem; font-weight: 800; color: #fff; letter-spacing: -.03em; line-height: 1; }
+.ys-feature-body h2 { margin: .2rem 0 .7rem !important; font-size: 2rem; line-height: 1.2; border: 0 !important; padding: 0 !important; }
+.ys-feature-body h2 a, .ys-entry h3 a { color: var(--heading) !important; text-decoration: none !important; }
+.ys-feature-body h2 a:hover, .ys-entry h3 a:hover { color: var(--accent) !important; }
+.ys-feature-body p { max-width: 62ch; }
+.ys-entry-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0 0 .35rem !important; color: var(--muted); font-size: .86rem; }
+.ys-tag { border: 1px solid var(--rule); border-radius: 999px; padding: 0 .55rem; font-size: .78rem; color: var(--muted); }
+.ys-year { font-size: 1.1rem !important; letter-spacing: .12em; color: var(--accent) !important; margin: 2.2rem 0 .2rem !important; padding: 0 !important; border: 0 !important; font-family: var(--mono); }
+.ys-entries { border-top: 1px solid var(--rule); }
+.ys-entry { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 22px; padding: 22px 0; border-bottom: 1px solid var(--rule); align-items: start; }
+.ys-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 76px; height: 76px; border-radius: var(--radius-sm); text-decoration: none !important; color: var(--muted) !important; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--rule); background: var(--surface); transition: border-color .2s, transform .2s; }
+.ys-tile b { font-size: 1.7rem; line-height: 1; color: var(--heading); letter-spacing: 0; }
+.ys-entry:hover .ys-tile { border-color: var(--accent); transform: translateY(-2px); }
+.ys-entry h3 { margin: .1rem 0 .4rem !important; font-size: 1.35rem; line-height: 1.25; }
+.ys-entry-ex { margin: 0 !important; color: var(--muted); max-width: 66ch; }
+.ys-empty { color: var(--muted); padding: 1.5rem 0; }
+.ys-blog .pagination { margin: 2.4rem 0 1rem; }
+@media (max-width: 800px) { .ys-feature { grid-template-columns: 1fr; gap: 20px; } .ys-feature-art { min-height: 190px; } .ys-entry { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; } .ys-tile { width: 56px; height: 56px; } .ys-tile b { font-size: 1.3rem; } }
