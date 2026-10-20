@@ -770,3 +770,4 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-banner { max-width: 760px; margin-left: auto; margin-right: auto; }
 .ys-article img.ys-banner { margin-left: auto !important; margin-right: auto !important; max-width: 760px; }
 .ys-article p:has(> img.ys-banner) { max-width: none; }
+@media (min-width: 901px) { .ys-article ul.ys-team, .ys-team { grid-template-columns: repeat(4, 148px); } }
