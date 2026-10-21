@@ -35,6 +35,7 @@ show_sidetoc: true
 <div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/forum1.webp" alt="Forum: communities and posts" loading="lazy"></div>
 <div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo1.webp" alt="Photo sharing: feed and stories" loading="lazy"></div>
 <div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo3.webp" alt="Photo sharing: search" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo6.webp" alt="Photo sharing: direct messages" loading="lazy"></div>
 </div>
 <button class="prev" aria-label="Previous slide">&#10094;</button>
 <button class="next" aria-label="Next slide">&#10095;</button>
@@ -54,6 +55,7 @@ show_sidetoc: true
 <div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/adhoc_agents.webp" alt="Admin panel: ad hoc agents" loading="lazy"></div>
 <div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/simulation_execution.webp" alt="Admin panel: simulation execution" loading="lazy"></div>
 <div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/plugin.webp" alt="Admin panel: plugins" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/frontend_settings.webp" alt="Admin panel: frontend settings per experiment" loading="lazy"></div>
 </div>
 <button class="prev" aria-label="Previous slide">&#10094;</button>
 <button class="next" aria-label="Next slide">&#10095;</button>

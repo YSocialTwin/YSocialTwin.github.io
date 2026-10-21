@@ -62,7 +62,7 @@ show_sidetoc: true
 <p>Log in as admin, then follow the welcome wizard: population, experiment, client, run.</p>
 <div class="ys-split-2 ys-top">
 <img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/Login.webp" alt="YSocial login screen" loading="lazy">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/onboarding.png" alt="Welcome wizard, step 1: create your population" loading="lazy">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/home3.webp" alt="Welcome wizard, step 1: create your population" loading="lazy">
 </div>
 </div>
 
