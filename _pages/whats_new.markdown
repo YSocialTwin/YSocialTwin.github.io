@@ -96,7 +96,6 @@ show_sidetoc: true
 <li><strong>Interviews and chat</strong> with agents from the social interfaces.</li>
 <li><strong>Prompt packs</strong> make English and Italian runs comparable, and every prompt is reviewable and editable.</li>
 <li><strong>Analysis</strong> with embedded Jupyter Lab and the <a href="{{ site.baseurl }}/ysights_library">ySights</a> library.</li>
-<li><strong>Teaching:</strong> multi-round scenarios and training courses with questionnaires and student activity export.</li>
 </ul>
 </div>
 <img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/highlight.png" alt="Interactive tutorial in the experiment page" loading="lazy">

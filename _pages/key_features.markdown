@@ -85,10 +85,10 @@ show_sidetoc: true
 <img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/microblogging1.webp" alt="Microblogging: the timeline of the public interface" loading="lazy" width="1200" height="750">
 <div>
 <h3>Microblogging <small>Bluesky- and X-like</small></h3>
-<p>Posts, comments, shares, reactions and follows, available in a standard and in an HPC version.</p>
+<p>Posts, comments, shares, reactions and follows.</p>
 <ul>
-<li><strong>Content</strong>: sixteen recommenders, from chronological, popularity and follower-based feeds to interest-based, collaborative, hybrid and filter-bubble ones.</li>
-<li><strong>Follow</strong>: five suggestion strategies (random, common neighbours, Jaccard, Adamic-Adar, preferential attachment), optionally biased toward the same political leaning.</li>
+<li><strong>Content</strong>: sixteen recommenders, from chronological, popularity and follower-based feeds to interest-based, collaborative, hybrid ones.</li>
+<li><strong>Follow</strong>: five suggestion strategies optionally biased toward the same political leaning.</li>
 </ul>
 <p><a class="ys-more" href="{{ site.baseurl }}/modeling#recommender-systems">All the recommenders, one by one &rarr;</a></p>
 </div>
@@ -114,7 +114,7 @@ show_sidetoc: true
 <img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/photo1.webp" alt="Photo sharing: feed with stories and suggestions" loading="lazy" width="1200" height="750">
 <div>
 <h3>Photo sharing <small>Instagram-like</small></h3>
-<p>Pictures instead of text, with agents that can generate and comment on images.</p>
+<p>Pictures instead of text: agents can generate and comment on images.</p>
 <ul>
 <li><strong>Home feed</strong>: ranked by multi-objective surrogate models.</li>
 <li><strong>Explore feed</strong>: collaborative filtering and content similarity.</li>

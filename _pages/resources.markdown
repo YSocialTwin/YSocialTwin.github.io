@@ -59,7 +59,7 @@ After the recovery, the database is ready to be queried.
 <div><dt>Content</dt><dd><code>post</code> posts and comments, <code>articles</code> shared news, <code>websites</code> their sources, <code>images</code> shared images with LLM annotations, <code>hashtags</code> and <code>post_hashtags</code>.</dd></div>
 <div><dt>Annotations</dt><dd><code>post_sentiment</code> (VADER), <code>post_toxicity</code>, <code>emotions</code> and <code>post_emotions</code>, <code>post_topics</code>.</dd></div>
 <div><dt>Interests</dt><dd><code>interests</code> the topics used in the simulation, <code>user_interests</code> the topics agents use to write.</dd></div>
-<div><dt>Platform activity</dt><dd><code>reactions</code> to contents, <code>voting</code> (when enabled), <code>recommendations</code> served to agents, <code>rounds</code> simulation rounds.</dd></div>
+<div><dt>Platform activity</dt><dd><code>reactions</code> to contents, <code>recommendations</code> served to agents, <code>rounds</code> simulation rounds.</dd></div>
 </dl>
 
 <p>Every table and column, for each platform, is described in the <a href="{{ site.baseurl }}/database_schema">database schema</a>. It follows the current version, so recent simulations may have more columns than these v3.0.0 datasets.</p>
@@ -69,20 +69,23 @@ After the recovery, the database is ready to be queried.
 <p class="ys-intro" style="text-align:left;margin:0 0 14px"><code>YSocial</code> is a research project and we are always looking for collaborations. It has been presented at conferences, workshops and schools.</p>
 
 <dl class="ys-feat one ys-events">
+<div><dt>2026</dt><dd><ul>
+<li>Tutorial &ldquo;YSocial: Building, Running, and Analyzing LLM-Powered Social Media Digital Twins&ldquo;, <a href="https://www.itadata.it/">ItaData</a>, Italy </li>
+<li><a href="https://www.unipi.it/eventi/worlds-of-co-intelligence-critical-role-play-on-human-ai-coexistence/">WORLDS OF CO-INTELLIGENCE | Exploring Human–AI Coexistence</a>, Details Lab, Italy</li>
+<li><a href="https://www.digitafrica.eu/">DigitAfrica</a> Workshop, Tunisia</li>
+</ul></dd></div>
+
 <div><dt>2025</dt><dd><ul>
 <li><a href="{{ site.baseurl }}/events/hhai">Tutorial &ldquo;LLM-powered Simulations of Social Media Environments&rdquo;</a> at <a href="https://hhai-conference.org/2025/">HHAI</a></li>
 <li>Workshop &ldquo;Simulating Societies&rdquo; at the <a href="https://ccs25.cssociety.org/">Conference on Complex Systems</a></li>
 <li><a href="https://summerschool2025.sobigdata.eu/">SoBigData Summer School</a>, From Data to Social Innovation</li>
 <li><a href="https://tcn2025.wordpress.com/tcn2025/">The Threads of Complex Networks</a> Summer School</li>
-<li>Future Artificial Intelligence Research (FAIR) workshop</li>
-<li><a href="https://www.fairconference2025.it/">FAIR 2025 Conference</a></li>
-<li>ICT4Intel Trends</li>
+<li>Future Artificial Intelligence Research (FAIR) workshop, <a href="https://www.fairconference2025.it/">FAIR 2025 Conference</a></li>
 </ul></dd></div>
 <div><dt>2024</dt><dd><ul>
 <li>International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</li>
 <li>International Conference on Complex Networks and their Applications</li>
 <li>Italian Conference on Computational Social Science (CS2Italy)</li>
-<li>ICT4Intel Trends</li>
 </ul></dd></div>
 </dl>
 
