@@ -1,3 +1,7 @@
+- year: 2026
+  title: Pairwise and Higher-order Mixing Patterns in Online Social Networks
+  authors: Failla, Andrea
+  venue: PhD thesis
 - year: 2027
   title: 'PhDGPT: Measuring bias in academic mental health across quantised and uncensored LLMs'
   authors: 'De Duro et al.'
@@ -21,10 +25,10 @@
 - year: 2026
   title: 'From Structural to Temporal Fidelity in Dynamic Graph Generation'
   authors: 'Hamouni and Bagheri'
-  venue: 'OpenReview'
+  venue: 'NeurIPS 2026 Workshop SLM-Agents'
 - year: 2026
   title: 'Large Language Models Toward Artificial General Intelligence: A Survey of Principles, Methods, and Challenges'
-  authors: 'Lama'
+  authors: 'Lama, Dikshant'
   venue: 'SSRN'
 - year: 2026
   title: 'Learnscrolling: Harnessing Attention Economy Mechanics for Incidental Learning via Synthetic Social Media'
@@ -177,7 +181,7 @@
 - year: 2026
   title: 'ADDRESSING ONLINE HARMS THROUGH CONTENT MODERATION: DETECTION OF MISBEHAVIOR AND INTERVENTION STRATEGIES'
   authors: Cima, Lorenzo
-  venue: —
+  venue: PhD thesis
 - year: 2026
   title: 'Predicting Social Media User Actions: A Hybrid Approach for Common and Rare Behavior Prediction on Bluesky'
   authors: White, Benjamin, and Anastasia Shimorina
