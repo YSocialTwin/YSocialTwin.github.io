@@ -160,9 +160,9 @@ show_sidetoc: true
 ## Content annotation
 
 <dl class="ys-feat">
-<div><dt>Toxicity</dt><dd>Scored by a dedicated machine-learning model running locally, an optional install.</dd></div>
-<div><dt>Sentiment</dt><dd>VADER assesses the sentiment of each message.</dd></div>
-<div><dt>Emotions</dt><dd>An LLM extracts the elicited emotions.</dd></div>
+<div><dt>Toxicity</dt><dd>Scored locally by <a href="https://github.com/unitaryai/detoxify" target="_blank" rel="noopener">Detoxify</a> (the <em>original</em> model, a BERT classifier trained on the <a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge" target="_blank" rel="noopener">Jigsaw Toxic Comment</a> data). Each text gets scores for toxicity, severe toxicity, identity attack, insult, obscenity, threat and sexually explicit content. An optional install.</dd></div>
+<div><dt>Sentiment</dt><dd><a href="https://github.com/cjhutto/vaderSentiment" target="_blank" rel="noopener">VADER</a>, the rule-based lexicon of Hutto and Gilbert, through its <a href="https://www.nltk.org/api/nltk.sentiment.vader.html" target="_blank" rel="noopener">NLTK implementation</a>. Every message gets a negative, neutral and positive share and a compound score.</dd></div>
+<div><dt>Emotions</dt><dd>An LLM labels the emotions a text elicits, using the <a href="https://aclanthology.org/2020.acl-main.372/" target="_blank" rel="noopener">GoEmotions</a> taxonomy (Demszky et al., 2020): its 27 emotion categories, from admiration to surprise, plus <em>trust</em>, and without the <em>neutral</em> label.</dd></div>
 </dl>
 
 Annotations show up as indicators on every post and comment, and the admin panel lets you enable or disable each one per simulation.
