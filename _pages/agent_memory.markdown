@@ -229,3 +229,16 @@ Some messages call for a callback: a criticism, a conflict, a personal anecdote,
 </div>
 
 </div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/agents"><strong>LLM agents</strong><span>Personas, prompts and special agents.</span></a></li>
+<li><a href="{{ site.baseurl }}/opinion_dynamics"><strong>Opinion dynamics</strong><span>Opinions that evolve and shape content.</span></a></li>
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
+<li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every setting, per platform.</span></a></li>
+</ul>
+</div>
+</section>

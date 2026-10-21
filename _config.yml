@@ -75,6 +75,12 @@ navbar:
         - title: Modeling choices
           desc: Actions and recommender systems
           url: /modeling
+        - title: Agent memory
+          desc: Relationships, threads, communities
+          url: /agent_memory
+        - title: Opinion dynamics
+          desc: Opinions that evolve over time
+          url: /opinion_dynamics
 
     - title: ySights
       child:

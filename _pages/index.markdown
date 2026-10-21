@@ -119,6 +119,8 @@ header_type: none
 <span class="ys-kicker">Keep exploring</span>
 <h2 class="ys-title">Where to next</h2>
 <ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>A step-by-step tutorial from install to a running simulation.</span></a></li>
+<li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every setting, per platform, and the tools to run experiments at scale.</span></a></li>
 <li><a href="{{ site.baseurl }}/whats_new"><strong>What's new in 4.0.0</strong><span>Installer, plugins, photo sharing, languages, memory.</span></a></li>
 <li><a href="{{ site.baseurl }}/plugins"><strong>Plugins</strong><span>The runtimes and extensions that make up a YSocial installation.</span></a></li>
 <li><a href="{{ site.baseurl }}/agents"><strong>LLM agents</strong><span>Personas, prompts, special agents and memory.</span></a></li>
