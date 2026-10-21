@@ -355,7 +355,18 @@ kbd { background: var(--card-hi); color: var(--heading); border: 1px solid var(-
 .ys-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 0; background: var(--line); cursor: pointer; transition: transform .15s, background .15s; }
 .ys-dots button.on { background: var(--accent); transform: scale(1.35); }
 .ys-lightbox { position: fixed; inset: 0; z-index: 4000; display: none; place-items: center; padding: 24px; background: rgba(4, 10, 15, .88); backdrop-filter: blur(6px); cursor: zoom-out; }
-.ys-lightbox.on { display: grid; } .ys-lightbox img { max-width: min(1400px, 96vw); max-height: 92vh; border-radius: 12px; box-shadow: var(--shadow); }
+.ys-lightbox.on { display: grid; }
+.ys-lightbox figure { margin: 0; display: grid; justify-items: center; gap: 10px; }
+.ys-lightbox img { max-width: min(1400px, 92vw); max-height: 84vh; border-radius: 12px; box-shadow: var(--shadow); cursor: default; }
+.ys-lightbox figcaption { color: #dbe7ee; font-size: .92rem; text-align: center; max-width: 80ch; }
+.ys-lightbox .ys-lb-close, .ys-lightbox .ys-lb-nav { position: absolute; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: rgba(8, 20, 28, .7); color: #fff; font-size: 1.3rem; line-height: 1; cursor: pointer; }
+.ys-lightbox .ys-lb-close { top: 16px; right: 16px; font-size: 1.8rem; }
+.ys-lightbox .ys-lb-nav.prev { left: 16px; top: 50%; transform: translateY(-50%); } .ys-lightbox .ys-lb-nav.next { right: 16px; top: 50%; transform: translateY(-50%); }
+.ys-lightbox .ys-lb-close:hover, .ys-lightbox .ys-lb-nav:hover { border-color: var(--accent); }
+.ys-lightbox.single .ys-lb-nav { display: none; }
+img.ys-zoomable { cursor: zoom-in; }
+img.ys-zoomable:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+html.ys-zoomed { overflow: hidden; }
 
 /* ---------- pagination (blog) ---------- */
 .pagination { gap: 6px; flex-wrap: wrap; } .pagination .page-link, .page-item .page-link { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: 10px; margin: 0; }
