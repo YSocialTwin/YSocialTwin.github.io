@@ -180,6 +180,7 @@ Two models ship with YSocial. Both are applied to the <strong>reader</strong>: t
 <li><strong>Neither</strong>: it stays where it is.</li>
 </ul>
 <p>The new value is the middle of the group it lands in. Because the text is part of the prompt, the same author can persuade with a good argument and fail with a poor one. It needs LLM agents and costs one LLM call for each post and topic.</p>
+<p class="ys-muted">The LLM-based model was introduced in <a href="https://link.springer.com/article/10.1140/epjds/s13688-025-00579-1" target="_blank" rel="noopener">this paper</a> (<em>EPJ Data Science</em>, 2025).</p>
 </div>
 <div class="am-mock">
 <div class="am-mock-h">Example &middot; one judgement</div>
