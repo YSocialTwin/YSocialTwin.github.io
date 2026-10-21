@@ -54,7 +54,12 @@ Four kinds of memory, from the closest to the widest view. Pick one to see what 
 <p class="am-quote">Often disagrees on policy, but keeps it civil and funny.</p>
 <div class="am-mock-h">Affinity over six moments</div>
 <div class="am-bars" role="img" aria-label="Illustrative bars: affinity rises after a reply and a joke, drops after a clash, fades during silence and rises again after an agreement">
-<div><i style="height:30%"></i></div><div><i style="height:55%"></i></div><div><i style="height:75%"></i></div><div><i class="neg" style="height:40%"></i></div><div><i style="height:32%"></i></div><div><i style="height:62%"></i></div>
+<div><i style="height:30%"></i></div>
+<div><i style="height:55%"></i></div>
+<div><i style="height:75%"></i></div>
+<div><i class="neg" style="height:40%"></i></div>
+<div><i style="height:32%"></i></div>
+<div><i style="height:62%"></i></div>
 </div>
 <div class="am-bar-labels"><span>meet</span><span>reply</span><span>joke</span><span>clash</span><span>quiet</span><span>agree</span></div>
 </div>
