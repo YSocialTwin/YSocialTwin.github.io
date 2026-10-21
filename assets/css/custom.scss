@@ -1067,27 +1067,24 @@ details.db-t .ys-table-wrap { margin: 0 0 6px; padding: 0 18px 12px; }
 details.db-t td:nth-child(2) { white-space: nowrap; color: var(--muted); }
 
 /* ---------- database schema: logical diagrams ---------- */
-.er-fig { margin: 1.2rem 0 .6rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 12px; }
+.er-fig { --er-a: var(--orange, #ff642a); --er-c: var(--teal, #6dc3d0); --er-w: #9aa3ad; --er-i: var(--violet, #8984cd); --er-s: #c9a227; --er-o: #d6567b; margin: 1.2rem 0 .6rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 12px; }
+.er-legend { --er-a: var(--orange, #ff642a); --er-c: var(--teal, #6dc3d0); --er-w: #9aa3ad; --er-i: var(--violet, #8984cd); --er-s: #c9a227; --er-o: #d6567b; display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 1.4rem; font-size: .86rem; color: var(--muted); }
+.er-lg { display: inline-flex; align-items: center; gap: 7px; }
+.er-lg::before { content: ""; width: 12px; height: 12px; border-radius: 4px; background: var(--c); flex: none; }
 .er-scroll { overflow-x: auto; }
-.er-fig svg { display: block; min-width: 880px; width: 100%; height: auto; }
+.er-fig svg { display: block; margin: 0 auto; height: auto; }
 .er-fig .graph > polygon { fill: none; stroke: none; }
-.er-fig .node polygon { fill: color-mix(in srgb, var(--accent) 5%, var(--card)); stroke-width: 1.6; }
+.er-fig .node > path, .er-fig .node > polygon { fill: color-mix(in srgb, var(--accent) 5%, var(--card)); stroke-width: 2; }
 .er-fig .node text { fill: var(--text); }
-.er-fig .er-a polygon { stroke: var(--orange); } .er-fig .er-c polygon { stroke: var(--teal); } .er-fig .er-n polygon { stroke: var(--muted); }
-.er-fig .er-i polygon { stroke: var(--violet); } .er-fig .er-s polygon { stroke: #c9a227; } .er-fig .er-o polygon { stroke: #d6567b; }
-.er-fig .er-e path { stroke: var(--muted); fill: none; opacity: .75; } .er-fig .er-e polygon { fill: var(--muted); stroke: var(--muted); }
-.er-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 1.4rem; font-size: .84rem; color: var(--muted); }
-.er-lg::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; border: 2px solid currentColor; vertical-align: -1px; }
-.er-lg.er-a::before { border-color: var(--orange); } .er-lg.er-c::before { border-color: var(--teal); } .er-lg.er-n::before { border-color: var(--muted); }
-.er-lg.er-i::before { border-color: var(--violet); } .er-lg.er-s::before { border-color: #c9a227; } .er-lg.er-o::before { border-color: #d6567b; }
+.er-fig .er-e path { stroke: var(--muted); fill: none; opacity: .7; } .er-fig .er-e polygon { fill: var(--muted); stroke: var(--muted); }
 .er-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin: 14px 0 0; }
 .er-bar label { font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
 .er-bar select { min-height: 40px; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--text); font: inherit; }
 .er-hint { color: var(--muted); font-size: .88rem; }
 .er-fig .node { cursor: pointer; } .er-fig .node:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.er-fig .node:hover polygon { fill: color-mix(in srgb, var(--accent) 14%, var(--card)); }
-.er-fig .node.is-sel polygon { stroke-width: 3.4; fill: color-mix(in srgb, var(--accent) 22%, var(--card)); }
-.er-fig .node.is-nb polygon { stroke-width: 2.6; }
+.er-fig .node:hover > path, .er-fig .node:hover > polygon { fill: color-mix(in srgb, var(--accent) 14%, var(--card)); }
+.er-fig .node.is-sel > path, .er-fig .node.is-sel > polygon { stroke-width: 3.4; fill: color-mix(in srgb, var(--accent) 22%, var(--card)); }
+.er-fig .node.is-nb > path, .er-fig .node.is-nb > polygon { stroke-width: 2.6; }
 .er-fig .er-e.is-rel path { stroke: var(--accent); opacity: 1; stroke-width: 2; } .er-fig .er-e.is-rel polygon { fill: var(--accent); stroke: var(--accent); }
 .er-info { margin: 14px 0 6px; padding: 16px 18px 6px; border: 1px solid var(--accent); border-radius: var(--radius); background: var(--card); }
 .er-info h4 { margin: 0 0 4px; font-size: 1.1rem; } .er-info > p { margin: 0 0 8px; color: var(--muted); }
