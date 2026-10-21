@@ -690,6 +690,13 @@ details > summary .ys-scope { margin-left: 10px; vertical-align: middle; white-s
 .ys-article .ys-split-2.ys-top.flip { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
 .ys-article .ys-split-2 > img.ys-row-img { width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius-sm); }
 .ys-article .ys-split-2 .custom-carousel { margin: 0; max-width: none; }
+/* figures on /agents and /modeling: same column width in every block, whatever the alternation */
+@media (min-width: 801px) {
+  .ys-article .ys-row:has(> .ys-fig), .ys-article .ys-row.flip:has(> .ys-fig) { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; }
+}
+@media (min-width: 901px) {
+  .ys-article .ys-split-2.ys-top:has(.ys-fig), .ys-article .ys-split-2.ys-top.flip:has(.ys-fig) { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; }
+}
 /* figures on /agents and /modeling: one frame size; charts are never cropped */
 .ys-article img.ys-fig { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; object-position: center; background: var(--surface); }
 .ys-article .ys-split-2 h3 { margin: 0 0 .4rem; font-size: 1.5rem; }
