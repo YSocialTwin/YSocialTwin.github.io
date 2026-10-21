@@ -25,35 +25,6 @@ Time is the table `rounds` (one row per slot, with `day` and `hour`). Other tabl
 </div>
 </div>
 
-## A first look {#first-look}
-
-```python
-import sqlite3, pandas as pd
-
-con = sqlite3.connect("y_web/experiments/<experiment>/database_server.db")
-
-# root posts per day
-pd.read_sql("""
-    SELECT r.day, COUNT(*) AS posts
-    FROM post p JOIN rounds r ON r.id = p.round
-    WHERE p.comment_to = -1
-    GROUP BY r.day""", con)
-
-# average toxicity per day
-pd.read_sql("""
-    SELECT r.day, AVG(t.toxicity) AS toxicity
-    FROM post_toxicity t
-    JOIN post p ON p.id = t.post_id
-    JOIN rounds r ON r.id = p.round
-    GROUP BY r.day""", con)
-
-# opinion on each topic over time
-pd.read_sql("""
-    SELECT r.day, a.topic_id, AVG(a.opinion) AS opinion
-    FROM agent_opinion a JOIN rounds r ON r.id = a.tid
-    GROUP BY r.day, a.topic_id""", con)
-```
-
 ## The tables {#tables}
 
 <div class="ys-tabs" data-tabs data-cards data-label="Platform">
