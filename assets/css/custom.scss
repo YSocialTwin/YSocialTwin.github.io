@@ -1065,3 +1065,18 @@ details.db-t > summary > code { font-weight: 800; }
 details.db-t > summary > span:not(.ys-pill) { flex: 1 1 280px; color: var(--muted); font-weight: 400; font-size: .92rem; }
 details.db-t .ys-table-wrap { margin: 0 0 6px; padding: 0 18px 12px; }
 details.db-t td:nth-child(2) { white-space: nowrap; color: var(--muted); }
+
+/* ---------- database schema: logical diagrams ---------- */
+.er-fig { margin: 1.2rem 0 .6rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 12px; }
+.er-scroll { overflow-x: auto; }
+.er-fig svg { display: block; min-width: 880px; width: 100%; height: auto; }
+.er-fig .graph > polygon { fill: none; stroke: none; }
+.er-fig .node polygon { fill: color-mix(in srgb, var(--accent) 5%, var(--card)); stroke-width: 1.6; }
+.er-fig .node text { fill: var(--text); }
+.er-fig .er-a polygon { stroke: var(--orange); } .er-fig .er-c polygon { stroke: var(--teal); } .er-fig .er-n polygon { stroke: var(--muted); }
+.er-fig .er-i polygon { stroke: var(--violet); } .er-fig .er-s polygon { stroke: #c9a227; } .er-fig .er-o polygon { stroke: #d6567b; }
+.er-fig .er-e path { stroke: var(--muted); fill: none; opacity: .75; } .er-fig .er-e polygon { fill: var(--muted); stroke: var(--muted); }
+.er-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 1.4rem; font-size: .84rem; color: var(--muted); }
+.er-lg::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; border: 2px solid currentColor; vertical-align: -1px; }
+.er-lg.er-a::before { border-color: var(--orange); } .er-lg.er-c::before { border-color: var(--teal); } .er-lg.er-n::before { border-color: var(--muted); }
+.er-lg.er-i::before { border-color: var(--violet); } .er-lg.er-s::before { border-color: #c9a227; } .er-lg.er-o::before { border-color: #d6567b; }
