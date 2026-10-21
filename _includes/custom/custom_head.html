@@ -2,7 +2,7 @@
 {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <script>
 /* apply the saved theme before first paint (default: dark, like the YSocial login) */
-(function(){try{var t=localStorage.getItem('ys-theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}document.documentElement.className+=' js';})();
+(function(){try{var t=localStorage.getItem('ys-theme');if(t!=='light'&&t!=='dark'){t='light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}document.documentElement.className+=' js';})();
 </script>
 <script src="{{ site.baseurl }}/assets/js/ysocial-v4.js?v={{ site.time | date: '%s' }}" defer></script>
 {% if page.vega %}
@@ -21,6 +21,6 @@
 <link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon/favicon.ico">
 <meta name="msapplication-TileColor" content="#333333">
 <meta name="msapplication-config" content="{{site.baseurl}}/assets/favicon/browserconfig.xml">
-<meta name="theme-color" content="#07131b">
+<meta name="theme-color" content="#f3f8fb">
 
 <!-- end custom head snippets -->
