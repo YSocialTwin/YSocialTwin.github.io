@@ -51,6 +51,11 @@ show_sidetoc: true
 </div>
 </div>
 <p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. Every file is listed in <a href="{{ site.release_url }}/SHA256SUMS.txt">SHA256SUMS.txt</a> so you can verify your download.</p>
+<div class="ys-shots">
+<figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install1.webp" alt="The installer: Install YSocial" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>1. Press <em>Install YSocial</em></figcaption></figure>
+<figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install2a.webp" alt="The installer preparing the Python environment" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>2. It prepares Python and a private environment</figcaption></figure>
+<figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install2b.webp" alt="The installer installing YSocial" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>3. It installs YSocial, then you press <em>Start</em></figcaption></figure>
+</div>
 {% capture t_installer %}
 Open the installer, press *Install YSocial*, then **Start**. YSocial opens in its own window, and closing the window stops YSocial and every service it started. The installers are not code-signed, so your system will warn you once:
 {% endcapture %}

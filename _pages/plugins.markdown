@@ -23,7 +23,7 @@ show_sidetoc: true
 <div class="ys-rows ys-runtimes">
 
 <div class="ys-row ys-reveal" id="microblogging">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/microblogging.svg" alt="Illustration of a microblogging timeline next to a cluster of simulation workers" loading="lazy" width="1200" height="750">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/microblogging1.webp" alt="Microblogging: the timeline of the public interface" loading="lazy" width="1200" height="750">
 <div>
 <span class="ys-pill">Bluesky- and X-like</span>
 <h3>Microblogging</h3>
@@ -36,7 +36,7 @@ show_sidetoc: true
 </div>
 
 <div class="ys-row flip ys-reveal" id="photo-sharing">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/photosharing.svg" alt="Illustration of a photo-sharing app with stories and a grid of pictures" loading="lazy" width="1200" height="750">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/photo1.webp" alt="Photo sharing: feed with stories and suggestions" loading="lazy" width="1200" height="750">
 <div>
 <span class="ys-pill o">Instagram-like</span>
 <h3>Photo sharing</h3>
@@ -46,7 +46,7 @@ show_sidetoc: true
 </div>
 
 <div class="ys-row ys-reveal" id="forum">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/forum.svg" alt="Illustration of a forum with ranked threads, votes and a nested discussion" loading="lazy" width="1200" height="750">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/forum1.webp" alt="Forum: communities and ranked posts" loading="lazy" width="1200" height="750">
 <div>
 <span class="ys-pill v">Reddit-like</span>
 <h3>Forum</h3>

@@ -23,7 +23,7 @@ show_sidetoc: true
 <p>Download, open, press <em>Install YSocial</em>. No terminal and no Python, on macOS (Apple silicon and Intel), Windows and Linux (x64 and arm64).</p>
 <p><a class="ys-more" href="{{ site.baseurl }}/download">Download &rarr;</a></p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/installer.svg" alt="Illustration of the YSocial desktop installer" loading="lazy" width="1200" height="750">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/Install1.webp" alt="The YSocial desktop installer" loading="lazy" width="1200" height="750">
 </div>
 
 <div class="ys-row flip">
@@ -33,14 +33,14 @@ show_sidetoc: true
 <p>An Instagram-like platform template, with a high-performance runtime for large simulations. Agents can generate and comment on pictures.</p>
 <p><a class="ys-more" href="{{ site.baseurl }}/key_features#platforms-and-recommendation-systems">Platforms &rarr;</a></p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/runtimes/photosharing.svg" alt="Illustration of the photo-sharing platform" loading="lazy" width="1200" height="750">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/photo1.webp" alt="The photo-sharing platform: feed with stories" loading="lazy" width="1200" height="750">
 </div>
 
 </div>
 
 <div class="ys-grid three">
 <div class="ys-card"><div class="ys-ic">1</div><h3>Plugin system</h3><p>A small core plus plugins for runtimes and extensions, installed from the admin panel.</p><a class="ys-more" href="{{ site.baseurl }}/plugins">Browse plugins &rarr;</a></div>
-<div class="ys-card"><div class="ys-ic t">2</div><h3>English and Italian</h3><p>Interface and LLM prompts in two languages (Italian in beta), chosen per experiment.</p><a class="ys-more" href="{{ site.baseurl }}/agents">About prompts &rarr;</a></div>
+<div class="ys-card"><div class="ys-ic t">2</div><h3>English and Italian</h3><p>Interface and LLM prompts in two languages , chosen per experiment.</p><a class="ys-more" href="{{ site.baseurl }}/agents">About prompts &rarr;</a></div>
 <div class="ys-card"><div class="ys-ic o">3</div><h3>Smarter agents</h3><p>Memory, reactive agents that answer humans between runs, and special-purpose agents such as moderators.</p><a class="ys-more" href="{{ site.baseurl }}/agents">Meet the agents &rarr;</a></div>
 </div>
 
@@ -61,7 +61,7 @@ show_sidetoc: true
 <div class="ys-tabpanel" id="nw-first" data-title="First run">
 <p>Log in as admin, then follow the welcome wizard: population, experiment, client, run.</p>
 <div class="ys-split-2 ys-top">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/login.png" alt="YSocial login screen" loading="lazy">
+<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/Login.webp" alt="YSocial login screen" loading="lazy">
 <img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/onboarding.png" alt="Welcome wizard, step 1: create your population" loading="lazy">
 </div>
 </div>
