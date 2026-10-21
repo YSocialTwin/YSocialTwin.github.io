@@ -62,6 +62,8 @@ After the recovery, the database is ready to be queried.
 <div><dt>Platform activity</dt><dd><code>reactions</code> to contents, <code>voting</code> (when enabled), <code>recommendations</code> served to agents, <code>rounds</code> simulation rounds.</dd></div>
 </dl>
 
+<p>Every table and column, for each platform, is described in the <a href="{{ site.baseurl }}/database_schema">database schema</a>. It follows the current version, so recent simulations may have more columns than these v3.0.0 datasets.</p>
+
 ## Research and outreach
 
 <p class="ys-intro" style="text-align:left;margin:0 0 14px"><code>YSocial</code> is a research project and we are always looking for collaborations. It has been presented at conferences, workshops and schools.</p>
