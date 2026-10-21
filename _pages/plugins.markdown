@@ -2,7 +2,7 @@
 layout: default-full
 title: "Plugins"
 subtitle: "A small core, and the runtimes and extensions you choose."
-eyebrow: "Inside YSocial"
+eyebrow: "Platform"
 header_title: "Plugins"
 header_type: hero
 show_sidetoc: true

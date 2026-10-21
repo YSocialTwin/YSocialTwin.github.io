@@ -2,7 +2,7 @@
 layout: default-full
 title: "Opinion Dynamics"
 subtitle: "How agents change their minds, and what it does to a simulation"
-eyebrow: "Inside YSocial"
+eyebrow: "Agents"
 header_type: hero
 header_title: "Opinion Dynamics"
 show_sidetoc: true

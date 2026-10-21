@@ -61,20 +61,23 @@ navbar:
           desc: Release highlights
           url: /whats_new
 
-    - title: Inside YSocial
+    - title: Platform
       child:
         - title: Key features
           desc: What a simulation looks like
           url: /key_features
-        - title: Plugins
-          desc: Clients, servers and extensions
-          url: /plugins
-        - title: LLM agents
-          desc: Personas, prompts, memory
-          url: /agents
         - title: Modeling choices
           desc: Actions and recommender systems
           url: /modeling
+        - title: Plugins
+          desc: Clients, servers and extensions
+          url: /plugins
+
+    - title: Agents
+      child:
+        - title: LLM agents
+          desc: Personas, prompts, special agents
+          url: /agents
         - title: Agent memory
           desc: Relationships, threads, communities
           url: /agent_memory

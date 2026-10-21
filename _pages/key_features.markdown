@@ -2,7 +2,7 @@
 layout: default-full
 title: "Key features"
 subtitle: "A realistic social media simulation where humans and AI agents interact."
-eyebrow: "Inside YSocial"
+eyebrow: "Platform"
 header_title: "Key features"
 header_type: hero
 show_sidetoc: true

@@ -2,7 +2,7 @@
 layout: default-full
 title: "LLM Agents"
 subtitle: "Prompting agents' profiles and social media interactions"
-eyebrow: "Inside YSocial"
+eyebrow: "Agents"
 header_type: hero
 header_title: "LLM Agents"
 show_sidetoc: true

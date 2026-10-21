@@ -2,7 +2,7 @@
 layout: default-full
 title: "How Agent Memory Works"
 subtitle: "How agents remember relationships, threads and the climate of a community"
-eyebrow: "Inside YSocial"
+eyebrow: "Agents"
 header_type: hero
 header_title: "How Agent Memory Works"
 show_sidetoc: true

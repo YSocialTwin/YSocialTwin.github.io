@@ -2,7 +2,7 @@
 layout: default-full
 title: "Modeling Choices"
 subtitle: "Actions, recommender systems, social dynamics and annotations"
-eyebrow: "Inside YSocial"
+eyebrow: "Platform"
 header_type: hero
 header_title: "Modeling Choices"
 show_sidetoc: true
