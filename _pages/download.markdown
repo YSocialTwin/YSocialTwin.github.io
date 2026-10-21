@@ -187,6 +187,7 @@ python y_social.py --no_notebook                           # disable Jupyter Lab
 3. In the admin panel, connect an LLM, create an experiment and press start.
 {% endcapture %}
 {{ t_first | markdownify }}
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen_v4/Login.webp" alt="The YSocial login page" loading="lazy" width="1600" height="994" style="width:100%;height:auto;margin-top:12px">
 </div>
 <div>
 {% capture t_open %}
