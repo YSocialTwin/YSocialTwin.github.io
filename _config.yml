@@ -54,6 +54,9 @@ navbar:
         - title: Download and install
           desc: Installer, pip, Docker or source
           url: /download
+        - title: Your first simulation
+          desc: Step-by-step tutorial
+          url: /first_simulation
         - title: What's new in 4.0.0
           desc: Release highlights
           url: /whats_new
