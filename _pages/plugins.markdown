@@ -103,7 +103,7 @@ Only the runtime of the platform you simulate is required. The extensions below 
 {%- for cat in site.data.plugins -%}
 {%- if cat.category != "Simulation runtimes" -%}
 {%- for p in cat.items %}
-<tr><td>{{ p.name }}</td><td>{{ p.desc }}</td><td><a href="{{ p.repo }}" target="_blank" rel="noopener">GitHub</a></td></tr>
+<tr><td>{{ p.name }}</td><td>{{ p.desc }}{% if p.page %} <a href="{{ site.baseurl }}{{ p.page }}">How it works</a>.{% endif %}</td><td><a href="{{ p.repo }}" target="_blank" rel="noopener">GitHub</a></td></tr>
 {%- endfor -%}
 {%- endif -%}
 {%- endfor %}

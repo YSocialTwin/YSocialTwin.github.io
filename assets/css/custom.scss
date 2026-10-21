@@ -839,3 +839,37 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 @keyframes ys-dot { 0%, 60%, 100% { opacity: .3; transform: none; } 30% { opacity: 1; transform: translateY(-3px); } }
 @media (max-width: 900px) { .ys-feed-body .ys-post.l1, .ys-feed-body .ys-post.l2, .ys-feed-body .ys-post.l3 { margin-left: 0; } .ys-feed-body .ys-post.l1 { margin-left: 14px; } .ys-feed-body .ys-post.l2 { margin-left: 28px; } .ys-feed-body .ys-post.l3 { margin-left: 14px; } }
 @media (prefers-reduced-motion: reduce) { .ys-dots i { animation: none; } }
+
+/* ---------- agent memory page ---------- */
+.ys-meters { margin: 1.2rem 0 1.6rem; padding: 18px 22px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); max-width: 640px; }
+.ys-meter { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 14px; align-items: center; margin: 10px 0; color: var(--text); font-weight: 600; }
+.ys-meter > div { height: 12px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.ys-meter > div > i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal), var(--violet)); }
+.ys-meter.c > div > i { background: linear-gradient(90deg, var(--warn), var(--orange)); }
+.ys-meter-note { margin: 10px 0 0; color: var(--muted); font-size: .92rem; font-style: italic; }
+.ys-diagram { margin: 1.2rem 0 1.6rem; padding: 14px 16px 10px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); overflow-x: auto; }
+.ys-diagram svg { display: block; width: 100%; min-width: 460px; height: auto; }
+.ys-diagram .ax { stroke: var(--muted); stroke-width: 1.2; opacity: .6; }
+.ys-diagram .curve { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.ys-diagram .dot { fill: var(--accent-2); stroke: var(--bg1); stroke-width: 2; }
+.ys-diagram .dot.neg { fill: var(--orange); }
+.ys-diagram .lbl { fill: var(--muted); font-size: 13px; font-family: var(--font); }
+.ys-flowlist { counter-reset: fl; list-style: none; margin: 0; padding: 0; }
+.ys-flowlist > li { counter-increment: fl; position: relative; margin: 0 0 12px; padding: 4px 0 4px 44px; color: var(--text); }
+.ys-flowlist > li::before { content: counter(fl); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; display: grid; place-items: center; font-weight: 800; color: var(--ink); border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--violet)); }
+.ys-flowlist > li:not(:last-child)::after { content: ""; position: absolute; left: 14px; top: 34px; bottom: -10px; width: 2px; background: var(--line); }
+.ys-tiers { display: grid; gap: 10px; margin: 1.2rem 0 1.6rem; }
+.ys-tier { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 6px 18px; padding: 14px 18px; border-radius: var(--radius-sm); background: var(--card); border: 1px solid var(--line); border-left-width: 6px; }
+.ys-tier b { color: var(--heading); } .ys-tier span { color: var(--muted); }
+.ys-tier.a { border-left-color: var(--teal); } .ys-tier.b { border-left-color: var(--violet); margin-left: 18px; } .ys-tier.c { border-left-color: var(--orange); margin-left: 36px; border-style: dashed; border-left-style: solid; }
+.ys-arch { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: stretch; margin: 1.2rem 0 .6rem; }
+.ys-node { padding: 16px 18px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); display: grid; gap: 6px; align-content: start; }
+.ys-node b { color: var(--heading); } .ys-node span { color: var(--muted); font-size: .94rem; }
+.ys-node.dim { border-style: dashed; }
+.ys-link { align-self: center; text-align: center; color: var(--accent); font-weight: 700; font-size: .85rem; line-height: 1.2; max-width: 5.5rem; }
+.ys-link::before { content: "\2194"; display: block; font-size: 1.6rem; }
+@media (max-width: 800px) {
+  .ys-arch { grid-template-columns: minmax(0, 1fr); }
+  .ys-link { max-width: none; } .ys-link::before { content: "\2195"; display: inline; margin-right: 8px; font-size: 1.2rem; }
+  .ys-tier { grid-template-columns: minmax(0, 1fr); } .ys-tier.b, .ys-tier.c { margin-left: 0; }
+}

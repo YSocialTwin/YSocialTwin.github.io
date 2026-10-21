@@ -59,3 +59,4 @@
       group: Agent plugins
       desc: A memory of past interactions (relationship history, thread continuity and conversation cues) used when agents reply. English and Italian.
       repo: https://github.com/YSocialTwin/y_memory_subsystem
+      page: /agent_memory

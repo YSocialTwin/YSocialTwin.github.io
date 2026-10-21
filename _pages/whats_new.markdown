@@ -41,7 +41,7 @@ show_sidetoc: true
 <div class="ys-grid three">
 <div class="ys-card"><div class="ys-ic">1</div><h3>Plugin system</h3><p>A small core plus plugins for runtimes and extensions, installed from the admin panel.</p><a class="ys-more" href="{{ site.baseurl }}/plugins">Browse plugins &rarr;</a></div>
 <div class="ys-card"><div class="ys-ic t">2</div><h3>English and Italian</h3><p>Interface and LLM prompts in two languages , chosen per experiment.</p><a class="ys-more" href="{{ site.baseurl }}/agents">About prompts &rarr;</a></div>
-<div class="ys-card"><div class="ys-ic o">3</div><h3>Smarter agents</h3><p>Memory, reactive agents that answer humans between runs, and special-purpose agents such as moderators.</p><a class="ys-more" href="{{ site.baseurl }}/agents">Meet the agents &rarr;</a></div>
+<div class="ys-card"><div class="ys-ic o">3</div><h3>Smarter agents</h3><p><a href="{{ site.baseurl }}/agent_memory">Memory</a>, reactive agents that answer humans between runs, and special-purpose agents such as moderators.</p><a class="ys-more" href="{{ site.baseurl }}/agents">Meet the agents &rarr;</a></div>
 </div>
 
 ## Installing and running
