@@ -120,3 +120,16 @@ A plugin is a GitHub repository listed in the registry. The YSocial repository d
 </div>
 
 </div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/download"><strong>Download and install</strong><span>Get YSocial and its plugins.</span></a></li>
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
+<li><a href="{{ site.baseurl }}/key_features"><strong>Key features</strong><span>What a simulation looks like.</span></a></li>
+<li><a href="{{ site.baseurl }}/whats_new"><strong>What's new in 4.0.0</strong><span>Installer, plugins, photo sharing, memory.</span></a></li>
+</ul>
+</div>
+</section>

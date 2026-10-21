@@ -114,3 +114,16 @@ If YSocial supports your research, please cite the paper listed on the [About pa
 </div>
 
 </div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/download"><strong>Download and install</strong><span>Get YSocial 4.0.0.</span></a></li>
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
+<li><a href="{{ site.baseurl }}/plugins"><strong>Plugins</strong><span>Runtimes and extensions.</span></a></li>
+<li><a href="{{ site.baseurl }}/agent_memory"><strong>Agent memory</strong><span>Relationships, threads and communities.</span></a></li>
+</ul>
+</div>
+</section>

@@ -189,3 +189,16 @@ More on the agents in [LLM agents]({{ site.baseurl }}/agents) and on the choices
 </div>
 
 </div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
+<li><a href="{{ site.baseurl }}/agents"><strong>LLM agents</strong><span>Personas, prompts and special agents.</span></a></li>
+<li><a href="{{ site.baseurl }}/modeling"><strong>Modeling choices</strong><span>Actions and recommender systems.</span></a></li>
+<li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every setting, per platform.</span></a></li>
+</ul>
+</div>
+</section>

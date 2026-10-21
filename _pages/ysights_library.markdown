@@ -130,3 +130,16 @@ analyzer.plot_timeline()
 </div>
 
 </div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
+<li><a href="{{ site.baseurl }}/resources"><strong>Resources</strong><span>Datasets, publications and outreach material.</span></a></li>
+<li><a href="{{ site.baseurl }}/key_features"><strong>Key features</strong><span>What a simulation looks like.</span></a></li>
+<li><a href="https://ysocialtwin.github.io/ysights" target="_blank" rel="noopener"><strong>ySights documentation</strong><span>API reference and examples.</span></a></li>
+</ul>
+</div>
+</section>
