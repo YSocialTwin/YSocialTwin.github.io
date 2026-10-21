@@ -988,7 +988,7 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .pr-t.json { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 50%, transparent); }
 .pr-t.ray { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 50%, transparent); }
 :root[data-theme="light"] .pr-t.json { color: #8a5a00; } :root[data-theme="light"] .pr-t.ray { color: #14774a; }
-.pr-chain { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; margin: 1.6rem 0 1rem !important; padding: 0 !important; max-width: none !important; }
+.pr-chain { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin: 1.6rem 0 1rem !important; padding: 0 !important; max-width: none !important; }
 .pr-chain > li { position: relative; display: flex; flex-direction: column; gap: 3px; margin: 0 !important; padding: 22px 16px 16px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
 .pr-chain > li:not(:last-child)::after { content: "\2192"; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 800; }
 .pr-chain .pr-n { position: absolute; top: -13px; left: 16px; width: 28px; height: 28px; display: grid; place-items: center; font-weight: 800; font-size: .85rem; color: var(--ink); background: linear-gradient(135deg, var(--teal), var(--violet)); clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%); }

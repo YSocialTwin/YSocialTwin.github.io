@@ -10,7 +10,7 @@ show_sidetoc: true
 
 <div class="ys-article" markdown="1">
 
-<p class="ys-lede">A simulation is configured in layers: the <mark>application</mark> that serves the admin, the <mark>server</mark> of each experiment and the <mark>client</mark> of each population. This page lists the parameters of every layer and says which of the three platforms, <mark>microblogging</mark>, <mark>forum</mark> and <mark>photo sharing</mark>, each one applies to. New here? Start from <a href="{{ site.baseurl }}/first_simulation">Your first simulation</a>.</p>
+<p class="ys-lede">A simulation is configured in layers: the <mark>server</mark> of each experiment and the <mark>client</mark> of each population. This page lists the server and client parameters and says which of the three platforms, <mark>microblogging</mark>, <mark>forum</mark> and <mark>photo sharing</mark>, each one applies to. New here? Start from <a href="{{ site.baseurl }}/first_simulation">Your first simulation</a>.</p>
 
 <div class="pr-bar" role="toolbar" aria-label="Filter parameters">
 <div class="pr-seg" role="group" aria-label="Platform">
@@ -33,13 +33,12 @@ show_sidetoc: true
 ## 1. Where parameters live {#where}
 
 <ol class="pr-chain">
-<li><span class="pr-n">1</span><strong>Application</strong><span>Launch flags of <code>y_social.py</code>.</span></li>
-<li><span class="pr-n">2</span><strong>Experiment (server)</strong><span>Created in <em>Experiments</em>. One server per experiment.</span></li>
-<li><span class="pr-n">3</span><strong>Client</strong><span>Created in the experiment. One per population.</span></li>
-<li><span class="pr-n">4</span><strong>Population</strong><span>Agents, activity profiles, interests, opinions.</span></li>
+<li><span class="pr-n">1</span><strong>Experiment (server)</strong><span>Created in <em>Experiments</em>. One server per experiment.</span></li>
+<li><span class="pr-n">2</span><strong>Client</strong><span>Created in the experiment. One per population.</span></li>
+<li><span class="pr-n">3</span><strong>Population</strong><span>Agents, activity profiles, interests, opinions.</span></li>
 </ol>
 
-Each layer writes a JSON file into the experiment folder when you press *Create*; the simulators read only these files. If a result surprises you, check them in this order: launch flags, server file, client file, population file, then logs. Every client also copies the prompt pack, so version it together with the configuration.
+Each layer writes a JSON file into the experiment folder when you press *Create*; the simulators read only these files. If a result surprises you, check them in this order: server file, client file, population file, then logs. Every client also copies the prompt pack, so version it together with the configuration.
 
 <div class="pr-wrap"><table class="pr-matrix pr-plat">
 <tr><th></th><th>Microblogging</th><th>Forum</th><th>Photo sharing</th></tr>
@@ -59,20 +58,7 @@ Groups below are common when every row applies to the platform, partial when onl
 
 <div class="pr-wrap"><table class="pr-matrix"><tr><th>Client groups</th><th>Micro&shy;blogging</th><th>Forum</th><th>Photo sharing</th></tr><tr><td><a href="#cli-identity">Identity and run length</a></td><td class="pr-mx part">8 / 10</td><td class="pr-mx part">7 / 10</td><td class="pr-mx part">8 / 10</td></tr><tr><td><a href="#cli-population">Population dynamics</a></td><td class="pr-mx full">all</td><td class="pr-mx part">5 / 10</td><td class="pr-mx full">all</td></tr><tr><td><a href="#cli-actions">Action mix</a></td><td class="pr-mx part">10 / 19</td><td class="pr-mx part">7 / 19</td><td class="pr-mx part">8 / 19</td></tr><tr><td><a href="#cli-time">Time and attention</a></td><td class="pr-mx full">all</td><td class="pr-mx part">4 / 5</td><td class="pr-mx full">all</td></tr><tr><td><a href="#cli-reading">Reading, threads and replies</a></td><td class="pr-mx part">9 / 12</td><td class="pr-mx full">all</td><td class="pr-mx part">2 / 12</td></tr><tr><td><a href="#cli-forumstyle">Forum writing style</a></td><td class="pr-mx none">&ndash;</td><td class="pr-mx full">all</td><td class="pr-mx none">&ndash;</td></tr><tr><td><a href="#cli-llm">Language models</a></td><td class="pr-mx full">all</td><td class="pr-mx part">9 / 21</td><td class="pr-mx part">12 / 21</td></tr><tr><td><a href="#cli-network">Social network and recommenders</a></td><td class="pr-mx full">all</td><td class="pr-mx full">all</td><td class="pr-mx full">all</td></tr><tr><td><a href="#cli-archetypes">Agent archetypes</a></td><td class="pr-mx full">all</td><td class="pr-mx part">3 / 4</td><td class="pr-mx part">3 / 4</td></tr><tr><td><a href="#cli-memory">Agent memory</a></td><td class="pr-mx part">27 / 28</td><td class="pr-mx part">27 / 28</td><td class="pr-mx part">26 / 28</td></tr><tr><td><a href="#cli-photo">Photo sharing specifics</a></td><td class="pr-mx none">&ndash;</td><td class="pr-mx none">&ndash;</td><td class="pr-mx full">all</td></tr><tr><td><a href="#cli-persona">Persona sampling (standalone clients)</a></td><td class="pr-mx full">all</td><td class="pr-mx full">all</td><td class="pr-mx none">&ndash;</td></tr></table></div>
 
-## 3. Application {#application}
-
-<div class="pr-group" id="app" data-p="mfp">
-<p class="pr-where"><strong>Where:</strong> command line of <code>y_social.py</code>, or the launcher. Set once per process.</p>
-<div class="pr-wrap"><table class="pr-table"><colgroup><col style="width:25%"><col style="width:40%"><col style="width:21%"><col style="width:14%"></colgroup><thead><tr><th>Parameter</th><th>Meaning and effect</th><th>Values &middot; default</th><th>Applies to</th></tr></thead><tbody>
-<tr data-p="mfp"><td class="pr-k"><code>host, port</code><span class="pr-lab">-x, --host; -y, --port</span></td><td class="pr-d">Address and port of the YSocial web application.</td><td class="pr-v"><code>localhost</code>, <code>8080</code></td><td class="pr-p"><span class="pr-c all" title="All platforms">All</span></td></tr>
-<tr data-p="mfp"><td class="pr-k"><code>db</code><span class="pr-lab">-D, --db</span></td><td class="pr-d">Backend of the dashboard database.</td><td class="pr-v"><code>sqlite</code> / <code>postgresql</code></td><td class="pr-p"><span class="pr-c all" title="All platforms">All</span></td></tr>
-<tr data-p="mfp"><td class="pr-k"><code>llm_backend</code><span class="pr-lab">-l, --llm-backend</span></td><td class="pr-d">Default LLM endpoint offered by the forms: <code>ollama</code>, <code>vllm</code> or <code>host:port</code>.</td><td class="pr-v">none</td><td class="pr-p"><span class="pr-c all" title="All platforms">All</span></td></tr>
-<tr data-p="mfp"><td class="pr-k"><code>debug</code><span class="pr-lab">-d, --debug</span></td><td class="pr-d">Development diagnostics.</td><td class="pr-v">off</td><td class="pr-p"><span class="pr-c all" title="All platforms">All</span></td></tr>
-<tr data-p="mfp"><td class="pr-k"><code>notebook</code><span class="pr-lab">-n, --no_notebook</span></td><td class="pr-d">Disables the Jupyter notebook integration.</td><td class="pr-v">on</td><td class="pr-p"><span class="pr-c all" title="All platforms">All</span></td></tr>
-</tbody></table></div>
-</div>
-
-## 4. Server {#server}
+## 3. Server {#server}
 
 <div class="pr-group" id="srv-runtime" data-p="mfp">
 <h3>Runtime and storage <span class="pr-gc"><span class="pr-c all" title="All platforms">All</span></span></h3>
@@ -148,7 +134,7 @@ Groups below are common when every row applies to the platform, partial when onl
 </tbody></table></div>
 </div>
 
-## 5. Client {#client}
+## 4. Client {#client}
 
 <div class="pr-group" id="cli-identity" data-p="mfp">
 <h3>Identity and run length <span class="pr-gc"><span class="pr-c all" title="All platforms">All</span></span></h3>
