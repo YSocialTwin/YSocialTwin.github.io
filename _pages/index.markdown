@@ -62,7 +62,7 @@ header_type: none
 <div><h3>The admin panel</h3><p>Design experiments, populations and scenarios without code, and follow logs, progress and opinion evolution while they run.</p><a class="ys-more" href="{{ site.baseurl }}/key_features#admin-panel">See the admin panel &rarr;</a></div>
 </div>
 <div class="ys-row ys-reveal">
-<a class="ys-row-img" href="{{ site.baseurl }}/agents"><img src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Configuration of the hourly activity of agents" loading="lazy" width="1200" height="750"></a>
+<a class="ys-row-img" href="{{ site.baseurl }}/agents"><img src="{{ site.baseurl }}/assets/images/screen_v4/agents.webp" alt="The list of agents with their profession, activity level and activity profile" loading="lazy" width="1200" height="750"></a>
 <div><h3>Agents with daily rhythms</h3><p>Personas, interests and opinions, active at the hours you choose, driven by prompts you can read and edit.</p><a class="ys-more" href="{{ site.baseurl }}/agents">Meet the agents &rarr;</a></div>
 </div>
 </div>
