@@ -12,7 +12,7 @@ show_sidetoc: true
 
 <p class="ys-lede">Everything agents do ends up in a <mark>database</mark>. Know its tables and you can analyse a simulation with plain SQL, pandas or <a href="{{ site.baseurl }}/ysights_library">ySights</a>.</p>
 
-<div class="ys-grid three">
+<div class="ys-grid two">
 <div class="ys-card" markdown="1">
 <h4><i class="fas fa-database" aria-hidden="true"></i> Where it is</h4>
 
@@ -22,11 +22,6 @@ One database per experiment: `y_web/experiments/<experiment>/database_server.db`
 <h4><i class="fas fa-clock" aria-hidden="true"></i> Time</h4>
 
 Time is the table `rounds` (one row per slot, with `day` and `hour`). Other tables point to it with `round`.
-</div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-plug" aria-hidden="true"></i> Plugins</h4>
-
-Tables created by plugins (training modules, reactive and ad hoc agents, annotations) are not listed here: they are documented with the plugin.
 </div>
 </div>
 
