@@ -1,3 +1,55 @@
+- year: 2027
+  title: 'PhDGPT: Measuring bias in academic mental health across quantised and uncensored LLMs'
+  authors: 'De Duro et al.'
+  venue: 'Information Processing & Management'
+- year: 2026
+  title: 'A survey of social network simulation in the LLM era: From classical models to Generative Agents'
+  authors: 'Nguyen et al.'
+  venue: 'Knowledge-Based Systems'
+- year: 2026
+  title: 'Can Persona-Conditioned Language Agents Simulate Counterfactual Online Discourse Dynamics?'
+  authors: 'Lu et al.'
+  venue: 'The 2026 Conference (proceedings)'
+- year: 2026
+  title: 'Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks'
+  authors: 'Berjawi et al.'
+  venue: 'arXiv:2609.19913'
+- year: 2026
+  title: 'From Caricature to Collective Artifact: How Persona Construction Drives Polarization in Generative Social Simulations'
+  authors: 'Michailidis, Törnberg, and Santos'
+  venue: 'arXiv:2610.16498'
+- year: 2026
+  title: 'From Structural to Temporal Fidelity in Dynamic Graph Generation'
+  authors: 'Hamouni and Bagheri'
+  venue: 'OpenReview'
+- year: 2026
+  title: 'Large Language Models Toward Artificial General Intelligence: A Survey of Principles, Methods, and Challenges'
+  authors: 'Lama'
+  venue: 'SSRN'
+- year: 2026
+  title: 'Learnscrolling: Harnessing Attention Economy Mechanics for Incidental Learning via Synthetic Social Media'
+  authors: 'Abel'
+  venue: 'International Conference on Computer (proceedings)'
+- year: 2026
+  title: 'LLMs for Social Network Modeling: From Network Generation to Dynamic Processes'
+  authors: 'Mallick, Thomo, and Saxena'
+  venue: 'arXiv:2609.08049'
+- year: 2026
+  title: 'Opening the black box: how EUD interfaces foster user agency and quality in generative phishing simulations'
+  authors: 'Desolda et al.'
+  venue: 'Behaviour & Information Technology'
+- year: 2026
+  title: 'Toward Verifiable Audience Digital Twins: An Agent-Based Architecture Integrating COM-B and ELM'
+  authors: 'Zeng'
+  venue: 'ResearchGate preprint'
+- year: 2026
+  title: 'Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum'
+  authors: 'Tomašević et al.'
+  venue: 'EPJ Data Science'
+- year: 2026
+  title: 'Transitioning from Urban to Social Digital Twins Through AI and Social Media Analytics'
+  authors: 'Qanazi, Leclerc, and Bosredon'
+  venue: '2026 5th MEC International Conference'
 - year: 2026
   title: 'From individual to society: A survey on social simulation driven by large language model-based agents'
   authors: Mou et al.

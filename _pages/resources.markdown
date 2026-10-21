@@ -92,7 +92,7 @@ After the recovery, the database is ready to be queried.
 
 <div class="alert-info-custom"><strong>Are you using <code>YSocial</code> in your research?</strong> Let us know and we will add your publication to the list.</div>
 
-<p>Publications related to, or citing, the <code>YSocial</code> project. Last updated: August 2026.</p>
+<p>Publications related to, or citing, the <code>YSocial</code> project. Last updated: October 2026.</p>
 
 <table class="ys-data ys-pubs" data-label="Search publications" data-placeholder="Search title, author, venue" data-year-col="0">
 <thead><tr><th>Year</th><th>Title</th><th>Authors</th><th>Venue</th></tr></thead>
