@@ -10,78 +10,190 @@ show_sidetoc: true
 
 <div class="ys-article" markdown="1">
 
-<p class="ys-lede">A study rarely needs one run. These facilities, all in the <mark>Experiments</mark> section of the admin panel, help you <mark>reuse</mark>, <mark>vary</mark> and <mark>queue</mark> experiments without rebuilding them by hand.</p>
+<p class="ys-lede">Studies need many runs, not one. These tools reuse, vary and queue experiments for you. All live in <mark>Experiments</mark>.</p>
 
-<ol class="ys-steps">
-<li><h3><a href="#copy">Copy experiment</a></h3><p>Clone one setup, N times.</p></li>
-<li><h3><a href="#copy-group">Copy group</a></h3><p>Clone a whole set.</p></li>
-<li><h3><a href="#upload">Upload experiment</a></h3><p>Import from a ZIP.</p></li>
-<li><h3><a href="#matrix">Experiment matrix</a></h3><p>Vary parameters.</p></li>
-<li><h3><a href="#schedule">Experiment schedule</a></h3><p>Run them in order.</p></li>
-</ol>
+<div class="ys-grid three">
+<a class="ys-card hover" href="#copy"><h3><i class="fas fa-copy" aria-hidden="true"></i> Copy experiment</h3><p>Clone one setup.</p></a>
+<a class="ys-card hover" href="#copy-group"><h3><i class="fas fa-layer-group" aria-hidden="true"></i> Copy group</h3><p>Clone a whole set.</p></a>
+<a class="ys-card hover" href="#upload"><h3><i class="fas fa-file-archive" aria-hidden="true"></i> Upload experiment</h3><p>Import from a ZIP.</p></a>
+<a class="ys-card hover" href="#matrix"><h3><i class="fas fa-th" aria-hidden="true"></i> Experiment matrix</h3><p>Vary parameters.</p></a>
+<a class="ys-card hover" href="#schedule"><h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Experiment schedule</h3><p>Run many, unattended.</p></a>
+</div>
 
 <div class="alert-info-custom" markdown="1">
-**Groups.** Every experiment can belong to a *group*, a named set of related runs. Copy group, matrix and schedule all work on groups.
+**Groups:** an experiment can belong to a named *group* of related runs. Copy group, matrix and schedule work on groups.
 </div>
 
 ## Copy experiment {#copy}
 
-**Use it to:** repeat the same setup (replications, random seeds, a baseline you then tweak).
+<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Copy experiment</p>
 
-1. Choose the **source** experiment and give the new **name**.
-2. Set how many **copies** you want: they are named `name_1`, `name_2`, and so on.
-3. Optionally put them in a **group**.
+Clone a setup to replicate it or try a variation.
 
-**What is copied:** configuration, populations, clients and prompts.
-**What is not:** simulation data, logs and runtime state. Each copy gets a fresh database and its own port, so it starts from zero and never interferes with the original.
+<div class="ys-grid three">
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
+
+- Replications
+- A baseline to tweak
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
+
+- Source experiment
+- New name
+- Number of copies
+- Group (optional)
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
+
+- Copies named `name_1`, `name_2`…
+- Configuration, populations, clients, prompts
+- Fresh database and port, **no data or logs**
+</div>
+</div>
 
 ## Copy group {#copy-group}
 
-**Use it to:** duplicate a whole set of experiments, for instance to rerun a full design with a different model.
+<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Copy group</p>
 
-Pick a **source group** and a **new group name**. Every experiment in the source is copied into the new group with the same rules as *Copy experiment*. If one copy fails, the others still go through and you get a per-experiment report.
+Duplicate a whole design in one step.
+
+<div class="ys-grid three">
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
+
+- Rerunning a full design, e.g. with another model
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
+
+- Source group
+- New group name
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
+
+- Every experiment copied as in *Copy experiment*
+- A report if one copy fails; the others still go through
+</div>
+</div>
 
 ## Upload experiment {#upload}
 
-**Use it to:** import an experiment made elsewhere: a colleague's, another installation, or an archived one.
+<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Upload experiment</p>
 
-Upload a **ZIP** of the experiment folder, with an optional new name and group. YSocial finds the configuration (`config_server.json` for Standard, `server_config.json` for HPC), also inside nested folders, and registers the experiment. Platform type and configuration are read from the files, so you do not enter them again.
+Bring in an experiment made elsewhere.
+
+<div class="ys-grid three">
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
+
+- A colleague's or archived experiment
+- Moving between installations
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
+
+- A ZIP of the experiment folder
+- Name and group (optional)
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
+
+- A registered experiment, ready to run
+- Settings read from `config_server.json` or `server_config.json`, also in nested folders
+</div>
+</div>
 
 ## Experiment matrix {#matrix}
 
-**Use it to:** explore a parameter space, such as several recommender systems crossed with several content filters.
+<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Experiment matrix</p>
 
-1. Pick a **source experiment** or group and a **target group**.
-2. **Unlock** the settings you want to vary: server parameters and recommender options are listed as editable items.
-3. For each unlocked setting, list its **alternative values**.
-4. Choose how to combine them:
+Explore a parameter space from one source experiment.
+
+<div class="ys-grid three">
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
+
+- Sensitivity analyses
+- Factorial designs, e.g. recommenders × content filters
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
+
+- Source experiment and target group
+- Settings to **unlock**
+- Alternative values for each
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
+
+- A new group of experiments
+- Everything else inherited
+- Ports, paths and databases regenerated
+</div>
+</div>
 
 <div class="ys-grid two">
 <div class="ys-card" markdown="1">
-#### Independent
-One new experiment per alternative, changing one setting at a time. Use it for **sensitivity analysis**.
+<h4>Independent</h4>
+
+One experiment per alternative, one setting at a time.
 </div>
 <div class="ys-card" markdown="1">
-#### Cartesian
-One experiment for **every combination** of values. Use it for **factorial designs**; the count grows quickly.
-</div>
-</div>
+<h4>Cartesian</h4>
 
-Everything else is inherited from the source. Identity settings (ports, paths, database) are never varied: they are regenerated for each experiment. The result is a new group, ready for the schedule.
+One experiment per combination. The count grows fast.
+</div>
+</div>
 
 ## Experiment schedule {#schedule}
 
-**Use it to:** run many experiments unattended, in order.
+<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Experiment schedule</p>
 
-- **Groups run one after another**; experiments **inside** a group can run in parallel.
-- **HPC groups** run at most **4** experiments at once (configurable) and cannot be mixed with Standard ones.
-- **Dynamic filling** (optional) starts the next experiment as soon as a slot frees.
-- **Eligible** experiments are stopped, not in a group, not completed, and with no infinite client.
-- You can **start, stop**, follow **progress** and read **logs**. Helpers create groups automatically and clean up finished ones.
-- A background monitor keeps the queue moving. Non-admin users see and run only their own experiments.
+Run many experiments unattended.
+
+<div class="ys-grid three">
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
+
+- Overnight batches
+- Running a whole group
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
+
+- Groups, in the order you want
+- Dynamic filling (optional)
+</div>
+<div class="ys-card" markdown="1">
+<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
+
+- Groups run **in sequence**, experiments in a group **in parallel**
+- Start, stop, progress and logs
+</div>
+</div>
+
+<div class="ys-grid two">
+<div class="ys-card" markdown="1">
+<h4>Good to know</h4>
+
+- HPC groups: at most **4** at once, never mixed with Standard.
+- Dynamic filling starts the next run when a slot frees.
+</div>
+<div class="ys-card" markdown="1">
+<h4>Eligible experiments</h4>
+
+- Stopped, not completed
+- Not already in a group
+- No infinite client
+</div>
+</div>
 
 <div class="alert-info-custom" markdown="1">
-**Typical workflow:** build one experiment → *Experiment matrix* into a group → *Experiment schedule* to run it → *Copy group* to replicate the whole study.
+**Typical workflow:** one experiment, then *Matrix* into a group, *Schedule* to run it, *Copy group* to replicate the study.
 </div>
 
 <div class="cta-buttons">
