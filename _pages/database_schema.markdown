@@ -16,7 +16,7 @@ show_sidetoc: true
 <div class="ys-card" markdown="1">
 <h4><i class="fas fa-database" aria-hidden="true"></i> Where it is</h4>
 
-One database per experiment: `y_web/experiments/<experiment>/database_server.db` (SQLite), or PostgreSQL when selected. HPC runtimes use the same table names.
+One database per experiment: `y_web/experiments/<experiment>/database_server.db` (SQLite). HPC runtimes use the same table names, but some of their tables identify rows with a <strong>UUID</strong> (text) instead of an auto-incrementing integer `id`: check the column type before joining across tables.
 </div>
 <div class="ys-card" markdown="1">
 <h4><i class="fas fa-clock" aria-hidden="true"></i> Time</h4>
