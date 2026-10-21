@@ -45,6 +45,13 @@ document.querySelectorAll('.custom-carousel').forEach(function (carousel) {
   function update() { items.forEach(function (i) { i.classList.remove('active'); }); items[currentIndex].classList.add('active'); }
   if (nextBtn) nextBtn.addEventListener('click', function () { currentIndex = (currentIndex + 1) % total; update(); });
   if (prevBtn) prevBtn.addEventListener('click', function () { currentIndex = (currentIndex - 1 + total) % total; update(); });
+  var held = false, last = Date.now();
+  ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { carousel.addEventListener(ev, function () { held = true; }, { passive: true }); });
+  ['mouseleave', 'focusout', 'touchend'].forEach(function (ev) { carousel.addEventListener(ev, function () { held = false; last = Date.now(); }); });
+  [nextBtn, prevBtn].forEach(function (b) { if (b) b.addEventListener('click', function () { last = Date.now(); }); });
+  if (total > 1 && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    setInterval(function () { if (!held && !document.hidden && Date.now() - last >= 5300) { currentIndex = (currentIndex + 1) % total; update(); last = Date.now(); } }, 500);
+  }
 });
 </script>
 {%- endif -%}

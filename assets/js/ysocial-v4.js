@@ -213,6 +213,20 @@
       var sx = 0; c.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
       c.addEventListener('touchend', function (e) { var d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 40) go(cur + (d < 0 ? 1 : -1)); }, { passive: true });
       go(cur);
+      /* autoplay: pauses on hover, focus, touch, while the lightbox is open, off screen or in a hidden tab;
+         a manual change restarts the delay; off for visitors who ask for reduced motion */
+      if (!reduce && items.length > 1) {
+        var held = false, onscreen = true, last = Date.now(), AUTOPLAY_MS = 5500, goManual = go;
+        go = function (n) { last = Date.now(); goManual(n); };
+        ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { c.addEventListener(ev, function () { held = true; }, { passive: true }); });
+        ['mouseleave', 'focusout'].forEach(function (ev) { c.addEventListener(ev, function () { held = false; last = Date.now(); }); });
+        c.addEventListener('touchend', function () { setTimeout(function () { held = false; last = Date.now(); }, 4000); }, { passive: true });
+        if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { onscreen = es[0].isIntersecting; }).observe(c);
+        setInterval(function () {
+          if (held || !onscreen || doc.hidden || (lb && lb.classList.contains('on'))) return;
+          if (Date.now() - last >= AUTOPLAY_MS - 200) go(cur + 1);
+        }, 500);
+      }
     });
   }
 

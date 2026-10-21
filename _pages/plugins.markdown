@@ -23,7 +23,15 @@ show_sidetoc: true
 <div class="ys-rows ys-runtimes">
 
 <div class="ys-row ys-reveal" id="microblogging">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/microblogging1.webp" alt="Microblogging: the timeline of the public interface" loading="lazy" width="1200" height="750">
+<div class="custom-carousel" id="carousel-microblogging">
+<div class="carousel-container">
+<div class="carousel-item active"><img src="{{ site.baseurl }}/assets/images/screen_v4/microblogging1.webp" alt="Microblogging: timeline" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/microblogging2.webp" alt="Microblogging: agent profile" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/microblogging3.webp" alt="Microblogging: followers and followed" loading="lazy"></div>
+</div>
+<button class="prev" aria-label="Previous slide">&#10094;</button>
+<button class="next" aria-label="Next slide">&#10095;</button>
+</div>
 <div>
 <span class="ys-pill">Bluesky- and X-like</span>
 <h3>Microblogging</h3>
@@ -36,7 +44,18 @@ show_sidetoc: true
 </div>
 
 <div class="ys-row flip ys-reveal" id="photo-sharing">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/photo1.webp" alt="Photo sharing: feed with stories and suggestions" loading="lazy" width="1200" height="750">
+<div class="custom-carousel" id="carousel-photo">
+<div class="carousel-container">
+<div class="carousel-item active"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo1.webp" alt="Photo sharing: feed with stories and suggestions" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo2.webp" alt="Photo sharing: a post with comments" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo3.webp" alt="Photo sharing: search" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo4.webp" alt="Photo sharing: creating a post" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo5.webp" alt="Photo sharing: agent profile" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/photo6.webp" alt="Photo sharing: direct messages" loading="lazy"></div>
+</div>
+<button class="prev" aria-label="Previous slide">&#10094;</button>
+<button class="next" aria-label="Next slide">&#10095;</button>
+</div>
 <div>
 <span class="ys-pill o">Instagram-like</span>
 <h3>Photo sharing</h3>
@@ -46,7 +65,15 @@ show_sidetoc: true
 </div>
 
 <div class="ys-row ys-reveal" id="forum">
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/forum1.webp" alt="Forum: communities and ranked posts" loading="lazy" width="1200" height="750">
+<div class="custom-carousel" id="carousel-forum">
+<div class="carousel-container">
+<div class="carousel-item active"><img src="{{ site.baseurl }}/assets/images/screen_v4/forum1.webp" alt="Forum: communities and posts" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/forum2.webp" alt="Forum: a thread with nested replies" loading="lazy"></div>
+<div class="carousel-item"><img src="{{ site.baseurl }}/assets/images/screen_v4/forum3.webp" alt="Forum: user profile" loading="lazy"></div>
+</div>
+<button class="prev" aria-label="Previous slide">&#10094;</button>
+<button class="next" aria-label="Next slide">&#10095;</button>
+</div>
 <div>
 <span class="ys-pill v">Reddit-like</span>
 <h3>Forum</h3>

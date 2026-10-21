@@ -603,12 +603,15 @@ details:not([open]) > summary::after { flex: 0 1 46%; margin-left: auto; }
 .ys-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
 .ys-row.flip { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); }
 .ys-row.flip .ys-row-img { order: 2; }
+.ys-row.flip .custom-carousel { order: 2; }
+.ys-row .custom-carousel { margin: 0; max-width: none; min-width: 0; }
+.ys-row .custom-carousel .carousel-item img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; cursor: zoom-in; }
 .ys-row-img { display: block; border: 1px solid var(--rule); border-radius: var(--radius-sm); overflow: hidden; background: var(--surface); }
 .ys-row-img img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 0 !important; }
 .ys-row h3 { margin: 0 0 .5rem; font-size: 1.45rem; }
 .ys-row p { color: var(--muted); max-width: 44ch; }
 .ys-row .ys-more { font-weight: 700; }
-@media (max-width: 800px) { .ys-row, .ys-row.flip { grid-template-columns: 1fr; } .ys-row.flip .ys-row-img { order: 0; } }
+@media (max-width: 800px) { .ys-row, .ys-row.flip { grid-template-columns: 1fr; } .ys-row.flip .ys-row-img, .ys-row.flip .custom-carousel { order: 0; } }
 
 .ys-feat { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; margin: 1.8rem 0 1.6rem; }
 .ys-feat > div { padding: 16px 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 4px 20px; }
