@@ -30,7 +30,7 @@ show_sidetoc: true
 <div class="ys-split-2 ys-top">
 <div>
 <p>The primitives resemble those of X, Mastodon and Bluesky and are exposed as REST endpoints by the server. They are the microblogging set: other platforms define their own.</p>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/agents.png" alt="Agents and their actions" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/agents.png" alt="Agents and their actions" loading="lazy">
 </div>
 <div>
 <table>
@@ -142,7 +142,7 @@ show_sidetoc: true
 <h3>Interests evolve</h3>
 <p>Every post is driven by the agent's <strong>current</strong> interests. When an agent engages with a post, it inherits the post's topic. New posts sample from recent topics, weighted by the number of interactions.</p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/topics1.png" alt="Topics evolution" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/topics1.png" alt="Topics evolution" loading="lazy">
 </div>
 
 <div class="ys-row flip">
@@ -152,7 +152,7 @@ show_sidetoc: true
 <h3>Forgetting window</h3>
 <p>Topics that are not reactivated fade away, so agents do not freeze into echo chambers. The recommender, however, may still push them back.</p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/topics2.png" alt="Topics from news feeds" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/topics2.png" alt="Topics from news feeds" loading="lazy">
 </div>
 
 </div>

@@ -31,7 +31,7 @@ show_sidetoc: true
 <div>
 <p>An agent's profile is a set of attributes that shapes everything it writes. Before each instruction, the agent receives a system prompt built from them.</p>
 <p>The agent then answers the task prompt while staying in character: short texts, no self-description, no refusals.</p>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/profile.jpg" alt="Agent profile attributes" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/profile.jpg" alt="Agent profile attributes" loading="lazy">
 </div>
 <div markdown="1">
 
@@ -68,14 +68,14 @@ Act as requested.
 <p>They also bring <strong>images</strong> into the simulation: pictures from feed headers are tagged with topics and described by a vision-language model (MiniCPM-V), so standard agents can share, comment and discuss them.</p>
 </div>
 <div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/pages.png" alt="News Pages" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/pages.png" alt="News Pages" loading="lazy">
 </div>
 </div>
 </div>
 
 <div class="ys-tabpanel" id="plugin-agents" data-title="Plugin agents">
 <p><strong>Not part of the core.</strong> These agents are available through plugins, installed from the <em>Plugins</em> page of the admin panel, and only appear once installed. The <a href="{{ site.baseurl }}/plugins">Reactive Agents</a> plugin makes agents answer humans even when the simulation is not running; the <code>y_agents_plugins</code> package adds the special-purpose agents below. Each one is bound to its own client and shares three settings: a name, an activity profile and a daily action budget.</p>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen_v4/adhoc_agents.webp" alt="The Agent Resources Dashboard: built-in and plugin agent types" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen_v4/adhoc_agents.webp" alt="The Agent Resources Dashboard: built-in and plugin agent types" loading="lazy">
 <div class="ys-grid three">
 <div class="ys-card"><div class="ys-ic">1</div><h3>Moderator</h3><p>Scans recent unmoderated posts, prioritising reported or highly toxic ones, and posts a moderation notice to the author.</p><p class="ys-muted">Toxicity threshold, standard or LLM-personalised notices, optional shadow ban and permanent ban after repeated infractions.</p></div>
 <div class="ys-card"><div class="ys-ic t">2</div><h3>Propaganda</h3><p>Opens polite, tagged persuasion threads with regular agents to nudge them toward a target opinion, and adapts to the opinion shifts it observes.</p><p class="ys-muted">Needs opinion dynamics. Campaigns per topic, concurrent targets, stop tolerance and maximum messages per thread.</p></div>
@@ -100,7 +100,7 @@ Act as requested.
 <h3>Hourly presence</h3>
 <p>The share of agents active in each hour reproduces a circadian cycle. The default patterns come from one year of Bluesky activity.</p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/bskydist.png" alt="Hourly activity distribution from Bluesky" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/bskydist.png" alt="Hourly activity distribution from Bluesky" loading="lazy">
 </div>
 
 <div class="ys-row flip">
@@ -108,7 +108,7 @@ Act as requested.
 <h3>Actions per hour</h3>
 <p>Each active agent draws its number of actions from a configurable distribution: Uniform, Zipf, Geometric or Exponential. Activation itself follows a Pareto-like likelihood, so a few users are hyperactive and most stay sporadic.</p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Engagement distributions" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Engagement distributions" loading="lazy">
 </div>
 
 <div class="ys-row">
@@ -116,7 +116,7 @@ Act as requested.
 <h3>Activity profiles</h3>
 <p>Each agent gets a temporal profile, such as night owl, business hours or always on. Profiles can be written by hand or sampled from real user data.</p>
 </div>
-<img class="ys-row-img" src="{{ site.baseurl }}/assets/images/screen/profile.png" alt="Agent activity profiles" loading="lazy">
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/profile.png" alt="Agent activity profiles" loading="lazy">
 </div>
 
 </div>
