@@ -522,9 +522,46 @@
     render();
   }
 
+  /* ---------- database schema: interactive diagrams ---------- */
+  function initErDiagrams() {
+    $$('.er-fig').forEach(function (fig) {
+      var panel = fig.closest('.ys-tabpanel') || doc, svg = $('svg', fig); if (!svg) return;
+      var dets = {}, names = [];
+      $$('details.db-t', panel).forEach(function (d) { var c = $('summary > code', d); if (c) { dets[c.textContent] = d; names.push(c.textContent); } });
+      var nodes = {}, edges = [];
+      $$('g.node', svg).forEach(function (g) { var t = $('title', g); if (t) nodes[t.textContent] = g; });
+      $$('g.edge', svg).forEach(function (g) { var t = $('title', g); if (t) { var p = t.textContent.split('->'); if (p.length === 2) edges.push({ g: g, a: p[0], b: p[1] }); } });
+      var bar = doc.createElement('div'); bar.className = 'er-bar';
+      var lab = doc.createElement('label'); lab.textContent = 'Table'; var sel = doc.createElement('select'); var id = 'er-sel-' + Math.random().toString(36).slice(2, 7); sel.id = id; lab.setAttribute('for', id);
+      sel.innerHTML = '<option value="">Choose a table…</option>' + names.slice().sort().map(function (n) { return '<option>' + n + '</option>'; }).join('');
+      var hint = doc.createElement('span'); hint.className = 'er-hint'; hint.textContent = 'or click a table in the diagram';
+      bar.appendChild(lab); bar.appendChild(sel); bar.appendChild(hint);
+      var info = doc.createElement('div'); info.className = 'er-info'; info.setAttribute('aria-live', 'polite'); info.hidden = true;
+      fig.parentNode.insertBefore(bar, fig); fig.parentNode.insertBefore(info, $('.er-legend', fig.parentNode) ? $('.er-legend', fig.parentNode).nextSibling : fig.nextSibling);
+      function clear() { Object.keys(nodes).forEach(function (k) { nodes[k].classList.remove('is-sel', 'is-nb'); }); edges.forEach(function (e) { e.g.classList.remove('is-rel'); }); }
+      function show(name) {
+        clear(); sel.value = dets[name] ? name : '';
+        if (!name || !dets[name]) { info.hidden = true; return; }
+        var d = dets[name], sum = $('summary > span:not(.ys-pill)', d), tb = $('table', d);
+        info.innerHTML = '<h4><code></code></h4><p></p><div class="ys-table-wrap"></div>';
+        $('code', info).textContent = name; $('p', info).innerHTML = sum ? sum.innerHTML : '';
+        if (tb) $('.ys-table-wrap', info).appendChild(tb.cloneNode(true));
+        info.hidden = false;
+        if (nodes[name]) { nodes[name].classList.add('is-sel'); }
+        edges.forEach(function (e) { if (e.a === name || e.b === name) { e.g.classList.add('is-rel'); var o = e.a === name ? e.b : e.a; if (nodes[o]) nodes[o].classList.add('is-nb'); } });
+      }
+      sel.addEventListener('change', function () { show(sel.value); });
+      Object.keys(nodes).forEach(function (k) {
+        var g = nodes[k]; g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button'); g.setAttribute('aria-label', 'Show columns of ' + k);
+        g.addEventListener('click', function () { show(k); info.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' }); });
+        g.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); show(k); } });
+      });
+    });
+  }
+
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initZoom, initReveal, initOS, initTabs, initDataTables, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initZoom, initReveal, initOS, initTabs, initDataTables, initErDiagrams, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();
