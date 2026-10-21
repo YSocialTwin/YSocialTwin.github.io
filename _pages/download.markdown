@@ -64,7 +64,14 @@ Open the installer, press *Install YSocial*, then **Start**. YSocial opens in it
 <p><strong>macOS:</strong> if you see <em>"The application cannot be opened"</em> (or that it is damaged or from an unverified developer), macOS has quarantined the download. Drag <em>YSocial</em> to <em>Applications</em>, then run this once in Terminal:</p>
 <pre><code>xattr -cr /Applications/YSocial.app</code></pre>
 <p>Then open the app again. Without Terminal: right-click the app, choose <em>Open</em>, and confirm; on recent macOS versions also use <em>System Settings → Privacy &amp; Security → Open Anyway</em>.</p>
-<p><strong>Windows:</strong> choose <em>More info</em> and then <em>Run anyway</em>.</p>
+<p><strong>Windows:</strong> because the installer is not code-signed, <em>Microsoft Defender SmartScreen</em> may block it ("Windows protected your PC"), and Windows Security or your browser may flag or quarantine the <code>.exe</code> as unrecognised. This is a false positive. To continue:</p>
+<ol>
+<li>If the browser blocks the download, open its downloads list and choose <em>Keep</em> (Edge: <em>…</em> → <em>Keep</em> → <em>Keep anyway</em>).</li>
+<li>Double-click the installer. On the blue SmartScreen window click <em>More info</em>, then <em>Run anyway</em>.</li>
+<li>If Windows Security removed the file, open <em>Windows Security → Virus &amp; threat protection → Protection history</em>, select the YSocial entry and choose <em>Actions → Restore</em> (or <em>Allow on device</em>), then run it again.</li>
+<li>If a managed (work or university) PC does not offer <em>Run anyway</em>, ask your IT department to allow the installer.</li>
+</ol>
+<p>Download the installer only from this page or from the official GitHub release. You can also right-click the file, choose <em>Properties</em> and tick <em>Unblock</em> before running it.</p>
 </div>
 {% capture t_installer2 %}
 Under *More options* you can open YSocial in your default browser instead of its own window, start Jupyter Lab (off by default), change the address and port (`127.0.0.1:8080` by default), and switch off the update check.
