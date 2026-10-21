@@ -12,187 +12,82 @@ show_sidetoc: true
 
 <p class="ys-lede">Studies need many runs, not one. These tools reuse, vary and queue experiments for you. All live in <mark>Experiments</mark>.</p>
 
-<div class="ys-grid three">
-<a class="ys-card hover" href="#copy"><h3><i class="fas fa-copy" aria-hidden="true"></i> Copy experiment</h3><p>Clone one setup.</p></a>
-<a class="ys-card hover" href="#copy-group"><h3><i class="fas fa-layer-group" aria-hidden="true"></i> Copy group</h3><p>Clone a whole set.</p></a>
-<a class="ys-card hover" href="#upload"><h3><i class="fas fa-file-archive" aria-hidden="true"></i> Upload experiment</h3><p>Import from a ZIP.</p></a>
-<a class="ys-card hover" href="#matrix"><h3><i class="fas fa-th" aria-hidden="true"></i> Experiment matrix</h3><p>Vary parameters.</p></a>
-<a class="ys-card hover" href="#schedule"><h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Experiment schedule</h3><p>Run many, unattended.</p></a>
-</div>
-
 <div class="alert-info-custom" markdown="1">
 **Groups:** an experiment can belong to a named *group* of related runs. Copy group, matrix and schedule work on groups.
 </div>
 
-## Copy experiment {#copy}
+<div class="ys-tabs" data-tabs data-cards data-label="Experiment tool">
 
-<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Copy experiment</p>
-
-Clone a setup to replicate it or try a variation.
-
-<div class="ys-grid three">
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
-
-- Replications
-- A baseline to tweak
+<div class="ys-tabpanel" id="copy" data-title="Copy experiment" data-kicker="Clone" data-pill="" data-desc="One setup, N copies.">
+<div class="ys-split-2 ys-top">
+<div>
+<p class="et-where"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><em>Experiments</em>, Copy experiment</p>
+<dl class="et-kv"><dt>Use it for</dt><dd>Replications, or a baseline you then tweak.</dd><dt>You provide</dt><dd>Source, new name, number of copies, group (optional).</dd><dt>You get</dt><dd>Copies <code>name_1</code>, <code>name_2</code>… with configuration, populations, clients and prompts. Fresh database and port: <strong>no data, no logs</strong>.</dd></dl>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
-
-- Source experiment
-- New name
-- Number of copies
-- Group (optional)
+<div>
+<div class="et-diag"><div class="et-col"><span class="et-chip src">Experiment</span></div><span class="et-arr" aria-hidden="true">&rarr;</span><div class="et-col"><span class="et-chip ">name_1</span><span class="et-chip ">name_2</span><span class="et-chip ">name_3</span></div></div>
+<p class="et-cap">Each copy starts from zero.</p>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
-
-- Copies named `name_1`, `name_2`…
-- Configuration, populations, clients, prompts
-- Fresh database and port, **no data or logs**
 </div>
 </div>
 
-## Copy group {#copy-group}
-
-<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Copy group</p>
-
-Duplicate a whole design in one step.
-
-<div class="ys-grid three">
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
-
-- Rerunning a full design, e.g. with another model
+<div class="ys-tabpanel" id="copy-group" data-title="Copy group" data-kicker="Clone a set" data-pill="" data-desc="A whole design at once.">
+<div class="ys-split-2 ys-top">
+<div>
+<p class="et-where"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><em>Experiments</em>, Copy group</p>
+<dl class="et-kv"><dt>Use it for</dt><dd>Rerunning a full design, for instance with another model.</dd><dt>You provide</dt><dd>Source group and new group name.</dd><dt>You get</dt><dd>Every experiment copied as in <em>Copy experiment</em>. If one copy fails you get a report, the others go through.</dd></dl>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
-
-- Source group
-- New group name
+<div>
+<div class="et-diag"><div class="et-grp"><b>Group A</b><span class="et-chip src">e1</span><span class="et-chip src">e2</span><span class="et-chip src">e3</span></div><span class="et-arr" aria-hidden="true">&rarr;</span><div class="et-grp"><b>Group B</b><span class="et-chip ">e1</span><span class="et-chip ">e2</span><span class="et-chip ">e3</span></div></div>
+<p class="et-cap">One click, the whole set.</p>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
-
-- Every experiment copied as in *Copy experiment*
-- A report if one copy fails; the others still go through
 </div>
 </div>
 
-## Upload experiment {#upload}
-
-<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Upload experiment</p>
-
-Bring in an experiment made elsewhere.
-
-<div class="ys-grid three">
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
-
-- A colleague's or archived experiment
-- Moving between installations
+<div class="ys-tabpanel" id="upload" data-title="Upload experiment" data-kicker="Import" data-pill="" data-desc="From a ZIP.">
+<div class="ys-split-2 ys-top">
+<div>
+<p class="et-where"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><em>Experiments</em>, Upload experiment</p>
+<dl class="et-kv"><dt>Use it for</dt><dd>A colleague's or archived experiment, or moving between installations.</dd><dt>You provide</dt><dd>A ZIP of the experiment folder. Name and group optional.</dd><dt>You get</dt><dd>A registered experiment ready to run. Settings are read from <code>config_server.json</code> or <code>server_config.json</code>, also in nested folders.</dd></dl>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
-
-- A ZIP of the experiment folder
-- Name and group (optional)
+<div>
+<div class="et-diag"><span class="et-chip o">experiment.zip</span><span class="et-arr" aria-hidden="true">&rarr;</span><span class="et-chip ">config found</span><span class="et-arr" aria-hidden="true">&rarr;</span><span class="et-chip src">Experiment</span></div>
+<p class="et-cap">No need to re-enter platform or settings.</p>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
-
-- A registered experiment, ready to run
-- Settings read from `config_server.json` or `server_config.json`, also in nested folders
 </div>
 </div>
 
-## Experiment matrix {#matrix}
-
-<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Experiment matrix</p>
-
-Explore a parameter space from one source experiment.
-
-<div class="ys-grid three">
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
-
-- Sensitivity analyses
-- Factorial designs, e.g. recommenders × content filters
+<div class="ys-tabpanel" id="matrix" data-title="Experiment matrix" data-kicker="Vary" data-pill="" data-desc="Explore a parameter space.">
+<div class="ys-split-2 ys-top">
+<div>
+<p class="et-where"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><em>Experiments</em>, Experiment matrix</p>
+<dl class="et-kv"><dt>Use it for</dt><dd>Sensitivity analyses and factorial designs, e.g. recommenders &times; content filters.</dd><dt>You provide</dt><dd>Source experiment, target group, the settings to <strong>unlock</strong> and alternative values for each.</dd><dt>You get</dt><dd>A new group, everything else inherited. Ports, paths and databases are regenerated.</dd></dl>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
-
-- Source experiment and target group
-- Settings to **unlock**
-- Alternative values for each
-</div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
-
-- A new group of experiments
-- Everything else inherited
-- Ports, paths and databases regenerated
+<div>
+<div class="et-diag"><div class="et-lane"><div class="et-line"><b>Independent</b><span class="et-chip src">base</span><span class="et-chip ">rec = B</span><span class="et-chip ">rec = C</span><span class="et-chip ">filter = Y</span></div><div class="et-line"><b>Cartesian</b><div class="et-grid"><span class="et-chip ">A &middot; X</span><span class="et-chip ">A &middot; Y</span><span class="et-chip ">B &middot; X</span><span class="et-chip ">B &middot; Y</span><span class="et-chip ">C &middot; X</span><span class="et-chip ">C &middot; Y</span></div></div></div></div>
+<p class="et-cap">Same inputs, two ways to combine them.</p>
 </div>
 </div>
-
-<div class="ys-grid two">
-<div class="ys-card" markdown="1">
-<h4>Independent</h4>
-
-One experiment per alternative, one setting at a time.
-</div>
-<div class="ys-card" markdown="1">
-<h4>Cartesian</h4>
-
-One experiment per combination. The count grows fast.
-</div>
+<div class="et-mini"><div><h4>Independent</h4><p>One experiment per alternative, one setting at a time. For sensitivity analysis.</p></div><div><h4>Cartesian</h4><p>One experiment per combination. For factorial designs; the count grows fast.</p></div></div>
 </div>
 
-## Experiment schedule {#schedule}
-
-<p class="ys-muted"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> *Experiments*, Experiment schedule</p>
-
-Run many experiments unattended.
-
-<div class="ys-grid three">
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-bullseye" aria-hidden="true"></i> Use it for</h4>
-
-- Overnight batches
-- Running a whole group
+<div class="ys-tabpanel" id="schedule" data-title="Experiment schedule" data-kicker="Run" data-pill="" data-desc="Many experiments, unattended.">
+<div class="ys-split-2 ys-top">
+<div>
+<p class="et-where"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><em>Experiments</em>, Experiment schedule</p>
+<dl class="et-kv"><dt>Use it for</dt><dd>Overnight batches, running a whole group.</dd><dt>You provide</dt><dd>Groups in the order you want. Dynamic filling is optional.</dd><dt>You get</dt><dd>Groups run <strong>in sequence</strong>, experiments in a group <strong>in parallel</strong>. Start, stop, progress and logs.</dd></dl>
 </div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-pen" aria-hidden="true"></i> You provide</h4>
-
-- Groups, in the order you want
-- Dynamic filling (optional)
-</div>
-<div class="ys-card" markdown="1">
-<h4><i class="fas fa-check" aria-hidden="true"></i> You get</h4>
-
-- Groups run **in sequence**, experiments in a group **in parallel**
-- Start, stop, progress and logs
+<div>
+<div class="et-diag"><div class="et-lane"><div class="et-line"><b>Group 1</b><span class="et-chip src">e1</span><span class="et-chip src">e2</span><span class="et-chip src">e3</span><span class="et-cap" style="margin:0">parallel</span></div><div class="et-line"><b>Group 2</b><span class="et-chip ">e4</span><span class="et-chip ">e5</span></div><div class="et-line"><b>Group 3</b><span class="et-chip dim">e6</span></div></div></div>
+<p class="et-cap">Group 2 starts when group 1 is done.</p>
 </div>
 </div>
-
-<div class="ys-grid two">
-<div class="ys-card" markdown="1">
-<h4>Good to know</h4>
-
-- HPC groups: at most **4** at once, never mixed with Standard.
-- Dynamic filling starts the next run when a slot frees.
-</div>
-<div class="ys-card" markdown="1">
-<h4>Eligible experiments</h4>
-
-- Stopped, not completed
-- Not already in a group
-- No infinite client
-</div>
+<div class="et-mini"><div><h4>Good to know</h4><p>HPC groups run at most <strong>4</strong> experiments at once and are never mixed with Standard. Dynamic filling starts the next run as soon as a slot frees.</p></div><div><h4>Eligible experiments</h4><p>Stopped, not completed, not already in a group, with no infinite client.</p></div></div>
 </div>
 
-<div class="alert-info-custom" markdown="1">
+</div>
+
+<div class="et-note" markdown="1">
 **Typical workflow:** one experiment, then *Matrix* into a group, *Schedule* to run it, *Copy group* to replicate the study.
 </div>
 
@@ -201,12 +96,17 @@ Run many experiments unattended.
 <a class="btn btn-secondary" href="{{ site.baseurl }}/user_roles">Who can do what</a>
 </div>
 
-## Where next {#next}
+</div>
 
-<ul class="ys-next">
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
 <li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>The basics, step by step.</span></a></li>
 <li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>What each setting does.</span></a></li>
 <li><a href="{{ site.baseurl }}/user_roles"><strong>User roles</strong><span>Who can use these tools.</span></a></li>
 </ul>
-
 </div>
+</section>
+

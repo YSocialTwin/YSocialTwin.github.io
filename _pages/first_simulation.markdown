@@ -118,9 +118,14 @@ Set:
 <a class="btn btn-primary" href="{{ site.baseurl }}/parameters">Every parameter explained</a>
 </div>
 
-## Where next {#next}
 
-<ul class="ys-next">
+</div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
 <li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every client and server setting, per platform.</span></a></li>
 <li><a href="{{ site.baseurl }}/experiment_tools"><strong>Experiment tools</strong><span>Copy, matrix and schedule at scale.</span></a></li>
 <li><a href="{{ site.baseurl }}/user_roles"><strong>User roles</strong><span>Who can do what.</span></a></li>
@@ -128,5 +133,6 @@ Set:
 <li><a href="{{ site.baseurl }}/agent_memory"><strong>Agent memory</strong><span>Relationships, threads and communities.</span></a></li>
 <li><a href="{{ site.baseurl }}/opinion_dynamics"><strong>Opinion dynamics</strong><span>Opinions that evolve and shape content.</span></a></li>
 </ul>
-
 </div>
+</section>
+

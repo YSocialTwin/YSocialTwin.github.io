@@ -253,14 +253,20 @@ Telemetry data is aggregated, stored with access controls, used only to improve 
 {{ t_tel | markdownify }}
 </details>
 
-## What next?
 
-<ul class="ys-next">
+</div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
 <li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>A step-by-step tutorial: population, experiment, client, run.</span></a></li>
 <li><a href="{{ site.baseurl }}/key_features"><strong>Key features</strong><span>What a simulation looks like and what you can configure.</span></a></li>
 <li><a href="https://github.com/orgs/YSocialTwin/discussions" target="_blank" rel="noopener"><strong>GitHub Discussions</strong><span>Ask for help and share your experiments.</span></a></li>
 <li><a href="https://github.com/YSocialTwin/YSocial/issues" target="_blank" rel="noopener"><strong>Report an issue</strong><span>Found a bug? Tell us, with logs if you can.</span></a></li>
 <li><a href="{{ site.baseurl }}/about#how-to-cite"><strong>Cite YSocial</strong><span>Using it in a paper? The reference is on the About page.</span></a></li>
 </ul>
-
 </div>
+</section>
+

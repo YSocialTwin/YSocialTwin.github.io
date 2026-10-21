@@ -99,11 +99,17 @@ A participant, not an operator.
 | Change roles, delete users | ✓ | — | — |
 | Plugin Manager, updates, system | ✓ | — | — |
 
-## Where next {#next}
 
-<ul class="ys-next">
+</div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
 <li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
 <li><a href="{{ site.baseurl }}/experiment_tools"><strong>Experiment tools</strong><span>Copy, matrix and schedule.</span></a></li>
 </ul>
-
 </div>
+</section>
+

@@ -296,16 +296,22 @@ Groups below are common when every row applies to the platform, partial when onl
 **Values marked as defaults** are those of the admin forms. Ranges are the limits enforced by the forms or clamped by the client. Only parameters you can set from the admin interface are listed.
 </div>
 
-## Where next {#next}
 
-<ul class="ys-next">
+</div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
 <li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>The same flow, step by step with screenshots.</span></a></li>
 <li><a href="{{ site.baseurl }}/opinion_dynamics"><strong>Opinion dynamics</strong><span>Models, groups and starting distributions.</span></a></li>
 <li><a href="{{ site.baseurl }}/agent_memory"><strong>Agent memory</strong><span>What the memory parameters tune.</span></a></li>
 <li><a href="{{ site.baseurl }}/agents"><strong>Agents</strong><span>Populations, custom agents, special agents.</span></a></li>
 </ul>
-
 </div>
+</section>
+
 
 <script>
 (function () {
