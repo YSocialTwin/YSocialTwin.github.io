@@ -1057,3 +1057,4 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .et-mini p { margin: 0; color: var(--muted); font-size: .9rem; }
 .et-note { margin-top: 14px; padding: 12px 16px; border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 0 10px 10px 0; font-size: .92rem; }
 @media (max-width: 600px) { .et-kv { grid-template-columns: 1fr; gap: 2px; } .et-kv dd { margin-bottom: 8px; } }
+@media (min-width: 901px) { .ys-tablist.as-cards { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); } }
