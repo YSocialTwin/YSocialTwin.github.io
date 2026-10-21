@@ -1058,3 +1058,10 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .et-note { margin-top: 14px; padding: 12px 16px; border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 0 10px 10px 0; font-size: .92rem; }
 @media (max-width: 600px) { .et-kv { grid-template-columns: 1fr; gap: 2px; } .et-kv dd { margin-bottom: 8px; } }
 @media (min-width: 901px) { .ys-tablist.as-cards { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); } }
+
+/* ---------- database schema page ---------- */
+details.db-t > summary { flex-wrap: wrap; row-gap: 4px; }
+details.db-t > summary > code { font-weight: 800; }
+details.db-t > summary > span:not(.ys-pill) { flex: 1 1 280px; color: var(--muted); font-weight: 400; font-size: .92rem; }
+details.db-t .ys-table-wrap { margin: 0 0 6px; padding: 0 18px 12px; }
+details.db-t td:nth-child(2) { white-space: nowrap; color: var(--muted); }

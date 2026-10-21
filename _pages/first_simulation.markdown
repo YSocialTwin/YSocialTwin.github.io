@@ -129,6 +129,7 @@ Set:
 <li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every client and server setting, per platform.</span></a></li>
 <li><a href="{{ site.baseurl }}/experiment_tools"><strong>Experiment tools</strong><span>Copy, matrix and schedule at scale.</span></a></li>
 <li><a href="{{ site.baseurl }}/user_roles"><strong>User roles</strong><span>Who can do what.</span></a></li>
+<li><a href="{{ site.baseurl }}/database_schema"><strong>Database schema</strong><span>The tables behind every simulation.</span></a></li>
 <li><a href="{{ site.baseurl }}/agents"><strong>Agents</strong><span>Custom agents, moderators, propaganda.</span></a></li>
 <li><a href="{{ site.baseurl }}/agent_memory"><strong>Agent memory</strong><span>Relationships, threads and communities.</span></a></li>
 <li><a href="{{ site.baseurl }}/opinion_dynamics"><strong>Opinion dynamics</strong><span>Opinions that evolve and shape content.</span></a></li>
