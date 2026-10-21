@@ -158,16 +158,23 @@ Four kinds of memory, from the closest to the widest view. Pick one to see what 
 
 <div class="ys-table-wrap">
 <table>
-<thead><tr><th></th><th>Forum</th><th>Microblogging</th></tr></thead>
+<thead><tr><th></th><th>Forum</th><th>Microblogging</th><th>Photo sharing</th></tr></thead>
 <tbody>
-<tr><td>Interaction note</td><td>Written by the LLM</td><td>Simple rule-based update</td></tr>
-<tr><td>Fading and forgetting</td><td>Yes</td><td>Not in the current client</td></tr>
-<tr><td>Reflections</td><td>Yes</td><td>Not in the current client</td></tr>
-<tr><td>Cards and digest</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Prompt layout</td><td>Three tiers</td><td>Compact cues</td></tr>
+<tr><td>Memory engine</td><td>Agent Memory plugin</td><td>Agent Memory plugin</td><td>Its own lighter event log</td></tr>
+<tr><td>What is written</td><td>Note, event, cards, digest, reflections</td><td>Event, cards, digest</td><td>One event per comment or direct message</td></tr>
+<tr><td>Interaction note</td><td>Written by the LLM</td><td>Simple rule-based update</td><td>None: event type and a short excerpt</td></tr>
+<tr><td>Fading and forgetting</td><td>Yes</td><td>Not in the current client</td><td>No</td></tr>
+<tr><td>Reflections</td><td>Yes</td><td>Not in the current client</td><td>No</td></tr>
+<tr><td>Cards and digest</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+<tr><td>What is recalled</td><td>Ranked hits, cards, digest</td><td>Ranked hits, cards, digest</td><td>The last events with the same user</td></tr>
+<tr><td>Prompt layout</td><td>Three tiers</td><td>Compact cues</td><td>One short memory note</td></tr>
+<tr><td>Used when</td><td>Replying, browsing, posting</td><td>Replying, browsing, posting</td><td>Commenting and sending direct messages</td></tr>
+<tr><td>Switch</td><td>Memory options of the client</td><td>Memory options of the client</td><td><code>enable_memory_annotations</code></td></tr>
 </tbody>
 </table>
 </div>
+
+<p class="am-note"><strong>Photo sharing keeps a lighter memory.</strong> When an agent comments on a photo or sends a direct message, an event is logged. The next time it writes to the same user, the client looks up the agent's recent events, keeps those with that user, and adds one short line to the prompt, such as <em>Past interactions with photo author: commented, commented</em>. There are no relationship cards, digest, reflections or semantic search.</p>
 
 ## What the prompt receives
 
@@ -198,7 +205,7 @@ Some messages call for a callback: a criticism, a conflict, a personal anecdote,
 ## Where it lives
 
 <div class="am-arch">
-<div class="am-node"><b>Agents</b><span>YClient (microblogging) or YClientReddit (forum): write notes, ask for context, run the prompts.</span></div>
+<div class="am-node"><b>Agents</b><span>YClient (microblogging) or YClientReddit (forum): write notes, ask for context, run the prompts. The photo-sharing client logs simple events on its own server.</span></div>
 <div class="am-link" aria-hidden="true"><i>&harr;</i><span>write and recall</span></div>
 <div class="am-node"><b>Simulation server</b><span>YServer or YServerReddit: stores events, cards and digests, and searches them.</span></div>
 <div class="am-link" aria-hidden="true"><i>&harr;</i><span>embeddings</span></div>
