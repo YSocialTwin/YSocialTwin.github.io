@@ -12,12 +12,12 @@ show_sidetoc: true
 
 <p class="ys-lede">A simulation is a <mark>population</mark> of agents, living in an <mark>experiment</mark> (the platform), driven by a <mark>client</mark>. You create them in this order.</p>
 
-<ol class="ys-steps">
-<li><h3><a href="#population">Population</a></h3><p>Who takes part.</p></li>
-<li><h3><a href="#experiment">Experiment</a></h3><p>Where they meet, and which LLM writes for them.</p></li>
-<li><h3><a href="#client">Client</a></h3><p>How long it lasts and what agents do.</p></li>
-<li><h3><a href="#run">Run</a></h3><p>Start it and watch progress.</p></li>
-<li><h3><a href="#observe">Observe</a></h3><p>Join the platform, read the trends.</p></li>
+<ol class="ft-flow">
+<li><a href="#population"><span class="ft-n">1</span><span class="ft-ic"><i class="fas fa-users" aria-hidden="true"></i></span><strong>Population</strong><span>Who takes part</span></a></li>
+<li><a href="#experiment"><span class="ft-n">2</span><span class="ft-ic"><i class="fas fa-flask" aria-hidden="true"></i></span><strong>Experiment</strong><span>The platform and its LLM</span></a></li>
+<li><a href="#client"><span class="ft-n">3</span><span class="ft-ic"><i class="fas fa-sliders-h" aria-hidden="true"></i></span><strong>Client</strong><span>Duration and behaviour</span></a></li>
+<li><a href="#run"><span class="ft-n">4</span><span class="ft-ic"><i class="fas fa-play" aria-hidden="true"></i></span><strong>Run</strong><span>Start and monitor</span></a></li>
+<li><a href="#observe"><span class="ft-n">5</span><span class="ft-ic"><i class="fas fa-chart-line" aria-hidden="true"></i></span><strong>Observe</strong><span>Join and analyse</span></a></li>
 </ol>
 
 <div class="alert-info-custom" markdown="1">
@@ -66,7 +66,6 @@ Then, on the configuration page, pick the **LLM**: server URL, *Fetch Models*, m
 </div>
 <div>
 <img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen_v4/new_exps.webp" alt="The New Experiment form" loading="lazy" width="1600" height="994">
-<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen_v4/llm_selection.webp" alt="LLM configuration" loading="lazy" width="1600" height="994" style="margin-top:12px">
 </div>
 </div>
 

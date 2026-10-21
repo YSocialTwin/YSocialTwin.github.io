@@ -948,3 +948,21 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .od-lab-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px; margin-top: 14px; align-items: start; }
 .od-lab-side { display: grid; gap: 10px; } .od-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 800px) { .od-lab-row { grid-template-columns: minmax(0, 1fr); } }
+
+/* tutorial flow */
+.ft-flow { list-style: none; counter-reset: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; margin: 2rem 0 !important; padding: 0 !important; max-width: none !important; }
+.ft-flow > li { position: relative; margin: 0 !important; padding: 0 !important; }
+.ft-flow > li > a { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; height: 100%; padding: 30px 12px 18px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); text-decoration: none !important; color: var(--heading) !important; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.ft-flow > li > a:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 10px 28px -12px color-mix(in srgb, var(--accent) 60%, transparent); }
+.ft-flow .ft-n { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; display: grid; place-items: center; font-weight: 800; font-size: .9rem; color: var(--ink); background: linear-gradient(135deg, var(--teal), var(--violet)); clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%); }
+.ft-flow .ft-ic { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; font-size: 1.25rem; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); margin-bottom: 6px; }
+.ft-flow strong { font-size: 1.05rem; }
+.ft-flow > li > a > span:last-child { color: var(--muted); font-size: .86rem; line-height: 1.35; }
+.ft-flow > li:not(:last-child)::after { content: "\2192"; position: absolute; right: -24px; top: 50%; transform: translateY(-50%); width: 20px; text-align: center; font-weight: 800; color: var(--accent); z-index: 1; }
+@media (max-width: 900px) {
+  .ft-flow { grid-template-columns: 1fr; gap: 26px; }
+  .ft-flow > li > a { flex-direction: row; text-align: left; gap: 14px; padding: 14px 16px 14px 28px; }
+  .ft-flow .ft-n { top: 50%; left: -14px; transform: translateY(-50%); }
+  .ft-flow .ft-ic { margin: 0; flex: none; }
+  .ft-flow > li:not(:last-child)::after { content: "\2193"; right: auto; left: 50%; top: auto; bottom: -24px; transform: translateX(-50%); }
+}
