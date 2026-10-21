@@ -522,46 +522,85 @@
     render();
   }
 
-  /* ---------- database schema: interactive diagrams ---------- */
-  function initErDiagrams() {
-    $$('.er-fig').forEach(function (fig) {
-      var panel = fig.closest('.ys-tabpanel') || doc, svg = $('svg', fig); if (!svg) return;
-      var dets = {}, names = [];
-      $$('details.db-t', panel).forEach(function (d) { var c = $('summary > code', d); if (c) { dets[c.textContent] = d; names.push(c.textContent); } });
-      var nodes = {}, edges = [];
-      $$('g.node', svg).forEach(function (g) { var t = $('title', g); if (t) nodes[t.textContent] = g; });
-      $$('g.edge', svg).forEach(function (g) { var t = $('title', g); if (t) { var p = t.textContent.split('->'); if (p.length === 2) edges.push({ g: g, a: p[0], b: p[1] }); } });
-      var bar = doc.createElement('div'); bar.className = 'er-bar';
-      var lab = doc.createElement('label'); lab.textContent = 'Table'; var sel = doc.createElement('select'); var id = 'er-sel-' + Math.random().toString(36).slice(2, 7); sel.id = id; lab.setAttribute('for', id);
-      sel.innerHTML = '<option value="">Choose a table…</option>' + names.slice().sort().map(function (n) { return '<option>' + n + '</option>'; }).join('');
-      var hint = doc.createElement('span'); hint.className = 'er-hint'; hint.textContent = 'or click a table in the diagram';
-      bar.appendChild(lab); bar.appendChild(sel); bar.appendChild(hint);
-      var info = doc.createElement('div'); info.className = 'er-info'; info.setAttribute('aria-live', 'polite'); info.hidden = true;
-      fig.parentNode.insertBefore(bar, fig); fig.parentNode.insertBefore(info, $('.er-legend', fig.parentNode) ? $('.er-legend', fig.parentNode).nextSibling : fig.nextSibling);
-      function clear() { Object.keys(nodes).forEach(function (k) { nodes[k].classList.remove('is-sel', 'is-nb'); }); edges.forEach(function (e) { e.g.classList.remove('is-rel'); }); }
-      function show(name) {
-        clear(); sel.value = dets[name] ? name : '';
-        if (!name || !dets[name]) { info.hidden = true; return; }
-        var d = dets[name], sum = $('summary > span:not(.ys-pill)', d), tb = $('table', d);
-        info.innerHTML = '<h4><code></code></h4><p></p><div class="ys-table-wrap"></div>';
-        $('code', info).textContent = name; $('p', info).innerHTML = sum ? sum.innerHTML : '';
-        if (tb) $('.ys-table-wrap', info).appendChild(tb.cloneNode(true));
-        info.hidden = false;
-        if (nodes[name]) { nodes[name].classList.add('is-sel'); }
-        edges.forEach(function (e) { if (e.a === name || e.b === name) { e.g.classList.add('is-rel'); var o = e.a === name ? e.b : e.a; if (nodes[o]) nodes[o].classList.add('is-nb'); } });
-      }
-      sel.addEventListener('change', function () { show(sel.value); });
-      Object.keys(nodes).forEach(function (k) {
-        var g = nodes[k]; g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button'); g.setAttribute('aria-label', 'Show columns of ' + k);
-        g.addEventListener('click', function () { show(k); info.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' }); });
-        g.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); show(k); } });
+  /* ---------- database schema: table explorer ---------- */
+  function initErExplorer() {
+    $$('.erx').forEach(function (host) {
+      var dataEl = $('script.erx-data', host.parentNode); if (!dataEl) return;
+      var data; try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+      var panel = host.closest('.ys-tabpanel') || doc, info = {}, cols = {};
+      $$('details.db-t', panel).forEach(function (d) {
+        var c = $('summary > code', d); if (!c) return; var sp = $('summary > span:not(.ys-pill)', d);
+        info[c.textContent] = { desc: sp ? sp.innerHTML : '', table: $('table', d), text: d.textContent.toLowerCase() };
       });
+      var gi = {}, order = [];
+      data.groups.forEach(function (g, i) { g[1].forEach(function (n) { gi[n] = i; order.push(n); }); });
+      var out = {}, inn = {};
+      data.edges.forEach(function (e) { (out[e[0]] = out[e[0]] || []).push(e); (inn[e[1]] = inn[e[1]] || []).push(e); });
+      host.innerHTML = '<div class="erx-bar"><label class="erx-search"><span class="sr-only">Search tables and columns</span><input type="search" placeholder="Search a table or a column" autocomplete="off"></label><div class="erx-chips" role="group" aria-label="Filter by group"></div></div><div class="erx-board"><svg class="erx-lines" aria-hidden="true"></svg><div class="erx-lanes"></div></div><div class="erx-detail" aria-live="polite"></div>';
+      var lanes = $('.erx-lanes', host), chips = $('.erx-chips', host), svg = $('.erx-lines', host), board = $('.erx-board', host), detail = $('.erx-detail', host), input = $('input', host);
+      var cards = {}, sel = null, hiddenG = {};
+      data.groups.forEach(function (g, i) {
+        var lane = doc.createElement('section'); lane.className = 'erx-lane g' + (i % 8); lane.setAttribute('data-g', i);
+        lane.innerHTML = '<h4><span class="erx-dot"></span>' + g[0] + '<small>' + g[1].length + '</small></h4><div class="erx-cards"></div>';
+        var wrap = $('.erx-cards', lane);
+        g[1].forEach(function (n) {
+          var b = doc.createElement('button'); b.type = 'button'; b.className = 'erx-card'; b.setAttribute('data-t', n);
+          var nc = info[n] && info[n].table ? $$('tbody tr', info[n].table).length : 0, nr = (out[n] ? out[n].length : 0) + (inn[n] ? inn[n].length : 0);
+          b.innerHTML = '<code>' + n + '</code><span>' + nc + ' columns' + (nr ? ' · ' + nr + ' links' : '') + '</span>';
+          b.addEventListener('click', function () { select(n, true); });
+          cards[n] = b; wrap.appendChild(b);
+        });
+        lanes.appendChild(lane);
+        var ch = doc.createElement('button'); ch.type = 'button'; ch.className = 'erx-chip g' + (i % 8); ch.setAttribute('aria-pressed', 'true'); ch.innerHTML = '<span class="erx-dot"></span>' + g[0];
+        ch.addEventListener('click', function () { hiddenG[i] = !hiddenG[i]; ch.setAttribute('aria-pressed', hiddenG[i] ? 'false' : 'true'); lane.hidden = !!hiddenG[i]; draw(); });
+        chips.appendChild(ch);
+      });
+      function link(n) { var a = doc.createElement('a'); a.href = '#'; a.className = 'erx-ref'; a.textContent = n; a.addEventListener('click', function (ev) { ev.preventDefault(); select(n, false); }); return a; }
+      function draw() {
+        svg.innerHTML = ''; if (!sel || !cards[sel] || window.innerWidth < 760) return;
+        var br = board.getBoundingClientRect(); if (!br.width) return;
+        svg.setAttribute('viewBox', '0 0 ' + br.width + ' ' + br.height); svg.setAttribute('width', br.width); svg.setAttribute('height', br.height);
+        var s = cards[sel].getBoundingClientRect(), sx = s.left - br.left + s.width / 2, sy = s.top - br.top + s.height / 2;
+        var rel = {}; (out[sel] || []).forEach(function (e) { rel[e[1]] = 'out'; }); (inn[sel] || []).forEach(function (e) { rel[e[0]] = rel[e[0]] ? 'both' : 'in'; });
+        Object.keys(rel).forEach(function (n) {
+          var c = cards[n]; if (!c || c.closest('.erx-lane').hidden) return; var r = c.getBoundingClientRect(), x = r.left - br.left + r.width / 2, y = r.top - br.top + r.height / 2;
+          var dy = Math.max(40, Math.abs(y - sy) * .5), p = doc.createElementNS('http://www.w3.org/2000/svg', 'path');
+          p.setAttribute('d', 'M' + sx + ' ' + sy + ' C' + sx + ' ' + (sy + (y >= sy ? dy : -dy)) + ' ' + x + ' ' + (y + (y >= sy ? -dy : dy)) + ' ' + x + ' ' + y);
+          p.setAttribute('class', 'erx-path ' + rel[n]); svg.appendChild(p);
+        });
+      }
+      function select(n, scroll) {
+        if (!info[n] && !cards[n]) return; sel = n;
+        var rel = {}; (out[n] || []).forEach(function (e) { rel[e[1]] = 1; }); (inn[n] || []).forEach(function (e) { rel[e[0]] = 1; });
+        Object.keys(cards).forEach(function (k) { var c = cards[k]; c.classList.toggle('is-sel', k === n); c.classList.toggle('is-rel', !!rel[k]); c.classList.toggle('is-dim', k !== n && !rel[k]); c.setAttribute('aria-pressed', k === n ? 'true' : 'false'); });
+        var d = info[n] || { desc: '', table: null }, h = '<div class="erx-head"><span class="erx-dot g' + (gi[n] % 8) + '"></span><h4><code></code></h4><p>' + d.desc + '</p></div><div class="erx-rel"></div><div class="erx-tab"></div>';
+        detail.innerHTML = h; $('code', detail).textContent = n; detail.className = 'erx-detail on g' + (gi[n] % 8);
+        var rel2 = $('.erx-rel', detail);
+        function group(title, list, ix) {
+          if (!list || !list.length) return; var box = doc.createElement('div'); box.innerHTML = '<b>' + title + '</b>'; var seen = {};
+          list.forEach(function (e) { var o = e[ix]; if (seen[o]) return; seen[o] = 1; var w = doc.createElement('span'); w.className = 'erx-pair'; w.appendChild(link(o)); var cl = list.filter(function (x) { return x[ix] === o; }).map(function (x) { return x[2]; }); var sm = doc.createElement('small'); sm.textContent = (ix === 1 ? ' via ' : ' through ') + cl.join(', '); w.appendChild(sm); box.appendChild(w); });
+          rel2.appendChild(box);
+        }
+        group('References', out[n], 1); group('Referenced by', inn[n], 0);
+        if (d.table) {
+          var tb = d.table.cloneNode(true), fk = {}; (out[n] || []).forEach(function (e) { fk[e[2]] = e[1]; });
+          $$('tbody tr', tb).forEach(function (r) { var c = $('td code', r); if (c && fk[c.textContent]) { var a = link(fk[c.textContent]); a.className += ' erx-fk'; a.textContent = '→ ' + fk[c.textContent]; c.parentNode.appendChild(doc.createTextNode(' ')); c.parentNode.appendChild(a); } });
+          var w = doc.createElement('div'); w.className = 'ys-table-wrap'; w.appendChild(tb); $('.erx-tab', detail).appendChild(w);
+        }
+        draw(); if (scroll) detail.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+      }
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        Object.keys(cards).forEach(function (k) { var ok = !q || k.indexOf(q) > -1 || (info[k] && info[k].text.indexOf(q) > -1); cards[k].classList.toggle('is-off', !ok); });
+      });
+      if (window.ResizeObserver) new ResizeObserver(function () { draw(); }).observe(board); else window.addEventListener('resize', draw);
+      select(order[0], false);
     });
   }
 
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initZoom, initReveal, initOS, initTabs, initDataTables, initErDiagrams, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initZoom, initReveal, initOS, initTabs, initDataTables, initErExplorer, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();
