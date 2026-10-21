@@ -522,79 +522,90 @@
     render();
   }
 
-  /* ---------- database schema: table explorer ---------- */
+  /* ---------- database schema: table explorer (rail + detail pane) ---------- */
   function initErExplorer() {
     $$('.erx').forEach(function (host) {
       var dataEl = $('script.erx-data', host.parentNode); if (!dataEl) return;
       var data; try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
-      var panel = host.closest('.ys-tabpanel') || doc, info = {}, cols = {};
-      $$('details.db-t', panel).forEach(function (d) {
-        var c = $('summary > code', d); if (!c) return; var sp = $('summary > span:not(.ys-pill)', d);
-        info[c.textContent] = { desc: sp ? sp.innerHTML : '', table: $('table', d), text: d.textContent.toLowerCase() };
-      });
-      var gi = {}, order = [];
+      var tabs = data.tables, gi = {}, out = {}, inn = {}, order = [], NS = 'http://www.w3.org/2000/svg';
       data.groups.forEach(function (g, i) { g[1].forEach(function (n) { gi[n] = i; order.push(n); }); });
-      var out = {}, inn = {};
       data.edges.forEach(function (e) { (out[e[0]] = out[e[0]] || []).push(e); (inn[e[1]] = inn[e[1]] || []).push(e); });
-      host.innerHTML = '<div class="erx-bar"><label class="erx-search"><span class="sr-only">Search tables and columns</span><input type="search" placeholder="Search a table or a column" autocomplete="off"></label><div class="erx-chips" role="group" aria-label="Filter by group"></div></div><div class="erx-board"><svg class="erx-lines" aria-hidden="true"></svg><div class="erx-lanes"></div></div><div class="erx-detail" aria-live="polite"></div>';
-      var lanes = $('.erx-lanes', host), chips = $('.erx-chips', host), svg = $('.erx-lines', host), board = $('.erx-board', host), detail = $('.erx-detail', host), input = $('input', host);
-      var cards = {}, sel = null, hiddenG = {};
+      function tag(n) { var d = tabs[n]; return d[2] === null ? 'new' : (d[2] && d[2].length ? 'changed' : ''); }
+      host.innerHTML = '<div class="erx-top"><label class="erx-search"><span class="sr-only">Search tables and columns</span><input type="search" placeholder="Search a table or a column" autocomplete="off"></label><div class="erx-chips" role="group" aria-label="Filter by group"></div></div>' +
+        '<div class="erx-main"><nav class="erx-rail" aria-label="Tables"></nav><div class="erx-pane"><label class="erx-pick"><span class="sr-only">Table</span><select></select></label><div class="erx-body"></div></div></div>';
+      var rail = $('.erx-rail', host), chips = $('.erx-chips', host), body = $('.erx-body', host), input = $('input', host), pick = $('select', host);
+      var rows = {}, groups = [], hiddenG = {}, sel = null;
       data.groups.forEach(function (g, i) {
-        var lane = doc.createElement('section'); lane.className = 'erx-lane g' + (i % 8); lane.setAttribute('data-g', i);
-        lane.innerHTML = '<h4><span class="erx-dot"></span>' + g[0] + '<small>' + g[1].length + '</small></h4><div class="erx-cards"></div>';
-        var wrap = $('.erx-cards', lane);
+        var box = doc.createElement('div'); box.className = 'erx-g g' + (i % 8);
+        box.innerHTML = '<h5><span class="erx-dot"></span>' + g[0] + '<small>' + g[1].length + '</small></h5>';
+        var ul = doc.createElement('ul'); box.appendChild(ul);
         g[1].forEach(function (n) {
-          var b = doc.createElement('button'); b.type = 'button'; b.className = 'erx-card'; b.setAttribute('data-t', n);
-          var nc = info[n] && info[n].table ? $$('tbody tr', info[n].table).length : 0, nr = (out[n] ? out[n].length : 0) + (inn[n] ? inn[n].length : 0);
-          b.innerHTML = '<code>' + n + '</code><span>' + nc + ' columns' + (nr ? ' · ' + nr + ' links' : '') + '</span>';
-          b.addEventListener('click', function () { select(n, true); });
-          cards[n] = b; wrap.appendChild(b);
+          var li = doc.createElement('li'), b = doc.createElement('button'); b.type = 'button'; b.setAttribute('data-t', n);
+          b.innerHTML = '<code>' + n + '</code>' + (tag(n) ? '<em class="erx-tag ' + tag(n) + '">' + tag(n) + '</em>' : '');
+          b.addEventListener('click', function () { select(n); }); li.appendChild(b); ul.appendChild(li); rows[n] = li;
         });
-        lanes.appendChild(lane);
+        rail.appendChild(box); groups.push(box);
         var ch = doc.createElement('button'); ch.type = 'button'; ch.className = 'erx-chip g' + (i % 8); ch.setAttribute('aria-pressed', 'true'); ch.innerHTML = '<span class="erx-dot"></span>' + g[0];
-        ch.addEventListener('click', function () { hiddenG[i] = !hiddenG[i]; ch.setAttribute('aria-pressed', hiddenG[i] ? 'false' : 'true'); lane.hidden = !!hiddenG[i]; draw(); });
-        chips.appendChild(ch);
+        ch.addEventListener('click', function () { hiddenG[i] = !hiddenG[i]; ch.setAttribute('aria-pressed', hiddenG[i] ? 'false' : 'true'); filter(); }); chips.appendChild(ch);
       });
-      function link(n) { var a = doc.createElement('a'); a.href = '#'; a.className = 'erx-ref'; a.textContent = n; a.addEventListener('click', function (ev) { ev.preventDefault(); select(n, false); }); return a; }
-      function draw() {
-        svg.innerHTML = ''; if (!sel || !cards[sel] || window.innerWidth < 760) return;
-        var br = board.getBoundingClientRect(); if (!br.width) return;
-        svg.setAttribute('viewBox', '0 0 ' + br.width + ' ' + br.height); svg.setAttribute('width', br.width); svg.setAttribute('height', br.height);
-        var s = cards[sel].getBoundingClientRect(), sx = s.left - br.left + s.width / 2, sy = s.top - br.top + s.height / 2;
-        var rel = {}; (out[sel] || []).forEach(function (e) { rel[e[1]] = 'out'; }); (inn[sel] || []).forEach(function (e) { rel[e[0]] = rel[e[0]] ? 'both' : 'in'; });
-        Object.keys(rel).forEach(function (n) {
-          var c = cards[n]; if (!c || c.closest('.erx-lane').hidden) return; var r = c.getBoundingClientRect(), x = r.left - br.left + r.width / 2, y = r.top - br.top + r.height / 2;
-          var dy = Math.max(40, Math.abs(y - sy) * .5), p = doc.createElementNS('http://www.w3.org/2000/svg', 'path');
-          p.setAttribute('d', 'M' + sx + ' ' + sy + ' C' + sx + ' ' + (sy + (y >= sy ? dy : -dy)) + ' ' + x + ' ' + (y + (y >= sy ? -dy : dy)) + ' ' + x + ' ' + y);
-          p.setAttribute('class', 'erx-path ' + rel[n]); svg.appendChild(p);
+      pick.innerHTML = data.groups.map(function (g) { return '<optgroup label="' + g[0] + '">' + g[1].map(function (n) { return '<option>' + n + '</option>'; }).join('') + '</optgroup>'; }).join('');
+      pick.addEventListener('change', function () { select(pick.value); });
+      function filter() {
+        var q = input.value.trim().toLowerCase();
+        data.groups.forEach(function (g, i) {
+          var any = 0; g[1].forEach(function (n) {
+            var hit = !q || n.indexOf(q) > -1 || tabs[n][0].toLowerCase().indexOf(q) > -1 || tabs[n][1].some(function (c) { return c[0].indexOf(q) > -1; });
+            rows[n].hidden = !hit; if (hit) any++;
+          }); groups[i].hidden = !!hiddenG[i] || !any;
         });
       }
-      function select(n, scroll) {
-        if (!info[n] && !cards[n]) return; sel = n;
-        var rel = {}; (out[n] || []).forEach(function (e) { rel[e[1]] = 1; }); (inn[n] || []).forEach(function (e) { rel[e[0]] = 1; });
-        Object.keys(cards).forEach(function (k) { var c = cards[k]; c.classList.toggle('is-sel', k === n); c.classList.toggle('is-rel', !!rel[k]); c.classList.toggle('is-dim', k !== n && !rel[k]); c.setAttribute('aria-pressed', k === n ? 'true' : 'false'); });
-        var d = info[n] || { desc: '', table: null }, h = '<div class="erx-head"><span class="erx-dot g' + (gi[n] % 8) + '"></span><h4><code></code></h4><p>' + d.desc + '</p></div><div class="erx-rel"></div><div class="erx-tab"></div>';
-        detail.innerHTML = h; $('code', detail).textContent = n; detail.className = 'erx-detail on g' + (gi[n] % 8);
-        var rel2 = $('.erx-rel', detail);
-        function group(title, list, ix) {
-          if (!list || !list.length) return; var box = doc.createElement('div'); box.innerHTML = '<b>' + title + '</b>'; var seen = {};
-          list.forEach(function (e) { var o = e[ix]; if (seen[o]) return; seen[o] = 1; var w = doc.createElement('span'); w.className = 'erx-pair'; w.appendChild(link(o)); var cl = list.filter(function (x) { return x[ix] === o; }).map(function (x) { return x[2]; }); var sm = doc.createElement('small'); sm.textContent = (ix === 1 ? ' via ' : ' through ') + cl.join(', '); w.appendChild(sm); box.appendChild(w); });
-          rel2.appendChild(box);
-        }
-        group('References', out[n], 1); group('Referenced by', inn[n], 0);
-        if (d.table) {
-          var tb = d.table.cloneNode(true), fk = {}; (out[n] || []).forEach(function (e) { fk[e[2]] = e[1]; });
-          $$('tbody tr', tb).forEach(function (r) { var c = $('td code', r); if (c && fk[c.textContent]) { var a = link(fk[c.textContent]); a.className += ' erx-fk'; a.textContent = '→ ' + fk[c.textContent]; c.parentNode.appendChild(doc.createTextNode(' ')); c.parentNode.appendChild(a); } });
-          var w = doc.createElement('div'); w.className = 'ys-table-wrap'; w.appendChild(tb); $('.erx-tab', detail).appendChild(w);
-        }
-        draw(); if (scroll) detail.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+      input.addEventListener('input', filter);
+      function svgEl(n, a) { var e = doc.createElementNS(NS, n); Object.keys(a || {}).forEach(function (k) { e.setAttribute(k, a[k]); }); return e; }
+      function side(title, list, ix) {
+        var col = doc.createElement('div'); col.className = 'erx-col'; col.innerHTML = '<h5>' + title + '</h5>';
+        var seen = {}, any = false;
+        (list || []).forEach(function (e) {
+          var o = e[ix]; if (seen[o]) return; seen[o] = 1; any = true;
+          var via = list.filter(function (x) { return x[ix] === o; }).map(function (x) { return x[2]; });
+          var b = doc.createElement('button'); b.type = 'button'; b.className = 'erx-node g' + (gi[o] % 8); b.setAttribute('data-t', o);
+          b.innerHTML = '<code>' + o + '</code><small>' + (ix === 1 ? 'via ' : 'through ') + via.join(', ') + '</small>';
+          b.addEventListener('click', function () { select(o); }); col.appendChild(b);
+        });
+        if (!any) { var p = doc.createElement('p'); p.className = 'erx-none'; p.textContent = ix === 1 ? 'No references to other tables.' : 'No other table points here.'; col.appendChild(p); }
+        return col;
       }
-      input.addEventListener('input', function () {
-        var q = input.value.trim().toLowerCase();
-        Object.keys(cards).forEach(function (k) { var ok = !q || k.indexOf(q) > -1 || (info[k] && info[k].text.indexOf(q) > -1); cards[k].classList.toggle('is-off', !ok); });
-      });
-      if (window.ResizeObserver) new ResizeObserver(function () { draw(); }).observe(board); else window.addEventListener('resize', draw);
-      select(order[0], false);
+      function lines(ego) {
+        var s = $('svg', ego); s.innerHTML = ''; var br = ego.getBoundingClientRect(); if (!br.width || window.innerWidth < 760) return;
+        s.setAttribute('viewBox', '0 0 ' + br.width + ' ' + br.height); s.setAttribute('width', br.width); s.setAttribute('height', br.height);
+        var defs = svgEl('defs'), m = svgEl('marker', { id: 'erx-arr', viewBox: '0 0 10 10', refX: '9', refY: '5', markerWidth: '7', markerHeight: '7', orient: 'auto-start-reverse' }); m.appendChild(svgEl('path', { d: 'M0 0L10 5L0 10z', fill: 'currentColor' })); defs.appendChild(m); s.appendChild(defs);
+        var c = $('.erx-center', ego).getBoundingClientRect(), cy = c.top - br.top + c.height / 2;
+        $$('.erx-col .erx-node', ego).forEach(function (n) {
+          var r = n.getBoundingClientRect(), left = n.closest('.erx-col').classList.contains('erx-refs'), y = r.top - br.top + r.height / 2;
+          var x1 = left ? c.left - br.left : r.left - br.left, x2 = left ? r.right - br.left : c.right - br.left;
+          // arrows follow the foreign key: from the referencing table to the referenced one
+          var from = left ? [c.left - br.left, cy] : [r.left - br.left, y], to = left ? [r.right - br.left, y] : [c.right - br.left, cy], mx = (from[0] + to[0]) / 2;
+          var p = svgEl('path', { d: 'M' + from[0] + ' ' + from[1] + ' C' + mx + ' ' + from[1] + ' ' + mx + ' ' + to[1] + ' ' + to[0] + ' ' + to[1], class: 'erx-path ' + (left ? 'out' : 'in'), 'marker-end': 'url(#erx-arr)' }); s.appendChild(p);
+        });
+      }
+      function select(n) {
+        if (!tabs[n]) return; sel = n; var d = tabs[n], g = gi[n] % 8;
+        Object.keys(rows).forEach(function (k) { var b = $('button', rows[k]); b.classList.toggle('on', k === n); b.setAttribute('aria-current', k === n ? 'true' : 'false'); });
+        pick.value = n;
+        body.className = 'erx-body g' + g;
+        body.innerHTML = '<div class="erx-head"><h4><span class="erx-dot"></span><code></code>' + (tag(n) ? '<em class="erx-tag ' + tag(n) + '">' + tag(n) + '</em>' : '') + '</h4><p>' + d[0] + '</p></div><div class="erx-ego"><svg class="erx-lines" aria-hidden="true"></svg></div><div class="erx-tab"></div>';
+        $('code', body).textContent = n;
+        var ego = $('.erx-ego', body), refs = side('References', out[n], 1), cen = doc.createElement('div'), by = side('Referenced by', inn[n], 0);
+        refs.className += ' erx-refs'; by.className += ' erx-by'; cen.className = 'erx-center'; cen.innerHTML = '<code></code><small>' + d[1].length + ' columns</small>'; $('code', cen).textContent = n;
+        ego.appendChild(refs); ego.appendChild(cen); ego.appendChild(by);
+        var fk = {}; (out[n] || []).forEach(function (e) { fk[e[2]] = e[1]; });
+        var added = d[2] || [], tb = '<div class="ys-table-wrap"><table><thead><tr><th>Column</th><th>Type</th><th>Description</th></tr></thead><tbody>';
+        d[1].forEach(function (c) { tb += '<tr' + (added.indexOf(c[0]) > -1 ? ' class="erx-newcol"' : '') + '><td><code>' + c[0] + '</code>' + (c[2] ? ' <span class="ys-pill">PK</span>' : '') + (added.indexOf(c[0]) > -1 ? ' <span class="ys-pill o">new</span>' : '') + (fk[c[0]] ? ' <a href="#" class="erx-ref" data-t="' + fk[c[0]] + '">→ ' + fk[c[0]] + '</a>' : '') + '</td><td>' + c[1] + '</td><td>' + c[3] + '</td></tr>'; });
+        $('.erx-tab', body).innerHTML = tb + '</tbody></table></div>';
+        $$('a.erx-ref', body).forEach(function (a) { a.addEventListener('click', function (ev) { ev.preventDefault(); select(a.getAttribute('data-t')); }); });
+        lines(ego);
+      }
+      if (window.ResizeObserver) new ResizeObserver(function () { var e = $('.erx-ego', body); if (e) lines(e); }).observe(body); else window.addEventListener('resize', function () { var e = $('.erx-ego', body); if (e) lines(e); });
+      select(tabs.post ? 'post' : (tabs.photos ? 'photos' : order[0]));
     });
   }
 
