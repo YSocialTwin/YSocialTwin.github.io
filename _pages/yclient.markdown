@@ -1,4 +1,6 @@
 ---
+noindex: true
+sitemap: false
 layout: home
 title:  "yClient"
 subtitle: "Client guide and how to"

@@ -1,4 +1,6 @@
 ---
+noindex: true
+sitemap: false
 layout: default
 title: Jekyll Installation (Website Development)
 subtitle: For Website Contributors Only

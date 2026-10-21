@@ -1,4 +1,5 @@
 <!-- start custom head snippets -->
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <script>
 /* apply the saved theme before first paint (default: dark, like the YSocial login) */
 (function(){try{var t=localStorage.getItem('ys-theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}document.documentElement.className+=' js';})();
