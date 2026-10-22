@@ -50,7 +50,7 @@ show_sidetoc: true
 </div>
 </div>
 </div>
-<p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. Every file is listed in <a href="{{ site.release_url }}/SHA256SUMS.txt">SHA256SUMS.txt</a> so you can verify your download.</p>
+<p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. Every file is listed in <a href="{{ site.release_url }}/SHA256SUMS.txt">SHA256SUMS.txt</a> so you can verify your download, and each file comes with a GPG signature (<code>.asc</code>). To check one: <code>gpg --import release-signing-key.asc</code>, then <code>gpg --verify YSocial-{{ site.ysocial_version }}-linux-x64.AppImage.asc YSocial-{{ site.ysocial_version }}-linux-x64.AppImage</code>. The public key is attached to every <a href="https://github.com/YSocialTwin/YSocial/releases/latest">release</a>.</p>
 <div class="ys-shots">
 <figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install1.webp" alt="The installer: Install YSocial" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>1. Press <em>Install YSocial</em></figcaption></figure>
 <figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install2a.webp" alt="The installer preparing the Python environment" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>2. It prepares Python and a private environment</figcaption></figure>
@@ -72,6 +72,7 @@ Open the installer, press *Install YSocial*, then **Start**. YSocial opens in it
 <li>If a managed (work or university) PC does not offer <em>Run anyway</em>, ask your IT department to allow the installer.</li>
 </ol>
 <p>Download the installer only from this page or from the official GitHub release. You can also right-click the file, choose <em>Properties</em> and tick <em>Unblock</em> before running it.</p>
+<p><strong>Linux:</strong> Chrome may block the <code>.AppImage</code> or <code>.deb</code> as a <em>"dangerous download"</em> because it is an executable that few people have downloaded yet. This is a false positive. Open <code>chrome://downloads</code>, choose <em>…</em> next to the file and then <em>Keep</em> (<em>Keep anyway</em>). For an <code>.AppImage</code>, make it executable before the first run: <code>chmod +x YSocial-*.AppImage</code>. You can check the file against its signature first, see below.</p>
 </div>
 {% capture t_installer2 %}
 Under *More options* you can open YSocial in your default browser instead of its own window, start Jupyter Lab (off by default), change the address and port (`127.0.0.1:8080` by default), and switch off the update check.
