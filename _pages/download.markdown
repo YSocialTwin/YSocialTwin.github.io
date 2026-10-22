@@ -50,7 +50,7 @@ show_sidetoc: true
 </div>
 </div>
 </div>
-<p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. Every file is listed in <a href="{{ site.release_url }}/SHA256SUMS.txt">SHA256SUMS.txt</a> so you can verify your download, and each file comes with a GPG signature (<code>.asc</code>). To check one: <code>gpg --import release-signing-key.asc</code>, then <code>gpg --verify YSocial-{{ site.ysocial_version }}-linux-x64.AppImage.asc YSocial-{{ site.ysocial_version }}-linux-x64.AppImage</code>. The public key is attached to every <a href="https://github.com/YSocialTwin/YSocial/releases/latest">release</a>.</p>
+<p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. To check that a file is genuine, see <a href="#verify-your-download">Verify your download</a>.</p>
 <div class="ys-shots">
 <figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install1.webp" alt="The installer: Install YSocial" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>1. Press <em>Install YSocial</em></figcaption></figure>
 <figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install2a.webp" alt="The installer preparing the Python environment" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>2. It prepares Python and a private environment</figcaption></figure>
@@ -72,7 +72,7 @@ Open the installer, press *Install YSocial*, then **Start**. YSocial opens in it
 <li>If a managed (work or university) PC does not offer <em>Run anyway</em>, ask your IT department to allow the installer.</li>
 </ol>
 <p>Download the installer only from this page or from the official GitHub release. You can also right-click the file, choose <em>Properties</em> and tick <em>Unblock</em> before running it.</p>
-<p><strong>Linux:</strong> Chrome may block the <code>.AppImage</code> or <code>.deb</code> as a <em>"dangerous download"</em> because it is an executable that few people have downloaded yet. This is a false positive. Open <code>chrome://downloads</code>, choose <em>…</em> next to the file and then <em>Keep</em> (<em>Keep anyway</em>). For an <code>.AppImage</code>, make it executable before the first run: <code>chmod +x YSocial-*.AppImage</code>. You can check the file against its signature first, see below.</p>
+<p><strong>Linux:</strong> Chrome may block the <code>.AppImage</code> or <code>.deb</code> as a <em>"dangerous download"</em> because it is an executable that few people have downloaded yet. This is a false positive. Open <code>chrome://downloads</code>, choose <em>…</em> next to the file and then <em>Keep</em> (<em>Keep anyway</em>). For an <code>.AppImage</code>, make it executable before the first run: <code>chmod +x YSocial-*.AppImage</code>.</p>
 </div>
 {% capture t_installer2 %}
 Under *More options* you can open YSocial in your default browser instead of its own window, start Jupyter Lab (off by default), change the address and port (`127.0.0.1:8080` by default), and switch off the update check.
@@ -218,6 +218,35 @@ python y_social.py --no_notebook                           # disable Jupyter Lab
 <div><dt>Internet</dt><dd>Needed while installing: the installer downloads its environment and Docker pulls the image.</dd></div>
 <div><dt>Disk</dt><dd>A few GB. Toxicity detection is optional and adds several more (PyTorch and a model).</dd></div>
 </dl>
+
+## Verify your download
+
+<details>
+<summary data-excerpt="Optional: check that a file is the one we published.">Check a file against its checksum and signature <span class="ys-pill ys-scope">All downloads, all systems</span></summary>
+{% capture t_verify %}
+This is optional and applies to **every file of a release**: the installers for macOS, Windows and Linux, the wheel and `constraints.txt`. Two checks are available, and they work the same on every system:
+
+1. **Checksum** (did the download arrive intact?). Download [SHA256SUMS.txt]({{ site.release_url }}/SHA256SUMS.txt) next to your file and compare:
+
+   | System | Command |
+   | --- | --- |
+   | Linux | `sha256sum -c SHA256SUMS.txt --ignore-missing` |
+   | macOS | `shasum -a 256 -c SHA256SUMS.txt --ignore-missing` |
+   | Windows (PowerShell) | `Get-FileHash .\YSocial-{{ site.ysocial_version }}-windows-x64.exe -Algorithm SHA256`, then compare it with the line in `SHA256SUMS.txt` |
+
+2. **Signature** (was it published by the YSocial team?). Every file has a detached [GPG](https://gnupg.org/) signature, the same name plus `.asc`, and so does `SHA256SUMS.txt`. The public key is `release-signing-key.asc`, attached to each release and kept in the [repository](https://github.com/YSocialTwin/YSocial/blob/main/docs/release-signing-key.asc). With GPG installed (`brew install gnupg` on macOS, `gpg4win` on Windows):
+
+   ```bash
+   gpg --import release-signing-key.asc
+   gpg --verify YSocial-{{ site.ysocial_version }}-linux-x64.AppImage.asc YSocial-{{ site.ysocial_version }}-linux-x64.AppImage
+   ```
+
+   Use the file name you downloaded. A line saying *Good signature* means the file is genuine. GPG may also warn that the key is not certified: that is expected, compare the key fingerprint with the one in the repository if you want to be sure.
+
+The installers are signed with GPG but **not code-signed** for macOS and Windows: the system warnings described above remain, and a valid GPG signature does not remove them.
+{% endcapture %}
+{{ t_verify | markdownify }}
+</details>
 
 ## Looking after your installation
 
