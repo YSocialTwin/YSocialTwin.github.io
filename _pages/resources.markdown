@@ -73,9 +73,12 @@ After the recovery, the database is ready to be queried.
 <li>Tutorial &ldquo;YSocial: Building, Running, and Analyzing LLM-Powered Social Media Digital Twins&ldquo;, <a href="https://www.itadata.it/">ItaData</a>, Italy </li>
 <li><a href="https://www.unipi.it/eventi/worlds-of-co-intelligence-critical-role-play-on-human-ai-coexistence/">WORLDS OF CO-INTELLIGENCE | Exploring Human–AI Coexistence</a>, Details Lab, Italy</li>
 <li><a href="https://www.digitafrica.eu/">DigitAfrica</a> Workshop, Tunisia</li>
+<li>Workshop &ldquo;Simulating Societies&rdquo; at the <a href="https://asonam.csu.edu.cn/">ASONAM</a>, Morocco</li>
+
 </ul></dd></div>
 
 <div><dt>2025</dt><dd><ul>
+<li><a href="https://cs2italy.org/">CS2Italy</a>, Italian Conference On Computational Social Science</li>
 <li><a href="{{ site.baseurl }}/events/hhai">Tutorial &ldquo;LLM-powered Simulations of Social Media Environments&rdquo;</a> at <a href="https://hhai-conference.org/2025/">HHAI</a></li>
 <li>Workshop &ldquo;Simulating Societies&rdquo; at the <a href="https://ccs25.cssociety.org/">Conference on Complex Systems</a></li>
 <li><a href="https://summerschool2025.sobigdata.eu/">SoBigData Summer School</a>, From Data to Social Innovation</li>
@@ -85,7 +88,6 @@ After the recovery, the database is ready to be queried.
 <div><dt>2024</dt><dd><ul>
 <li>International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</li>
 <li>International Conference on Complex Networks and their Applications</li>
-<li>Italian Conference on Computational Social Science (CS2Italy)</li>
 </ul></dd></div>
 </dl>
 
