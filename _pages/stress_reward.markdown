@@ -114,7 +114,7 @@ Each event has a base push on stress and on reward. <span class="sr-key bad">Red
 <p class="sr-evft">protected &times; support strength &middot; reports &times; exposure</p></div>
 </div>
 
-<details markdown="0" class="sr-det"><summary>Exactly how each event is scaled</summary>
+<details markdown="0"><summary data-excerpt="Factors per event, in one table.">Exactly how each event is scaled</summary>
 <div class="ys-table-wrap ys-no-wrap"><table>
 <thead><tr><th>Event</th><th>Stress is multiplied by</th><th>Reward is multiplied by</th></tr></thead>
 <tbody>
@@ -176,6 +176,7 @@ Pick an event and the recipient's current state, then move the sliders to see th
 <div class="od-controls" id="sr-c1"></div>
 <div class="od-controls" id="sr-c2"></div>
 </div>
+<details markdown="0"><summary data-excerpt="Sensitivity, resilience, coupling.">Traits and coupling</summary><div class="od-controls sr-two" id="sr-c3"></div></details>
 <div class="ys-table-wrap ys-no-wrap sr-steps"><table>
 <thead><tr><th>Step</th><th>Stress</th><th>Reward</th></tr></thead>
 <tbody>
@@ -205,13 +206,9 @@ Sixty rounds, two interactions per round. Pick a scenario, then tune traits and 
 </div>
 <canvas id="sr-canvas" class="od-canvas" width="900" height="300" role="img" aria-label="Stress, reward and activity of one agent over 60 rounds"></canvas>
 <div class="sr-legend" aria-hidden="true"><span class="s">Stress</span><span class="r">Reward</span><span class="a">Activity multiplier</span></div>
-<div class="od-lab-row">
-<div class="od-controls" id="sr-t1"></div>
-<div class="od-lab-side">
 <p class="od-result" id="sr-t-out" aria-live="polite"></p>
 <div class="od-btns"><button type="button" id="sr-replay">Replay</button><button type="button" id="sr-redraw">New draw</button></div>
-</div>
-</div>
+<details markdown="0"><summary data-excerpt="Sensitivity, resilience, coupling.">Temperament and coupling</summary><div class="od-controls sr-two" id="sr-t1"></div></details>
 <noscript><p class="am-note">Enable JavaScript to run the simulation.</p></noscript>
 </div>
 
@@ -254,7 +251,8 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 <div class="sr-scale" aria-hidden="true"><span id="sr-lo">0</span><i></i><span id="sr-hi">1</span></div>
 <div class="od-lab-row">
 <div class="od-controls" id="sr-m1"></div>
-<div class="od-controls" id="sr-m2"></div>
+<div id="sr-ga"><h4 class="sr-gh">Burden and skipping</h4><div class="od-controls" id="sr-m2"></div></div>
+<div id="sr-gc" hidden><h4 class="sr-gh">Churn curve</h4><div class="od-controls" id="sr-m3"></div></div>
 </div>
 <p class="od-result" id="sr-m-out" aria-live="polite"></p>
 <div class="od-btns"><button type="button" id="sr-m-reset">Reset to defaults</button></div>
@@ -263,31 +261,31 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 
 ## All parameters {#all-parameters}
 
-One row per group, with defaults. <strong>Everything is configurable</strong>; any key you leave out keeps its default and nested blocks are merged. <em>Admin page</em> is <em>Experiment &rsaquo; Configure Stress / Reward</em>.
+One row per group, with defaults. <strong>Everything is configurable</strong>; any key you leave out keeps its default and nested blocks are merged. <span class="sr-where e">Experiment</span> is the experiment form, <span class="sr-where a">Admin</span> is <em>Experiment &rsaquo; Configure Stress / Reward</em>, <span class="sr-where c">Config</span> is the client configuration file (reports have no form field).
 
 <div class="ys-table-wrap ys-no-wrap sr-params" markdown="0"><table>
 <thead><tr><th>Key</th><th>Default</th><th>What it does</th><th>Set in</th></tr></thead>
 <tbody>
 <tr class="sr-grp"><td colspan="4">Switches &middot; <code>stress_reward</code></td></tr>
-<tr><td><code>enabled</code></td><td>off</td><td>Master switch for the whole feature.</td><td>Experiment page</td></tr>
-<tr><td><code>backward_rounds</code></td><td>24</td><td>Rounds the first state rebuild looks back.</td><td>Config file</td></tr>
+<tr><td><code>enabled</code></td><td>off</td><td>Master switch for the whole feature.</td><td><span class="sr-where e">Experiment</span></td></tr>
+<tr><td><code>backward_rounds</code></td><td>24</td><td>Rounds the first state rebuild looks back.</td><td><span class="sr-where c">Config</span></td></tr>
 <tr class="sr-grp"><td colspan="4">Recipient &middot; <code>system.traits</code></td></tr>
-<tr><td><code>sensitivity</code> &middot; <code>resilience</code> &middot; <code>reward_sensitivity</code> &middot; <code>visibility_need</code></td><td>1.0 each</td><td>Multipliers on stress increases, stress relief, reward increases and reward losses.</td><td>Config file</td></tr>
+<tr><td><code>sensitivity</code> &middot; <code>resilience</code> &middot; <code>reward_sensitivity</code> &middot; <code>visibility_need</code></td><td>1.0 each</td><td>Multipliers on stress increases, stress relief, reward increases and reward losses.</td><td><span class="sr-where c">Config</span></td></tr>
 <tr class="sr-grp"><td colspan="4">Coupling &middot; <code>system.coupling</code></td></tr>
-<tr><td><code>reward_buffers_stress_alpha</code> &middot; <code>stress_reduces_reward_beta</code></td><td>0.30 &middot; 0.20</td><td>&alpha;: share of a stress increase absorbed per unit of reward. &beta;: share of a reward increase lost per unit of stress.</td><td>Admin page</td></tr>
+<tr><td><code>reward_buffers_stress_alpha</code> &middot; <code>stress_reduces_reward_beta</code></td><td>0.30 &middot; 0.20</td><td>&alpha;: share of a stress increase absorbed per unit of reward. &beta;: share of a reward increase lost per unit of stress.</td><td><span class="sr-where a">Admin</span></td></tr>
 <tr class="sr-grp"><td colspan="4">Events &middot; <code>system.events.&lt;family&gt;.&lt;subtype&gt;</code></td></tr>
-<tr><td><code>stress</code> &middot; <code>reward</code></td><td>see Event weights</td><td>Base push of each event.</td><td>Admin page (reports: config file)</td></tr>
+<tr><td><code>stress</code> &middot; <code>reward</code></td><td>see Event weights</td><td>Base push of each event.</td><td><span class="sr-where a">Admin</span> <span class="sr-where c">Config</span></td></tr>
 <tr class="sr-grp"><td colspan="4">Activity &middot; <code>system.activity_impact</code></td></tr>
-<tr><td><code>enabled</code></td><td>on</td><td>Lets the state slow the agent down.</td><td>Config file</td></tr>
-<tr><td><code>stress_weight</code> &middot; <code>reward_weight</code> &middot; <code>baseline_buffer</code></td><td>1.1 &middot; 0.35 &middot; 0.10</td><td>Terms of the burden.</td><td>Config file</td></tr>
-<tr><td><code>min_action_multiplier</code> &middot; <code>max_skip_probability</code></td><td>0.15 &middot; 0.65</td><td>Floor of the multiplier and cap of the skip probability.</td><td>Config file</td></tr>
+<tr><td><code>enabled</code></td><td>on</td><td>Lets the state slow the agent down.</td><td><span class="sr-where c">Config</span></td></tr>
+<tr><td><code>stress_weight</code> &middot; <code>reward_weight</code> &middot; <code>baseline_buffer</code></td><td>1.1 &middot; 0.35 &middot; 0.10</td><td>Terms of the burden.</td><td><span class="sr-where c">Config</span></td></tr>
+<tr><td><code>min_action_multiplier</code> &middot; <code>max_skip_probability</code></td><td>0.15 &middot; 0.65</td><td>Floor of the multiplier and cap of the skip probability.</td><td><span class="sr-where c">Config</span></td></tr>
 <tr class="sr-grp"><td colspan="4">Churn &middot; <code>system.churn</code></td></tr>
-<tr><td><code>enabled</code></td><td>off</td><td>Lets the state make the agent leave.</td><td>Admin page</td></tr>
-<tr><td><code>stress_weight</code> &middot; <code>reward_weight</code> &middot; <code>bias</code> &middot; <code>temperature</code></td><td>1.5 &middot; 1.0 &middot; &minus;2.2 &middot; 0.35</td><td>Shape of the churn curve: weights, baseline and sharpness.</td><td>Config file</td></tr>
-<tr><td><code>min_probability</code> &middot; <code>max_probability</code></td><td>0 &middot; 0.95</td><td>Bounds of the per-turn probability.</td><td>Config file</td></tr>
+<tr><td><code>enabled</code></td><td>off</td><td>Lets the state make the agent leave.</td><td><span class="sr-where a">Admin</span></td></tr>
+<tr><td><code>stress_weight</code> &middot; <code>reward_weight</code> &middot; <code>bias</code> &middot; <code>temperature</code></td><td>1.5 &middot; 1.0 &middot; &minus;2.2 &middot; 0.35</td><td>Shape of the churn curve: weights, baseline and sharpness.</td><td><span class="sr-where c">Config</span></td></tr>
+<tr><td><code>min_probability</code> &middot; <code>max_probability</code></td><td>0 &middot; 0.95</td><td>Bounds of the per-turn probability.</td><td><span class="sr-where c">Config</span></td></tr>
 </tbody></table></div>
 
-<details markdown="0" class="sr-det"><summary>Example: a harsher, thinner-skinned world</summary>
+<details markdown="0"><summary data-excerpt="A configuration snippet.">Example: a harsher, thinner-skinned world</summary>
 <pre class="sr-json"><code>{
   "stress_reward": {
     "enabled": true,
@@ -456,17 +454,14 @@ One row per group, with defaults. <strong>Everything is configurable</strong>; a
       return { st: st, rw: rw, steps: out };
     };
     var lerp = function (a, b, t) { return Math.round(a + (b - a) * t); };
-    var face = function (st, rw) {
-      var t = clamp01(st * 1.3), fill = "rgb(" + lerp(95, 255, t) + "," + lerp(192, 138, t) + "," + lerp(207, 92, t) + ")";
-      var mood = rw - st, my = 50 - mood * 9, br = (st - 0.25) * 8;
-      return "<svg viewBox=\"0 0 80 80\" class=\"sr-face\" role=\"img\" aria-label=\"Maria's face: " + (mood > 0.15 ? "content" : mood < -0.15 ? "distressed" : "neutral") + "\"><circle cx=\"40\" cy=\"40\" r=\"34\" fill=\"" + fill + "\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"29\" cy=\"34\" r=\"3\" fill=\"#222\"/><circle cx=\"51\" cy=\"34\" r=\"3\" fill=\"#222\"/><line x1=\"23\" y1=\"" + (26 + br) + "\" x2=\"34\" y2=\"" + (26 - br) + "\" stroke=\"#222\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"46\" y1=\"" + (26 - br) + "\" x2=\"57\" y2=\"" + (26 + br) + "\" stroke=\"#222\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><path d=\"M28 50 Q40 " + (50 + mood * 18).toFixed(1) + " 52 50\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>";
-    };
+    var label = function (st, rw) { return st >= 0.6 ? "Overwhelmed" : st >= 0.3 ? "Strained" : rw >= 0.5 ? "Thriving" : "Calm"; };
     var moodHtml = function (st, rw) {
-      var a = act(st, rw);
-      return face(st, rw) + "<div class=\"sr-name\">Maria</div>" +
-        "<div class=\"am-meter c\"><span>Stress</span><div><i style=\"width:" + (st * 100) + "%\"></i></div></div>" +
-        "<div class=\"am-meter\"><span>Reward</span><div><i style=\"width:" + (rw * 100) + "%\"></i></div></div>" +
-        "<p class=\"sr-act\">Acts at <b>" + Math.round(a.mult * 100) + "%</b> of her usual pace and skips <b>" + Math.round(a.skip * 100) + "%</b> of her turns.</p>";
+      var a = act(st, rw), t = clamp01(st * 1.4), c1 = lerp(95, 255, t) + "," + lerp(192, 138, t) + "," + lerp(207, 92, t);
+      return "<div class=\"sr-avatar\" style=\"--c:rgb(" + c1 + ");--g:" + (6 + rw * 18).toFixed(0) + "px\">M</div>" +
+        "<div class=\"sr-name\">Maria</div><div class=\"sr-state\" style=\"color:rgb(" + c1 + ")\">" + label(st, rw) + "</div>" +
+        "<div class=\"sr-g c\"><span>Stress</span><div><i style=\"width:" + (st * 100) + "%\"></i></div><b>" + st.toFixed(2) + "</b></div>" +
+        "<div class=\"sr-g\"><span>Reward</span><div><i style=\"width:" + (rw * 100) + "%\"></i></div><b>" + rw.toFixed(2) + "</b></div>" +
+        "<p class=\"sr-act\">Acts at <b>" + Math.round(a.mult * 100) + "%</b> of her usual pace, skips <b>" + Math.round(a.skip * 100) + "%</b> of turns.</p>";
     };
     var chipHtml = function (m, s) {
       var p = m.k.split(":"), fam = p[0], sub = p[1], lab;
@@ -530,27 +525,28 @@ One row per group, with defaults. <strong>Everything is configurable</strong>; a
   try {
     var ev = $("sr-ev");
     if (ev) {
-      var T = { min: 0, max: 3, step: 0.05 };
-      mk($("sr-c1"), [
+            mk($("sr-c1"), [
         { id: "s", l: "Current stress <i>s</i>", min: 0, max: 1, step: 0.01, v: 0.2, a: "Current stress" },
-        { id: "r", l: "Current reward <i>r</i>", min: 0, max: 1, step: 0.01, v: 0.4, a: "Current reward" },
-        { id: "sens", l: "Sensitivity", min: 0, max: 3, step: 0.05, v: 1 },
-        { id: "res", l: "Resilience", min: 0, max: 3, step: 0.05, v: 1 },
-        { id: "rs", l: "Reward sensitivity", min: 0, max: 3, step: 0.05, v: 1 },
-        { id: "vn", l: "Visibility need", min: 0, max: 3, step: 0.05, v: 1 }
+        { id: "r", l: "Current reward <i>r</i>", min: 0, max: 1, step: 0.01, v: 0.4, a: "Current reward" }
       ], function () { outer.upd(); }, cc);
       mk($("sr-c2"), [
         { id: "dir", l: "Directness", min: 0, max: 1, step: 0.01, v: 1 },
         { id: "exp", l: "Public exposure", min: 0, max: 1, step: 0.01, v: 1 },
         { id: "sup", l: "Support strength", min: 0, max: 1, step: 0.01, v: 1 },
-        { id: "vol", l: "Volume (events)", min: 1, max: 20, step: 1, v: 1, dp: 0 },
+        { id: "vol", l: "Volume (events)", min: 1, max: 20, step: 1, v: 1, dp: 0 }
+      ], function () { outer.upd(); }, cc);
+      mk($("sr-c3"), [
+        { id: "sens", l: "Sensitivity", min: 0, max: 3, step: 0.05, v: 1 },
+        { id: "res", l: "Resilience", min: 0, max: 3, step: 0.05, v: 1 },
+        { id: "rs", l: "Reward sensitivity", min: 0, max: 3, step: 0.05, v: 1 },
+        { id: "vn", l: "Visibility need", min: 0, max: 3, step: 0.05, v: 1 },
         { id: "a", l: "Coupling <i>&alpha;</i>", min: 0, max: 1, step: 0.01, v: 0.3, a: "Coupling alpha" },
         { id: "b", l: "Coupling <i>&beta;</i>", min: 0, max: 1, step: 0.01, v: 0.2, a: "Coupling beta" }
       ], function () { outer.upd(); }, cc);
       var cell = function (id, v) { var e = $(id), b = e.querySelector("b"); (b || e).textContent = sgn(v); };
       outer.upd = function () {
         var key = ev.value, ap = APPLIES[key] || [], st = val(cc, "s"), rw = val(cc, "r");
-        ["dir", "exp", "sup", "vol"].forEach(function (f) { var on = ap.indexOf(f) >= 0; cc[f].el.disabled = !on; cc[f].lab.style.opacity = on ? 1 : 0.45; });
+        ["dir", "exp", "sup", "vol"].forEach(function (f) { var on = ap.indexOf(f) >= 0; cc[f].lab.hidden = !on; });
         var o = delta(key,
           { dir: val(cc, "dir"), exp: val(cc, "exp"), sup: val(cc, "sup"), vol: val(cc, "vol") },
           { sens: val(cc, "sens"), res: val(cc, "res"), rs: val(cc, "rs"), vn: val(cc, "vn") },
@@ -672,34 +668,41 @@ One row per group, with defaults. <strong>Everything is configurable</strong>; a
       };
       mk($("sr-m1"), [
         { id: "ps", l: "Agent stress <i>s</i>", min: 0, max: 1, step: 0.01, v: 0.5, a: "Agent stress" },
-        { id: "pr", l: "Agent reward <i>r</i>", min: 0, max: 1, step: 0.01, v: 0.3, a: "Agent reward" },
-        { id: "sw", l: "Burden: stress weight", min: 0, max: 3, step: 0.05, v: D.sw },
-        { id: "rw", l: "Burden: reward weight", min: 0, max: 2, step: 0.05, v: D.rw },
-        { id: "bb", l: "Burden: baseline buffer", min: 0, max: 0.5, step: 0.01, v: D.bb },
+        { id: "pr", l: "Agent reward <i>r</i>", min: 0, max: 1, step: 0.01, v: 0.3, a: "Agent reward" }
+      ], onm, mm);
+      mk($("sr-m2"), [
+        { id: "sw", l: "Stress weight", min: 0, max: 3, step: 0.05, v: D.sw },
+        { id: "rw", l: "Reward weight", min: 0, max: 2, step: 0.05, v: D.rw },
+        { id: "bb", l: "Baseline buffer", min: 0, max: 0.5, step: 0.01, v: D.bb },
         { id: "mm", l: "Min action multiplier", min: 0, max: 1, step: 0.01, v: D.mm },
         { id: "ms", l: "Max skip probability", min: 0, max: 1, step: 0.01, v: D.ms }
       ], onm, mm);
-      mk($("sr-m2"), [
-        { id: "cb", l: "Churn: bias", min: -6, max: 2, step: 0.1, v: D.cb, dp: 1 },
-        { id: "cs", l: "Churn: stress weight", min: 0, max: 4, step: 0.05, v: D.cs },
-        { id: "cr", l: "Churn: reward weight", min: 0, max: 4, step: 0.05, v: D.cr },
-        { id: "ct", l: "Churn: temperature", min: 0.05, max: 1, step: 0.01, v: D.ct },
-        { id: "cx", l: "Churn: max probability", min: 0, max: 1, step: 0.01, v: D.cx }
+      mk($("sr-m3"), [
+        { id: "cb", l: "Bias", min: -6, max: 2, step: 0.1, v: D.cb, dp: 1 },
+        { id: "cs", l: "Stress weight", min: 0, max: 4, step: 0.05, v: D.cs },
+        { id: "cr", l: "Reward weight", min: 0, max: 4, step: 0.05, v: D.cr },
+        { id: "ct", l: "Temperature", min: 0.05, max: 1, step: 0.01, v: D.ct },
+        { id: "cx", l: "Max probability", min: 0, max: 1, step: 0.01, v: D.cx }
       ], onm, mm);
       var M = { L: 34, R: 8, T: 8, B: 22 };
       function mdraw() {
         var dpr = window.devicePixelRatio || 1, w = mc.clientWidth || 600, hgt = Math.round(w * 0.36);
         mc.style.height = hgt + "px"; mc.width = Math.round(w * dpr); mc.height = Math.round(hgt * dpr);
         var c = mc.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, hgt);
-        var pw = w - M.L - M.R, ph = hgt - M.T - M.B, gx = 60, gy = 36, i, j, rg = range(), span = Math.max(rg[1] - rg[0], 1e-9);
-        for (i = 0; i < gx; i++) {
-          for (j = 0; j < gy; j++) {
-            c.fillStyle = color((at((i + 0.5) / gx, 1 - (j + 0.5) / gy) - rg[0]) / span);
-            c.fillRect(M.L + pw * i / gx, M.T + ph * j / gy, pw / gx + 0.6, ph / gy + 0.6);
+        var pw = w - M.L - M.R, ph = hgt - M.T - M.B, gx = 140, gy = 70, i, j, rg = range(), span = Math.max(rg[1] - rg[0], 1e-9);
+        var off = document.createElement("canvas"); off.width = gx; off.height = gy;
+        var oc = off.getContext("2d"), img = oc.createImageData(gx, gy), q = 0, t2, cs;
+        for (j = 0; j < gy; j++) {
+          for (i = 0; i < gx; i++) {
+            t2 = clamp01((at((i + 0.5) / gx, 1 - (j + 0.5) / gy) - rg[0]) / span) * 2; cs = t2 >= 1 ? 1 : 0;
+            var f2 = t2 - cs, A = COL[cs], B2 = COL[cs + 1];
+            img.data[q++] = A[0] + (B2[0] - A[0]) * f2; img.data[q++] = A[1] + (B2[1] - A[1]) * f2; img.data[q++] = A[2] + (B2[2] - A[2]) * f2; img.data[q++] = 255;
           }
         }
+        oc.putImageData(img, 0, 0); c.imageSmoothingEnabled = true; c.imageSmoothingQuality = "high";
+        c.drawImage(off, M.L, M.T, pw, ph);
         c.fillStyle = css("--muted", "#888"); c.font = "11px system-ui, sans-serif";
-        c.fillText("stress →", M.L + pw - 52, hgt - 6); c.fillText("1", 22, M.T + 9); c.fillText("0", 22, M.T + ph); c.fillText("reward", 0, M.T + ph / 2);
+        c.fillText("stress →", M.L + pw - 52, hgt - 6); c.fillText("1", 24, M.T + 9); c.fillText("0", 24, M.T + ph); c.save(); c.translate(11, M.T + ph / 2 + 18); c.rotate(-Math.PI / 2); c.fillText("reward \u2192", 0, 0); c.restore();
         var px = M.L + pw * pt.s, py = M.T + ph * (1 - pt.r);
         c.beginPath(); c.arc(px, py, 7, 0, 6.2832); c.fillStyle = "#fff"; c.fill(); c.lineWidth = 2.5; c.strokeStyle = "#222"; c.stroke();
         var f = function (v) { return metric === "act" ? v.toFixed(2) : (v * 100).toFixed(metric === "churn" ? 1 : 0) + "%"; };
@@ -713,12 +716,13 @@ One row per group, with defaults. <strong>Everything is configurable</strong>; a
         var s = clamp01((e.clientX - b.left - M.L) / pw), r = clamp01(1 - (e.clientY - b.top - M.T) / ph);
         mm.ps.el.value = s; mm.pr.el.value = r; mm.ps.show(); mm.pr.show(); pt.s = +mm.ps.el.value; pt.r = +mm.pr.el.value; mdraw();
       };
+      var mark2 = function () { Array.prototype.forEach.call(document.querySelectorAll("#sr-metrics button"), function (x) { x.classList.toggle("sr-on", x.getAttribute("data-m") === metric); }); };
       var down = false;
       mc.addEventListener("pointerdown", function (e) { down = true; place(e); });
       mc.addEventListener("pointermove", function (e) { if (down) { place(e); } });
       window.addEventListener("pointerup", function () { down = false; });
       Array.prototype.forEach.call(document.querySelectorAll("#sr-metrics button"), function (b) {
-        b.addEventListener("click", function () { metric = b.getAttribute("data-m"); mdraw(); });
+        b.addEventListener("click", function () { metric = b.getAttribute("data-m"); $("sr-ga").hidden = metric === "churn"; $("sr-gc").hidden = metric !== "churn"; mark2(); mdraw(); });
       });
       $("sr-m-reset").addEventListener("click", function () {
         var id; for (id in mm) { mm[id].el.value = mm[id].def; mm[id].show(); }
@@ -726,7 +730,7 @@ One row per group, with defaults. <strong>Everything is configurable</strong>; a
       });
       window.addEventListener("resize", mdraw);
       if (window.MutationObserver) { new MutationObserver(mdraw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] }); }
-      mdraw();
+      mark2(); mdraw();
     }
   } catch (err) { if (window.console) { console.warn("stress surface:", err); } }
 })();
