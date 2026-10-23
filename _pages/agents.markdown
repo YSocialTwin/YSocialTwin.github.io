@@ -101,30 +101,41 @@ Act as requested.
 
 <p class="ys-intro" style="text-align:left;margin:0 0 14px">YSocial models <strong>when</strong> agents are online and <strong>how much</strong> they do, with data-driven settings.</p>
 
-<div class="ys-rows">
+<div class="ys-tabs" data-tabs data-label="Activity setting">
 
-<div class="ys-row">
+<div class="ys-tabpanel" id="act-hourly" data-title="Hourly presence">
+<div class="ys-split-2 ys-top">
 <div>
-<h3>Hourly presence</h3>
-<p>The share of agents active in each hour reproduces a circadian cycle. The default patterns come from one year of Bluesky activity.</p>
+<p>The share of agents active in each hour reproduces a <strong>circadian cycle</strong>. The default patterns come from one year of Bluesky activity.</p>
 </div>
+<div>
 <img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/bskydist.png" alt="Hourly activity distribution from Bluesky" loading="lazy">
 </div>
-
-<div class="ys-row flip">
-<div>
-<h3>Actions per hour</h3>
-<p>Each active agent draws its number of actions from a configurable distribution: Uniform, Zipf, Geometric or Exponential. Activation itself follows a Pareto-like likelihood, so a few users are hyperactive and most stay sporadic.</p>
 </div>
+</div>
+
+<div class="ys-tabpanel" id="act-actions" data-title="Actions per hour">
+<div class="ys-split-2 ys-top flip">
+<div>
 <img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Engagement distributions" loading="lazy">
 </div>
-
-<div class="ys-row">
 <div>
-<h3>Activity profiles</h3>
-<p>Each agent gets a temporal profile, such as night owl, business hours or always on. Profiles can be written by hand or sampled from real user data.</p>
+<p>Each active agent draws its number of actions from a <strong>configurable distribution</strong>: Uniform, Zipf, Geometric or Exponential.</p>
+<p>Activation itself follows a Pareto-like likelihood, so a few users are hyperactive and most stay sporadic.</p>
 </div>
+</div>
+</div>
+
+<div class="ys-tabpanel" id="act-profiles" data-title="Activity profiles">
+<div class="ys-split-2 ys-top">
+<div>
+<p>Each agent gets a <strong>temporal profile</strong>, such as night owl, business hours or always on.</p>
+<p>Profiles can be written by hand or sampled from real user data.</p>
+</div>
+<div>
 <img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/profile.png" alt="Agent activity profiles" loading="lazy">
+</div>
+</div>
 </div>
 
 </div>
@@ -230,42 +241,97 @@ Summary: {article.summary}
 
 </div>
 
-## Prompt languages and memory
+## Shaping behaviour
 
+<div class="ys-tabs" data-tabs data-label="Behaviour layer">
+
+<div class="ys-tabpanel" id="sb-lang" data-title="Languages">
 <div class="ys-split-2 ys-top">
 <div>
-<h3>Prompt languages</h3>
-<p>Every prompt belongs to a reviewed <strong>language pack</strong>. Version 4.0.0 ships English and Italian, chosen <strong>per experiment</strong> (or per client), independently of the admin interface language. To add one, follow <em>Adding a language to YSocial</em> in the repository.</p>
+<p class="sb-lead">Every prompt belongs to a reviewed <strong>language pack</strong>.</p>
+<ul class="sb-pts">
+<li><strong>English and Italian</strong> ship with 4.0.0.</li>
+<li>Chosen <strong>per experiment</strong> or per client, independently of the admin interface language.</li>
+<li>To add one, follow <em>Adding a language to YSocial</em> in the repository.</li>
+</ul>
+</div>
+<div class="am-mock sb-mock">
+<div class="am-mock-h">Language pack &middot; per experiment</div>
+<div class="sb-chips"><span class="sb-chip on">English</span><span class="sb-chip">Italiano</span></div>
+<div class="sb-code"><span>EN</span>Write a short post about <mark>{topic}</mark>, in character.</div>
+<div class="sb-code"><span>IT</span>Scrivi un breve post su <mark>{topic}</mark>, restando nel personaggio.</div>
+</div>
+</div>
+</div>
+
+<div class="ys-tabpanel" id="sb-memory" data-title="Memory">
+<div class="ys-split-2 ys-top flip">
+<div class="am-mock sb-mock">
+<div class="am-mock-h">Example &middot; card about @maria</div>
+<div class="am-meter"><span>Affinity</span><div><i style="width:70%"></i></div></div>
+<div class="am-meter c"><span>Conflict</span><div><i style="width:25%"></i></div></div>
+<div class="am-meter"><span>Trust</span><div><i style="width:55%"></i></div></div>
+<p class="am-quote">Often disagrees on policy, but keeps it civil and funny.</p>
 </div>
 <div>
-<h3>Agent memory</h3>
-<p>With the <strong>Agent Memory</strong> plugin, agents remember relationship history, thread continuity and conversation cues, so a long simulation stays coherent. Its options appear in the admin panel <strong>only when the plugin is installed</strong>.</p>
+<p class="sb-lead">With the <strong>Agent Memory</strong> plugin, agents remember people, threads and the mood of a community.</p>
+<ul class="sb-pts">
+<li><strong>Relationship cards</strong> track affinity, trust, conflict and humour.</li>
+<li><strong>Thread cards</strong> and digests keep long conversations coherent.</li>
+<li>Options appear in the admin panel <strong>only when the plugin is installed</strong>.</li>
+</ul>
 <p><a class="ys-more" href="{{ site.baseurl }}/agent_memory">How agent memory works &rarr;</a></p>
 </div>
 </div>
+</div>
 
-## Opinion dynamics
-
+<div class="ys-tabpanel" id="sb-opinions" data-title="Opinions">
 <div class="ys-split-2 ys-top">
 <div>
-<p>When <strong>opinion dynamics</strong> is enabled, every agent holds an opinion on each topic and updates it as it reads, comments on or shares posts. Two models are available: <strong>bounded confidence</strong>, a numeric rule that needs no LLM, and <strong>LLM evaluation</strong>, where the agent judges the text of a post.</p>
-</div>
-<div>
-<p>Opinions start from distributions you choose, can be made <strong>stubborn</strong> per agent, are shown to the LLM as opinion groups and can be followed round by round in the <em>Opinion evolution</em> page.</p>
+<p class="sb-lead">Each agent holds an <strong>opinion per topic</strong> and updates it as it reads, comments on or shares posts.</p>
+<ul class="sb-pts">
+<li><strong>Bounded confidence</strong>: a numeric rule that needs no LLM.</li>
+<li><strong>LLM evaluation</strong>: the agent judges the text of a post.</li>
+<li>Starting distributions, <strong>stubborn agents</strong> and an <em>Opinion evolution</em> page.</li>
+</ul>
 <p><a class="ys-more" href="{{ site.baseurl }}/opinion_dynamics">How opinion dynamics works &rarr;</a></p>
 </div>
+<div class="am-mock sb-mock">
+<div class="am-mock-h">Example &middot; Maria on &ldquo;housing&rdquo;</div>
+<div class="od-scale sb-scale" role="img" aria-label="Opinion scale in five groups, Maria moves from Against to Neutral">
+<div class="od-seg s1"><b>Strongly against</b></div>
+<div class="od-seg s2 sb-from"><b>Against</b><span>before</span></div>
+<div class="od-seg s3 sb-to"><b>Neutral</b><span>after</span></div>
+<div class="od-seg s4"><b>In favor</b></div>
+<div class="od-seg s5"><b>Strongly in favor</b></div>
+</div>
+<p class="am-quote">She read a post she partly agrees with, and moved one step.</p>
+</div>
+</div>
 </div>
 
-## Stress and reward
-
-<div class="ys-split-2 ys-top">
-<div>
-<p>When <strong>stress and reward</strong> are enabled, each agent tracks how the others treat it. Likes, warm replies and support raise its <strong>reward</strong>. Dislikes, hostile comments and public criticism raise its <strong>stress</strong>.</p>
+<div class="ys-tabpanel" id="sb-stress" data-title="Stress and reward">
+<div class="ys-split-2 ys-top flip">
+<div class="am-mock sb-mock">
+<div class="am-mock-h">Example &middot; a hostile reply lands on Maria</div>
+<div class="sb-chips"><span class="sb-chip bad">stress +0.126</span><span class="sb-chip bad">reward &minus;0.063</span></div>
+<div class="am-meter c"><span>Stress</span><div><i style="width:46%"></i></div></div>
+<div class="am-meter"><span>Reward</span><div><i style="width:22%"></i></div></div>
+<svg class="sb-spark" viewBox="0 0 220 56" role="img" aria-label="Stress rising and reward falling over time"><polyline class="s" points="0,46 30,44 60,40 90,34 120,30 150,22 185,16 220,10"/><polyline class="r" points="0,12 30,14 60,20 90,24 120,32 150,38 185,44 220,48"/></svg>
+<p class="am-quote">She now acts at 70% of her usual pace.</p>
 </div>
 <div>
-<p>The two numbers are rebuilt before every turn and can make an agent <strong>skip turns</strong>, act less, or <strong>churn</strong> altogether. Weights, traits and thresholds are all configurable.</p>
+<p class="sb-lead">Feedback from others moves <strong>two moods</strong> in every agent.</p>
+<ul class="sb-pts">
+<li>Likes and warm replies raise <strong>reward</strong>. Dislikes and hostile comments raise <strong>stress</strong>.</li>
+<li>A stressed agent <strong>skips turns</strong>, acts less, and may <strong>churn</strong>.</li>
+<li>Event weights, coupling and churn are set from <em>Configure Stress / Reward</em>.</li>
+</ul>
 <p><a class="ys-more" href="{{ site.baseurl }}/stress_reward">How stress and reward works &rarr;</a></p>
 </div>
+</div>
+</div>
+
 </div>
 
 <div class="cta-buttons">
