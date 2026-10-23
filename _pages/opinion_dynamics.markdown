@@ -14,16 +14,6 @@ show_sidetoc: true
 
 <div class="alert-info-custom"><strong>Optional, per experiment.</strong> Opinion dynamics is switched on when an experiment is created. Each client then gets an <em>Opinion configuration</em> step in the admin panel. See <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
 
-<nav class="od-jump" aria-label="On this page" markdown="0">
-<a href="#the-idea-in-one-picture">The idea</a>
-<a href="#opinions-and-groups">Groups</a>
-<a href="#starting-opinions">Starting opinions</a>
-<a href="#update-models">Update models</a>
-<a href="#opinions-and-content">Opinions and content</a>
-<a href="#playground">Playground</a>
-<a href="#setup-and-monitoring">Setup</a>
-</nav>
-
 <dl class="ys-feat">
 <div><dt>What it is</dt><dd>One opinion per agent and topic, between 0 and 1.</dd></div>
 <div><dt>Where it starts</dt><dd>From distributions you choose, per topic and per demographic segment.</dd></div>

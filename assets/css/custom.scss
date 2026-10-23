@@ -932,9 +932,6 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td { padding-right: 
 .ys-diagram figcaption { margin-top: 8px; color: var(--muted); font-size: .9rem; } .ys-diagram figcaption b { color: var(--heading); display: block; }
 @media (max-width: 800px) { .od-fig-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 520px) { .od-scale { grid-template-columns: minmax(0, 1fr); } .od-seg { grid-auto-flow: column; justify-content: space-between; text-align: left; } .od-step b { font-size: .7rem; } .od-step { font-size: .7rem; padding: 8px 2px; } }
-.od-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 1.2rem 0 1rem; }
-.od-jump a { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--text); font-weight: 600; font-size: .9rem; text-decoration: none; transition: border-color .15s, background .15s; }
-.od-jump a:hover { border-color: var(--accent); background: var(--card-hi); }
 .od-dist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 1rem 0 1.4rem; }
 .od-dist { padding: 12px 14px; border-radius: var(--radius-sm); background: var(--card); border: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
 .od-dist b { color: var(--heading); } .od-dist span { color: var(--muted); font-size: .88rem; line-height: 1.35; }
