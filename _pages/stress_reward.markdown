@@ -12,18 +12,7 @@ show_sidetoc: true
 
 <p class="ys-lede">Being ignored, insulted or defended is not neutral. With <mark>stress and reward</mark> on, every agent carries <mark>two moods</mark> that move with the feedback it gets, and that decide how much it <mark>takes part</mark>, or whether it <mark>leaves</mark>.</p>
 
-<div class="alert-info-custom"><strong>Optional, and tunable.</strong> The feature is switched on per experiment. Every number on this page is a <strong>default you can change at configuration time</strong>: event weights, coupling and the churn switch from <em>Experiment &rsaquo; Configure Stress / Reward</em> in the admin panel, everything else from the <code>stress_reward</code> block of the client configuration. All parameters are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>. See also <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
-
-<nav class="od-jump" aria-label="On this page" markdown="0">
-<a href="#see-it-in-a-conversation">Conversations</a>
-<a href="#the-idea-in-one-picture">The idea</a>
-<a href="#what-moves-them">What moves them</a>
-<a href="#the-formula">The formula</a>
-<a href="#try-one-event">Calculator</a>
-<a href="#a-story-over-time">Story</a>
-<a href="#what-it-changes">Effects</a>
-<a href="#configure-it">Configure</a>
-</nav>
+<div class="alert-info-custom"><strong>Optional, and tunable.</strong> The feature is switched on per experiment. Every number on this page is a <strong>default</strong>. Event weights, coupling and the churn switch can be changed from <em>Experiment &rsaquo; Configure Stress / Reward</em> in the admin panel; the other values keep the defaults shown here. All parameters are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>. See also <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
 
 ## In 60 seconds
 
@@ -92,7 +81,7 @@ Each kind of event has a base effect on stress and on reward. A negative stress 
 
 <p class="am-note">Reactions, comments and shares are emitted by the stock client. Reports and moderation outcomes are defined in the model, with their own weights, for scenarios that use them. A client never counts its own interactions: only the author of the target post is affected.</p>
 
-Comments and shares need an interpretation. Before computing anything, the agent asks the LLM to label the text with the annotation prompts <code>agent_comment_stress_reward_annotation</code> and <code>agent_post_stress_reward_annotation</code>. The answer carries three fields.
+Comments and shares need an interpretation. Before computing anything, the agent asks the LLM to label the text with a dedicated annotation prompt. The answer carries three fields.
 
 <div class="od-dist-grid">
 <div class="od-dist"><b>tone</b><span>positive, neutral, critical, hostile or supportive. For shares only positive or hostile (supportive counts as positive).</span></div>
@@ -128,7 +117,7 @@ Which factors apply depends on the event. Anything not listed is left at 1.
 | Report | exposure × ln(1 + volume) | exposure × ln(1 + volume) |
 | Moderation · protected | support strength | support strength |
 
-Every base value is also multiplied by <code>importance</code>, 1 by default. The stock client sends a single event at a time (<code>volume</code> = 1, so reactions are scaled by ln 2 &asymp; 0.69), leaves importance, source status and relation weight at 1, uses the annotated directness as exposure for shares, and exposure 1 for comments. Custom clients can use all of them.
+Every base value is also multiplied by an importance factor, 1 by default. The stock client sends a single event at a time (volume = 1, so reactions are scaled by ln 2 &asymp; 0.69), leaves importance, source status and relation weight at 1, uses the annotated directness as exposure for shares, and exposure 1 for comments. Custom clients can use all of them.
 
 ### Step 2 · traits
 
@@ -136,10 +125,10 @@ Four traits, all equal to 1 by default, tune how the recipient feels the same ev
 
 | Trait | Applies to | Effect |
 | --- | --- | --- |
-| <code>sensitivity</code> | a stress increase | Higher means more stress from bad interactions. |
-| <code>resilience</code> | a stress decrease | Higher means more relief from good ones. Never below 0.2. |
-| <code>reward_sensitivity</code> | a reward increase | Higher means more joy from positive attention. |
-| <code>visibility_need</code> | a reward decrease | Higher means a bigger loss when attention turns negative. |
+| Sensitivity | a stress increase | Higher means more stress from bad interactions. |
+| Resilience | a stress decrease | Higher means more relief from good ones. Never below 0.2. |
+| Reward sensitivity | a reward increase | Higher means more joy from positive attention. |
+| Visibility need | a reward decrease | Higher means a bigger loss when attention turns negative. |
 
 ### Step 3 · coupling
 
@@ -156,7 +145,7 @@ The server keeps a log of variations. When an agent is about to act, its current
 
 <div class="ys-formula" markdown="0"><pre><code>state(now) = clamp&#8320;&#8321;( last_aggregate + &Sigma; variations since that aggregate )</code></pre></div>
 
-Two consequences are worth knowing. There is <strong>no built-in decay</strong>: the state only moves when something happens, so a quiet agent keeps its mood. And <code>backward_rounds</code> (24 by default) only matters on the first rebuild, when no aggregate exists yet: it says how many rounds back the first sum looks. Variations outside &minus;1 and +1 are rejected by the server.
+Two consequences are worth knowing. There is <strong>no built-in decay</strong>: the state only moves when something happens, so a quiet agent keeps its mood. And the lookback window (24 rounds by default) only matters on the first rebuild, when no aggregate exists yet: it says how many rounds back the first sum looks. Variations outside &minus;1 and +1 are rejected by the server.
 
 
 ## Try one event {#try-one-event}
@@ -225,7 +214,7 @@ On by default whenever stress and reward are on. A <strong>burden</strong> is co
 action_multiplier = max( 0.15, 1 &minus; burden )
 skip_probability  = min( 0.65, 0.85 &middot; burden )</code></pre></div>
 
-At the start of a turn the agent first draws against <code>skip_probability</code> and, if it passes, draws against <code>action_multiplier</code> before choosing an action. A calm agent (burden 0) acts normally, a maximally stressed one still acts about 15% of the time. Reward is a cushion: it lowers the burden, but only by a third as much as stress raises it.
+At the start of a turn the agent first draws against the skip probability and, if it passes, draws against the action multiplier before choosing an action. A calm agent (burden 0) acts normally, a maximally stressed one still acts about 15% of the time. Reward is a cushion: it lowers the burden, but only by a third as much as stress raises it.
 
 ### Churn
 
@@ -260,9 +249,9 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 
 ## Configure it {#configure-it}
 
-Every number on this page is a default. Turn the feature on in the experiment form, then edit event weights, coupling and the churn switch from <em>Experiment &rsaquo; Configure Stress / Reward</em>. Traits, the activity-impact terms and the churn curve live in the <code>stress_reward.system</code> block of the client configuration. Keys you leave out keep their default.
+Every number on this page is a default. Turn the feature on in the experiment form, then open <em>Experiment &rsaquo; Configure Stress / Reward</em> to switch churn on or off, and to edit the coupling and the weight of every event (the form calls reward <em>Recognition</em>). Traits, the activity-impact terms and the churn curve are not exposed in the interface and keep the defaults shown on this page.
 
-The full list, with ranges and the platforms each one applies to, is in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>.
+The settings shown in the interface, with the platforms each one applies to, are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>.
 
 ## Good to know {#good-to-know}
 
@@ -563,12 +552,12 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
         t = clamp01(t) * 2; var i = t >= 1 ? 1 : 0, f = t - i, a = COL[i], b = COL[i + 1];
         return "rgb(" + Math.round(a[0] + (b[0] - a[0]) * f) + "," + Math.round(a[1] + (b[1] - a[1]) * f) + "," + Math.round(a[2] + (b[2] - a[2]) * f) + ")";
       };
-      var range = function () {
-        if (metric === "act") { return [cfg.mm, 1]; }
-        if (metric === "skip") { return [0, cfg.ms]; }
-        return [0, cfg.cx];
-      };
       var at = function (s, r) { return metric === "act" ? act(s, r).mult : metric === "skip" ? act(s, r).skip : churn(s, r); };
+      var range = function () {
+        /* every quantity is monotone in stress and reward: the corners are the extremes */
+        var v1 = at(0, 1), v2 = at(1, 0);
+        return [Math.min(v1, v2), Math.max(v1, v2)];
+      };
       var onm = function () {
         cfg.sw = val(mm, "sw"); cfg.rw = val(mm, "rw"); cfg.bb = val(mm, "bb"); cfg.mm = val(mm, "mm"); cfg.ms = val(mm, "ms");
         cfg.cb = val(mm, "cb"); cfg.cs = val(mm, "cs"); cfg.cr = val(mm, "cr"); cfg.ct = val(mm, "ct"); cfg.cx = val(mm, "cx");
@@ -603,7 +592,7 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
         var oc = off.getContext("2d"), img = oc.createImageData(gx, gy), q = 0, t2, cs;
         for (j = 0; j < gy; j++) {
           for (i = 0; i < gx; i++) {
-            t2 = clamp01((at((i + 0.5) / gx, 1 - (j + 0.5) / gy) - rg[0]) / span) * 2; cs = t2 >= 1 ? 1 : 0;
+            t2 = clamp01((at((i + 0.5) / gx, 1 - (j + 0.5) / gy) - rg[0]) / span); if (metric === "churn") { t2 = Math.sqrt(t2); } t2 *= 2; cs = t2 >= 1 ? 1 : 0;
             var f2 = t2 - cs, A = COL[cs], B2 = COL[cs + 1];
             img.data[q++] = A[0] + (B2[0] - A[0]) * f2; img.data[q++] = A[1] + (B2[1] - A[1]) * f2; img.data[q++] = A[2] + (B2[2] - A[2]) * f2; img.data[q++] = 255;
           }
@@ -615,7 +604,7 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
         var px = M.L + pw * pt.s, py = M.T + ph * (1 - pt.r);
         c.beginPath(); c.arc(px, py, 7, 0, 6.2832); c.fillStyle = "#fff"; c.fill(); c.lineWidth = 2.5; c.strokeStyle = "#222"; c.stroke();
         var f = function (v) { return metric === "act" ? v.toFixed(2) : (v * 100).toFixed(metric === "churn" ? 1 : 0) + "%"; };
-        $("sr-lo").textContent = f(rg[0]); $("sr-hi").textContent = f(rg[1]);
+        $("sr-lo").textContent = f(rg[0]); $("sr-hi").textContent = f(rg[1]) + (metric === "churn" ? " (square-root colour scale)" : "");
         var a = act(pt.s, pt.r), p = churn(pt.s, pt.r);
         $("sr-m-out").textContent = "At stress " + pt.s.toFixed(2) + " and reward " + pt.r.toFixed(2) + ": burden " + a.burden.toFixed(2) + ", so the agent acts with multiplier " + a.mult.toFixed(2) + " and skips its turn with probability " + (a.skip * 100).toFixed(0) + "%. Churn probability per turn, if enabled: " + (p * 100).toFixed(1) + "%.";
       }
