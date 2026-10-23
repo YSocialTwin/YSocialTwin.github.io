@@ -45,9 +45,8 @@ show_sidetoc: true
 <button type="button" data-t="res">Same pile-on, resilient Maria</button>
 <button type="button" data-t="def">Hostile, but defended</button>
 </div>
-<p class="sr-post" id="sr-post"></p>
 <div class="am-panel">
-<ol class="sr-thread" id="sr-thread" aria-live="polite"></ol>
+<div class="ys-feed"><div class="ys-feed-head"><span>Simulation running</span><span style="margin:0">illustrative thread</span></div><div class="ys-feed-body" id="sr-thread" aria-live="polite"></div></div>
 <div class="am-mock">
 <div class="am-mock-h">Maria's state</div>
 <div class="am-meter c"><span id="sr-ms-l">Stress</span><div><i id="sr-ms"></i></div></div>
@@ -371,7 +370,7 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
     var BIKE = "I think the new bike lanes downtown are a great idea.";
     var PILE = [
       { w: "Tom", t: "Great for you, maybe. I lost ten minutes a day because of them.", k: "comment:critical", d: 0.7 },
-      { w: "Ivo", t: "(dislikes the post)", k: "reaction:dislike" },
+      { w: "Ivo", t: "disliked this post", k: "reaction:dislike" },
       { w: "Dana", t: "Typical. People like you have no idea how the real world works.", k: "comment:hostile", d: 0.9 },
       { w: "Sam", t: "Look at what some people believe. Unreal.", k: "share:hostile", d: 0.8 },
       { w: "Leo", t: "Nobody asked for your opinion.", k: "comment:hostile", d: 0.8 }
@@ -379,7 +378,7 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
     var TH = {
       warm: { post: "Just moved to Pisa. Any cafe I should not miss?", tr: AVG, msgs: [
         { w: "Anna", t: "Welcome to the neighbourhood! Try the little place behind the station.", k: "comment:positive" },
-        { w: "Luca", t: "(likes the post)", k: "reaction:like" },
+        { w: "Luca", t: "liked this post", k: "reaction:like" },
         { w: "Giulia", t: "Great choice of city. Ask me anything.", k: "comment:supportive", u: 0.6 },
         { w: "Marco", t: "Sharing this so more people can help you out.", k: "share:positive", d: 0.8 },
         { w: "Elena", t: "Which part of town are you in?", k: "comment:neutral" }
@@ -388,7 +387,7 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
       res: { post: BIKE, tr: RES, msgs: PILE },
       def: { post: BIKE, tr: AVG, msgs: [
         { w: "Dana", t: "Typical. People like you have no idea how the real world works.", k: "comment:hostile", d: 0.9 },
-        { w: "Ivo", t: "(dislikes the post)", k: "reaction:dislike" },
+        { w: "Ivo", t: "disliked this post", k: "reaction:dislike" },
         { w: "Sara", t: "Ignore that. Maria is right, and the data backs her up.", k: "comment:supportive", u: 0.9 },
         { w: "Leo", t: "Agreed, I use that lane every day.", k: "comment:positive" },
         { w: "Moderator", t: "The hostile comment is removed and its author is warned.", k: "moderation:protected", u: 0.8 }
@@ -396,16 +395,18 @@ The full list, with ranges and the platforms each one applies to, is in the <a h
     };
     var tk = "warm", ri = 2;
     var cls = function (v, goodPos) { return Math.abs(v) < 0.0005 ? "" : ((v > 0) === goodPos ? " good" : " bad"); };
+    var AV = ["var(--violet)", "var(--orange)", "var(--teal)"], AVC = {};
     var drawConv = function () {
-      var th = TH[tk], st = 0, rw = 0, h = "", i, m, d, o, tone;
+      var th = TH[tk], st = 0, rw = 0, i, m, d, o, n = 0, h;
+      h = "<div class=\"ys-post\"><div class=\"ys-av\" style=\"background:var(--teal)\">M</div><div><div class=\"ys-who\">Maria <span>@maria_pisa &middot; post</span></div><p>" + th.post + "</p></div></div>";
       for (i = 0; i < ri; i++) {
         m = th.msgs[i]; d = m.d === undefined ? 1 : m.d;
         o = delta(m.k, { dir: d, exp: m.k.indexOf("share") === 0 ? Math.max(0.1, d) : 1, sup: m.u === undefined ? 1 : m.u, vol: 1 }, th.tr, CPL, st, rw);
         st = clamp01(st + o.s3); rw = clamp01(rw + o.r3);
-        tone = m.k.split(":")[1];
-        h += "<li class=\"sr-row\"><div class=\"sr-who\"><b>" + m.w + "</b><span>" + m.k.split(":")[0] + " &middot; " + tone + "</span></div><p>" + m.t + "</p><div class=\"sr-dl\"><span class=\"" + cls(o.s3, false).trim() + "\">stress " + sgn(o.s3, 3) + "</span><span class=\"" + cls(o.r3, true).trim() + "\">reward " + sgn(o.r3, 3) + "</span></div></li>";
+        if (!AVC[m.w]) { AVC[m.w] = AV[n++ % AV.length]; if (n > 99) { n = 0; } }
+        var kind = m.k.split(":");
+        h += "<div class=\"ys-post l1" + (kind[0] === "reaction" ? " sr-react" : "") + "\"><div class=\"ys-av\" style=\"background:" + AVC[m.w] + "\">" + m.w.charAt(0) + "</div><div><div class=\"ys-who\">" + m.w + " <span>" + kind[0] + " &middot; " + kind[1] + "</span></div><p>" + m.t + "</p><div class=\"ys-act sr-dl\"><span class=\"" + cls(o.s3, false).trim() + "\">stress " + sgn(o.s3, 3) + "</span><span class=\"" + cls(o.r3, true).trim() + "\">reward " + sgn(o.r3, 3) + "</span></div></div></div>";
       }
-      $("sr-post").innerHTML = "<b>Maria posts:</b> &ldquo;" + th.post + "&rdquo;";
       $("sr-thread").innerHTML = h;
       $("sr-ms").style.width = (st * 100) + "%"; $("sr-mr").style.width = (rw * 100) + "%";
       $("sr-ms-l").textContent = "Stress " + st.toFixed(2); $("sr-mr-l").textContent = "Reward " + rw.toFixed(2);
