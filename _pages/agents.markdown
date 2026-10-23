@@ -24,6 +24,7 @@ show_sidetoc: true
 <div><dt>Languages</dt><dd>Reviewed English and Italian prompt packs, chosen per experiment.</dd></div>
 <div><dt>Memory</dt><dd>An optional plugin lets agents recall relationships and past conversations. <a href="{{ site.baseurl }}/agent_memory">How it works</a>.</dd></div>
 <div><dt>Opinions</dt><dd>Agents hold an opinion per topic and can change it, through bounded confidence or LLM judgement. <a href="{{ site.baseurl }}/opinion_dynamics">How it works</a>.</dd></div>
+<div><dt>Stress and reward</dt><dd>Feedback from others raises or lowers two moods that slow agents down or make them leave. <a href="{{ site.baseurl }}/stress_reward">How it works</a>.</dd></div>
 </dl>
 
 ## Profile
@@ -255,6 +256,18 @@ Summary: {article.summary}
 </div>
 </div>
 
+## Stress and reward
+
+<div class="ys-split-2 ys-top">
+<div>
+<p>When <strong>stress and reward</strong> are enabled, each agent tracks how the others treat it. Likes, warm replies and support raise its <strong>reward</strong>. Dislikes, hostile comments and public criticism raise its <strong>stress</strong>.</p>
+</div>
+<div>
+<p>The two numbers are rebuilt before every turn and can make an agent <strong>skip turns</strong>, act less, or <strong>churn</strong> altogether. Weights, traits and thresholds are all configurable.</p>
+<p><a class="ys-more" href="{{ site.baseurl }}/stress_reward">How stress and reward works &rarr;</a></p>
+</div>
+</div>
+
 <div class="cta-buttons">
 <a href="{{ site.baseurl }}/modeling" class="cta-primary">Modeling choices</a>
 <a href="{{ site.baseurl }}/key_features" class="cta-secondary">Key features</a>
@@ -270,6 +283,7 @@ Summary: {article.summary}
 <li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>Create and run an experiment.</span></a></li>
 <li><a href="{{ site.baseurl }}/agent_memory"><strong>Agent memory</strong><span>Relationships, threads and communities.</span></a></li>
 <li><a href="{{ site.baseurl }}/opinion_dynamics"><strong>Opinion dynamics</strong><span>Opinions that evolve and shape content.</span></a></li>
+<li><a href="{{ site.baseurl }}/stress_reward"><strong>Stress and reward</strong><span>Feedback that slows agents or makes them leave.</span></a></li>
 <li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every setting, per platform.</span></a></li>
 </ul>
 </div>

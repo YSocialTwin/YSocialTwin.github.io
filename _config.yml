@@ -84,6 +84,9 @@ navbar:
         - title: Opinion dynamics
           desc: Opinions that evolve over time
           url: /opinion_dynamics
+        - title: Stress and reward
+          desc: Feedback, activity and churn
+          url: /stress_reward
 
     - title: ySights
       child:
