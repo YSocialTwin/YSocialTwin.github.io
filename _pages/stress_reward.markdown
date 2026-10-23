@@ -236,7 +236,6 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 <button type="button" data-m="churn">Churn probability</button>
 </div>
 <canvas id="sr-map" class="od-canvas sr-map" width="900" height="320" role="img" aria-label="Map of the chosen quantity over stress (horizontal) and reward (vertical)"></canvas>
-<div class="sr-scale" aria-hidden="true"><span id="sr-lo">0</span><i></i><span id="sr-hi">1</span></div>
 <div class="od-lab-row">
 <div class="od-controls" id="sr-m1"></div>
 <div id="sr-ga"><h4 class="sr-gh">Burden and skipping</h4><div class="od-controls" id="sr-m2"></div></div>
@@ -582,7 +581,7 @@ The settings shown in the interface, with the platforms each one applies to, are
         { id: "ct", l: "Temperature", min: 0.05, max: 1, step: 0.01, v: D.ct },
         { id: "cx", l: "Max probability", min: 0, max: 1, step: 0.01, v: D.cx }
       ], onm, mm);
-      var M = { L: 34, R: 8, T: 8, B: 22 };
+      var M = { L: 34, R: 100, T: 8, B: 22 };
       function mdraw() {
         var dpr = window.devicePixelRatio || 1, w = mc.clientWidth || 600, hgt = Math.round(w * 0.36);
         mc.style.height = hgt + "px"; mc.width = Math.round(w * dpr); mc.height = Math.round(hgt * dpr);
@@ -604,7 +603,18 @@ The settings shown in the interface, with the platforms each one applies to, are
         var px = M.L + pw * pt.s, py = M.T + ph * (1 - pt.r);
         c.beginPath(); c.arc(px, py, 7, 0, 6.2832); c.fillStyle = "#fff"; c.fill(); c.lineWidth = 2.5; c.strokeStyle = "#222"; c.stroke();
         var f = function (v) { return metric === "act" ? v.toFixed(2) : (v * 100).toFixed(metric === "churn" ? 1 : 0) + "%"; };
-        $("sr-lo").textContent = f(rg[0]); $("sr-hi").textContent = f(rg[1]) + (metric === "churn" ? " (square-root colour scale)" : "");
+        var bx = M.L + pw + 18, bw = 14, gr = c.createLinearGradient(0, M.T + ph, 0, M.T);
+        gr.addColorStop(0, "rgb(" + COL[0].join(",") + ")"); gr.addColorStop(0.5, "rgb(" + COL[1].join(",") + ")"); gr.addColorStop(1, "rgb(" + COL[2].join(",") + ")");
+        c.fillStyle = gr; c.fillRect(bx, M.T + 24, bw, ph - 24);
+        c.fillStyle = css("--text", "#ddd"); c.font = "bold 11px system-ui, sans-serif";
+        c.fillText(metric === "act" ? "Activity" : metric === "skip" ? "Skip prob." : "Churn prob.", bx - 4, M.T + 8);
+        c.font = "11px system-ui, sans-serif"; c.fillStyle = css("--muted", "#888");
+        var tk2, fr, vv, ty;
+        for (tk2 = 0; tk2 <= 4; tk2++) {
+          fr = tk2 / 4; vv = rg[0] + span * (metric === "churn" ? fr * fr : fr); ty = M.T + ph - fr * (ph - 24);
+          c.fillRect(bx + bw, ty - 0.5, 4, 1); c.fillText(f(vv), bx + bw + 7, ty + 4);
+        }
+        if (metric === "churn") { c.fillText("sqrt colours", bx - 4, M.T + ph + 16); }
         var a = act(pt.s, pt.r), p = churn(pt.s, pt.r);
         $("sr-m-out").textContent = "At stress " + pt.s.toFixed(2) + " and reward " + pt.r.toFixed(2) + ": burden " + a.burden.toFixed(2) + ", so the agent acts with multiplier " + a.mult.toFixed(2) + " and skips its turn with probability " + (a.skip * 100).toFixed(0) + "%. Churn probability per turn, if enabled: " + (p * 100).toFixed(1) + "%.";
       }
