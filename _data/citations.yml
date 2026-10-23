@@ -1,0 +1,324 @@
+- year: 2026
+  title: Pairwise and Higher-order Mixing Patterns in Online Social Networks
+  authors: Failla, Andrea
+  venue: PhD thesis
+- year: 2027
+  title: 'PhDGPT: Measuring bias in academic mental health across quantised and uncensored LLMs'
+  authors: 'De Duro et al.'
+  venue: 'Information Processing & Management'
+- year: 2026
+  title: 'A survey of social network simulation in the LLM era: From classical models to Generative Agents'
+  authors: 'Nguyen et al.'
+  venue: 'Knowledge-Based Systems'
+- year: 2026
+  title: 'Can Persona-Conditioned Language Agents Simulate Counterfactual Online Discourse Dynamics?'
+  authors: 'Lu et al.'
+  venue: 'EMNLP 2026 (Conference on Empirical Methods in Natural Language Processing)'
+- year: 2026
+  title: 'Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks'
+  authors: 'Berjawi et al.'
+  venue: 'arXiv:2609.19913'
+- year: 2026
+  title: 'From Caricature to Collective Artifact: How Persona Construction Drives Polarization in Generative Social Simulations'
+  authors: 'Michailidis, Törnberg, and Santos'
+  venue: 'arXiv:2610.16498'
+- year: 2026
+  title: 'From Structural to Temporal Fidelity in Dynamic Graph Generation'
+  authors: 'Hamouni and Bagheri'
+  venue: 'NeurIPS 2026 Workshop SLM-Agents'
+- year: 2026
+  title: 'Large Language Models Toward Artificial General Intelligence: A Survey of Principles, Methods, and Challenges'
+  authors: 'Lama, Dikshant'
+  venue: 'SSRN'
+- year: 2026
+  title: 'Learnscrolling: Harnessing Attention Economy Mechanics for Incidental Learning via Synthetic Social Media'
+  authors: 'Abel'
+  venue: 'International Conference on Computer Sciences (IHCONCS 2026)'
+- year: 2026
+  title: 'LLMs for Social Network Modeling: From Network Generation to Dynamic Processes'
+  authors: 'Mallick, Thomo, and Saxena'
+  venue: 'arXiv:2609.08049'
+- year: 2026
+  title: 'Opening the black box: how EUD interfaces foster user agency and quality in generative phishing simulations'
+  authors: 'Desolda et al.'
+  venue: 'Behaviour & Information Technology'
+- year: 2026
+  title: 'Toward Verifiable Audience Digital Twins: An Agent-Based Architecture Integrating COM-B and ELM'
+  authors: 'Zeng'
+  venue: 'ResearchGate preprint'
+- year: 2026
+  title: 'Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum'
+  authors: 'Tomašević et al.'
+  venue: 'EPJ Data Science'
+- year: 2026
+  title: 'Transitioning from Urban to Social Digital Twins Through AI and Social Media Analytics'
+  authors: 'Qanazi, Leclerc, and Bosredon'
+  venue: '2026 5th MEC International Conference'
+- year: 2026
+  title: 'From individual to society: A survey on social simulation driven by large language model-based agents'
+  authors: Mou et al.
+  venue: ACM Computing Surveys
+- year: 2026
+  title: 'Generative exaggeration in LLM social agents: Consistency, bias, and toxicity'
+  authors: Nudo et al.
+  venue: Online Social Networks and Media
+- year: 2026
+  title: 'GATSim: Urban mobility simulation with generative agents'
+  authors: Liu, Qi, Can Li, and Wanjing Ma
+  venue: 'Transportation Research Part C: Emerging Technologies'
+- year: 2026
+  title: Large language models for spreading dynamics in complex systems
+  authors: Jiang et al.
+  venue: Physics Reports
+- year: 2026
+  title: 'Large Language Model (LLM)-driven Adversarial Social Influences in Online Information Spread: Risks and Interventions'
+  authors: Lu, Zhuoran, Gionnieve Lim, and Ming Yin
+  venue: CHI 2026
+- year: 2026
+  title: 'The collective turing test: large language models can generate realistic multi-user discussions'
+  authors: Bouleimen et al.
+  venue: Scientific Reports
+- year: 2026
+  title: A Comprehensive Survey of LLMs for Sustainable and Renewable Energy Systems
+  authors: Bahi et al.
+  venue: Information
+- year: 2026
+  title: 'Talk2AI: A Longitudinal Dataset of Human--AI Persuasive Conversations'
+  authors: Carrillo et al.
+  venue: arXiv:2604.04354
+- year: 2026
+  title: Assessing the Reliability of Persona-Conditioned LLMs as Synthetic Survey Respondents
+  authors: Taday Morocho et al.
+  venue: The Web Conference 2026 (Companion)
+- year: 2026
+  title: 'Phenomenologically human: Fine-tuning LLMs to simulate online group identity'
+  authors: Torres, Andrés Martínez, and Davide Morselli
+  venue: 'Computers in Human Behavior: Artificial Humans'
+- year: 2026
+  title: Experimental evidence on the emergent social network patterns of LLM-driven multi-agent system for edge service collaboration
+  authors: Chen et al.
+  venue: Tsinghua Science and Technology
+- year: 2026
+  title: Evaluating online moderation via LLM-powered counterfactual simulations
+  authors: Fidone, Giacomo, Lucia Passaro, and Riccardo Guidotti
+  venue: AAAI 2026
+- year: 2026
+  title: Mapping how LLMs debate societal issues when shadowing human personality traits, sociodemographics and social media behavior
+  authors: Ardebili, Ali Aghazadeh, and Massimo Stella
+  venue: arXiv:2604.27624
+- year: 2026
+  title: 'From Who They Are to How They Act: Behavioral Traits in Generative Agent-Based Models of Social Media'
+  authors: La Gatta et al.
+  venue: arXiv:2601.15114
+- year: 2026
+  title: Political Persuasion and Endorsement in Large Language Models
+  authors: Antelmi et al.
+  venue: arXiv:2606.05961
+- year: 2026
+  title: LLMs can persuade only psychologically susceptible humans on societal issues, via trust in AI and emotional appeals, amid logical fallacies
+  authors: Carrillo et al.
+  venue: arXiv:2604.16935
+- year: 2026
+  title: 'Math Education Digital Shadows for facilitating learning with LLMs: Math performance, anxiety and confidence in simulated students and AIs'
+  authors: Esposito et al.
+  venue: arXiv:2604.27618
+- year: 2026
+  title: 'Eco3S: Complex Socio-Economic System Simulation via Agent-Based Models'
+  authors: Wei et al.
+  venue: arXiv:2607.26588
+- year: 2026
+  title: Network Effects and Agreement Drift in LLM Debates
+  authors: Cau, Erica, Andrea Failla, and Giulio Rossetti
+  venue: arXiv:2604.11312
+- year: 2026
+  title: Joint Effects of Recommender Systems and Network Structure on the Visibility of Content and Creators
+  authors: Morini et al.
+  venue: arXiv:2607.00258
+- year: 2026
+  title: LLM-Augmented Digital Twin for Policy Evaluation in Short-Video Platforms
+  authors: Zhang et al.
+  venue: arXiv:2603.11333
+- year: 2026
+  title: 'Before You Simulate: A Pre-Study Benchmark for Large Language Model Stability in Political Role-Playing Simulations'
+  authors: Shen, Hanyang, Jie Wu, and Zhulin Tao
+  venue: Applied Sciences
+- year: 2026
+  title: 'GRAPHIA: Harnessing Social Graph Data to Enhance LLM-Based Social Simulation'
+  authors: Ji et al.
+  venue: ACL 2026
+- year: 2026
+  title: 'Evaluating the Realism of LLM-powered Social Agents: A Case Study of Reactions to Spanish Online News'
+  authors: López et al.
+  venue: arXiv:2605.28598
+- year: 2026
+  title: 'Social Simulations: from Agent-Based Modeling to Digital Twins'
+  authors: Cau et al.
+  venue: arXiv:2607.13693
+- year: 2026
+  title: 'Influence in Motion: Tracing Persuasive Dynamics via Multi‐Agent Networks'
+  authors: Huang, Ming, and Zi-Ke Zhang
+  venue: Computational Communication Research
+- year: 2026
+  title: 'Influencing Belief in LLM-Based Agent Networks: An Empirically Validated Simulation of Bot-Driven Manipulation'
+  authors: Burmester, Julian
+  venue: Thesis (Leuphana)
+- year: 2026
+  title: Towards Large Language Model–Enabled Cognitive Digital Twins for Urban Mobility Systems
+  authors: Wu et al.
+  venue: CSCWD 2026 (IEEE)
+- year: 2026
+  title: 'Challenging the Myth: A Research Arc on LLMs as Human Simulacra'
+  authors: Münker, Simon, Achim Rettinger, and Damian Trilling
+  venue: The Big Picture v2
+- year: 2026
+  title: 'MiroBench: Benchmarking Realism in Agentic Simulation of Real-world Discussions'
+  authors: Yu et al.
+  venue: arXiv:2606.14715
+- year: 2026
+  title: Digital shadows in mental health map how LLMs simulate depression, anxiety, and stress through language and psychometrics
+  authors: Franchino et al.
+  venue: —
+- year: 2026
+  title: 'ADDRESSING ONLINE HARMS THROUGH CONTENT MODERATION: DETECTION OF MISBEHAVIOR AND INTERVENTION STRATEGIES'
+  authors: Cima, Lorenzo
+  venue: PhD thesis
+- year: 2026
+  title: 'Predicting Social Media User Actions: A Hybrid Approach for Common and Rare Behavior Prediction on Bluesky'
+  authors: White, Benjamin, and Anastasia Shimorina
+  venue: SoCon & NLPSI @ LREC 2026
+- year: 2025
+  title: 'Llm-based agentic reasoning frameworks: A survey from methods to scenarios'
+  authors: Zhao et al.
+  venue: arXiv:2508.17692
+- year: 2025
+  title: Emergent social conventions and collective bias in LLM populations
+  authors: Ashery, Ariel Flint, Luca Maria Aiello, and Andrea Baronchelli
+  venue: Science Advances
+- year: 2025
+  title: 'Human and LLM biases in hate speech annotations: A socio-demographic analysis of annotators and targets'
+  authors: Giorgi et al.
+  venue: ICWSM 2025
+- year: 2025
+  title: 'Large language models for artificial general intelligence (agi): A survey of foundational principles and approaches'
+  authors: Mumuni, Alhassan, and Fuseini Mumuni
+  venue: arXiv:2501.03151
+- year: 2025
+  title: 'Towards a design guideline for rpa evaluation: A survey of large language model-based role-playing agents'
+  authors: Chen et al.
+  venue: Findings of ACL 2025
+- year: 2025
+  title: Network formation and dynamics among multi-llms
+  authors: Papachristou, Marios, and Yuan Yuan
+  venue: PNAS nexus
+- year: 2025
+  title: 'Agentmisalignment: Measuring the propensity for misaligned behaviour in llm-based agents'
+  authors: Naik et al.
+  venue: arXiv:2506.04018
+- year: 2025
+  title: Measuring and identifying factors of individuals' trust in Large Language Models
+  authors: De Duro et al.
+  venue: arXiv:2502.21028
+- year: 2025
+  title: Unmasking conversational bias in ai multiagent systems
+  authors: Coppolillo, Erica, Giuseppe Manco, and Luca Maria Aiello
+  venue: arXiv:2501.14844
+- year: 2025
+  title: 'Bridging minds and machines: Toward an integration of AI and cognitive science'
+  authors: Mao et al.
+  venue: arXiv:2508.20674
+- year: 2025
+  title: Cognitive networks identify AI biases on societal issues in Large Language Models
+  authors: De Duro et al.
+  venue: EPJ Data Science
+- year: 2025
+  title: Can llms simulate social media engagement? a study on action-guided response generation
+  authors: Qiu et al.
+  venue: arXiv:2502.12073
+- year: 2025
+  title: Simulating conversations on social media with generative agent-based models
+  authors: Jeon et al.
+  venue: EPJ Data Science
+- year: 2025
+  title: 'Simulation agent: A framework for integrating simulation and large language models for enhanced decision-making'
+  authors: Kleiman et al.
+  venue: arXiv:2505.13761
+- year: 2025
+  title: 'PRISM: A personality-driven multi-agent framework for social media simulation'
+  authors: Lu et al.
+  venue: arXiv:2512.19933
+- year: 2025
+  title: 'Possum: a protocol for surveying social-media users with multimodal llms'
+  authors: Cerina, Roberto
+  venue: arXiv:2503.05529
+- year: 2025
+  title: 'twony: A Micro-Simulation of the Impact of OSN Mechanics on the Emotionality of Online Discourse'
+  authors: Münker, Simon, and Achim Rettinger
+  venue: ESWC-JP
+- year: 2025
+  title: 'Prototyping Digital Social Spaces through Metaphor-Driven Design: Translating Spatial Concepts into an Interactive Social Simulation'
+  authors: Hong et al.
+  venue: arXiv:2510.02759
+- year: 2025
+  title: 'A Survey on LLM-based Agents for Social Simulation: Taxonomy, Evaluation and Applications'
+  authors: Wang et al.
+  venue: arXiv
+- year: 2025
+  title: 'Network Science Meets AI: A Converging Frontier'
+  authors: Zignani et al.
+  venue: ESANN
+- year: 2025
+  title: 'Community-Aligned Behavior Under Uncertainty: Evidence of Epistemic Stance Transfer in LLMs'
+  authors: Gerard, Patrick, Aiden Chang, and Svitlana Volkova
+  venue: arXiv:2511.17572
+- year: 2025
+  title: 'Inject, Fork, Compare: Defining an Interaction Vocabulary for Multi-Agent Simulation Platforms'
+  authors: Lee et al.
+  venue: arXiv:2509.13712
+- year: 2025
+  title: 'Social-Media Based Personas Challenge: Hybrid Prediction of Common and Rare User Actions on Bluesky'
+  authors: White, Benjamin, and Anastasia Shimorina
+  venue: arXiv:2511.17241
+- year: 2025
+  title: 'Designing Synthetic Discussion Generation Systems: A Case Study for Online Facilitation'
+  authors: Tsirmpas, Dimitris, Ion Androutsopoulos, and John Pavlopoulos
+  venue: arXiv:2503.16505
+- year: 2025
+  title: 'The Duality of Social Media Discourse: Characterizing Polluted and Supportive Online Behaviors'
+  authors: Morini, Virginia
+  venue: —
+- year: 2025
+  title: Leveraging EUD and Generative AI for Ethical Phishing Campaigns
+  authors: Breve et al.
+  venue: EUD 2025 (Springer)
+- year: 2025
+  title: Cyber Security Education by integrating Digital Twins and Generative AI
+  authors: Avhad, Atharv S
+  venue: —
+- year: 2025
+  title: Aligning Large Language Models With Human Perspectives
+  authors: He, Zihao
+  venue: Thesis (USC)
+- year: 2025
+  title: VALIDATING GENERATIVE AGENT-BASED MODELS
+  authors: Sen et al.
+  venue: —
+- year: 2024
+  title: Can large language model agents simulate human trust behavior
+  authors: Jia et al.
+  venue: NeurIPS 2024
+- year: 2024
+  title: AI agents can coordinate beyond human scale
+  authors: De Marzo, Giordano, Claudio Castellano, and David Garcia
+  venue: arXiv:2409.02822
+- year: 2024
+  title: 'Bots of a feather: mixing biases in LLMs’ opinion dynamics'
+  authors: Cau, Erica, Andrea Failla, and Giulio Rossetti
+  venue: Complex Networks 2024
+- year: 2024
+  title: A survey on the impacts of recommender systems on users, items, and human-AI ecosystems
+  authors: Pappalardo et al.
+  venue: arXiv:2407.01630
+- year: 2024
+  title: 'Exploring the role of llms in e-commerce: From sentiment analysis to causal reasoning in customer feedback'
+  authors: Rakhi, Allah, and Beth Goldie
+  venue: —

@@ -23,9 +23,14 @@ title: "Y Social"
 subtitle: "Where the Digital World Comes to Life"
 email: info@y-not.social
 description: >- # this means to ignore newlines until "baseurl:"
-  Y Social is a cutting-edge Digital Twin of a microblogging platform.
-  It enables realistic social media simulations by integrating Large Language Models (LLMs) agents.
-  Describe your desired scenario - be it a political community, a mental health support group or a sportive fandom - and observe complex social behaviours emerge.
+  YSocial is an open-source digital twin of online social media. Microblogging, forums and photo sharing,
+  populated by LLM agents: describe a scenario - a political community, a support group, a sports fandom -
+  and observe how collective behaviour emerges. Version 4.0.0: desktop installer, plugin system, English and Italian.
+
+# Current release, shown in the navbar, download page and footer
+ysocial_version: "4.0.0"
+# Direct download folder of that release (keep in sync with the line above)
+release_url: "https://github.com/YSocialTwin/YSocial/releases/download/v4.0.0"
 
 
 # Riportare il github del gruppo di progetto e quello del sito web (se differente).
@@ -44,87 +49,64 @@ navbar:
     img: "./assets/images/Ysocial_logo.png"
     url: /
   nav:
-    - title: 🚀 Get Started
+    - title: Get started
       child:
-        - title: Download #Label
-          url: /download  #url
-        - title: Developer #Label
-          url: /ysocial  #url
-        - title: Docker #Label
-          url: /docker  #url
-        #- title: Manual Installation
-        #  url: /hard_way
+        - title: Download and install
+          desc: Installer, pip, Docker or source
+          url: /download
+        - title: Your first simulation
+          desc: Step-by-step tutorial
+          url: /first_simulation
+        - title: What's new in 4.0.0
+          desc: Release highlights
+          url: /whats_new
 
-
-    - title: 📖 Inside YSocial
+    - title: Platform
       child:
-        - title: Introduction #Label
-          url: /key_features  #url
-        - title: LLM Agents #Label
-          url: /agents #url
-        - title: Modeling Choices #Label
-          url: /modeling  #url
+        - title: Key features
+          desc: What a simulation looks like
+          url: /key_features
+        - title: Modeling choices
+          desc: Actions and recommender systems
+          url: /modeling
+        - title: Plugins
+          desc: Clients, servers and extensions
+          url: /plugins
 
-      #  - title: 🎬 Scenario Design #Label
-      #    url: /scenario #url
-
-   # - title: 🍹 Recipes
-   #   child:
-   #     - title: 🤯 y/politics #Label
-   #       url: /politics  #url
-        #- title: 🤺 y/olympics  #Label
-        #  url: /olympics #url
-
-    - title: 📊 ySights
+    - title: Agents
       child:
-        - title: Library Overview
+        - title: LLM agents
+          desc: Personas, prompts, special agents
+          url: /agents
+        - title: Agent memory
+          desc: Relationships, threads, communities
+          url: /agent_memory
+        - title: Opinion dynamics
+          desc: Opinions that evolve over time
+          url: /opinion_dynamics
+        - title: Stress and reward
+          desc: Feedback, activity and churn
+          url: /stress_reward
+
+    - title: ySights
+      child:
+        - title: Library overview
+          desc: Analyse simulation data
           url: /ysights_library
         - title: Documentation
+          desc: ysocialtwin.github.io/ysights
           url: https://ysocialtwin.github.io/ysights
 
-    - title: 🔬 Resources
+    - title: Resources
       url: /resources
 
-    - title: 📚 Blog
+    - title: Blog
       url: /blog
 
-    - title: 👥 About
-      url: /about #url
-    #- title: Bootstrap
-    #  url: /bootstrap
-    #- title: Jekyll
-    #  url: /jekyll-ssg
-    #- title: Charts
-    #  url: /charts
-    #- title: Folium
-    #  url: /folium-map
-    #- title: Write first #Label
-    #  child:
-    #    - title: markdown cheatsheet #Label
-    #      url: /markdown  #url
-    #    - title: kramdown cheatsheet #Label
-    #      url: /kramdown #url
-    #- title: One page demo
-    #  child:
-    #    - title: Demo
-    #      url: /single
-    #    - title: "Sezione 1" #Label
-    #      url: /single#sezione-1 #url
-    #    - title: "Sezione 1.1" #Label
-    #      url: /single#sezione-11 #url
-    #    - title: "Sezione 1.2" #Label
-    #      url: /single#sezione-12 #url
-    #    - title: "Gallerie" #Label
-    #      url: /single#galleria #url
-    #    - title: "Mappa delle stragi" #Label
-    #      url: /single#mappa-delle-stragi #url
+    - title: About
+      url: /about
 
 
-
-googlefonts:
-  - url: "https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-  - url: "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-  - url: "https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
 
 chulapa-skin:
   skin:  "lux" #"gitdev-dark" #"graymor" #"graymor" "gitdev-dark" "gitdev" "universal" "academia" "gitdev" "towards" "pear" "twitter-lights-out" "twitter-dim" "wandoo" "lymcha" "twitter" "chulapa" "sunset" "sunset" "minty" "lux" "journal" "deeply"
@@ -188,7 +170,7 @@ footer:
   #- label: "Facebook"
   #  icon: "fab fa-facebook"
   #  url: https://www.facebook.com/sobigdata
-  copyright: "2025 YSocial"
+  copyright: "2026 YSocial"
 
 
 sass:

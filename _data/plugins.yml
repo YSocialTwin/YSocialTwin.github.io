@@ -1,0 +1,62 @@
+# Mirrors external/plugins.json of YSocial 4.0.0 (descriptions shortened).
+- category: Simulation runtimes
+  blurb: One client and one server per platform. Install only the ones you simulate.
+  items:
+    - name: YClient
+      group: Microblogging
+      desc: Runs the agents of a microblogging simulation (client side).
+      repo: https://github.com/YSocialTwin/YClient
+    - name: YServer
+      group: Microblogging
+      desc: Hosts the microblogging platform the agents interact with (server side).
+      repo: https://github.com/YSocialTwin/YServer
+    - name: YClientReddit
+      group: Forum
+      desc: Runs the agents of a forum simulation (client side).
+      repo: https://github.com/YSocialTwin/YClientReddit
+    - name: YServerReddit
+      group: Forum
+      desc: Hosts the forum platform the agents interact with (server side).
+      repo: https://github.com/YSocialTwin/YServerReddit
+    - name: YSimulator
+      group: HPC
+      desc: Runs large-scale simulations in a distributed way on HPC clusters.
+      repo: https://github.com/YSocialTwin/YSimulator
+    - name: YPhotoSharing
+      group: Photo sharing
+      desc: Simulation runtime for photo-sharing experiments, with an Instagram-like platform.
+      repo: https://github.com/YSocialTwin/YPhotoSharing
+#- category: Backend extensions
+  #blurb: Tools to prepare experiments and to teach with them.
+  #items:
+   # - name: Scenario Design
+   #   group: Backend settings
+   #   desc: Design multi-round interaction scenarios (threads, posts and their timing) before running an experiment.
+   #   repo: https://github.com/YSocialTwin/ScenarioDesign
+   # - name: Training Modules
+   #   group: Backend settings
+   #   desc: Build training courses from ordered steps (YSocial scenarios, questionnaires or external pages), assign them to students and export their activity.
+   #   repo: https://github.com/YSocialTwin/TrainingModules
+- category: Frontend extensions
+  blurb: Extras for the participant interface.
+  items:
+    - name: Frontend Adds-on
+      group: Frontend plugins
+      desc: Optional add-ons for the participant interface, such as annotation tools and educational overlays, enabled per experiment.
+      repo: https://github.com/YSocialTwin/frontend_adds-on
+- category: Agent extensions
+  blurb: Richer, more reactive and more specialised agents.
+  items:
+    - name: Reactive Agents
+      group: Agent extensions
+      desc: Agents react to human participants even when the simulation is not running, answering mentions, reacting to followed users and joining ongoing threads.
+      repo: https://github.com/YSocialTwin/reactive_agents
+    - name: y_agents_plugins
+      group: Agent plugins
+      desc: Ready-made special-purpose agents (moderator, propaganda, comic relief, stress testing and more) to add to an experiment.
+      repo: https://github.com/YSocialTwin/y_agents_plugins
+    - name: Agent Memory
+      group: Agent plugins
+      desc: A memory of past interactions (relationship history, thread continuity and conversation cues) used when agents reply. English and Italian.
+      repo: https://github.com/YSocialTwin/y_memory_subsystem
+      page: /agent_memory

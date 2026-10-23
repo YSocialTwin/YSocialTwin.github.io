@@ -1,260 +1,309 @@
 ---
 layout: default-full
-title: "Y Social"
-subtitle: "Get Started now!"
-show_sidetoc: true
+title: "Download and install"
+subtitle: "One page, four ways to run YSocial. Pick the one that fits you."
+eyebrow: "Version 4.0.0"
+header_title: "Install YSocial"
 header_type: hero
-header_img: assets/images/server1.jpg
-header_title: "Download Y Social"
-vega: true
+show_sidetoc: true
 ---
 
-<div class="container py-3">
-<div class="row">
-<div class="col-md-12" markdown="1">
+<div class="ys-article" markdown="1">
 
-<div style="text-align: center; margin: 2rem 0;">
-<p style="font-size: 1.25rem; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-Transform your social media research with our powerful <mark>Digital Twin platform</mark>. Choose your platform and start simulating realistic social interactions today.
-</p>
-</div>
+<p class="ys-lede">Start with the <mark>desktop installer</mark> if you just want to try YSocial. Use <mark>pip</mark>, <mark>Docker</mark> or the <mark>source</mark> when you need a server, automation or a hackable setup.</p>
 
----
+## Choose how to install
 
-## 📥 Download for Your Platform
+<div class="ys-tabs" data-tabs data-cards data-label="Installation method">
 
-v3.0.0 (Roshar - [changelog](https://github.com/YSocialTwin/YSocial/releases/tag/v2.5.0)) is available for the following operating systems:
-
+<div class="ys-tabpanel" id="installer" data-title="Desktop installer" data-kicker="Easiest" data-pill="" data-desc="No terminal, no Python. macOS, Windows, Linux.">
+<p>Version <strong>{{ site.ysocial_version }}</strong>. The installer prepares a private Python environment the first time you run it (a few minutes, internet required).</p>
+<p class="ys-detect">We think you are on <strong id="ys-detected">your system</strong>, highlighted below.</p>
 <div class="download-grid">
-
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fab fa-linux"></i>
-</div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Linux</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Ubuntu, Fedora & more</p>
-<a href="https://releases.y-not.social/latest/YSocial_v3_linux" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-Download for Linux
-</a>
-</div>
-
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fab fa-apple"></i>
-</div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">macOS</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Silicon (M1 or later)</p>
-<a href="https://releases.y-not.social/latest/YSocial_v3.dmg" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-Download for macOS
-</a>
-</div>
-
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fab fa-windows"></i>
-</div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Windows</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Windows 10 and later</p>
-<div style="display: flex; gap: 0.5rem; justify-content: center;">
-<a href="https://releases.y-not.social/latest/YSocial_v3_x86.exe" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
-x86
-</a>
-<a href="https://releases.y-not.social/latest/YSocial_v3_arm.exe" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1rem; font-size: 0.9rem;">
-ARM
-</a>
+<div class="download-box" data-os="macos">
+<span class="ys-mine">Your system</span>
+<span class="os-ic"><i class="fab fa-apple" aria-hidden="true"></i></span>
+<h3>macOS</h3>
+<p>Apple silicon and Intel</p>
+<div class="ys-dl">
+<div class="ys-dlrow"><span>Apple silicon</span><a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-macos-arm64.dmg">.dmg</a></div>
+<div class="ys-dlrow"><span>Intel</span><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-macos-x64.dmg">.dmg</a></div>
 </div>
 </div>
-
-<div class="download-box">
-<div style="font-size: 3rem; margin-bottom: 0.75rem; color: #333;">
-<i class="fas fa-code"></i>
+<div class="download-box" data-os="windows">
+<span class="ys-mine">Your system</span>
+<span class="os-ic"><i class="fab fa-windows" aria-hidden="true"></i></span>
+<h3>Windows</h3>
+<p>Windows 10 and later</p>
+<div class="ys-dl">
+<div class="ys-dlrow"><span>x64</span><a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-windows-x64.exe">.exe</a></div>
 </div>
-<h3 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem;">Source Code</h3>
-<p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.9rem;">Latest version ZIP archive</p>
-<a href="https://releases.y-not.social/latest/YSocial_v3_source.zip" class="cta-primary" style="margin-right: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-Download Source
-</a>
 </div>
-
+<div class="download-box" data-os="linux">
+<span class="ys-mine">Your system</span>
+<span class="os-ic"><i class="fab fa-linux" aria-hidden="true"></i></span>
+<h3>Linux</h3>
+<p>x64 and arm64</p>
+<div class="ys-dl">
+<div class="ys-dlrow"><span>x64</span><a class="ys-btn primary small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-x64.AppImage">AppImage</a><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-x64.deb">.deb</a></div>
+<div class="ys-dlrow"><span>arm64</span><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-arm64.AppImage">AppImage</a><a class="ys-btn ghost small" href="{{ site.release_url }}/YSocial-{{ site.ysocial_version }}-linux-arm64.deb">.deb</a></div>
 </div>
-
-Once started, access YSocial using the credentials: <mark>admin@y-not.social</mark> / <mark>admin</mark>
-
+</div>
+</div>
+<p class="ys-fine">Something not downloading? Open the <a href="https://github.com/YSocialTwin/YSocial/releases/latest">latest release page</a>. To check that a file is genuine, see <a href="#verify-your-download">Verify your download</a>.</p>
+<div class="ys-shots">
+<figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install1.webp" alt="The installer: Install YSocial" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>1. Press <em>Install YSocial</em></figcaption></figure>
+<figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install2a.webp" alt="The installer preparing the Python environment" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>2. It prepares Python and a private environment</figcaption></figure>
+<figure><img src="{{ site.baseurl }}/assets/images/screen_v4/Install2b.webp" alt="The installer installing YSocial" loading="lazy" style="aspect-ratio: 4 / 3; object-position: center;"><figcaption>3. It installs YSocial, then you press <em>Start</em></figcaption></figure>
+</div>
+{% capture t_installer %}
+Open the installer, press *Install YSocial*, then **Start**. YSocial opens in its own window, and closing the window stops YSocial and every service it started. The installers are not code-signed, so your system will warn you once:
+{% endcapture %}
+{{ t_installer | markdownify }}
 <div class="alert-warning-custom">
-<strong>⚠️ Note 1: </strong> OS-specific releases provide a zero-configuration quick start at a cost: no JupyterLab support and longer startup times.
-<br>
-<strong>⚠️ Note 2: </strong> YSocial assumes you have access to an OpenAI-compatible LLM model (either commercial or self-hosted). 
-
+<p><strong>macOS:</strong> if you see <em>"The application cannot be opened"</em> (or that it is damaged or from an unverified developer), macOS has quarantined the download. Drag <em>YSocial</em> to <em>Applications</em>, then run this once in Terminal:</p>
+<pre><code>xattr -cr /Applications/YSocial.app</code></pre>
+<p>Then open the app again. Without Terminal: right-click the app, choose <em>Open</em>, and confirm; on recent macOS versions also use <em>System Settings → Privacy &amp; Security → Open Anyway</em>.</p>
+<p><strong>Windows:</strong> because the installer is not code-signed, <em>Microsoft Defender SmartScreen</em> may block it ("Windows protected your PC"), and Windows Security or your browser may flag or quarantine the <code>.exe</code> as unrecognised. This is a false positive. To continue:</p>
+<ol>
+<li>If the browser blocks the download, open its downloads list and choose <em>Keep</em> (Edge: <em>…</em> → <em>Keep</em> → <em>Keep anyway</em>).</li>
+<li>Double-click the installer. On the blue SmartScreen window click <em>More info</em>, then <em>Run anyway</em>.</li>
+<li>If Windows Security removed the file, open <em>Windows Security → Virus &amp; threat protection → Protection history</em>, select the YSocial entry and choose <em>Actions → Restore</em> (or <em>Allow on device</em>), then run it again.</li>
+<li>If a managed (work or university) PC does not offer <em>Run anyway</em>, ask your IT department to allow the installer.</li>
+</ol>
+<p>Download the installer only from this page or from the official GitHub release. You can also right-click the file, choose <em>Properties</em> and tick <em>Unblock</em> before running it.</p>
+<p><strong>Linux:</strong> Chrome may block the <code>.AppImage</code> or <code>.deb</code> as a <em>"dangerous download"</em> because it is an executable that few people have downloaded yet. This is a false positive. Open <code>chrome://downloads</code>, choose <em>…</em> next to the file and then <em>Keep</em> (<em>Keep anyway</em>). For an <code>.AppImage</code>, make it executable before the first run: <code>chmod +x YSocial-*.AppImage</code>.</p>
+</div>
+{% capture t_installer2 %}
+Under *More options* you can open YSocial in your default browser instead of its own window, start Jupyter Lab (off by default), change the address and port (`127.0.0.1:8080` by default), and switch off the update check.
+{% endcapture %}
+{{ t_installer2 | markdownify }}
 </div>
 
-<div class="alert-info-custom">
-<strong>🛠️ Want full control?</strong> Follow our <a href="/ysocial">developer installation guide</a> to install Y Social with Python and customize every aspect of your setup.
+<div class="ys-tabpanel" id="pip" data-title="pip wheel" data-kicker="Command line" data-pill="v" data-desc="Python 3.12 and the <code>ysocial</code> command.">
+{% capture t_pip %}
+Use this on servers, in notebooks or in scripts. You need **Python 3.12**.
+
+Download `ysocial-{{ site.ysocial_version }}-py3-none-any.whl` and `constraints.txt` from the [release]({{ site.release_url }}/ysocial-{{ site.ysocial_version }}-py3-none-any.whl) (the constraints file is [here]({{ site.release_url }}/constraints.txt)), then:
+
+```bash
+python3.12 -m venv ysocial-env && source ysocial-env/bin/activate
+pip install ysocial-{{ site.ysocial_version }}-py3-none-any.whl -c constraints.txt
+ysocial --host localhost --port 8080
+```
+
+Add the `[toxicity]` extra if you want local toxicity detection (large download):
+
+```bash
+pip install "ysocial-{{ site.ysocial_version }}-py3-none-any.whl[toxicity]" -c constraints.txt
+```
+
+Open [http://localhost:8080](http://localhost:8080). Plugins are installed afterwards from the admin panel.
+{% endcapture %}
+{{ t_pip | markdownify }}
 </div>
 
-<div class="alert-info-custom">
-<strong>💡 Prefer Docker?</strong> For a hassle-free installation with all dependencies included, check out our <a href="/docker">Docker installation guide</a>. 
+<div class="ys-tabpanel" id="docker" data-title="Docker" data-kicker="Servers" data-pill="o" data-desc="One command, data in a volume.">
+{% capture t_docker %}
+The image is published on the GitHub Container Registry, for every release. Your data lives in the `ysocial-data` volume, so it survives restarts and upgrades.
+
+```bash
+docker run -d --name ysocial -p 5000:5000 -v ysocial-data:/data ghcr.io/ysocialtwin/ysocial:latest
+```
+
+Pin a version with `ghcr.io/ysocialtwin/ysocial:v{{ site.ysocial_version }}`. Then open [http://localhost:5000](http://localhost:5000).
+
+**Compose, from the repository**
+
+```bash
+git clone https://github.com/YSocialTwin/YSocial.git && cd YSocial
+docker compose -f docker/compose.yml up                       # YSocial + SQLite
+WITH_TOXICITY=1 docker compose -f docker/compose.yml build    # image with toxicity detection
+YSOCIAL_PORT=8080 docker compose -f docker/compose.yml up     # another host port
+```
+
+**Good to know**
+
+- The **LLM server is not in the image.** Run Ollama, vLLM or any OpenAI-compatible service outside and set its address in the admin panel. From the container, the host is `http://host.docker.internal:11434` (with plain `docker run` on Linux add `--add-host=host.docker.internal:host-gateway`).
+- Update: `docker pull`, `docker rm -f ysocial`, then run again with the same volume. Back the volume up before major upgrades.
+- Logs: `docker logs -f ysocial`. Port busy? Map another one, for example `-p 8081:5000`.
+- Older compose variants (GPU, reverse proxy) are described in `deployment/docker/README.md` in the repository.
+{% endcapture %}
+{{ t_docker | markdownify }}
 </div>
 
+<div class="ys-tabpanel" id="source" data-title="From source" data-kicker="Developers" data-pill="v" data-desc="Clone, add plugins, run <code>y_social.py</code>.">
+{% capture t_source %}
+For development and customisation. Python **3.12** is the reference version (CI, builds and Docker).
 
+**1. Environment and code**
 
+```bash
+conda create --name Y python=3.12
+conda activate Y
+git clone https://github.com/YSocialTwin/YSocial.git
+cd YSocial
+```
 
+**2. Plugins.** YSocial is a core plus plugins that live in `external/`. The recommended way is the *Plugins* page of the admin panel. By hand, clone only the runtimes you simulate (full list in `external/plugins.json`, see also the [plugins page]({{ site.baseurl }}/plugins)):
 
----
+| Platform or feature | Clone into `external/` |
+| --- | --- |
+| Microblogging | `YClient`, `YServer` |
+| Forum | `YClientReddit`, `YServerReddit` |
+| Photo sharing and HPC | `YSimulator`, `YPhotoSharing` |
+| Optional | `ScenarioDesign`, `TrainingModules`, `y_memory_subsystem`, `frontend_adds-on`, `reactive_agents`, `y_agents_plugins` |
 
-## 🔒 Privacy & Telemetry
+**3. Configure and install**
 
-<div style="background: #f8f9fa; border-left: 4px solid #2563eb; padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0;">
+```bash
+cp .env.example .env
+python -c "import secrets; print(secrets.token_hex(32))"   # paste as YSOCIAL_SECRET_KEY in .env
+pip install -r requirements.txt
+```
 
-{% capture content %}
+**4. LLM server (optional locally)**
 
-### 📊 GDPR-Compliant Data Collection
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull minicpm-v    # image captioning
+ollama pull llama3.1     # or any model you prefer
+# vLLM: use the OpenAI-compatible entry point, not "vllm serve"
+pip install vllm && python3 -m vllm.entrypoints.openai.api_server <model_name> --host 0.0.0.0 --port 8000
+```
 
-Y Social respects your privacy and is fully compliant with GDPR regulations. We collect minimal, anonymized telemetry data to improve the platform. Here's exactly what we track:
+**5. Run**
 
-#### What We Collect
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-
-<div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-<h5 style="color: #2563eb; margin-bottom: 0.5rem;">📈 Usage Analytics</h5>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li># Experiments/Populations</li>
-<li># Agents/Pages</li>
-<li>Recommendation system used</li>
-<li>Simulation duration</li>
-<li>Preferred LLM model</li>
-</ul>
-</div>
-
-<div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-<h5 style="color: #2563eb; margin-bottom: 0.5rem;">💾 Installation Data</h5>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Installation/Update date</li>
-<li>YSocial version</li>
-<li>Operating system and locale</li>
-</ul>
-</div>
-
-<div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-<h5 style="color: #2563eb; margin-bottom: 0.5rem;">🐛 Error Logs</h5>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;">
-<li>Error types and frequency</li>
-<li>Stack traces (anonymized)</li>
-</ul>
-</div>
-
-</div>
-
-#### What We DON'T Collect
+```bash
+python y_social.py --host localhost --port 8080            # browser
+python y_social.py --no_notebook                           # disable Jupyter Lab
+```
 
 {% endcapture %}
-{{ content | markdownify }}
+{{ t_source | markdownify }}
+</div>
 
-<div style="background: #ecfdf5; border: 1px solid #10b981; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-<strong style="color: #059669;">✅ Your Privacy is Protected</strong>
-<ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;">
-<li>❌ No personally identifiable information (PII)</li>
-<li>❌ No IP addresses or location data</li>
-<li>❌ No simulation content or user-generated data</li>
-<li>❌ No email addresses or contact information</li>
-<li>❌ No passwords or authentication credentials</li>
-<li>❌ No tracking of individual users across sessions</li>
+</div>
+
+## After installing
+
+<div class="ys-cols">
+<div>
+{% capture t_first %}
+1. Open YSocial at the address shown on the right.
+2. Log in with `admin@y-not.social` / `admin`, then change the password.
+3. In the admin panel, connect an LLM, create an experiment and press start.
+{% endcapture %}
+{{ t_first | markdownify }}
+<img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen_v4/Login.webp" alt="The YSocial login page" loading="lazy" width="1600" height="994" style="width:100%;height:auto;margin-top:12px">
+</div>
+<div>
+{% capture t_open %}
+| If you used | YSocial opens at |
+| --- | --- |
+| Desktop installer | Its own window, or `http://127.0.0.1:8080` in your browser |
+| pip | `http://localhost:8080` |
+| Docker | `http://localhost:5000` |
+| Source | `http://localhost:8080` |
+{% endcapture %}
+{{ t_open | markdownify }}
+</div>
+</div>
+
+## Requirements
+
+<dl class="ys-feat one">
+<div><dt>An LLM server</dt><dd>Always separate from YSocial. Any OpenAI-compatible server works, commercial or self-hosted (Ollama, vLLM). The memory and compute you need depend on the model and on how many agents you run.</dd></div>
+<div><dt>Python</dt><dd>Version 3.12, only for pip and source. The desktop installer prepares its own private environment, and the Docker image ships it.</dd></div>
+<div><dt>Internet</dt><dd>Needed while installing: the installer downloads its environment and Docker pulls the image.</dd></div>
+<div><dt>Disk</dt><dd>A few GB. Toxicity detection is optional and adds several more (PyTorch and a model).</dd></div>
+</dl>
+
+## Verify your download
+
+<details>
+<summary data-excerpt="Optional: check that a file is the one we published.">Check a file against its checksum and signature <span class="ys-pill ys-scope">All downloads, all systems</span></summary>
+{% capture t_verify %}
+This is optional and applies to **every file of a release**: the installers for macOS, Windows and Linux, the wheel and `constraints.txt`. Two checks are available, and they work the same on every system:
+
+1. **Checksum** (did the download arrive intact?). Download [SHA256SUMS.txt]({{ site.release_url }}/SHA256SUMS.txt) next to your file and compare:
+
+   | System | Command |
+   | --- | --- |
+   | Linux | `sha256sum -c SHA256SUMS.txt --ignore-missing` |
+   | macOS | `shasum -a 256 -c SHA256SUMS.txt --ignore-missing` |
+   | Windows (PowerShell) | `Get-FileHash .\YSocial-{{ site.ysocial_version }}-windows-x64.exe -Algorithm SHA256`, then compare it with the line in `SHA256SUMS.txt` |
+
+2. **Signature** (was it published by the YSocial team?). Every file has a detached [GPG](https://gnupg.org/) signature, the same name plus `.asc`, and so does `SHA256SUMS.txt`. The public key is `release-signing-key.asc`, attached to each release and kept in the [repository](https://github.com/YSocialTwin/YSocial/blob/main/docs/release-signing-key.asc). With GPG installed (`brew install gnupg` on macOS, `gpg4win` on Windows):
+
+   ```bash
+   gpg --import release-signing-key.asc
+   gpg --verify YSocial-{{ site.ysocial_version }}-linux-x64.AppImage.asc YSocial-{{ site.ysocial_version }}-linux-x64.AppImage
+   ```
+
+   Use the file name you downloaded. A line saying *Good signature* means the file is genuine. GPG may also warn that the key is not certified: that is expected, compare the key fingerprint with the one in the repository if you want to be sure.
+
+The installers are signed with GPG but **not code-signed** for macOS and Windows: the system warnings described above remain, and a valid GPG signature does not remove them.
+{% endcapture %}
+{{ t_verify | markdownify }}
+</details>
+
+## Looking after your installation
+
+<details open>
+<summary data-excerpt="One folder to back up or move.">Where your data lives <span class="ys-pill ys-scope">Desktop installer only</span></summary>
+{% capture t_data %}
+YSocial keeps everything in a single data folder (`YSOCIAL_HOME`), so backing up or moving an installation means copying one directory.
+
+| System | Default data folder |
+| --- | --- |
+| macOS | `~/Library/Application Support/YSocial` |
+| Windows | `%USERPROFILE%\AppData\Local\YSocial` |
+| Linux | `~/.ysocial` |
+
+If YSocial does not start, the last lines of `logs/launch.log` inside the data folder say why.
+{% endcapture %}
+{{ t_data | markdownify }}
+</details>
+
+<details>
+<summary data-excerpt="Your data and experiments are kept.">Updating and uninstalling <span class="ys-pill ys-scope">Desktop installer only</span></summary>
+{% capture t_upd %}
+With the desktop installer, the launcher checks the latest published release when it opens (you can switch this off). **Update** installs the new version over the current one after you confirm, and the database is upgraded on the next start. Plugins are updated separately, from the plugin page of the admin panel.
+
+To remove YSocial choose **Uninstall** in the launcher. You decide whether to delete the data folder and the downloaded toxicity models, then remove the installer app like any other app.
+{% endcapture %}
+{{ t_upd | markdownify }}
+</details>
+
+<details>
+<summary data-excerpt="Minimal, anonymised usage data. You can switch it off in the admin panel.">Anonymised telemetry, and how to turn it off</summary>
+{% capture t_tel %}
+YSocial collects minimal, anonymised telemetry to help us fix bugs and prioritise work. You can disable it at any time from the admin panel. The code that receives it is public: [yTelemetry](https://github.com/YSocialTwin/yTelemetry).
+
+**Collected:** number of experiments, populations, agents and pages; the recommender system and LLM model in use; simulation duration; installation or update date, YSocial version, operating system and locale; error types, frequency and anonymised stack traces.
+
+**Not collected:** personal data, IP addresses or location, simulation content or user-generated data, emails, passwords or credentials, or any tracking of individuals across sessions.
+
+Telemetry data is aggregated, stored with access controls, used only to improve YSocial and never shared with third parties.
+{% endcapture %}
+{{ t_tel | markdownify }}
+</details>
+
+
+</div>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title" id="next">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>A step-by-step tutorial: population, experiment, client, run.</span></a></li>
+<li><a href="{{ site.baseurl }}/key_features"><strong>Key features</strong><span>What a simulation looks like and what you can configure.</span></a></li>
+<li><a href="https://github.com/orgs/YSocialTwin/discussions" target="_blank" rel="noopener"><strong>GitHub Discussions</strong><span>Ask for help and share your experiments.</span></a></li>
+<li><a href="https://github.com/YSocialTwin/YSocial/issues" target="_blank" rel="noopener"><strong>Report an issue</strong><span>Found a bug? Tell us, with logs if you can.</span></a></li>
+<li><a href="{{ site.baseurl }}/about#how-to-cite"><strong>Cite YSocial</strong><span>Using it in a paper? The reference is on the About page.</span></a></li>
 </ul>
 </div>
+</section>
 
-
-{% capture content1 %}
-#### Your Rights & Control
-{% endcapture %}
-{{ content1 | markdownify }}
-
-<div style="margin: 1rem 0;">
-
-{% capture content2 %}
-**🎛️ Opt-Out Anytime**: You have full control over telemetry data collection. To disable just set the appropriate toggle in the admin panel.
-
-**🔐 Data Security**: All telemetry data is:
-- Anonymized and aggregated to protect your identity
-- Stored securely with access controls
-- Used solely for improving Y Social
-- Never shared with third parties
-
-{% endcapture %}
-{{ content2 | markdownify }}
-</div>
-
-{% capture content3 %}
-
-
-#### Why We Collect Data
-
-We use this information to:
-- 🐛 Identify and fix bugs faster
-- 📊 Understand which features are most valuable
-- ⚡ Improve performance and reliability
-- 🎯 Prioritize development efforts
-- 🔒 Enhance security
-
-**Our Commitment**: We believe in transparency and respect for user privacy. This telemetry helps us build a better product without compromising your privacy. Check with your own eyes what we collect in the service dedicated repository ([yTelemetry](https://github.com/YSocialTwin/yTelemetry)) and make an informed decision.
-
-{% endcapture %}
-{{ content3 | markdownify }}
-
-</div>
-
-
-
----
-
-## 📚 Next Steps
-
-<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
-
-<div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
-<div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📖</div>
-<h4>Read the Docs</h4>
-<p style="color: #666; margin-bottom: 1rem;">Learn how to set up your first simulation</p>
-<a href="/key_features" class="cta-secondary">View Features</a>
-</div>
-
-<div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
-<div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💬</div>
-<h4>Join Community</h4>
-<p style="color: #666; margin-bottom: 1rem;">Get help and share your experiences</p>
-<a href="https://github.com/orgs/YSocialTwin/discussions" class="cta-secondary">GitHub Discussions</a>
-</div>
-
-<div style="flex: 1; min-width: 250px; max-width: 350px; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; text-align: center;">
-<div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🐛</div>
-<h4>Report Issues</h4>
-<p style="color: #666; margin-bottom: 1rem;">Found a bug? Let us know!</p>
-<a href="https://github.com/YSocialTwin/YSocial/issues" class="cta-secondary">Report Bug</a>
-</div>
-
-</div>
-
----
-
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">
-<h3 style="color: #212529; margin-bottom: 1rem;">🎓 Perfect for Researchers</h3>
-<p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #6c757d;">
-Y Social has been conceived as a tool to support Computational Social Science studies, providing a realistic social media simulation environment.
-</p>
-<a href="/about" class="cta-primary">Learn About Our Team</a>
-</div>
-
-</div>
-</div>
-</div>
-
-<style>
-@media (hover: hover) {
-  [style*="transition: all"] {
-    cursor: pointer;
-  }
-  [style*="transition: all"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  }
-}
-</style>

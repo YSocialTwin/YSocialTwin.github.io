@@ -1,4 +1,6 @@
 ---
+noindex: true
+sitemap: false
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
@@ -106,7 +108,7 @@ The server will be then ready to accept requests at `http://localhost:5010`.
 </details>
 
 <details>
-<summary data-excerpt="Client application simulating user interactions with LLM roleplay, built with Python/pyautogen/feedparser."><strong>Y Client</strong></summary>
+<summary data-excerpt="Client application simulating user interactions with LLM roleplay, built with Python/LangChain/feedparser."><strong>Y Client</strong></summary>
 
 
 {% capture y_client_content %}
@@ -117,7 +119,7 @@ It is designed to be used in conjunction with `Y Server`, a server-side applicat
 
 
 **Programming Language:** Python <br>
-**Framework:** pyautogen + feedparser + bs4 + faker
+**Framework:** LangChain + feedparser + bs4 + faker
 
 ### Getting Started
 

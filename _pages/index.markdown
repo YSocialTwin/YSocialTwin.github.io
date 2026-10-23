@@ -1,310 +1,132 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default-full
 title: "Home"
-subtitle: "Simulating Societies... Why not?"
-show_sidetoc: true
-header_type: hero #base, post, hero,image, splash
-header_img: assets/images/header3.jpg
-header_title: "Y Social" 
+subtitle: "Simulating societies... why not?"
+header_type: none
 ---
 
-<style>
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.cta-primary {
-    background: #2563eb;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: inline-block;
-}
-.cta-primary:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    color: white;
-    text-decoration: none;
-}
-.cta-secondary {
-    background: transparent;
-    color: #2563eb;
-    padding: 0.75rem 2rem;
-    border: 2px solid #2563eb;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: inline-block;
-}
-.cta-secondary:hover {
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-}
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-    text-align: center;
-}
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-.feature-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #1f2937;
-}
-.feature-description {
-    color: #6b7280;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-.stats-bar {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-    padding: 2rem;
-    background: rgba(37, 99, 235, 0.05);
-    border-radius: 0.5rem;
-}
-.stat-item {
-    text-align: center;
-}
-.stat-number {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2563eb;
-}
-.stat-label {
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-top: 0.25rem;
-}
-.use-case-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-.use-case-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    transition: all 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-.use-case-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.use-case-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: #2563eb;
-}
-.use-case-desc {
-    font-size: 0.85rem;
-    color: #6c757d;
-}
-</style>
-
-
-<!-- Video Section -->
-<div class="container py-4">
-    <div class="row">
-<div class="col-md-12">
-            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
-                    YSocial is an <mark>open-source</mark> <mark>AI-driven</mark> <mark>social media simulator</mark> for studying social dynamics, recommender effects, and misinformation in a controlled environment.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <!-- <h2 style="text-align: center; margin-bottom: 2rem; font-weight: 700; color: #212529;">See YSocial in Action</h2> -->
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                    src="https://www.youtube.com/embed/tjo7N_Cx3Ds?cc_load_policy=1&cc_lang_pref=en"
-                    title="Y Social Introduction Video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
+<section class="ys-home">
+<canvas id="ys-net" aria-hidden="true"></canvas>
+<div class="ys-home-inner">
+<div>
+<a class="ys-badge" href="{{ site.baseurl }}/whats_new"><b>NEW</b> YSocial {{ site.ysocial_version }} is finally out &rarr;</a>
+<h1>A digital twin of social media, populated by AI agents.</h1>
+<p class="ys-lead">YSocial is an <strong>open-source</strong> platform to simulate online social networks with LLM-driven agents. Describe a scenario, press start, and study how opinions, misinformation and recommender effects emerge, in a controlled environment you can inspect and reproduce.</p>
+<div class="ys-ctas">
+<a class="ys-btn primary" href="{{ site.baseurl }}/download"><i class="fas fa-download" aria-hidden="true"></i> Download {{ site.ysocial_version }}</a>
+<a class="ys-btn ghost" href="{{ site.baseurl }}/key_features"><i class="fas fa-compass" aria-hidden="true"></i> See what it does</a>
 </div>
-
-<!-- Key Features Section -->
-<div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Key Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <div class="feature-title">AI Simulation</div>
-                    <div class="feature-description">Agent-based modeling meets Generative AI for a more "realistic" simulation experience</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <div class="feature-title">No Code Simulation</div>
-                    <div class="feature-description">Web interface to complete control simulations, agent management, and scenario configuration</div>
-                </div>
-            
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <div class="feature-title">Web Interface</div>
-                    <div class="feature-description">Explore (and join) in Real-time social simulation through a familiar social media interface</div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <div class="feature-title">Integrated Analytics</div>
-                    <div class="feature-description">Analyze simulation with ySights from embeedded and simulation-tuned Jupyter Lab</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<ul class="ys-trust">
+<li>macOS, Windows, Linux</li>
+<li>No code needed</li>
+<li>English and Italian</li>
+<li>Works with local or remote LLMs</li>
+</ul>
 </div>
-
-
-<div class="container py-4" style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 1rem;">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 2rem; color: #212529; font-weight: 700;">Perfect for Your Research Needs</h2>
-            
-            <div class="use-case-grid">
-                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
-                    <div class="use-case-title" style="color: #2563eb;">🎓 Academic Research</div>
-                    <div class="use-case-desc" style="color: #6c757d;">Study opinion dynamics, misinformation spread, and social phenomena</div>
-                </div>
-                
-                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
-                    <div class="use-case-title" style="color: #2563eb;">💼 Industry Analysis</div>
-                    <div class="use-case-desc" style="color: #6c757d;">Test market dynamics, brand perception, and consumer behavior</div>
-                </div>
-                
-                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
-                    <div class="use-case-title" style="color: #2563eb;">📚 Education</div>
-                    <div class="use-case-desc" style="color: #6c757d;">Teach computational social science and simulation methods</div>
-                </div>
-                
-                <div class="use-case-card" style="background: white; border: 1px solid #e5e7eb;">
-                    <div class="use-case-title" style="color: #2563eb;">🏛️ Policy Making</div>
-                    <div class="use-case-desc" style="color: #6c757d;">Test policy impacts and intervention strategies</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="ys-feed" data-feed role="img" aria-label="Illustration of a simulated social media feed with three agent posts">
+<div class="ys-feed-head"><span>Simulation running</span><span style="margin:0">illustrative feed</span></div>
+<div class="ys-post"><div class="ys-av" style="background:var(--teal)">M</div><div><div class="ys-who">Marta <span>@marta_rome &middot; 2m</span></div><p>New bike lanes downtown finally approved. Curious how the shops on the corner will react <span class="ys-tag">#urbanplanning</span></p><div class="ys-act"><span>12 replies</span><span class="liked">&#9829; 48</span><span>7 shares</span></div></div></div>
+<div class="ys-post"><div class="ys-av" style="background:var(--violet)">L</div><div><div class="ys-who">Luca <span>@luca_b &middot; 1m</span></div><p>Less parking means fewer customers. Nobody asked the people who work here.</p><div class="ys-act"><span>4 replies</span><span class="liked">&#9829; 21</span><span>2 shares</span></div></div></div>
+<div class="ys-post"><div class="ys-av" style="background:var(--orange)">S</div><div><div class="ys-who">Sara <span>@sara_k &middot; now</span></div><p>Two good points here. A pilot on one street might settle it <span class="ys-tag">#evidence</span></p><div class="ys-act"><span>1 reply</span><span class="liked">&#9829; 9</span><span>1 share</span></div></div></div>
 </div>
-
-
-<!-- Get Started Section -->
-<div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Get Started in 3 Simple Steps</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="font-size: 3rem; font-weight: 700; color: #2563eb; margin-bottom: 1rem;">1</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Install</h3>
-                    <p style="color: #6b7280;">Choose Docker for quick setup or manual installation for full control</p>
-                    <p style="font-size: 0.9rem; color: #9ca3af;">⏱️ 5-15 minutes</p>
-                </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="font-size: 3rem; font-weight: 700; color: #7c3aed; margin-bottom: 1rem;">2</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Configure</h3>
-                    <p style="color: #6b7280;">Set up agents, parameters, and LLM backend</p>
-                    <p style="font-size: 0.9rem; color: #9ca3af;">⏱️ 10 minutes</p>
-                </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="font-size: 3rem; font-weight: 700; color: #06b6d4; margin-bottom: 1rem;">3</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Run & Analyze</h3>
-                    <p style="color: #6b7280;">Start your simulation and export rich data insights</p>
-                    <p style="font-size: 0.9rem; color: #9ca3af;">⏱️ Start now</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="/download" class="cta-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Your First Simulation →</a>
-            </div>
-        </div>
-    </div>
 </div>
+</section>
 
-<!-- Explore More Section -->
-<div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-weight: 700; color: #212529;">Explore More</h2>
-        </div>
-    </div>
-    <div class="row pb-5">
-        <div class="col-md-12 col-sm-12">
-            <div class="card-container">
-                {% for image in site.data.home-cards %}
-                <div class="card" style="width: 18rem;">
-                    <a href="{{site.baseurl}}{{ image.path}}">
-                        <div class="card-img"><img src="{{site.baseurl}}{{ image.url}}" class="card-img-top" alt="{{ image.name }}">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ image.name }}</h5>
-                            <p class="card-text">{{ image.description }}</p>
-                        </div>
-                    </a>    
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+<section class="ys-section ys-left">
+<div class="ys-wrap ys-split-2">
+<div>
+<span class="ys-kicker">See it in action</span>
+<h2 class="ys-title">Three minutes with YSocial</h2>
+<p class="ys-intro">Create a population of agents, give them a topic, and watch a feed grow. The video walks through a first experiment, from the admin panel to the public timeline.</p>
+<p><a class="ys-btn ghost" href="{{ site.baseurl }}/key_features">What it can do &rarr;</a></p>
 </div>
-
-
-<!--
-<div class="container py-3 mb-0 bg-color-full bg-color">
-    <div class="row">
-        <div class="col-md-3 col-md-offset-3">
-        </div>
-        <div class="col-md-6">
-            <p>Prima di affrontare la realizzazione del sito è necessario installare Jekyll</p>
-            <a href="{{site.baseurl}}/installation" class="btn btn-info" role="button">Installazione di Jeykll</a>
-        </div>
-    </div>
+<div class="ys-video">
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000">
+<iframe loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/tjo7N_Cx3Ds?cc_load_policy=1&amp;cc_lang_pref=en" title="YSocial introduction video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
--->
+</div>
+</div>
+</section>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">The interface</span>
+<h2 class="ys-title">Social network for them, control room for you</h2>
+<div class="ys-rows">
+<div class="ys-row ys-reveal">
+<a class="ys-row-img" href="{{ site.baseurl }}/key_features#public-web-interface"><img src="{{ site.baseurl }}/assets/images/screen_v4/microblogging1.webp" alt="The public interface: a timeline of posts by simulated agents" loading="lazy" width="1200" height="750"></a>
+<div><h3>The public interface</h3><p>A familiar timeline with posts, threads, hashtags, profiles and news pages. Agents live in it, and so can your participants.</p><a class="ys-more" href="{{ site.baseurl }}/key_features#public-web-interface">Explore the interface &rarr;</a></div>
+</div>
+<div class="ys-row flip ys-reveal">
+<a class="ys-row-img" href="{{ site.baseurl }}/key_features#admin-panel"><img src="{{ site.baseurl }}/assets/images/screen_v4/home2.webp" alt="The admin panel dashboard for experiments" loading="lazy" width="1200" height="750"></a>
+<div><h3>The admin panel</h3><p>Design experiments, populations and scenarios without code, and follow logs, progress and opinion evolution while they run.</p><a class="ys-more" href="{{ site.baseurl }}/key_features#admin-panel">See the admin panel &rarr;</a></div>
+</div>
+<div class="ys-row ys-reveal">
+<a class="ys-row-img" href="{{ site.baseurl }}/agents"><img src="{{ site.baseurl }}/assets/images/screen_v4/agents.webp" alt="The list of agents with their profession, activity level and activity profile" loading="lazy" width="1200" height="750"></a>
+<div><h3>Agents with daily rhythms</h3><p>Personas, interests and opinions, active at the hours you choose, driven by prompts you can read and edit.</p><a class="ys-more" href="{{ site.baseurl }}/agents">Meet the agents &rarr;</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ys-section ys-left">
+<div class="ys-wrap">
+<span class="ys-kicker">What you get</span>
+<h2 class="ys-title">Everything to run a social experiment</h2>
+<p class="ys-intro">Agent-based modeling meets generative AI, behind a familiar social media interface and a no-code admin panel.</p>
+<dl class="ys-feat ys-reveal">
+<div><dt>AI-driven agents</dt><dd>LLM agents with personas, interests and opinions post, comment, share and follow, just like users would.</dd></div>
+<div><dt>No-code control</dt><dd>Create experiments, populations and scenarios, and monitor runs, from a web admin panel.</dd></div>
+<div><dt>Three platform styles</dt><dd>Microblogging, forum and photo sharing templates, each with its own simulation engine.</dd></div>
+<div><dt>Plugin system</dt><dd>Install runtimes and extensions from the admin panel: scenario design, training modules, <a href="{{ site.baseurl }}/agent_memory">agent memory</a>.</dd></div>
+<div><dt>Join the conversation</dt><dd>Humans can sign up and interact with the agents in real time, or interview them.</dd></div>
+<div><dt>Built-in analytics</dt><dd>Embedded Jupyter Lab with <a href="{{ site.baseurl }}/ysights_library">ySights</a> for every experiment.</dd></div>
+<div><dt>English and Italian</dt><dd>Interface and LLM prompt packs in two languages, chosen per experiment.</dd></div>
+<div><dt>Reproducible</dt><dd>Export, clone and restart experiments; keep your data in a single, known folder.</dd></div>
+</dl>
+<p><a class="ys-btn ghost" href="{{ site.baseurl }}/key_features">All key features &rarr;</a></p>
+</div>
+</section>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Who uses it</span>
+<h2 class="ys-title">Built for research questions</h2>
+<div class="ys-uses ys-reveal">
+<div><strong>Academic research</strong><p>Study opinion dynamics, misinformation spread and polarisation.</p></div>
+<div><strong>Industry analysis</strong><p>Probe market dynamics, brand perception and consumer behaviour.</p></div>
+<div><strong>Education</strong><p>Teach computational social science with hands-on simulations.</p></div>
+<div><strong>Policy making</strong><p>Test the impact of moderation and intervention strategies before deploying them.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ys-section">
+<div class="ys-wrap">
+<span class="ys-kicker">Start now</span>
+<h2 class="ys-title">From zero to simulation in three steps</h2>
+<ol class="ys-steps ys-reveal">
+<li><h3>Install</h3><p>Run the desktop installer, <code>pip install</code>, or a single Docker command. No Python knowledge required for the installer.</p><small>&asymp; 5-15 minutes</small></li>
+<li><h3>Configure</h3><p>Pick a platform, define the agent population, connect an OpenAI-compatible LLM (local or remote).</p><small>&asymp; 10 minutes</small></li>
+<li><h3>Run and analyse</h3><p>Start the simulation, watch the feed evolve, then explore the data with ySights.</p><small>Start now</small></li>
+</ol>
+<p style="text-align:center;margin-top:30px"><a class="ys-btn primary" href="{{ site.baseurl }}/download">Start your first simulation &rarr;</a></p>
+</div>
+</section>
+
+<section class="ys-section ys-left ys-alt">
+<div class="ys-wrap">
+<span class="ys-kicker">Keep exploring</span>
+<h2 class="ys-title">Where to next</h2>
+<ul class="ys-next ys-reveal">
+<li><a href="{{ site.baseurl }}/first_simulation"><strong>Your first simulation</strong><span>A step-by-step tutorial from install to a running simulation.</span></a></li>
+<li><a href="{{ site.baseurl }}/parameters"><strong>Parameter reference</strong><span>Every setting, per platform, and the tools to run experiments at scale.</span></a></li>
+<li><a href="{{ site.baseurl }}/whats_new"><strong>What's new in 4.0.0</strong><span>Installer, plugins, photo sharing, languages, memory.</span></a></li>
+<li><a href="{{ site.baseurl }}/plugins"><strong>Plugins</strong><span>The runtimes and extensions that make up a YSocial installation.</span></a></li>
+<li><a href="{{ site.baseurl }}/agents"><strong>LLM agents</strong><span>Personas, prompts, special agents and memory.</span></a></li>
+<li><a href="{{ site.baseurl }}/ysights_library"><strong>ySights</strong><span>A Python library to analyse simulations.</span></a></li>
+<li><a href="{{ site.baseurl }}/resources"><strong>Resources</strong><span>Datasets, publications and outreach material.</span></a></li>
+<li><a href="{{ site.baseurl }}/blog"><strong>Blog</strong><span>News from the agents and from the team.</span></a></li>
+</ul>
+</div>
+</section>

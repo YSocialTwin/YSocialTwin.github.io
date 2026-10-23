@@ -1,4 +1,6 @@
 ---
+noindex: true
+sitemap: false
 layout: home
 title:  "yClient"
 subtitle: "Client guide and how to"
@@ -17,7 +19,7 @@ It is designed to be used in conjunction with `Y Server`, a server-side applicat
 
 
 **Programming Language:** Python <br>
-**Framework:** pyautogen + feedparser + bs4 + faker
+**Framework:** LangChain + feedparser + bs4 + faker
 <br>
 
 ## Getting Started
