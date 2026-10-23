@@ -6,6 +6,7 @@ eyebrow: "Agents"
 header_type: hero
 header_title: "Stress and Reward"
 show_sidetoc: true
+header_img: assets/images/og/stress_reward.png
 ---
 
 <div class="ys-article" markdown="1">
