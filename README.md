@@ -91,6 +91,17 @@ Links shared on social platforms show a 1200×630 card (`og:image`). The theme t
 * **New post or page:** run the script, then add `header_img: assets/images/og/blog-<post-name>.png` to its front matter. To add a page to the script, append it to the `for page, label in [...]` list at the bottom.
 * **After publishing:** platforms cache previews. Refresh them with the Facebook Sharing Debugger or LinkedIn Post Inspector.
 
+## Editing with Pages CMS
+
+The blog, the pages and some data files can be edited from [Pages CMS](https://app.pagescms.org) (sign in with GitHub, open `YSocialTwin/YSocialTwin.github.io`, branch `main`). What is editable is defined in `.pages.yml`:
+
+* **Blog:** posts in `_posts/` (front matter as a form, body as Markdown/HTML/Liquid, kept as is). New posts are named `YYYY-MM-DD-<title>.md`; the file name can be changed when creating it.
+* **Pages:** `_pages/*.markdown`, except the old unlinked pages (`hard_way`, `llms`, `olympics`, `politics`, `scenario`, `yclient`, `jekyll_installation_guide`) and the subfolders.
+* **Data:** publications (`_data/citations.yml`, as a form) and the plugin list (`_data/plugins.yml`, as raw YAML so its commented blocks survive). Remember the "Last updated" date in `_pages/resources.markdown`.
+* **Images:** uploads go to `assets/images/`; social preview cards are picked from `assets/images/og/`.
+
+Pages CMS commits only the source files: the live site does not change until `docs/` is rebuilt. After editing, `git pull`, regenerate the social preview cards if titles changed, then follow [Publishing](#publishing).
+
 ## Publishing
 
 ```bash
