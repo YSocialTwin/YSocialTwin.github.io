@@ -5345,30 +5345,6 @@ table.ys-data:not(.ys-pubs) th, table.ys-data:not(.ys-pubs) td {
     padding: 8px 2px;
   }
 }
-.od-jump {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 1.2rem 0 1rem;
-}
-
-.od-jump a {
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--card);
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: border-color 0.15s, background 0.15s;
-}
-
-.od-jump a:hover {
-  border-color: var(--accent);
-  background: var(--card-hi);
-}
-
 .od-dist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
