@@ -1193,3 +1193,5 @@ details.db-t td:nth-child(2) { white-space: nowrap; color: var(--muted); }
 .sb-scale .sb-to { outline-style: dashed; }
 .sb-spark { width: 100%; height: 56px; display: block; margin: 12px 0 2px; } .sb-spark polyline { fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; } .sb-spark .s { stroke: var(--orange); } .sb-spark .r { stroke: var(--teal); }
 @media (max-width: 520px) { .sb-scale { grid-template-columns: minmax(0, 1fr); } .sb-scale .od-seg { grid-auto-flow: column; justify-content: space-between; min-height: 0; text-align: left; } }
+
+.ys-article .ys-split-2.ys-top.ys-mid { align-items: center; }

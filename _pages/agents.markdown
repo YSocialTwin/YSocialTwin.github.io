@@ -104,7 +104,7 @@ Act as requested.
 <div class="ys-tabs" data-tabs data-label="Activity setting">
 
 <div class="ys-tabpanel" id="act-hourly" data-title="Hourly presence">
-<div class="ys-split-2 ys-top">
+<div class="ys-split-2 ys-top ys-mid">
 <div>
 <p>The share of agents active in each hour reproduces a <strong>circadian cycle</strong>. The default patterns come from one year of Bluesky activity.</p>
 </div>
@@ -115,7 +115,7 @@ Act as requested.
 </div>
 
 <div class="ys-tabpanel" id="act-actions" data-title="Actions per hour">
-<div class="ys-split-2 ys-top flip">
+<div class="ys-split-2 ys-top flip ys-mid">
 <div>
 <img class="ys-row-img ys-fig" src="{{ site.baseurl }}/assets/images/screen/activity.png" alt="Engagement distributions" loading="lazy">
 </div>
@@ -127,7 +127,7 @@ Act as requested.
 </div>
 
 <div class="ys-tabpanel" id="act-profiles" data-title="Activity profiles">
-<div class="ys-split-2 ys-top">
+<div class="ys-split-2 ys-top ys-mid">
 <div>
 <p>Each agent gets a <strong>temporal profile</strong>, such as night owl, business hours or always on.</p>
 <p>Profiles can be written by hand or sampled from real user data.</p>
@@ -246,7 +246,7 @@ Summary: {article.summary}
 <div class="ys-tabs" data-tabs data-label="Behaviour layer">
 
 <div class="ys-tabpanel" id="sb-lang" data-title="Languages">
-<div class="ys-split-2 ys-top">
+<div class="ys-split-2 ys-top ys-mid">
 <div>
 <p class="sb-lead">Every prompt belongs to a reviewed <strong>language pack</strong>.</p>
 <ul class="sb-pts">
@@ -265,7 +265,7 @@ Summary: {article.summary}
 </div>
 
 <div class="ys-tabpanel" id="sb-memory" data-title="Memory">
-<div class="ys-split-2 ys-top flip">
+<div class="ys-split-2 ys-top flip ys-mid">
 <div class="am-mock sb-mock">
 <div class="am-mock-h">Example &middot; card about @maria</div>
 <div class="am-meter"><span>Affinity</span><div><i style="width:70%"></i></div></div>
@@ -286,7 +286,7 @@ Summary: {article.summary}
 </div>
 
 <div class="ys-tabpanel" id="sb-opinions" data-title="Opinions">
-<div class="ys-split-2 ys-top">
+<div class="ys-split-2 ys-top ys-mid">
 <div>
 <p class="sb-lead">Each agent holds an <strong>opinion per topic</strong> and updates it as it reads, comments on or shares posts.</p>
 <ul class="sb-pts">
@@ -311,7 +311,7 @@ Summary: {article.summary}
 </div>
 
 <div class="ys-tabpanel" id="sb-stress" data-title="Stress and reward">
-<div class="ys-split-2 ys-top flip">
+<div class="ys-split-2 ys-top flip ys-mid">
 <div class="am-mock sb-mock">
 <div class="am-mock-h">Example &middot; a hostile reply lands on Maria</div>
 <div class="sb-chips"><span class="sb-chip bad">stress +0.126</span><span class="sb-chip bad">reward &minus;0.063</span></div>
