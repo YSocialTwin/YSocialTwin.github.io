@@ -12,17 +12,17 @@ show_sidetoc: true
 
 <p class="ys-lede">Being ignored, insulted or defended is not neutral. With <mark>stress and reward</mark> on, every agent carries <mark>two moods</mark> that move with the feedback it gets, and that decide how much it <mark>takes part</mark>, or whether it <mark>leaves</mark>.</p>
 
-<div class="alert-info-custom"><strong>Optional, and tunable.</strong> The feature is switched on per experiment. Every number on this page is a <strong>default you can change at configuration time</strong>: event weights, coupling and the churn switch from <em>Experiment &rsaquo; Configure Stress / Reward</em> in the admin panel, everything else from the <code>stress_reward</code> block of the client configuration. See <a href="#all-parameters">All parameters</a> and <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
+<div class="alert-info-custom"><strong>Optional, and tunable.</strong> The feature is switched on per experiment. Every number on this page is a <strong>default you can change at configuration time</strong>: event weights, coupling and the churn switch from <em>Experiment &rsaquo; Configure Stress / Reward</em> in the admin panel, everything else from the <code>stress_reward</code> block of the client configuration. All parameters are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>. See also <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
 
 <nav class="od-jump" aria-label="On this page" markdown="0">
 <a href="#see-it-in-a-conversation">Conversations</a>
 <a href="#the-idea-in-one-picture">The idea</a>
-<a href="#event-weights">Event weights</a>
+<a href="#what-moves-them">What moves them</a>
 <a href="#the-formula">The formula</a>
 <a href="#try-one-event">Calculator</a>
 <a href="#a-story-over-time">Story</a>
 <a href="#what-it-changes">Effects</a>
-<a href="#all-parameters">Parameters</a>
+<a href="#configure-it">Configure</a>
 </nav>
 
 ## In 60 seconds
@@ -36,37 +36,30 @@ show_sidetoc: true
 
 ## See it in a conversation {#see-it-in-a-conversation}
 
-Meet <strong>Maria</strong>. Other agents react to her posts, and every reply moves her stress and reward. Choose who she is, then replay a thread or build your own.
+<strong>Maria</strong> posts, other agents answer, and each answer moves her two moods. Pick a thread and step through it, one reply at a time. Values use the default weights.
 
-<div class="od-lab" markdown="0">
-<div class="sr-prof"><span>Maria is</span>
-<div class="od-presets" id="sr-prof" role="group" aria-label="Maria's temperament">
-<button type="button" data-p="avg" class="sr-on">Average</button>
-<button type="button" data-p="sens">Sensitive</button>
-<button type="button" data-p="res">Resilient</button>
-</div>
-<em id="sr-prof-t"></em></div>
-<div class="ys-tabs" data-tabs data-label="Conversation mode">
-<div class="ys-tabpanel" id="sr-tab-replay" data-title="Replay a thread">
+<div class="od-lab sr-conv" markdown="0">
 <div class="od-presets" id="sr-th" role="group" aria-label="Thread">
 <button type="button" data-t="warm" class="sr-on">Warm welcome</button>
 <button type="button" data-t="pile">Pile-on</button>
+<button type="button" data-t="res">Same pile-on, resilient Maria</button>
 <button type="button" data-t="def">Hostile, but defended</button>
 </div>
-<div class="sr-dlg"><div class="sr-mood" id="sr-m-a"></div><div class="sr-chat" id="sr-chat-a" aria-live="polite"></div></div>
+<p class="sr-post" id="sr-post"></p>
+<div class="am-panel">
+<ol class="sr-thread" id="sr-thread" aria-live="polite"></ol>
+<div class="am-mock">
+<div class="am-mock-h">Maria's state</div>
+<div class="am-meter c"><span id="sr-ms-l">Stress</span><div><i id="sr-ms"></i></div></div>
+<div class="am-meter"><span id="sr-mr-l">Reward</span><div><i id="sr-mr"></i></div></div>
+<p class="am-quote" id="sr-mq"></p>
+</div>
+</div>
 <div class="od-btns"><button type="button" id="sr-next">Next reply</button><button type="button" id="sr-rst">Start over</button></div>
-</div>
-<div class="ys-tabpanel" id="sr-tab-pick" data-title="Choose the replies">
-<p class="sr-hint">Tap replies to add them to the thread, in any order. Try ten friendly ones, then one hostile one, then the other way round.</p>
-<div class="sr-bank" id="sr-bank"></div>
-<div class="sr-dlg"><div class="sr-mood" id="sr-m-b"></div><div class="sr-chat" id="sr-chat-b" aria-live="polite"></div></div>
-<div class="od-btns"><button type="button" id="sr-pk-rst">Clear the thread</button></div>
-</div>
-</div>
-<noscript><p class="am-note">Enable JavaScript to run the conversations.</p></noscript>
+<noscript><p class="am-note">Enable JavaScript to step through the conversations.</p></noscript>
 </div>
 
-<p class="am-note">The chips show what the client works out for each reply: for comments and shares an LLM first reads the tone, for reactions no LLM is needed. Values use the default weights.</p>
+<p class="am-note">For each reply, an LLM first labels the tone of comments and shares; reactions need no LLM. The numbers under each reply are the change sent to the server. &ldquo;Resilient Maria&rdquo; has sensitivity 0.6, resilience 1.6 and visibility need 0.6.</p>
 
 ## The idea in one picture {#the-idea-in-one-picture}
 
@@ -79,86 +72,93 @@ Meet <strong>Maria</strong>. Other agents react to her posts, and every reply mo
 <li><h3>React</h3><p>It may skip the turn, act less or churn.</p></li>
 </ol>
 
-For text, the model returns three fields, using the prompts <code>agent_comment_stress_reward_annotation</code> and <code>agent_post_stress_reward_annotation</code>. It is told to be conservative when unsure, and the server never does this step.
+## What moves them {#what-moves-them}
 
-<div class="od-dist-grid" markdown="0">
-<div class="od-dist"><b>tone</b><span>positive, neutral, critical, hostile or supportive. Shares: positive or hostile.</span></div>
-<div class="od-dist"><b>directness</b><span>0 not aimed at the recipient, 1 explicitly aimed.</span></div>
-<div class="od-dist"><b>support strength</b><span>0 none, 1 strong, explicit support.</span></div>
+Each kind of event has a base effect on stress and on reward. A negative stress value is a relief. These are defaults: every weight can be edited per experiment (see <a href="#configure-it">Configure it</a>).
+
+| Event | Subtype | Stress | Reward |
+| --- | --- | --- | --- |
+| Reaction | like | -0.005 | +0.030 |
+| Reaction | dislike | +0.050 | -0.030 |
+| Comment | positive | -0.020 | +0.070 |
+| Comment | neutral | 0.000 | +0.010 |
+| Comment | critical | +0.060 | -0.020 |
+| Comment | hostile | +0.140 | -0.070 |
+| Comment | supportive | -0.050 | +0.080 |
+| Share | positive | -0.010 | +0.080 |
+| Share | hostile | +0.120 | -0.060 |
+| Report | mass report | +0.120 | -0.050 |
+| Moderation | protected | -0.080 | +0.030 |
+| Moderation | sanctioned | +0.050 | -0.060 |
+
+<p class="am-note">Reactions, comments and shares are emitted by the stock client. Reports and moderation outcomes are defined in the model, with their own weights, for scenarios that use them. A client never counts its own interactions: only the author of the target post is affected.</p>
+
+Comments and shares need an interpretation. Before computing anything, the agent asks the LLM to label the text with the annotation prompts <code>agent_comment_stress_reward_annotation</code> and <code>agent_post_stress_reward_annotation</code>. The answer carries three fields.
+
+<div class="od-dist-grid">
+<div class="od-dist"><b>tone</b><span>positive, neutral, critical, hostile or supportive. For shares only positive or hostile (supportive counts as positive).</span></div>
+<div class="od-dist"><b>directness</b><span>From 0 (not aimed at the recipient) to 1 (explicitly aimed at them).</span></div>
+<div class="od-dist"><b>support strength</b><span>From 0 (none) to 1 (strong, explicit support).</span></div>
 </div>
 
-## Event weights {#event-weights}
-
-Each event has a base push on stress and on reward. <span class="sr-key bad">Red</span> hurts, <span class="sr-key good">green</span> helps: a negative stress is a relief. Defaults shown, <strong>all editable</strong>. The admin page calls reward <em>Recognition</em>.
-
-<div class="sr-evgrid" markdown="0">
-<div class="sr-ev"><h3>Reactions</h3><div class="sr-evhd"><span></span><span>Stress</span><span>Reward</span></div>
-<div class="sr-evrow"><span>like</span><span class="sr-v good">&minus;0.005</span><span class="sr-v good">+0.030</span></div>
-<div class="sr-evrow"><span>dislike</span><span class="sr-v bad">+0.050</span><span class="sr-v bad">&minus;0.030</span></div>
-<p class="sr-evft">&times; ln(1 + volume)</p></div>
-<div class="sr-ev"><h3>Comments</h3><div class="sr-evhd"><span></span><span>Stress</span><span>Reward</span></div>
-<div class="sr-evrow"><span>positive</span><span class="sr-v good">&minus;0.020</span><span class="sr-v good">+0.070</span></div>
-<div class="sr-evrow"><span>neutral</span><span class="sr-v">0.000</span><span class="sr-v good">+0.010</span></div>
-<div class="sr-evrow"><span>critical</span><span class="sr-v bad">+0.060</span><span class="sr-v bad">&minus;0.020</span></div>
-<div class="sr-evrow"><span>hostile</span><span class="sr-v bad">+0.140</span><span class="sr-v bad">&minus;0.070</span></div>
-<div class="sr-evrow"><span>supportive</span><span class="sr-v good">&minus;0.050</span><span class="sr-v good">+0.080</span></div>
-<p class="sr-evft">hostile &times; directness &middot; supportive &times; support strength</p></div>
-<div class="sr-ev"><h3>Shares</h3><div class="sr-evhd"><span></span><span>Stress</span><span>Reward</span></div>
-<div class="sr-evrow"><span>positive</span><span class="sr-v good">&minus;0.010</span><span class="sr-v good">+0.080</span></div>
-<div class="sr-evrow"><span>hostile</span><span class="sr-v bad">+0.120</span><span class="sr-v bad">&minus;0.060</span></div>
-<p class="sr-evft">&times; public exposure, the annotated directness (at least 0.1)</p></div>
-<div class="sr-ev"><h3>Moderation and reports</h3><div class="sr-evhd"><span></span><span>Stress</span><span>Reward</span></div>
-<div class="sr-evrow"><span>protected</span><span class="sr-v good">&minus;0.080</span><span class="sr-v good">+0.030</span></div>
-<div class="sr-evrow"><span>sanctioned</span><span class="sr-v bad">+0.050</span><span class="sr-v bad">&minus;0.060</span></div>
-<div class="sr-evrow"><span>mass report</span><span class="sr-v bad">+0.120</span><span class="sr-v bad">&minus;0.050</span></div>
-<p class="sr-evft">protected &times; support strength &middot; reports &times; exposure</p></div>
-</div>
-
-<details markdown="0"><summary data-excerpt="Factors per event, in one table.">Exactly how each event is scaled</summary>
-<div class="ys-table-wrap ys-no-wrap"><table>
-<thead><tr><th>Event</th><th>Stress is multiplied by</th><th>Reward is multiplied by</th></tr></thead>
-<tbody>
-<tr><td>Reaction</td><td>ln(1 + volume)</td><td>source status &times; relation weight &times; ln(1 + volume)</td></tr>
-<tr><td>Comment &middot; hostile</td><td>directness &times; exposure &times; status &times; relation</td><td>directness</td></tr>
-<tr><td>Comment &middot; critical</td><td>exposure &times; status &times; relation</td><td>exposure</td></tr>
-<tr><td>Comment &middot; supportive</td><td>support strength</td><td>support strength</td></tr>
-<tr><td>Share &middot; positive</td><td>1</td><td>exposure</td></tr>
-<tr><td>Share &middot; hostile</td><td>exposure &times; status &times; relation</td><td>1</td></tr>
-<tr><td>Report</td><td>exposure &times; ln(1 + volume)</td><td>exposure &times; ln(1 + volume)</td></tr>
-<tr><td>Moderation &middot; protected</td><td>support strength</td><td>support strength</td></tr>
-</tbody></table></div>
-<p class="am-note">Every base value is also multiplied by <code>importance</code> (1). The stock client sends one event at a time (volume 1, so a reaction is scaled by ln 2 &asymp; 0.69), keeps importance, status and relation at 1, and uses the annotated directness as exposure for shares and 1 for comments. Reactions, comments and shares are emitted by the stock client; reports and moderation outcomes are defined in the model for scenarios that use them.</p>
-</details>
+The prompt asks the model to be conservative when unsure. The server never performs this annotation.
 
 ## The formula {#the-formula}
 
-<div class="ys-grid four" markdown="0">
-<div class="ys-card"><div class="ys-ic">1</div><h3>Scale</h3><p>Base weight times the event factors: directness, exposure, support, volume.</p></div>
-<div class="ys-card"><div class="ys-ic t">2</div><h3>Personalise</h3><p>The recipient's four traits amplify or soften the change.</p></div>
-<div class="ys-card"><div class="ys-ic o">3</div><h3>Couple</h3><p>Reward absorbs a stress increase. Stress eats into a reward increase.</p></div>
-<div class="ys-card"><div class="ys-ic">4</div><h3>Store</h3><p>Both results are saved as variations for the recipient.</p></div>
-</div>
+Every event goes through the same four steps. Take the base values from the table above.
 
-<div class="sr-traits" markdown="0">
-<div><b>sensitivity</b><span>more stress from bad events</span></div>
-<div><b>resilience</b><span>more relief from good ones (at least 0.2)</span></div>
-<div><b>reward_sensitivity</b><span>more joy from positive attention</span></div>
-<div><b>visibility_need</b><span>a bigger loss when attention turns negative</span></div>
-</div>
+<ol class="am-loop four">
+<li><h3>Scale</h3><p>Multiply the base values by the event factors: importance, directness, exposure, support and volume.</p></li>
+<li><h3>Personalise</h3><p>Apply the recipient's traits, which amplify some changes and soften others.</p></li>
+<li><h3>Couple</h3><p>Reward buffers a stress increase. Stress dampens a reward increase.</p></li>
+<li><h3>Store</h3><p>The two results are sent as variations, one for stress and one for reward.</p></li>
+</ol>
 
-Coupling acts only on <em>increases</em>, with &alpha; and &beta; as the two coupling weights:
+### Step 1 · event factors
+
+Which factors apply depends on the event. Anything not listed is left at 1.
+
+| Event | Stress change is multiplied by | Reward change is multiplied by |
+| --- | --- | --- |
+| Reaction (like, dislike) | ln(1 + volume) | source status × relation weight × ln(1 + volume) |
+| Comment · hostile | directness × exposure × source status × relation weight | directness |
+| Comment · critical | exposure × source status × relation weight | exposure |
+| Comment · supportive | support strength | support strength |
+| Share · positive | none | exposure |
+| Share · hostile | exposure × source status × relation weight | none |
+| Report | exposure × ln(1 + volume) | exposure × ln(1 + volume) |
+| Moderation · protected | support strength | support strength |
+
+Every base value is also multiplied by <code>importance</code>, 1 by default. The stock client sends a single event at a time (<code>volume</code> = 1, so reactions are scaled by ln 2 &asymp; 0.69), leaves importance, source status and relation weight at 1, uses the annotated directness as exposure for shares, and exposure 1 for comments. Custom clients can use all of them.
+
+### Step 2 · traits
+
+Four traits, all equal to 1 by default, tune how the recipient feels the same event.
+
+| Trait | Applies to | Effect |
+| --- | --- | --- |
+| <code>sensitivity</code> | a stress increase | Higher means more stress from bad interactions. |
+| <code>resilience</code> | a stress decrease | Higher means more relief from good ones. Never below 0.2. |
+| <code>reward_sensitivity</code> | a reward increase | Higher means more joy from positive attention. |
+| <code>visibility_need</code> | a reward decrease | Higher means a bigger loss when attention turns negative. |
+
+### Step 3 · coupling
+
+The coupling only acts on <em>increases</em>, so a bad day cannot be undone by buffering alone.
 
 <div class="ys-formula" markdown="0"><pre><code>if  &Delta;stress &gt; 0 :   &Delta;stress &times;= max(0, 1 &minus; &alpha; &middot; reward)      &alpha; = 0.30
 if  &Delta;reward &gt; 0 :   &Delta;reward &times;= max(0, 1 &minus; &beta; &middot; stress)      &beta; = 0.20</code></pre></div>
 
-<div class="alert-info-custom"><strong>Worked example.</strong> A fully directed hostile comment lands on a calm agent (stress 0.20, reward 0.40, traits at 1). Stress: 0.14 &times; buffer (1 &minus; 0.30 &times; 0.40 = 0.88) = <strong>+0.123</strong>. Reward: &minus;0.07, a decrease, so no coupling: <strong>&minus;0.070</strong>. A like on the same agent gives about <strong>&minus;0.0035</strong> stress and <strong>+0.020</strong> reward.</div>
+A worked example. A fully directed hostile comment lands on a calm agent with stress 0.20 and reward 0.40, all traits at 1. The base stress change is +0.14, scaled by directness 1 and exposure 1, and then by the buffer 1 &minus; 0.30 &times; 0.40 = 0.88, which gives <strong>+0.123</strong>. The reward change is &minus;0.07, a decrease, so it is not coupled: <strong>&minus;0.070</strong>. A single like on the same agent gives about <strong>&minus;0.0035</strong> stress and <strong>+0.020</strong> reward.
 
-### From variations to a state
+### Step 4 · from variations to a state
 
-<div class="ys-split-2 ys-top" markdown="0">
-<div><p>The server logs every variation. When an agent is about to act, its state is the <strong>last saved aggregate plus all variations since</strong>, clamped to 0&ndash;1.</p><div class="ys-formula"><pre><code>state = clamp&#8320;&#8321;( last_aggregate + &Sigma; variations )</code></pre></div></div>
-<div><p><strong>No built-in decay</strong>: the state moves only when something happens. <code>backward_rounds</code> (24) matters just for the first rebuild, when no aggregate exists. The server rejects variations outside &minus;1 and +1.</p></div>
-</div>
+The server keeps a log of variations. When an agent is about to act, its current state is the last saved aggregate plus every variation recorded since, <strong>clamped to 0&ndash;1</strong>. A new aggregate is saved for the current round.
+
+<div class="ys-formula" markdown="0"><pre><code>state(now) = clamp&#8320;&#8321;( last_aggregate + &Sigma; variations since that aggregate )</code></pre></div>
+
+Two consequences are worth knowing. There is <strong>no built-in decay</strong>: the state only moves when something happens, so a quiet agent keeps its mood. And <code>backward_rounds</code> (24 by default) only matters on the first rebuild, when no aggregate exists yet: it says how many rounds back the first sum looks. Variations outside &minus;1 and +1 are rejected by the server.
+
 
 ## Try one event {#try-one-event}
 
@@ -259,47 +259,11 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 <noscript><p class="am-note">Enable JavaScript to explore the surface.</p></noscript>
 </div>
 
-## All parameters {#all-parameters}
+## Configure it {#configure-it}
 
-One row per group, with defaults. <strong>Everything is configurable</strong>; any key you leave out keeps its default and nested blocks are merged. <span class="sr-where e">Experiment</span> is the experiment form, <span class="sr-where a">Admin</span> is <em>Experiment &rsaquo; Configure Stress / Reward</em>, <span class="sr-where c">Config</span> is the client configuration file (reports have no form field).
+Every number on this page is a default. Turn the feature on in the experiment form, then edit event weights, coupling and the churn switch from <em>Experiment &rsaquo; Configure Stress / Reward</em>. Traits, the activity-impact terms and the churn curve live in the <code>stress_reward.system</code> block of the client configuration. Keys you leave out keep their default.
 
-<div class="ys-table-wrap ys-no-wrap sr-params" markdown="0"><table>
-<thead><tr><th>Key</th><th>Default</th><th>What it does</th><th>Set in</th></tr></thead>
-<tbody>
-<tr class="sr-grp"><td colspan="4">Switches &middot; <code>stress_reward</code></td></tr>
-<tr><td><code>enabled</code></td><td>off</td><td>Master switch for the whole feature.</td><td><span class="sr-where e">Experiment</span></td></tr>
-<tr><td><code>backward_rounds</code></td><td>24</td><td>Rounds the first state rebuild looks back.</td><td><span class="sr-where c">Config</span></td></tr>
-<tr class="sr-grp"><td colspan="4">Recipient &middot; <code>system.traits</code></td></tr>
-<tr><td><code>sensitivity</code> &middot; <code>resilience</code> &middot; <code>reward_sensitivity</code> &middot; <code>visibility_need</code></td><td>1.0 each</td><td>Multipliers on stress increases, stress relief, reward increases and reward losses.</td><td><span class="sr-where c">Config</span></td></tr>
-<tr class="sr-grp"><td colspan="4">Coupling &middot; <code>system.coupling</code></td></tr>
-<tr><td><code>reward_buffers_stress_alpha</code> &middot; <code>stress_reduces_reward_beta</code></td><td>0.30 &middot; 0.20</td><td>&alpha;: share of a stress increase absorbed per unit of reward. &beta;: share of a reward increase lost per unit of stress.</td><td><span class="sr-where a">Admin</span></td></tr>
-<tr class="sr-grp"><td colspan="4">Events &middot; <code>system.events.&lt;family&gt;.&lt;subtype&gt;</code></td></tr>
-<tr><td><code>stress</code> &middot; <code>reward</code></td><td>see Event weights</td><td>Base push of each event.</td><td><span class="sr-where a">Admin</span> <span class="sr-where c">Config</span></td></tr>
-<tr class="sr-grp"><td colspan="4">Activity &middot; <code>system.activity_impact</code></td></tr>
-<tr><td><code>enabled</code></td><td>on</td><td>Lets the state slow the agent down.</td><td><span class="sr-where c">Config</span></td></tr>
-<tr><td><code>stress_weight</code> &middot; <code>reward_weight</code> &middot; <code>baseline_buffer</code></td><td>1.1 &middot; 0.35 &middot; 0.10</td><td>Terms of the burden.</td><td><span class="sr-where c">Config</span></td></tr>
-<tr><td><code>min_action_multiplier</code> &middot; <code>max_skip_probability</code></td><td>0.15 &middot; 0.65</td><td>Floor of the multiplier and cap of the skip probability.</td><td><span class="sr-where c">Config</span></td></tr>
-<tr class="sr-grp"><td colspan="4">Churn &middot; <code>system.churn</code></td></tr>
-<tr><td><code>enabled</code></td><td>off</td><td>Lets the state make the agent leave.</td><td><span class="sr-where a">Admin</span></td></tr>
-<tr><td><code>stress_weight</code> &middot; <code>reward_weight</code> &middot; <code>bias</code> &middot; <code>temperature</code></td><td>1.5 &middot; 1.0 &middot; &minus;2.2 &middot; 0.35</td><td>Shape of the churn curve: weights, baseline and sharpness.</td><td><span class="sr-where c">Config</span></td></tr>
-<tr><td><code>min_probability</code> &middot; <code>max_probability</code></td><td>0 &middot; 0.95</td><td>Bounds of the per-turn probability.</td><td><span class="sr-where c">Config</span></td></tr>
-</tbody></table></div>
-
-<details markdown="0"><summary data-excerpt="A configuration snippet.">Example: a harsher, thinner-skinned world</summary>
-<pre class="sr-json"><code>{
-  "stress_reward": {
-    "enabled": true,
-    "backward_rounds": 24,
-    "system": {
-      "traits":  { "sensitivity": 1.4 },
-      "coupling": { "reward_buffers_stress_alpha": 0.4 },
-      "events":  { "comment": { "hostile": { "stress": 0.20, "reward": -0.10 } } },
-      "activity_impact": { "max_skip_probability": 0.5 },
-      "churn":   { "enabled": true, "bias": -1.8 }
-    }
-  }
-}</code></pre>
-</details>
+The full list, with ranges and the platforms each one applies to, is in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>.
 
 ## Good to know {#good-to-know}
 
@@ -403,119 +367,63 @@ One row per group, with defaults. <strong>Everything is configurable</strong>; a
 
   /* ---- conversations ---- */
   try {
-    var PROF = { avg: { sens: 1, res: 1, rs: 1, vn: 1 }, sens: { sens: 1.8, res: 0.6, rs: 1, vn: 1.6 }, res: { sens: 0.6, res: 1.6, rs: 1, vn: 0.6 } };
-    var PROF_T = { avg: "Default traits: everything at 1.", sens: "Sensitivity 1.8, resilience 0.6, visibility need 1.6: feels bad moments more, recovers less.", res: "Sensitivity 0.6, resilience 1.6, visibility need 0.6: shrugs off bad moments, recovers fast." };
-    var prof = "avg", CPL = { a: 0.3, b: 0.2 };
-    var POST = { warm: "Just moved to Pisa. Any cafe I should not miss?", pile: "I think the new bike lanes downtown are a great idea.", def: "I think the new bike lanes downtown are a great idea." };
+    var AVG = { sens: 1, res: 1, rs: 1, vn: 1 }, RES = { sens: 0.6, res: 1.6, rs: 1, vn: 0.6 }, CPL = { a: 0.3, b: 0.2 };
+    var BIKE = "I think the new bike lanes downtown are a great idea.";
+    var PILE = [
+      { w: "Tom", t: "Great for you, maybe. I lost ten minutes a day because of them.", k: "comment:critical", d: 0.7 },
+      { w: "Ivo", t: "(dislikes the post)", k: "reaction:dislike" },
+      { w: "Dana", t: "Typical. People like you have no idea how the real world works.", k: "comment:hostile", d: 0.9 },
+      { w: "Sam", t: "Look at what some people believe. Unreal.", k: "share:hostile", d: 0.8 },
+      { w: "Leo", t: "Nobody asked for your opinion.", k: "comment:hostile", d: 0.8 }
+    ];
     var TH = {
-      warm: [
+      warm: { post: "Just moved to Pisa. Any cafe I should not miss?", tr: AVG, msgs: [
         { w: "Anna", t: "Welcome to the neighbourhood! Try the little place behind the station.", k: "comment:positive" },
-        { w: "Luca", k: "reaction:like" },
-        { w: "Giulia", t: "Great pick of city. Ask me anything, I have lived here for years.", k: "comment:supportive", u: 0.6 },
+        { w: "Luca", t: "(likes the post)", k: "reaction:like" },
+        { w: "Giulia", t: "Great choice of city. Ask me anything.", k: "comment:supportive", u: 0.6 },
         { w: "Marco", t: "Sharing this so more people can help you out.", k: "share:positive", d: 0.8 },
         { w: "Elena", t: "Which part of town are you in?", k: "comment:neutral" }
-      ],
-      pile: [
-        { w: "Tom", t: "Great for you, maybe. I lost ten minutes a day because of them.", k: "comment:critical", d: 0.7 },
-        { w: "Ivo", k: "reaction:dislike" },
+      ] },
+      pile: { post: BIKE, tr: AVG, msgs: PILE },
+      res: { post: BIKE, tr: RES, msgs: PILE },
+      def: { post: BIKE, tr: AVG, msgs: [
         { w: "Dana", t: "Typical. People like you have no idea how the real world works.", k: "comment:hostile", d: 0.9 },
-        { w: "Sam", t: "Look at what some people believe. Unreal.", k: "share:hostile", d: 0.8 },
-        { w: "Ivo", k: "reaction:dislike" },
-        { w: "Leo", t: "Nobody asked for your opinion.", k: "comment:hostile", d: 0.8 }
-      ],
-      def: [
-        { w: "Dana", t: "Typical. People like you have no idea how the real world works.", k: "comment:hostile", d: 0.9 },
-        { w: "Ivo", k: "reaction:dislike" },
+        { w: "Ivo", t: "(dislikes the post)", k: "reaction:dislike" },
         { w: "Sara", t: "Ignore that. Maria is right, and the data backs her up.", k: "comment:supportive", u: 0.9 },
         { w: "Leo", t: "Agreed, I use that lane every day.", k: "comment:positive" },
-        { w: "Moderator", t: "The hostile comment is removed and its author is warned.", k: "moderation:protected", u: 0.8 },
-        { w: "Tom", k: "reaction:like" }
-      ]
+        { w: "Moderator", t: "The hostile comment is removed and its author is warned.", k: "moderation:protected", u: 0.8 }
+      ] }
     };
-    var BANK = [
-      { w: "Tom", t: "I disagree: the lanes cost us parking spots.", k: "comment:critical", d: 0.7, c: "crit" },
-      { w: "Dana", t: "You clearly have no clue.", k: "comment:hostile", d: 0.9, c: "bad" },
-      { w: "Anna", t: "Totally with you, I cycle to work.", k: "comment:positive", c: "good" },
-      { w: "Elena", t: "Which streets do you mean?", k: "comment:neutral", c: "neu" },
-      { w: "Sara", t: "Do not listen to the haters, you are right.", k: "comment:supportive", u: 0.8, c: "good" },
-      { w: "Luca", k: "reaction:like", c: "good" },
-      { w: "Ivo", k: "reaction:dislike", c: "bad" },
-      { w: "Sam", t: "Look at this nonsense.", k: "share:hostile", d: 0.8, c: "bad" },
-      { w: "Marco", t: "Smart take, worth reading.", k: "share:positive", d: 0.8, c: "good" }
-    ];
-    var evalSeq = function (msgs) {
-      var st = 0, rw = 0, out = [], i, m, d, o;
-      for (i = 0; i < msgs.length; i++) {
-        m = msgs[i]; d = m.d === undefined ? 1 : m.d;
-        o = delta(m.k, { dir: d, exp: m.k.indexOf("share") === 0 ? Math.max(0.1, d) : 1, sup: m.u === undefined ? 1 : m.u, vol: 1 }, PROF[prof], CPL, st, rw);
+    var tk = "warm", ri = 2;
+    var cls = function (v, goodPos) { return Math.abs(v) < 0.0005 ? "" : ((v > 0) === goodPos ? " good" : " bad"); };
+    var drawConv = function () {
+      var th = TH[tk], st = 0, rw = 0, h = "", i, m, d, o, tone;
+      for (i = 0; i < ri; i++) {
+        m = th.msgs[i]; d = m.d === undefined ? 1 : m.d;
+        o = delta(m.k, { dir: d, exp: m.k.indexOf("share") === 0 ? Math.max(0.1, d) : 1, sup: m.u === undefined ? 1 : m.u, vol: 1 }, th.tr, CPL, st, rw);
         st = clamp01(st + o.s3); rw = clamp01(rw + o.r3);
-        out.push({ s: o.s3, r: o.r3 });
+        tone = m.k.split(":")[1];
+        h += "<li class=\"sr-row\"><div class=\"sr-who\"><b>" + m.w + "</b><span>" + m.k.split(":")[0] + " &middot; " + tone + "</span></div><p>" + m.t + "</p><div class=\"sr-dl\"><span class=\"" + cls(o.s3, false).trim() + "\">stress " + sgn(o.s3, 3) + "</span><span class=\"" + cls(o.r3, true).trim() + "\">reward " + sgn(o.r3, 3) + "</span></div></li>";
       }
-      return { st: st, rw: rw, steps: out };
+      $("sr-post").innerHTML = "<b>Maria posts:</b> &ldquo;" + th.post + "&rdquo;";
+      $("sr-thread").innerHTML = h;
+      $("sr-ms").style.width = (st * 100) + "%"; $("sr-mr").style.width = (rw * 100) + "%";
+      $("sr-ms-l").textContent = "Stress " + st.toFixed(2); $("sr-mr-l").textContent = "Reward " + rw.toFixed(2);
+      var a = act(st, rw);
+      $("sr-mq").textContent = ri === 0 ? "Nothing has happened yet." : "Maria acts at " + Math.round(a.mult * 100) + "% of her usual pace and skips " + Math.round(a.skip * 100) + "% of her turns.";
+      $("sr-next").disabled = ri >= th.msgs.length;
     };
-    var lerp = function (a, b, t) { return Math.round(a + (b - a) * t); };
-    var label = function (st, rw) { return st >= 0.6 ? "Overwhelmed" : st >= 0.3 ? "Strained" : rw >= 0.5 ? "Thriving" : "Calm"; };
-    var moodHtml = function (st, rw) {
-      var a = act(st, rw), t = clamp01(st * 1.4), c1 = lerp(95, 255, t) + "," + lerp(192, 138, t) + "," + lerp(207, 92, t);
-      return "<div class=\"sr-avatar\" style=\"--c:rgb(" + c1 + ");--g:" + (6 + rw * 18).toFixed(0) + "px\">M</div>" +
-        "<div class=\"sr-name\">Maria</div><div class=\"sr-state\" style=\"color:rgb(" + c1 + ")\">" + label(st, rw) + "</div>" +
-        "<div class=\"sr-g c\"><span>Stress</span><div><i style=\"width:" + (st * 100) + "%\"></i></div><b>" + st.toFixed(2) + "</b></div>" +
-        "<div class=\"sr-g\"><span>Reward</span><div><i style=\"width:" + (rw * 100) + "%\"></i></div><b>" + rw.toFixed(2) + "</b></div>" +
-        "<p class=\"sr-act\">Acts at <b>" + Math.round(a.mult * 100) + "%</b> of her usual pace, skips <b>" + Math.round(a.skip * 100) + "%</b> of turns.</p>";
-    };
-    var chipHtml = function (m, s) {
-      var p = m.k.split(":"), fam = p[0], sub = p[1], lab;
-      if (fam === "reaction") { lab = "reaction: " + sub + " (no LLM)"; }
-      else if (fam === "moderation") { lab = "moderation: " + sub; }
-      else {
-        lab = "LLM reads: " + sub;
-        if (m.d !== undefined && (sub === "hostile" || fam === "share")) { lab += " &middot; directness " + m.d.toFixed(1); }
-        if (m.u !== undefined) { lab += " &middot; support " + m.u.toFixed(1); }
-      }
-      var cls = function (v, goodPos) { return Math.abs(v) < 0.0005 ? "" : ((v > 0) === goodPos ? " good" : " bad"); };
-      return "<div class=\"sr-chips\"><span class=\"sr-chip\">" + lab + "</span><span class=\"sr-chip" + cls(s.s, false) + "\">Stress " + sgn(s.s, 3) + "</span><span class=\"sr-chip" + cls(s.r, true) + "\">Reward " + sgn(s.r, 3) + "</span></div>";
-    };
-    var chatHtml = function (post, msgs, steps) {
-      var h = "<div class=\"sr-msg me\"><b class=\"sr-who\">Maria</b><p>" + post + "</p></div>", i, m, txt;
-      for (i = 0; i < msgs.length; i++) {
-        m = msgs[i]; txt = m.t || (m.k === "reaction:like" ? "Liked the post." : "Disliked the post.");
-        h += "<div class=\"sr-msg\"><b class=\"sr-who\">" + m.w + "</b><p" + (m.t ? "" : " class=\"sr-dim\"") + ">" + txt + "</p>" + chipHtml(m, steps[i]) + "</div>";
-      }
-      return h;
-    };
-    var tk = "warm", ri = 0, picks = [];
-    var drawA = function () {
-      var msgs = TH[tk].slice(0, ri), e = evalSeq(msgs);
-      $("sr-m-a").innerHTML = moodHtml(e.st, e.rw);
-      $("sr-chat-a").innerHTML = chatHtml(POST[tk], msgs, e.steps);
-      $("sr-next").disabled = ri >= TH[tk].length;
-    };
-    var drawB = function () {
-      var msgs = picks.map(function (i) { return BANK[i]; }), e = evalSeq(msgs);
-      $("sr-m-b").innerHTML = moodHtml(e.st, e.rw);
-      $("sr-chat-b").innerHTML = chatHtml(POST.def, msgs, e.steps);
-      Array.prototype.forEach.call($("sr-bank").children, function (b, i) { b.disabled = picks.indexOf(i) >= 0; });
-    };
-    var bank = $("sr-bank");
-    if (bank) {
-      BANK.forEach(function (m, i) {
-        var b = document.createElement("button"); b.type = "button"; b.className = "sr-pill " + m.c;
-        b.innerHTML = "<b>" + m.w + "</b> " + (m.t ? m.t : (m.k === "reaction:like" ? "Like" : "Dislike"));
-        b.addEventListener("click", function () { picks.push(i); drawB(); });
-        bank.appendChild(b);
-      });
-      var mark = function (box, attr, v) { Array.prototype.forEach.call(box.querySelectorAll("button"), function (b) { b.classList.toggle("sr-on", b.getAttribute(attr) === v); }); };
-      Array.prototype.forEach.call($("sr-prof").querySelectorAll("button"), function (b) {
-        b.addEventListener("click", function () { prof = b.getAttribute("data-p"); mark($("sr-prof"), "data-p", prof); $("sr-prof-t").textContent = PROF_T[prof]; drawA(); drawB(); });
-      });
+    if ($("sr-th")) {
       Array.prototype.forEach.call($("sr-th").querySelectorAll("button"), function (b) {
-        b.addEventListener("click", function () { tk = b.getAttribute("data-t"); ri = 0; mark($("sr-th"), "data-t", tk); drawA(); });
+        b.addEventListener("click", function () {
+          tk = b.getAttribute("data-t"); ri = 2;
+          Array.prototype.forEach.call($("sr-th").querySelectorAll("button"), function (x) { x.classList.toggle("sr-on", x === b); });
+          drawConv();
+        });
       });
-      $("sr-next").addEventListener("click", function () { if (ri < TH[tk].length) { ri++; drawA(); } });
-      $("sr-rst").addEventListener("click", function () { ri = 0; drawA(); });
-      $("sr-pk-rst").addEventListener("click", function () { picks = []; drawB(); });
-      $("sr-prof-t").textContent = PROF_T.avg;
-      ri = 2; drawA(); drawB();
+      $("sr-next").addEventListener("click", function () { if (ri < TH[tk].msgs.length) { ri++; drawConv(); } });
+      $("sr-rst").addEventListener("click", function () { ri = 0; drawConv(); });
+      drawConv();
     }
   } catch (err) { if (window.console) { console.warn("stress conversations:", err); } }
 
