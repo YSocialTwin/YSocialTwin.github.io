@@ -160,7 +160,7 @@ Pick an event and the recipient's current state, then move the sliders to see th
 <optgroup label="Share"><option value="share:positive">Positive share</option><option value="share:hostile">Hostile share</option></optgroup>
 <optgroup label="Report and moderation (model only)"><option value="report:mass_report">Mass report</option><option value="moderation:protected">Moderation: protected</option><option value="moderation:sanctioned">Moderation: sanctioned</option></optgroup>
 </select></div>
-<div class="od-lab-row">
+<div class="od-lab-row sr-stack">
 <div class="od-controls" id="sr-c1"></div>
 <div class="od-controls" id="sr-c2"></div>
 </div>
@@ -236,7 +236,7 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 <button type="button" data-m="churn">Churn probability</button>
 </div>
 <canvas id="sr-map" class="od-canvas sr-map" width="900" height="320" role="img" aria-label="Map of the chosen quantity over stress (horizontal) and reward (vertical)"></canvas>
-<div class="od-lab-row">
+<div class="od-lab-row sr-stack">
 <div class="od-controls" id="sr-m1"></div>
 <div id="sr-ga"><h4 class="sr-gh">Burden and skipping</h4><div class="od-controls" id="sr-m2"></div></div>
 <div id="sr-gc" hidden><h4 class="sr-gh">Churn curve</h4><div class="od-controls" id="sr-m3"></div></div>
@@ -340,12 +340,12 @@ The settings shown in the interface, with the platforms each one applies to, are
   /* ---- slider factory ---- */
   function mk(box, defs, onchange, store) {
     defs.forEach(function (d) {
-      var l = document.createElement("label");
+      var l = document.createElement("label"); l.className = "sr-sl"; box.classList.add("sr-ctl");
       l.innerHTML = "<span>" + d.l + "</span> <output></output><input type=\"range\">";
       var i = l.querySelector("input"), o = l.querySelector("output"), dp = d.dp === undefined ? 2 : d.dp;
       i.min = d.min; i.max = d.max; i.step = d.step; i.value = d.v; i.id = "sr-" + d.id;
       i.setAttribute("aria-label", d.a || d.id);
-      var show = function () { o.textContent = (+i.value).toFixed(dp); };
+      var show = function () { o.textContent = (+i.value).toFixed(dp); i.style.setProperty("--p", ((+i.value - d.min) / (d.max - d.min) * 100) + "%"); };
       i.addEventListener("input", function () { show(); onchange(); });
       show(); box.appendChild(l); store[d.id] = { el: i, lab: l, show: show, def: d.v };
     });
@@ -571,8 +571,8 @@ The settings shown in the interface, with the platforms each one applies to, are
         { id: "sw", l: "Stress weight", min: 0, max: 3, step: 0.05, v: D.sw },
         { id: "rw", l: "Reward weight", min: 0, max: 2, step: 0.05, v: D.rw },
         { id: "bb", l: "Baseline buffer", min: 0, max: 0.5, step: 0.01, v: D.bb },
-        { id: "mm", l: "Min action multiplier", min: 0, max: 1, step: 0.01, v: D.mm },
-        { id: "ms", l: "Max skip probability", min: 0, max: 1, step: 0.01, v: D.ms }
+        { id: "mm", l: "Min multiplier", min: 0, max: 1, step: 0.01, v: D.mm },
+        { id: "ms", l: "Max skip prob.", min: 0, max: 1, step: 0.01, v: D.ms }
       ], onm, mm);
       mk($("sr-m3"), [
         { id: "cb", l: "Bias", min: -6, max: 2, step: 0.1, v: D.cb, dp: 1 },
