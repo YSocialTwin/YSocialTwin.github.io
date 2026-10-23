@@ -3,7 +3,7 @@ layout: default-full
 title: " 🎉 Finally Published!"
 subtitle: "Read about YSocial in Big Data & Society"
 header_title: "🎉 Finally Published!"
-date: 2026-07-23 10ß:00:00
+date: 2026-07-23 10:00:00
 description: "Discover YSocial v3.0.0 with cross-platform support, one-click installation, GDPR-compliant telemetry, and in-app announcements. Elevate your social media research experience today!"
 tags: [platform, web]
 categories: [news]
