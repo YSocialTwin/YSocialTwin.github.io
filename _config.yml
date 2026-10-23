@@ -234,3 +234,11 @@ related_blog_posts:
 
 news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
 news_limit: 5 # leave blank to include all the news in the `_news` folder
+
+# Default social-preview image (og:image / twitter:image). The theme reads it from
+# header_img; a page or post that sets its own header_img keeps it.
+defaults:
+  - scope:
+      path: ""
+    values:
+      header_img: assets/images/og-default.png
