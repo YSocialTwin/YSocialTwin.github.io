@@ -6,6 +6,7 @@ eyebrow: "Version 4.0.0"
 header_title: "Install YSocial"
 header_type: hero
 show_sidetoc: true
+header_img: assets/images/og/download.png
 ---
 
 <div class="ys-article" markdown="1">

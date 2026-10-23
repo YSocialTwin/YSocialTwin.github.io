@@ -6,6 +6,7 @@ eyebrow: "Platform"
 header_title: "Plugins"
 header_type: hero
 show_sidetoc: true
+header_img: assets/images/og/plugins.png
 ---
 
 <div class="ys-article" markdown="1">

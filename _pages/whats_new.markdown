@@ -6,6 +6,7 @@ eyebrow: "Release 4.0.0"
 header_title: "What's new in 4.0.0"
 header_type: hero
 show_sidetoc: true
+header_img: assets/images/og/whats_new.png
 ---
 
 <div class="ys-article" markdown="1">

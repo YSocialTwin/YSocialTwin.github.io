@@ -242,3 +242,8 @@ defaults:
       path: ""
     values:
       header_img: assets/images/og-default.png
+  - scope:
+      path: ""
+      type: posts
+    values:
+      header_img: assets/images/og-blog.png
