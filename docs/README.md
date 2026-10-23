@@ -41,6 +41,7 @@ The `v4.0.0` branch holds the new site: the style of the YSocial login, a dark t
 | `assets/` | CSS, JavaScript, images, fonts |
 | `_config.yml` | Site configuration: menu, `ysocial_version`, `release_url`, excludes |
 | `_build_config.yml` | Extra settings used only to build into `docs/` |
+| `scripts/` | Helper scripts, e.g. `make_og_images.py` (social preview cards) |
 | `docs/` | The built site served by GitHub Pages. Never edit it by hand |
 
 ## Run the site locally
@@ -79,6 +80,16 @@ To try the site on a phone, run `bundle exec jekyll serve --host 0.0.0.0` and op
 * **Port 4000 is busy:** `bundle exec jekyll serve --port 4001`.
 * **Old styles after an update:** reload without cache (Ctrl/Cmd+Shift+R).
 * **Missing menu icons:** Font Awesome comes from a CDN, check your connection.
+
+## Social preview images
+
+Links shared on social platforms show a 1200×630 card (`og:image`). The theme takes it from the `header_img` of each page, and the page header itself never displays it.
+
+* **Default:** `assets/images/og-default.png` for every page, `assets/images/og-blog.png` for posts without their own image (both set in `_config.yml`, under `defaults`).
+* **Posts and key pages:** one card each in `assets/images/og/`, e.g. `blog-<post-name>.png`, `download.png`.
+* **Regenerate:** `python3 scripts/make_og_images.py` from the repository root (needs [Pillow](https://pypi.org/project/pillow/), `pip install pillow`). It reads titles and subtitles from the front matter.
+* **New post or page:** run the script, then add `header_img: assets/images/og/blog-<post-name>.png` to its front matter. To add a page to the script, append it to the `for page, label in [...]` list at the bottom.
+* **After publishing:** platforms cache previews. Refresh them with the Facebook Sharing Debugger or LinkedIn Post Inspector.
 
 ## Publishing
 
