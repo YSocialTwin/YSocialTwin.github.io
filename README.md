@@ -36,7 +36,7 @@ The `v4.0.0` branch holds the new site: the style of the YSocial login, a dark t
 | --- | --- |
 | `_pages/` | The pages (Markdown), e.g. home, download, what's new, plugins, key features |
 | `_posts/` | Blog posts |
-| `_data/` | Data used by the templates, e.g. `plugins.yml` (the Plugins page), `members.yml`, `citations.yml` |
+| `_data/` | Data used by the templates, e.g. `plugins.yml` (the Plugins page), `members.yml`, `citations.yml`, `press.yml` (press review on Resources) |
 | `_layouts/`, `_includes/` | Page layouts and reusable fragments |
 | `assets/` | CSS, JavaScript, images, fonts |
 | `_config.yml` | Site configuration: menu, `ysocial_version`, `release_url`, excludes |

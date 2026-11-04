@@ -182,6 +182,37 @@ content:
             type: string
             description: Journal, conference, arXiv id or "PhD thesis".
 
+      - name: press
+        label: Press review (Resources)
+        type: file
+        path: _data/press.yml
+        format: yaml
+        list: true
+        fields:
+          - name: outlet
+            label: Outlet
+            type: string
+            required: true
+          - name: title
+            label: Article title
+            type: string
+            required: true
+          - name: language
+            label: Language
+            type: string
+            required: true
+            default: Italian
+          - name: date
+            label: Date
+            type: date
+            required: true
+            options:
+              format: "yyyy-MM-dd"
+          - name: url
+            label: Article URL
+            type: string
+            required: true
+
       # Raw editor on purpose: the file contains commented-out blocks that a
       # structured form would drop on save.
       - name: plugins

@@ -373,6 +373,52 @@
     });
   }
 
+  /* Press review (resources page): search + client-side pagination of the grouped stories (newest first). */
+  function initPressList() {
+    $$('#maincontent .ys-press').forEach(function (box, bi) {
+      var items = $$('.ys-press-item', box); if (!items.length) return;
+      var id = 'ys-pr-' + bi, size = parseInt(box.getAttribute('data-page-size'), 10) || 5;
+      var noun = box.getAttribute('data-noun') || 'items', page = 1, matched = items;
+      var bar = doc.createElement('div'); bar.className = 'ys-filter';
+      bar.innerHTML = '<label class="sr-only" for="' + id + '">' + (box.getAttribute('data-label') || 'Filter') + '</label><input id="' + id + '" type="search" placeholder="' + (box.getAttribute('data-placeholder') || 'Search') + '" autocomplete="off"><span class="ys-count" role="status" aria-live="polite"></span>';
+      box.insertBefore(bar, box.firstChild);
+      var pager = doc.createElement('nav'); pager.className = 'ys-pager'; pager.setAttribute('aria-label', 'Press review pages');
+      box.appendChild(pager);
+      var q = $('input', bar), c = $('.ys-count', bar), list = $('.ys-press-list', box);
+      var empty = doc.createElement('p'); empty.className = 'ys-press-empty'; empty.textContent = 'No story matches your search.'; empty.hidden = true; box.insertBefore(empty, pager);
+      items.forEach(function (r) { r._t = r.textContent.toLowerCase(); });
+      function btn(label, p, opts) {
+        var b = doc.createElement('button'); b.type = 'button'; b.className = 'ys-pg'; b.innerHTML = label;
+        if (opts && opts.cur) { b.setAttribute('aria-current', 'page'); b.className += ' on'; }
+        if (opts && opts.dis) b.disabled = true;
+        if (opts && opts.aria) b.setAttribute('aria-label', opts.aria);
+        b.addEventListener('click', function () { page = p; render(true); });
+        return b;
+      }
+      function render(scroll) {
+        var pages = Math.max(1, Math.ceil(matched.length / size)); page = Math.min(Math.max(page, 1), pages);
+        var from = (page - 1) * size, to = from + size;
+        items.forEach(function (r) { r.hidden = true; });
+        matched.forEach(function (r, i) { r.hidden = !(i >= from && i < to); });
+        empty.hidden = matched.length > 0;
+        c.textContent = matched.length ? (matched.length > size ? (from + 1) + '\u2013' + Math.min(to, matched.length) + ' of ' : '') + matched.length + ' ' + noun : '';
+        pager.innerHTML = ''; pager.hidden = pages < 2;
+        if (pages > 1) {
+          pager.appendChild(btn('&lsaquo; Newer', page - 1, { dis: page === 1, aria: 'Newer stories' }));
+          for (var p = 1; p <= pages; p++) pager.appendChild(btn(String(p), p, { cur: p === page, aria: 'Page ' + p }));
+          pager.appendChild(btn('Older &rsaquo;', page + 1, { dis: page === pages, aria: 'Older stories' }));
+        }
+        if (scroll) { var r = bar.getBoundingClientRect(); if (r.top < 0) bar.scrollIntoView({ block: 'start' }); }
+      }
+      q.addEventListener('input', function () {
+        var term = q.value.toLowerCase().trim();
+        matched = items.filter(function (r) { return !term || r._t.indexOf(term) > -1; });
+        page = 1; render(false);
+      });
+      render(false);
+    });
+  }
+
   /* Landing page: animated simulated feed with rotating discussion threads (illustrative content). */
   function initFeed() {
     var feed = document.querySelector('.ys-feed[data-feed]');
@@ -612,6 +658,6 @@
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     root.classList.remove('no-js');
-    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initZoom, initReveal, initOS, initTabs, initDataTables, initErExplorer, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
+    [initTheme, initNav, initAurora, initNet, initHeadings, initToc, initJump, initTables, initCopy, initDetails, initCarousels, initZoom, initReveal, initOS, initTabs, initDataTables, initPressList, initErExplorer, initBlog, initFeed].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.warn('ysocial-v4:', f.name, e); } });
   });
 })();

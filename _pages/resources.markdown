@@ -10,7 +10,7 @@ show_sidetoc: true
 
 <div class="ys-article" markdown="1">
 
-<p class="ys-lede">Explore YSocial-generated <mark>datasets</mark>, see where we have <mark>presented</mark> the project and find out <mark>who is citing us</mark>.</p>
+<p class="ys-lede">Explore YSocial-generated <mark>datasets</mark>, see where we have <mark>presented</mark> the project read the <mark>press coverage</mark> and find out <mark>who is citing us</mark>.</p>
 
 ## Datasets
 
@@ -94,6 +94,16 @@ After the recovery, the database is ready to be queried.
 <p>A slide deck about the project:</p>
 
 <iframe title="YSocial project slide deck" loading="lazy" src="https://docs.google.com/presentation/d/e/2PACX-1vSWYu2s09mEJwL7mskYHC3XFuIeTdBPTnHEpee3KyCCFbr5eyix7UZMyUEMYrSfm_ZMI9_ZJt64Ql1Z/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+## In the press
+
+<p class="ys-intro" style="text-align:left;margin:0 0 14px">Coverage of <code>YSocial</code> in newspapers and online media. Each story is listed once, with the outlets that ran it. Search by outlet, title, language or date.</p>
+
+<div class="ys-press" data-label="Search press coverage" data-placeholder="Search outlet, title, date" data-noun="stories" data-page-size="5">
+{% assign press = site.data.press | sort: "date" | reverse %}{% assign stories = press | group_by: "title" %}<ul class="ys-press-list">
+{% for g in stories %}{% assign first = g.items | first %}<li class="ys-press-item"><p class="ys-press-meta"><time datetime="{{ first.date | date: '%Y-%m-%d' }}">{{ first.date | date: "%-d %b %Y" }}</time> &middot; {{ first.language | escape }}</p><p class="ys-press-title">{{ g.name | escape }}</p><p class="ys-press-outlets">{% assign outs = g.items | sort: "outlet" %}{% for p in outs %}<a class="ys-chip" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.outlet | escape }}</a>{% endfor %}</p></li>
+{% endfor %}</ul>
+</div>
 
 ## Who is citing us?
 
