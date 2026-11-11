@@ -219,12 +219,25 @@ At the start of a turn the agent first draws against the skip probability and, i
 
 ### Churn
 
-Off by default. When enabled, the agent also computes, at the beginning of its turn, a probability of <strong>leaving the platform</strong>, and may be removed for good.
+Off by default: it must be switched on explicitly when you configure the experiment (see <a href="#configure-it">Configure it</a>). When enabled, the agent also computes, at the beginning of its turn, a probability of <strong>leaving the platform</strong>, and may be removed for good.
 
-<div class="ys-formula" markdown="0"><pre><code>p_churn = clamp( sigmoid( ( bias + 1.5 &middot; stress &minus; 1.0 &middot; reward ) / temperature ) )
-bias = &minus;2.2   temperature = 0.35   clamp = [0, 0.95]</code></pre></div>
+<div class="ys-formula" markdown="0"><pre><code>p_churn = clamp( sigmoid( ( bias + 2.0 &middot; stress &minus; 1.0 &middot; reward ) / temperature ) )
+bias = &minus;1.8   temperature = 0.3   clamp = [0, 0.95]</code></pre></div>
 
-The logistic shape makes churn rare for most states and rise quickly near the corner of high stress and low reward. The probability is evaluated at every turn, so a small value still adds up over a long simulation.
+The logistic shape makes churn rare for calm agents and lets it grow steadily as stress builds up and reward stays low. The probability is evaluated at every turn, so even a modest value adds up quickly over a few days of simulation. With the defaults, an agent that stays at the same state gets these probabilities at each turn:
+
+| Stress | Reward | Churn probability per turn |
+| --- | --- | --- |
+| 0.0 | 0.1 | 0.2% |
+| 0.3 | 0.3 | 0.7% |
+| 0.5 | 0.2 | 3.4% |
+| 0.6 | 0.2 | 6.5% |
+| 0.7 | 0.2 | 11.9% |
+| 0.8 | 0.1 | 26.9% |
+| 0.9 | 0.1 | 41.7% |
+| 1.0 | 0.0 | 66.1% |
+
+<p class="am-note">What matters is how many agents reach high stress. There is no decay, so an agent that receives a hostile comment every day, with a few likes in between, climbs from a calm start to the top of the stress scale in about a week. In a run where hostile feedback is rare, few agents leave even with churn on. To see departures, check the share of agents above 0.7 stress after a short run and, if it is very low, raise the exposure to hostile content rather than the churn weights.</p>
 
 ### Explore the surface
 
@@ -326,7 +339,7 @@ The settings shown in the interface, with the platforms each one applies to, are
     o.s3 = ds; o.r3 = dr;
     return o;
   }
-  var D = { sw: 1.1, rw: 0.35, bb: 0.10, mm: 0.15, ms: 0.65, cb: -2.2, cs: 1.5, cr: 1.0, ct: 0.35, cx: 0.95 };
+  var D = { sw: 1.1, rw: 0.35, bb: 0.10, mm: 0.15, ms: 0.65, cb: -1.8, cs: 2.0, cr: 1.0, ct: 0.3, cx: 0.95 };
   var cfg = {}, k;
   for (k in D) { cfg[k] = D[k]; }
   function act(s, r) {
