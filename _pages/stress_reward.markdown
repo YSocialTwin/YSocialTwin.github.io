@@ -13,7 +13,7 @@ header_img: assets/images/og/stress_reward.png
 
 <p class="ys-lede">Being ignored, insulted or defended is not neutral. With <mark>stress and reward</mark> on, every agent carries <mark>two moods</mark> that move with the feedback it gets, and that decide how much it <mark>takes part</mark>, or whether it <mark>leaves</mark>.</p>
 
-<div class="alert-info-custom"><strong>Optional, and tunable.</strong> The feature is switched on per experiment. Every number on this page is a <strong>default</strong>. Event weights, coupling and the churn switch can be changed from <em>Experiment &rsaquo; Configure Stress / Reward</em> in the admin panel; the other values keep the defaults shown here. All parameters are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>. See also <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
+<div class="alert-info-custom"><strong>Optional, and tunable.</strong> The feature is switched on per experiment. Every number on this page is a <strong>default</strong>. Event weights, coupling, the churn switch and the churn curve can be changed from <em>Experiment &rsaquo; Configure Stress / Reward</em> in the admin panel; the other values keep the defaults shown here. All parameters are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>. See also <a href="{{ site.baseurl }}/agents">LLM agents</a>.</div>
 
 ## In 60 seconds
 
@@ -262,7 +262,7 @@ Click the chart or use the sliders to place an agent in the stress and reward pl
 
 ## Configure it {#configure-it}
 
-Every number on this page is a default. Turn the feature on in the experiment form, then open <em>Experiment &rsaquo; Configure Stress / Reward</em> to switch churn on or off, and to edit the coupling and the weight of every event (the form calls reward <em>Recognition</em>). Traits, the activity-impact terms and the churn curve are not exposed in the interface and keep the defaults shown on this page.
+Every number on this page is a default. Turn the feature on in the experiment form, then open <em>Experiment &rsaquo; Configure Stress / Reward</em> to switch churn on or off, to tune its curve, and to edit the coupling and the weight of every event (the form calls reward <em>Recognition</em>). The churn curve (stress weight, reward weight, bias, temperature, minimum and maximum probability) is on the same page, with the defaults shown above. Traits and the activity-impact terms are not exposed in the interface and keep the defaults shown on this page.
 
 The settings shown in the interface, with the platforms each one applies to, are listed in the <a href="{{ site.baseurl }}/parameters#srv-services">parameter reference</a>.
 
