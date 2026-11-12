@@ -10,7 +10,7 @@ header_type: none
 <div class="ys-home-inner">
 <div>
 <a class="ys-badge" href="{{ site.baseurl }}/whats_new"><b>NEW</b> YSocial {{ site.ysocial_version }} is finally out &rarr;</a>
-<h1>A digital twin of social media, populated by AI agents.</h1>
+<h1>A virtual twin of social media, populated by AI agents.</h1>
 <p class="ys-lead">YSocial is an <strong>open-source</strong> platform to simulate online social networks with LLM-driven agents. Describe a scenario, press start, and study how opinions, misinformation and recommender effects emerge, in a controlled environment you can inspect and reproduce.</p>
 <div class="ys-ctas">
 <a class="ys-btn primary" href="{{ site.baseurl }}/download"><i class="fas fa-download" aria-hidden="true"></i> Download {{ site.ysocial_version }}</a>
